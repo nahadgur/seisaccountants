@@ -201,6 +201,22 @@ const nextConfig = {
       },
 
       // -----------------------------------------------------------------
+      // Industries section removed (1:1 carryover from startup-fleet,
+      // didn't earn distinct SEIS value). Catch-all redirect to the
+      // services hub since SEIS specialism is horizontal not vertical.
+      // -----------------------------------------------------------------
+      {
+        source: '/industries/',
+        destination: '/services/',
+        permanent: true,
+      },
+      {
+        source: '/industries/:path*',
+        destination: '/services/',
+        permanent: true,
+      },
+
+      // -----------------------------------------------------------------
       // Retired guides on the SEIS pivot: business-registration,
       // startup-tax-relief, cash-flow-forecasting, and growth-planning.
       // Each redirected to the closest surviving SEIS-aligned guide.

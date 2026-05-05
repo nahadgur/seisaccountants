@@ -11,7 +11,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, BookOpen } from 'lucide-react';
 import { services } from '@/data/services';
-import { industries } from '@/data/industries';
 import { guides } from '@/data/guides';
 import { siteConfig } from '@/data/site';
 
@@ -19,7 +18,7 @@ interface HeaderProps {
   onOpenModal?: () => void;
 }
 
-type DropdownKey = 'services' | 'industries' | 'guides' | null;
+type DropdownKey = 'services' | 'guides' | null;
 
 export function Header({ onOpenModal }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -136,49 +135,6 @@ export function Header({ onOpenModal }: HeaderProps) {
               )}
             </div>
 
-            {/* Industries */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => toggleDropdown('industries')}
-                aria-expanded={openDropdown === 'industries'}
-                aria-haspopup="menu"
-                aria-controls="industries-menu"
-                className="flex items-center gap-1 nav-link"
-              >
-                Industries
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform ${openDropdown === 'industries' ? 'rotate-180' : ''}`}
-                  aria-hidden="true"
-                />
-              </button>
-              {openDropdown === 'industries' && (
-                <div
-                  id="industries-menu"
-                  role="menu"
-                  className="absolute top-full left-0 w-72 bg-white border border-ink-900/10 shadow-sm p-1 z-50 mt-2 rounded-sm"
-                >
-                  <Link
-                    href="/industries/"
-                    role="menuitem"
-                    className="block px-4 py-2.5 font-display italic text-[15px] text-brand-500 hover:bg-paper-100 border-b border-ink-900/8 mb-1"
-                  >
-                    All industries &rarr;
-                  </Link>
-                  {industries.map(industry => (
-                    <Link
-                      key={industry.slug}
-                      href={`/industries/${industry.slug}/`}
-                      role="menuitem"
-                      className="block px-4 py-2 text-[14px] text-ink-700 hover:bg-paper-100 hover:text-brand-500 transition-colors"
-                    >
-                      {industry.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {/* Guides */}
             <div className="relative">
               <button
@@ -283,20 +239,6 @@ export function Header({ onOpenModal }: HeaderProps) {
               {services.map(s => (
                 <Link key={s.id} href={`/services/${s.slug}/`} className="block py-1.5 text-[14px] text-ink-700 hover:text-brand-500">
                   {s.title}
-                </Link>
-              ))}
-            </div>
-
-            <div className="py-4 border-b border-ink-900/10">
-              <div className="text-[10px] font-semibold text-brand-500 uppercase tracking-[0.22em] mb-3">
-                Industries
-              </div>
-              <Link href="/industries/" className="block py-1.5 font-display italic text-brand-500">
-                All industries &rarr;
-              </Link>
-              {industries.map(i => (
-                <Link key={i.slug} href={`/industries/${i.slug}/`} className="block py-1.5 text-[14px] text-ink-700 hover:text-brand-500">
-                  {i.title}
                 </Link>
               ))}
             </div>

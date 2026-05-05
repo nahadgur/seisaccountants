@@ -4,7 +4,6 @@
 
 import type { MetadataRoute } from 'next';
 import { services } from '@/data/services';
-import { industries } from '@/data/industries';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
 import { guides } from '@/data/guides';
@@ -20,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`,                lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 1.0 },
     { url: `${base}/services/`,       lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/industries/`,     lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/location/`,       lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/guides/`,         lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/how-we-vet/`,     lastModified: SITE_MODIFIED, changeFrequency: 'yearly',  priority: 0.6 },
@@ -45,14 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Industry pages — tech-startups deepened, others kept light
-  const industryPages: MetadataRoute.Sitemap = industries.map(i => ({
-    url: `${base}/industries/${i.slug}/`,
-    lastModified: i.lastModified ?? SITE_MODIFIED,
-    changeFrequency: 'monthly' as const,
-    priority: i.slug === 'tech-startups' ? 0.85 : 0.7,
-  }));
-
   // 12 GSC-validated location pages
   const locationPages: MetadataRoute.Sitemap = allCities.map(city => ({
     url: `${base}/location/${toSlug(city)}/`,
@@ -65,7 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...guidePages,
     ...servicePages,
-    ...industryPages,
     ...locationPages,
   ];
 }
