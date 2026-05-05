@@ -28,7 +28,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
   return (
     <section>
       <div className="masthead mb-4">
-        <span>&sect; TYPICAL FEES</span>
+        <span>TYPICAL FEES</span>
         <span className="text-ink-500">GBP</span>
       </div>
       <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight mb-3">

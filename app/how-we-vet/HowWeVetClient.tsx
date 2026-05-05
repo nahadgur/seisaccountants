@@ -80,20 +80,12 @@ export default function HowWeVetClient() {
           className="border-b border-ink-900/10"
           style={{ backgroundColor: 'var(--paper-100)' }}
         >
-          <div className="container-width pt-6 md:pt-10">
-            <div className="flex items-center justify-between pb-3 border-b border-ink-900/40 text-[10px] md:text-[11px] font-semibold tracking-[0.22em] uppercase text-ink-900">
-              <span>VETTING &nbsp;&middot;&nbsp; THE NETWORK</span>
-              <span className="text-brand-500">&#9733; FIVE STEPS</span>
-              <span className="hidden md:inline">&pound;1M+ PI</span>
-            </div>
-          </div>
-
           <div className="container-width py-12 md:py-16">
             <Breadcrumbs items={[{ label: 'How We Vet Our Accountants' }]} />
             <div className="max-w-3xl mt-6">
               <div className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase text-brand-500 mb-5">
                 <BadgeCheck className="w-3.5 h-3.5" aria-hidden="true" />
-                <span>&sect; VERIFIED ACCOUNTANT NETWORK</span>
+                <span>VERIFIED ACCOUNTANT NETWORK</span>
               </div>
               <h1 className="font-display text-[44px] md:text-[56px] lg:text-[64px] text-ink-900 leading-[0.98] tracking-tighter mb-5">
                 How we <em className="text-brand-500 italic">vet</em><br />our accountants.
@@ -112,7 +104,7 @@ export default function HowWeVetClient() {
         >
           <div className="container-width max-w-3xl">
             <div className="masthead mb-4">
-              <span>&sect; 01 &nbsp;&middot;&nbsp; WHY IT MATTERS</span>
+              <span>WHY IT MATTERS</span>
             </div>
             <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 mb-6 tracking-tight leading-tight">
               Why vetting matters <em className="text-brand-500 italic">for SEIS founders.</em>
@@ -139,7 +131,7 @@ export default function HowWeVetClient() {
           <div className="container-width">
             <div className="mb-12 max-w-3xl">
               <div className="masthead mb-4">
-                <span>&sect; 02 &nbsp;&middot;&nbsp; THE PROCESS</span>
+                <span>THE PROCESS</span>
               </div>
               <h2 className="font-display text-[30px] md:text-[38px] text-ink-900 mb-4 tracking-tight leading-tight">
                 Five steps. <em className="text-brand-500 italic">Zero shortcuts.</em>
@@ -242,7 +234,7 @@ export default function HowWeVetClient() {
                 <Shield className="w-6 h-6 text-brand-600" aria-hidden="true" />
               </div>
               <div className="flex items-center justify-center text-[10px] font-semibold tracking-[0.22em] uppercase text-ink-900 pb-3 mb-4 border-b border-ink-900/40 max-w-[200px] mx-auto">
-                <span>&sect; 03 &nbsp;&middot;&nbsp; GUARANTEE</span>
+                <span>GUARANTEE</span>
               </div>
               <h2 className="font-display text-[28px] md:text-[34px] text-ink-900 mb-4 tracking-tight leading-tight">
                 Our guarantee to <em className="text-brand-500 italic">UK startups.</em>
@@ -275,7 +267,7 @@ export default function HowWeVetClient() {
               className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: 'rgba(255, 255, 255, 0.75)' }}
             >
-              &sect; READY TO MATCH?
+              READY TO MATCH?
             </span>
             <h2
               className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"

@@ -18,7 +18,7 @@ export default function DirectAnswer({ question, answer, className = '' }: Direc
     >
       <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
       <p className="eyebrow mb-3">
-        &sect; QUICK ANSWER
+        QUICK ANSWER
       </p>
       <h2 className="font-display text-[20px] md:text-[22px] text-ink-900 mb-4 leading-snug tracking-tight">
         {question}

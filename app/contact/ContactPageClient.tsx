@@ -25,7 +25,7 @@ export default function ContactPageClient() {
         <div className="container-width py-12 md:py-16 max-w-4xl">
           <Breadcrumbs items={[{ label: 'Contact' }]} />
 
-          <span className="eyebrow mb-4 inline-block">&sect; GET IN TOUCH</span>
+          <span className="eyebrow mb-4 inline-block">GET IN TOUCH</span>
           <h1 className="font-display text-[40px] md:text-[52px] text-ink-900 leading-[0.98] tracking-tighter mb-5">
             Contact <em className="text-brand-500 italic">us.</em>
           </h1>
@@ -44,7 +44,7 @@ export default function ContactPageClient() {
                 <CheckCircle className="w-5 h-5" />
               </div>
               <div>
-                <span className="eyebrow mb-2 block">&sect; MAIN SERVICE</span>
+                <span className="eyebrow mb-2 block">MAIN SERVICE</span>
                 <h2 className="font-display text-[22px] text-ink-900 mb-3 tracking-tight leading-snug">
                   Looking to find an <em className="text-brand-500 italic">accountant?</em>
                 </h2>
@@ -65,7 +65,7 @@ export default function ContactPageClient() {
           {/* How it works */}
           <section className="mb-12">
             <div className="masthead mb-4">
-              <span>&sect; 01 &nbsp;&middot;&nbsp; THE PROCESS</span>
+              <span>THE PROCESS</span>
             </div>
             <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 mb-6 tracking-tight leading-tight">
               How the <em className="text-brand-500 italic">matching</em> works
@@ -95,7 +95,7 @@ export default function ContactPageClient() {
           {/* Other contact reasons */}
           <section className="mb-12">
             <div className="masthead mb-4">
-              <span>&sect; 02 &nbsp;&middot;&nbsp; OTHER ENQUIRIES</span>
+              <span>OTHER ENQUIRIES</span>
             </div>
             <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 mb-6 tracking-tight leading-tight">
               Other reasons to <em className="text-brand-500 italic">get in touch</em>
@@ -191,7 +191,7 @@ export default function ContactPageClient() {
             className="mb-10 p-6 rounded-sm border border-ink-900/10"
             style={{ backgroundColor: 'var(--paper-50)' }}
           >
-            <span className="eyebrow mb-3 block">&sect; ABOUT</span>
+            <span className="eyebrow mb-3 block">ABOUT</span>
             <h2 className="font-display text-[18px] text-ink-900 mb-3 tracking-tight leading-snug">
               About this service
             </h2>

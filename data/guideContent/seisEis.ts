@@ -10,13 +10,13 @@ export const seisEisContent: {
   citySectionIntro: string;
 } = {
   introduction: [
-    "SEIS and EIS are two of the most powerful fundraising tools available to UK SEIS and EIS founders, and two of the most widely misunderstood. Many founders discover them too late, structure their companies in ways that inadvertently disqualify them, or miss the advance assurance step that makes their shares genuinely investable.",
+    "SEIS and EIS are two of the most powerful fundraising tools available to UK founders, and two of the most widely misunderstood. Many founders discover them too late, structure their companies in ways that inadvertently disqualify them, or miss the advance assurance step that makes their shares genuinely investable.",
     "This guide covers every aspect of SEIS and EIS that a UK startup founder needs to understand: the eligibility criteria, the differences between the two schemes, how to obtain advance assurance, what investors actually receive, the activities that disqualify companies, and how to maintain compliance after the shares are issued. It also covers the Knowledge-Intensive Company rules that give certain deep-tech and life sciences startups access to more generous thresholds.",
   ],
   sections: [
     {
       id: "seis-vs-eis",
-      h2: "What is the difference between SEIS and EIS for UK SEIS and EIS founders?",
+      h2: "What is the difference between SEIS and EIS founders?",
       paragraphs: [
         "SEIS (Seed Enterprise Investment Scheme) and EIS (Enterprise Investment Scheme) are two related but distinct HMRC schemes designed to encourage investment in early-stage UK companies by offering significant tax reliefs to investors. They have different eligibility criteria, different investment limits, and different investor tax relief rates, but they are designed to be used sequentially, with most companies graduating from SEIS to EIS as they grow.",
         "SEIS is for the earliest-stage companies: fewer than three years old, fewer than 25 employees, gross assets below £350,000. It offers investors 50% income tax relief on investments up to £200,000 per investor per tax year, meaning an investor who puts in £20,000 can reclaim £10,000 from HMRC regardless of what happens to the company. EIS is for larger companies with higher investment requirements: up to seven years old (ten for Knowledge-Intensive Companies), fewer than 250 employees, gross assets below £15m. It offers 30% investor income tax relief on investments up to £1m per investor per year.",

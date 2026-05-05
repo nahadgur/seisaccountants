@@ -34,7 +34,7 @@ function SectionHeading({ number, label, title }: { number: string; label: strin
   return (
     <div className="mb-5">
       <div className="masthead mb-4">
-        <span>&sect; {number} &nbsp;&middot;&nbsp; {label}</span>
+        <span>{number} &nbsp;&middot;&nbsp; {label}</span>
       </div>
       <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
         {title}
@@ -60,7 +60,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
           breadcrumbs={[{ label: 'Services', href: '/services/' }, { label: service.title }]}
           eyebrow={
             <span className="eyebrow">
-              &sect; SEIS SPECIALIST ACCOUNTANTS
+              SEIS SPECIALIST ACCOUNTANTS
             </span>
           }
           title={
@@ -124,7 +124,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
                     </div>
                     <div className="flex-1">
                       <div className="masthead mb-3 !border-0 !pb-0">
-                        <span>&sect; THE FULL GUIDE &nbsp;&middot;&nbsp; {relatedGuide.estimatedReadTime} MIN READ</span>
+                        <span>THE FULL GUIDE &nbsp;&middot;&nbsp; {relatedGuide.estimatedReadTime} MIN READ</span>
                       </div>
                       <h2
                         id="related-guide-heading"
@@ -210,7 +210,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
                     <div key={i} className="bg-white border border-ink-900/10 rounded-sm p-6 relative">
                       <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
                       <div className="masthead mb-3 !border-0 !pb-0">
-                        <span>&sect; CASE {String(i + 1).padStart(2, '0')}</span>
+                        <span>CASE {String(i + 1).padStart(2, '0')}</span>
                       </div>
                       <h3 className="font-display text-[18px] md:text-[20px] text-ink-900 mb-3 tracking-tight leading-snug">
                         {ex.title}
@@ -316,7 +316,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
               <div className="sticky top-24 space-y-5">
 
                 <div className="bg-white p-6 border border-ink-900/10 rounded-sm">
-                  <span className="eyebrow mb-3 block">&sect; GET MATCHED</span>
+                  <span className="eyebrow mb-3 block">GET MATCHED</span>
                   <h3 className="font-display text-[18px] text-ink-900 mb-2 leading-tight tracking-tight">
                     Match for <em className="text-brand-500 italic">{service.title}</em>
                   </h3>
@@ -357,7 +357,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
                     className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-3"
                     style={{ color: '#AFA9EC' }}
                   >
-                    &sect; FROM &pound;99/MONTH
+                    FROM &pound;99/MONTH
                   </span>
                   <h3
                     className="font-display text-[19px] mb-3 tracking-tight leading-tight"
@@ -382,7 +382,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
                 </div>
 
                 <div className="bg-white border border-ink-900/10 p-6 rounded-sm">
-                  <span className="eyebrow mb-4 block">&sect; OTHER SERVICES</span>
+                  <span className="eyebrow mb-4 block">OTHER SERVICES</span>
                   <div className="space-y-0">
                     {relatedServices.map((s, i) => (
                       <Link
@@ -413,7 +413,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
               className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: 'rgba(255, 255, 255, 0.75)' }}
             >
-              &sect; CLOSING
+              CLOSING
             </span>
             <h2
               className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"

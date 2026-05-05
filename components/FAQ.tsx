@@ -21,7 +21,7 @@ export function FAQ({
     <section>
       {/* Masthead */}
       <div className="masthead mb-8">
-        <span>&sect; QUESTIONS</span>
+        <span>QUESTIONS</span>
       </div>
 
       <h2 className="h-display-md mb-8 max-w-xl">{title}</h2>

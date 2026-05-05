@@ -4,7 +4,7 @@
 // Client component for the /industries/ hub. Restyled 2026-05-02 to match
 // the Paper Tape visual language used across services / location / guides
 // indexes. Replaces the off-style rounded-2xl + text-gray-X + font-bold
-// version with the consistent &sect; masthead + brand-italic accent +
+// version with the consistent masthead + brand-italic accent +
 // section-padding rhythm used elsewhere on the site.
 
 import { useState } from 'react';
@@ -34,7 +34,7 @@ export default function IndustriesIndexClient() {
 
           <div className="max-w-3xl mt-8 md:mt-12">
             <div className="masthead mb-5">
-              <span>&sect; INDUSTRIES &nbsp;&middot;&nbsp; {industries.length} VERTICALS</span>
+              <span>INDUSTRIES &nbsp;&middot;&nbsp; {industries.length} VERTICALS</span>
             </div>
             <h1 className="font-display text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.02] tracking-tight text-ink-900 mb-6">
               SEIS and EIS specialist accountants <em className="text-brand-500 italic">by industry</em>.
@@ -76,7 +76,7 @@ export default function IndustriesIndexClient() {
         >
           <div className="container-width">
             <div className="masthead mb-4">
-              <span>&sect; 01 &nbsp;&middot;&nbsp; ALL INDUSTRIES</span>
+              <span>ALL INDUSTRIES</span>
             </div>
             <h2 className="font-display text-[26px] md:text-[32px] text-ink-900 leading-[1.05] tracking-tight mb-10">
               The <em className="text-brand-500 italic">verticals</em> we cover
@@ -112,7 +112,7 @@ export default function IndustriesIndexClient() {
                     </div>
                     <div className="flex flex-col flex-1 min-w-0">
                       <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-2">
-                        &sect; INDUSTRY {String(i + 1).padStart(2, '0')}
+                        INDUSTRY {String(i + 1).padStart(2, '0')}
                       </div>
                       <h3 className="font-display text-[18px] md:text-[20px] text-ink-900 group-hover:text-brand-500 leading-[1.2] tracking-tight mb-2 transition-colors">
                         {industry.title}
@@ -136,7 +136,7 @@ export default function IndustriesIndexClient() {
         <section className="section-padding border-t border-ink-900/10">
           <div className="container-width max-w-content">
             <div className="masthead mb-4">
-              <span>&sect; 02 &nbsp;&middot;&nbsp; OTHER WAYS TO BROWSE</span>
+              <span>OTHER WAYS TO BROWSE</span>
             </div>
             <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-5">
               Industry isn&apos;t the only axis. <em className="text-brand-500 italic">Browse by service or city.</em>
@@ -170,7 +170,7 @@ export default function IndustriesIndexClient() {
               className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: 'rgba(255, 255, 255, 0.75)' }}
             >
-              &sect; CLOSING
+              CLOSING
             </span>
             <h2
               className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"

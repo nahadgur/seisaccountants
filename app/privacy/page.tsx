@@ -20,7 +20,7 @@ const LAST_UPDATED = '21 April 2026';
 function SectionH2({ num, children }: { num: string; children: React.ReactNode }) {
   return (
     <div className="flex items-baseline gap-3 mb-3">
-      <span className="font-display italic text-brand-500 text-[18px] flex-shrink-0">&sect; {num}</span>
+      <span className="font-display italic text-brand-500 text-[18px] flex-shrink-0">{num}</span>
       <h2 className="font-display text-[20px] md:text-[22px] text-ink-900 tracking-tight leading-snug">
         {children}
       </h2>
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         <div className="container-width py-12 md:py-16 max-w-3xl">
           <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
 
-          <span className="eyebrow mb-4 inline-block">&sect; POLICY</span>
+          <span className="eyebrow mb-4 inline-block">POLICY</span>
           <h1 className="font-display text-[40px] md:text-[52px] text-ink-900 leading-[0.98] tracking-tighter mb-4">
             Privacy <em className="text-brand-500 italic">Policy</em>
           </h1>

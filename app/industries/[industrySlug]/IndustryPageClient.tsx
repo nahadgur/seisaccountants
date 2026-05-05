@@ -35,7 +35,7 @@ function SectionHeading({ number, label, title }: { number: string; label: strin
   return (
     <div className="mb-5">
       <div className="masthead mb-4">
-        <span>&sect; {number} &nbsp;&middot;&nbsp; {label}</span>
+        <span>{number} &nbsp;&middot;&nbsp; {label}</span>
       </div>
       <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
         {title}
@@ -66,7 +66,7 @@ export default function IndustryPageClient({
           breadcrumbs={[{ label: 'Industries', href: '/industries/' }, { label: industry.title }]}
           eyebrow={
             <span className="eyebrow">
-              &sect; SPECIALIST VERTICAL
+              SPECIALIST VERTICAL
             </span>
           }
           title={
@@ -239,7 +239,7 @@ export default function IndustryPageClient({
                   {Object.entries(LOCATIONS).map(([region, cities]) => (
                     <div key={region}>
                       <h3 className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-3">
-                        &sect; {region.toUpperCase()}
+                        {region.toUpperCase()}
                       </h3>
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                         {cities.map(city => (
@@ -269,7 +269,7 @@ export default function IndustryPageClient({
               {relatedIndustries.length > 0 && (
                 <section className="mt-10 pt-10 border-t border-ink-900/10">
                   <div className="masthead mb-4">
-                    <span>&sect; OTHER INDUSTRIES</span>
+                    <span>OTHER INDUSTRIES</span>
                   </div>
                   <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-8">
                     Different vertical? <em className="text-brand-500 italic">Browse another.</em>
@@ -304,7 +304,7 @@ export default function IndustryPageClient({
               className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: 'rgba(255, 255, 255, 0.75)' }}
             >
-              &sect; CLOSING
+              CLOSING
             </span>
             <h2
               className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"

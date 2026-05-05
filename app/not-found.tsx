@@ -19,7 +19,7 @@ export default function NotFound() {
         style={{ backgroundColor: 'var(--paper-100)' }}
       >
         <div className="container-width py-20 md:py-28 text-center max-w-2xl">
-          <span className="eyebrow mb-4 inline-block">&sect; PAGE NOT FOUND</span>
+          <span className="eyebrow mb-4 inline-block">PAGE NOT FOUND</span>
           <h1 className="font-display italic text-[96px] md:text-[140px] text-brand-500 leading-none tracking-tighter mb-4">
             404
           </h1>
@@ -35,7 +35,7 @@ export default function NotFound() {
           </div>
 
           <div className="text-left bg-white border border-ink-900/10 rounded-sm p-6">
-            <span className="eyebrow mb-4 block">&sect; POPULAR PAGES</span>
+            <span className="eyebrow mb-4 block">POPULAR PAGES</span>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
               <li><Link href="/services/" className="font-display italic text-[14px] text-brand-500 hover:text-brand-700">All services &rarr;</Link></li>
               <li><Link href="/guides/" className="font-display italic text-[14px] text-brand-500 hover:text-brand-700">Free guides &rarr;</Link></li>

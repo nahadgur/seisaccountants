@@ -83,7 +83,7 @@ function SectionHeading({ id, title }: { id: string; title: string }) {
   return (
     <div id={id} className="scroll-mt-24">
       <div className="masthead mb-4">
-        <span>&sect; {title.toUpperCase().slice(0, 30)}</span>
+        <span>{title.toUpperCase().slice(0, 30)}</span>
       </div>
       <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight mb-5">
         {title}
@@ -174,7 +174,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
               {/* Direct answer */}
               <div className="relative bg-white border border-ink-900/10 rounded-sm p-6 md:p-7 mb-10">
                 <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-                <p className="eyebrow mb-3">&sect; QUICK ANSWER</p>
+                <p className="eyebrow mb-3">QUICK ANSWER</p>
                 <h2 className="font-display text-[21px] text-ink-900 mb-4 leading-snug tracking-tight">
                   {guide.directQuestion}
                 </h2>
@@ -199,7 +199,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
               {toolEntry && (
                 <section id="calculator" className="mb-14 scroll-mt-24">
                   <div className="masthead mb-4">
-                    <span>&sect; {toolEntry.sectionEyebrow}</span>
+                    <span>{toolEntry.sectionEyebrow}</span>
                   </div>
                   <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight mb-6">
                     {toolEntry.sectionHeading}
@@ -283,7 +283,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
               {/* City spoke grid */}
               <section id="by-city" className="mb-14 scroll-mt-24">
                 <div className="masthead mb-4">
-                  <span>&sect; BY CITY</span>
+                  <span>BY CITY</span>
                 </div>
                 <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight mb-3">
                   Find a <em className="text-brand-500 italic">specialist</em> in your city
@@ -295,7 +295,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                   {Object.entries(regionGroups).map(([region, cities]) => (
                     <div key={region}>
                       <h3 className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-3">
-                        &sect; {region.toUpperCase()}
+                        {region.toUpperCase()}
                       </h3>
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                         {cities.map(city => (
@@ -323,7 +323,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                   className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-4"
                   style={{ color: 'rgba(255, 255, 255, 0.75)' }}
                 >
-                  &sect; READY?
+                  READY?
                 </span>
                 <h2
                   className="font-display text-[26px] md:text-[32px] leading-tight tracking-tight mb-4"
@@ -352,7 +352,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
             {relatedGuides.length > 0 && (
               <section className="mt-16 pt-12 border-t border-ink-900/10">
                 <div className="masthead mb-4">
-                  <span>&sect; OTHER GUIDES</span>
+                  <span>OTHER GUIDES</span>
                 </div>
                 <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-8">
                   Continue with another <em className="text-brand-500 italic">guide</em>

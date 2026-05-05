@@ -33,7 +33,7 @@ export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: 
   return (
     <section className="mb-16">
       <div className="mb-3">
-        <span className="eyebrow">&sect; NEARBY</span>
+        <span className="eyebrow">NEARBY</span>
       </div>
       <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 mb-3 tracking-tight leading-tight">
         {heading}

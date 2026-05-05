@@ -67,14 +67,6 @@ export function SlashHero({
       className="relative border-b border-ink-900/10"
       style={{ backgroundColor: 'var(--paper-100)' }}
     >
-      <div className="container-width pt-6 md:pt-10">
-        <div className="flex items-center justify-between pb-3 border-b border-ink-900/40 text-[10px] md:text-[11px] font-semibold tracking-[0.22em] uppercase text-ink-900">
-          <span>SERVICE</span>
-          <span className="text-brand-500">&#9733; MATCHING</span>
-          <span className="hidden md:inline">VOL. I</span>
-        </div>
-      </div>
-
       <div className="container-width relative z-10 pt-10 md:pt-14 pb-10 md:pb-14">
         {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
 

@@ -446,7 +446,7 @@ export default function SeisChecker() {
             <div className="flex-shrink-0 mt-1">{style.icon}</div>
             <div>
               <span className="inline-block font-mono text-[10px] font-semibold tracking-[0.22em] uppercase text-ink-900 mb-3">
-                &sect; {style.tag}
+                {style.tag}
               </span>
               <h3 className="font-display text-[22px] md:text-[24px] text-ink-900 mb-3 leading-snug tracking-tight">
                 {result.heading}
@@ -468,7 +468,7 @@ export default function SeisChecker() {
 
           <div className="bg-white rounded-sm p-5 mb-5 border border-ink-900/10 relative">
             <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-            <p className="eyebrow mb-2">&sect; NEXT STEP</p>
+            <p className="eyebrow mb-2">NEXT STEP</p>
             <p className="font-display text-[15px] text-ink-900 leading-snug tracking-tight">{result.nextStep}</p>
           </div>
 

@@ -230,7 +230,7 @@ export default function RdCalculator() {
         {isComplete && result && (
           <div className="border border-ink-900/15 rounded-sm p-6 md:p-7 bg-paper-50 relative">
             <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-            <span className="eyebrow mb-3 block">&sect; ESTIMATED CREDIT</span>
+            <span className="eyebrow mb-3 block">ESTIMATED CREDIT</span>
 
             <div className="flex items-baseline gap-2 mb-2">
               <span className="font-display italic text-brand-500 text-[44px] leading-none tracking-tight">

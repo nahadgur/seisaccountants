@@ -204,7 +204,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
               {/* Masthead */}
               <div className="mb-6 pb-4 border-b border-ink-900/15">
                 <div className="flex items-center mb-4">
-                  <span className="eyebrow">&sect; FREE MATCHING</span>
+                  <span className="eyebrow">FREE MATCHING</span>
                 </div>
                 <h2
                   id="lead-form-title"

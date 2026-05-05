@@ -274,7 +274,7 @@ export function Header({ onOpenModal }: HeaderProps) {
 
             <div className="py-4 border-b border-ink-900/10">
               <div className="text-[10px] font-semibold text-brand-500 uppercase tracking-[0.22em] mb-3">
-                &sect; Services
+                Services
               </div>
               <Link href="/services/" className="block py-1.5 font-display italic text-brand-500">
                 All services &rarr;
@@ -288,7 +288,7 @@ export function Header({ onOpenModal }: HeaderProps) {
 
             <div className="py-4 border-b border-ink-900/10">
               <div className="text-[10px] font-semibold text-brand-500 uppercase tracking-[0.22em] mb-3">
-                &sect; Industries
+                Industries
               </div>
               <Link href="/industries/" className="block py-1.5 font-display italic text-brand-500">
                 All industries &rarr;
@@ -302,7 +302,7 @@ export function Header({ onOpenModal }: HeaderProps) {
 
             <div className="py-4 border-b border-ink-900/10">
               <div className="text-[10px] font-semibold text-brand-500 uppercase tracking-[0.22em] mb-3">
-                &sect; Guides
+                Guides
               </div>
               <Link href="/guides/" className="block py-1.5 font-display italic text-brand-500">
                 All guides &rarr;

@@ -45,7 +45,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-brand-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
-              &sect; Services
+              Services
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
               {services.map(s => (
@@ -64,7 +64,7 @@ export function Footer() {
           {/* Guides */}
           <div>
             <h4 className="text-brand-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
-              &sect; Guides
+              Guides
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
               <li>
@@ -91,7 +91,7 @@ export function Footer() {
           {/* About */}
           <div>
             <h4 className="text-brand-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
-              &sect; About
+              About
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
               <li>

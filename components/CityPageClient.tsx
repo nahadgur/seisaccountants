@@ -57,7 +57,7 @@ function SectionHeading({ number, label, title }: { number: string; label: strin
   return (
     <div className="mb-5">
       <div className="masthead mb-4">
-        <span>&sect; {number} &nbsp;&middot;&nbsp; {label}</span>
+        <span>{number} &nbsp;&middot;&nbsp; {label}</span>
       </div>
       <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
         {title}
@@ -100,14 +100,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
           className="border-b border-ink-900/10"
           style={{ backgroundColor: 'var(--paper-100)' }}
         >
-          <div className="container-width pt-6 md:pt-10">
-            <div className="flex items-center justify-between pb-3 border-b border-ink-900/40 text-[10px] md:text-[11px] font-semibold tracking-[0.22em] uppercase text-ink-900">
-              <span>CITY &nbsp;&middot;&nbsp; {cityName.toUpperCase()}</span>
-              <span className="text-brand-500">&#9733; {profile.region.toUpperCase()}</span>
-              <span className="hidden md:inline">VOL. I</span>
-            </div>
-          </div>
-
           <div className="container-width py-10 md:py-14">
             <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} />
 
@@ -248,7 +240,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
                       <div key={i} className="bg-white border border-ink-900/10 rounded-sm p-6 relative">
                         <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
                         <div className="masthead mb-3 !border-0 !pb-0">
-                          <span>&sect; MATCH {String(i + 1).padStart(2, '0')}</span>
+                          <span>MATCH {String(i + 1).padStart(2, '0')}</span>
                         </div>
                         <h3 className="font-display text-[18px] md:text-[20px] text-ink-900 mb-3 tracking-tight leading-snug">
                           {ex.title}
@@ -351,7 +343,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {!isRegional && (
                 <section>
                   <div className="bg-white border border-ink-900/10 rounded-sm p-6">
-                    <span className="eyebrow mb-3 block">&sect; CONSIDERATIONS</span>
+                    <span className="eyebrow mb-3 block">CONSIDERATIONS</span>
                     <h3 className="font-display text-[17px] text-ink-900 mb-3 tracking-tight leading-snug">
                       Accounting context for <em className="text-brand-500 italic">{cityName}</em>
                     </h3>
@@ -423,7 +415,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: 'rgba(255, 255, 255, 0.75)' }}
             >
-              &sect; CLOSING
+              CLOSING
             </span>
             <h2
               className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"

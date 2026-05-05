@@ -44,7 +44,7 @@ const iconMap: Record<string, React.ReactNode> = {
 function Masthead({ number, label, note }: { number: string; label: string; note?: string }) {
   return (
     <div className="masthead mb-6">
-      <span>&sect; {number} &nbsp;&middot;&nbsp; {label}</span>
+      <span>{number} &nbsp;&middot;&nbsp; {label}</span>
       {note && <span className="text-ink-500">{note}</span>}
     </div>
   );
@@ -82,7 +82,7 @@ export default function HomeClient() {
 
               {/* Text */}
               <div className="lg:col-span-7 order-2 lg:order-1">
-                <Masthead number="01" label="THE LANDSCAPE" note="PP. 02" />
+                <Masthead number="01" label="THE LANDSCAPE" note="" />
                 <h2 className="h-display-md mb-6">
                   {problemFraming.heading}
                 </h2>
@@ -541,7 +541,7 @@ export default function HomeClient() {
               className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: 'rgba(255, 255, 255, 0.75)' }}
             >
-              &sect; CLOSING
+              CLOSING
             </span>
             <h2
               className="font-display text-[32px] md:text-[44px] leading-[1.0] tracking-tight mb-5"

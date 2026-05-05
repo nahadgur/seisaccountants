@@ -94,7 +94,7 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
     <div className="bg-white text-ink-900 rounded-sm p-6 md:p-7 border border-ink-900/10">
       <div className="mb-5 pb-4 border-b border-ink-900/10">
         <div className="flex items-center mb-3">
-          <span className="eyebrow">&sect; FREE MATCHING</span>
+          <span className="eyebrow">FREE MATCHING</span>
         </div>
         <h3 className="font-display text-[26px] md:text-[28px] leading-[1.0] tracking-tight">
           {ctaHeading || (city ? <>Get matched<br /><em className="text-brand-500 italic">in {city}</em></> : <>Get <em className="text-brand-500 italic">matched</em></>)}
