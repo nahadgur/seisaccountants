@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/location/`,       lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/guides/`,         lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/how-we-vet/`,     lastModified: SITE_MODIFIED, changeFrequency: 'yearly',  priority: 0.6 },
+    { url: `${base}/tools/seis-diagnostic/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/contact/`,        lastModified: SITE_MODIFIED, changeFrequency: 'yearly',  priority: 0.5 },
     { url: `${base}/privacy/`,        lastModified: SITE_MODIFIED, changeFrequency: 'yearly',  priority: 0.3 },
     { url: `${base}/terms/`,          lastModified: SITE_MODIFIED, changeFrequency: 'yearly',  priority: 0.3 },
