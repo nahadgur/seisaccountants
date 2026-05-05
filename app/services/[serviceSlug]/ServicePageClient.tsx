@@ -286,6 +286,33 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
 
               <PricingSection serviceId={service.id} serviceName={service.title} />
 
+              {/* SEIS Diagnostic CTA. Conversion-tuned for the inflection
+                  point where the reader has finished the service detail and
+                  is choosing between bouncing and engaging. Different intent
+                  to the sidebar matching CTA (which pushes 'I know I want
+                  help'); this one captures 'I'm not sure if I qualify yet'. */}
+              <Link
+                href="/tools/seis-diagnostic/"
+                className="group block bg-ink-900 text-white rounded-sm p-6 md:p-7 hover:bg-brand-700 transition-colors"
+              >
+                <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
+                  <div className="flex-1">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
+                      Free SEIS check
+                    </span>
+                    <p className="font-display text-[20px] md:text-[24px] text-white leading-[1.15] tracking-tight mb-2">
+                      Not sure if you qualify? <em className="text-brand-300 italic">Check first.</em>
+                    </p>
+                    <p className="font-sans text-[13.5px] text-paper-300 leading-relaxed max-w-xl">
+                      Type your company name and we run age, structure, jurisdiction, and excluded-trades tests against your Companies House record in seconds. Free, no sign-up.
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-300 whitespace-nowrap mt-2 group-hover:translate-x-1 transition-transform">
+                    Run the check <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
+                </div>
+              </Link>
+
               <div>
                 <FAQ faqs={combinedFaqs} title={`${service.title} FAQs`} />
               </div>

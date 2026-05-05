@@ -182,7 +182,7 @@ export function Header({ onOpenModal }: HeaderProps) {
             </div>
 
             <Link href="/location/" className="nav-link">Areas</Link>
-            <Link href="/tools/seis-diagnostic/" className="nav-link">Diagnostic</Link>
+            <Link href="/tools/seis-diagnostic/" className="nav-link">SEIS Check</Link>
             <Link href="/how-we-vet/" className="nav-link">Vetting</Link>
 
             {onOpenModal ? (
@@ -262,7 +262,7 @@ export function Header({ onOpenModal }: HeaderProps) {
               Areas we cover
             </Link>
             <Link href="/tools/seis-diagnostic/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
-              SEIS diagnostic
+              SEIS check
             </Link>
             <Link href="/how-we-vet/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
               How we vet

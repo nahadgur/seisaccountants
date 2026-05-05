@@ -95,6 +95,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
               <li>
+                <Link href="/tools/seis-diagnostic/" className="text-paper-100/80 hover:text-white transition-colors">
+                  SEIS eligibility check
+                </Link>
+              </li>
+              <li>
                 <Link href="/how-we-vet/" className="text-paper-100/80 hover:text-white transition-colors">
                   How we vet accountants
                 </Link>

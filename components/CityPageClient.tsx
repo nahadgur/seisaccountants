@@ -364,9 +364,35 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
 
               <NearbyAreasGrid cityName={cityName} />
 
+              {/* SEIS Diagnostic CTA — sits between local services info and
+                  the FAQ. City-page readers are typically searching for local
+                  SEIS expertise; the diagnostic is the lowest-friction first
+                  step before requesting a match. */}
+              <Link
+                href="/tools/seis-diagnostic/"
+                className="group block bg-ink-900 text-white rounded-sm p-6 hover:bg-brand-700 transition-colors"
+              >
+                <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
+                  <div className="flex-1">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
+                      Free check &middot; No sign-up
+                    </span>
+                    <p className="font-display text-[20px] md:text-[22px] text-white leading-[1.15] tracking-tight mb-2">
+                      Before you talk to a {cityName} specialist, <em className="text-brand-300 italic">check eligibility.</em>
+                    </p>
+                    <p className="font-sans text-[13px] text-paper-300 leading-relaxed max-w-xl">
+                      Type your company name. We pull your record from Companies House and run the SEIS, EIS, and knowledge-intensive qualifying tests in seconds.
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-300 whitespace-nowrap mt-2 group-hover:translate-x-1 transition-transform">
+                    Run the check <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
+                </div>
+              </Link>
+
               {/* FAQ */}
               <div>
-                <FAQ faqs={cityFaqs} title={`Startup accountants in ${cityName}: common questions`} />
+                <FAQ faqs={cityFaqs} title={`SEIS accountants in ${cityName}: common questions`} />
               </div>
 
               {/* Closer */}
