@@ -25,15 +25,7 @@ import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import RdCalculator from '@/components/tools/RdCalculator';
 import SeisChecker from '@/components/tools/SeisChecker';
-import { AuthoritativeSources } from '@/components/AuthoritativeSources';
-import type { ExternalRef } from '@/data/externalReferences';
-
-// Per-guide topic mapping. Each guide surfaces only the references it
-// actually needs, deduplicated, in source order.
-const GUIDE_REF_TOPICS: Record<string, ExternalRef['topics'][number][]> = {
-  'rd-tax-credits-uk-startups':   ['rd', 'companies-house'],
-  'seis-eis-guide-uk-startups':   ['seis', 'eis', 'kic', 'compliance', 'companies-house', 'professional'],
-};
+import { renderInlineLinks } from '@/lib/renderInlineLinks';
 
 interface CityLink { slug: string; name: string; region: string; }
 interface Props {
@@ -196,7 +188,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
               {content && (
                 <div className="mb-10 space-y-5">
                   {content.introduction.map((p, i) => (
-                    <p key={i} className="font-sans text-[15px] text-ink-700 leading-[1.75]">{p}</p>
+                    <p key={i} className="font-sans text-[15px] text-ink-700 leading-[1.75]">{renderInlineLinks(p)}</p>
                   ))}
                 </div>
               )}
@@ -249,7 +241,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                   <SectionHeading id={section.id} title={section.h2} />
 
                   {section.paragraphs.map((p, i) => (
-                    <p key={i} className="font-sans text-[15px] text-ink-700 leading-[1.75] mb-5">{p}</p>
+                    <p key={i} className="font-sans text-[15px] text-ink-700 leading-[1.75] mb-5">{renderInlineLinks(p)}</p>
                   ))}
 
                   {section.callout && (() => {
@@ -261,7 +253,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                           {section.callout.heading && (
                             <p className="font-display text-[15px] text-ink-900 mb-1 tracking-tight leading-snug">{section.callout.heading}</p>
                           )}
-                          <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed guide-callout-text">{section.callout.text}</p>
+                          <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed guide-callout-text">{renderInlineLinks(section.callout.text)}</p>
                         </div>
                       </div>
                     );
@@ -294,7 +286,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                     <div key={i} className="mt-8">
                       <h3 className="font-display text-[19px] md:text-[21px] text-ink-900 leading-snug tracking-tight mb-3">{sub.h3}</h3>
                       {sub.paragraphs.map((p, j) => (
-                        <p key={j} className="font-sans text-[15px] text-ink-700 leading-[1.75] mb-4">{p}</p>
+                        <p key={j} className="font-sans text-[15px] text-ink-700 leading-[1.75] mb-4">{renderInlineLinks(p)}</p>
                       ))}
                       {sub.callout && (() => {
                         const style = CALLOUT_STYLES[sub.callout.type];
@@ -305,7 +297,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                               {sub.callout.heading && (
                                 <p className="font-display text-[15px] text-ink-900 mb-1 tracking-tight leading-snug">{sub.callout.heading}</p>
                               )}
-                              <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed guide-callout-text">{sub.callout.text}</p>
+                              <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed guide-callout-text">{renderInlineLinks(sub.callout.text)}</p>
                             </div>
                           </div>
                         );
@@ -314,12 +306,6 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                   ))}
                 </section>
               ))}
-
-              {/* Authoritative sources — outbound links to HMRC, Companies
-                  House, and professional bodies. Real value for the reader
-                  (verify the rules); SEO value for the site (outbound .gov.uk
-                  links signal topical authority). */}
-              <AuthoritativeSources topics={GUIDE_REF_TOPICS[guide.slug] ?? ['seis', 'eis']} />
 
               {/* City spoke grid */}
               <section id="by-city" className="mb-14 scroll-mt-24">

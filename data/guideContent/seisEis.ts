@@ -10,7 +10,7 @@ export const seisEisContent: {
   citySectionIntro: string;
 } = {
   introduction: [
-    "SEIS and EIS are the central reliefs UK founders use to attract early investor capital, and the central focus of every accountant in the seisaccountants.uk specialist network. The schemes themselves are well-defined; what fails them in practice is the documentation chain — the advance assurance application, the share-class structure at issue, the SEIS1 and EIS1 compliance statements, the SEIS3 and EIS3 investor certificate distribution, and the three-year qualifying-period monitoring after the round closes.",
+    "SEIS and EIS are the central reliefs UK founders use to attract early investor capital, and the central focus of every accountant in the seisaccountants.uk specialist network. The schemes themselves are well-defined; what fails them in practice is the documentation chain — the [advance assurance application](https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance), the share-class structure at issue, the SEIS1 and EIS1 compliance statements, the SEIS3 and EIS3 investor certificate distribution, and the three-year qualifying-period monitoring after the round closes.",
     "This guide is the structural reference for founders running through that chain. It covers eligibility for SEIS, EIS, and knowledge-intensive EIS; the documentation HMRC's Venture Capital Reliefs team expects at each stage; the share class and cap table requirements; and the qualifying-period tests that protect investor relief from clawback. Where you would benefit from a specialist running the actual filings, the matching service surfaces accountants whose live caseload is dominated by SEIS work.",
   ],
   sections: [

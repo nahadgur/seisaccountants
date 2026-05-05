@@ -38,7 +38,7 @@ export const rdTaxCreditsContent: {
   citySectionIntro: string;
 } = {
   introduction: [
-    "For most SEIS-backed and EIS-backed UK companies, R&D tax credits are the single largest non-equity cash inflow in the first three years of operation. SEIS and EIS bring investor capital onto the balance sheet at favourable investor economics; the R&D credit returns a meaningful percentage of the underlying R&D spend back to the company itself. Stack the two correctly and a £200,000 SEIS round funding £150,000 of qualifying R&D produces an additional £30,000-£40,500 in HMRC cash on top of the original investor capital.",
+    "For most SEIS-backed and EIS-backed UK companies, R&D tax credits are the single largest non-equity cash inflow in the first three years of operation. SEIS and EIS bring investor capital onto the balance sheet at favourable investor economics; the [R&D credit under the merged scheme](https://www.gov.uk/guidance/corporation-tax-research-and-development-rd-relief) returns a meaningful percentage of the underlying R&D spend back to the company itself. Stack the two correctly and a £200,000 SEIS round funding £150,000 of qualifying R&D produces an additional £30,000-£40,500 in HMRC cash on top of the original investor capital.",
     "This guide covers how R&D credits work specifically for companies inside the SEIS / EIS ecosystem: the SEIS + R&D interaction (which does not affect SEIS qualification but does affect cash-flow modelling), the merged scheme rules under HMRC's post-April-2024 regime, what qualifies, how to size and prepare a claim that survives HMRC enquiry, and how to find a specialist accountant whose live caseload covers both SEIS work and R&D filings.",
   ],
   sections: [
@@ -170,7 +170,7 @@ export const rdTaxCreditsContent: {
       callout: {
         type: 'warning',
         heading: 'Prior notification requirement (new from April 2023)',
-        text: 'Companies claiming R&D tax credits for the first time, or claiming for a new project type they have not claimed before, must submit an Advance Notification to HMRC within six months of the end of the accounting period in which the qualifying expenditure was incurred. Missing this deadline means you cannot claim for that period. If this is your first R&D claim, notify HMRC before you file your Corporation Tax return.',
+        text: "Companies claiming R&D tax credits for the first time, or claiming for a new project type they have not claimed before, must submit an [Advance Notification to HMRC](https://www.gov.uk/guidance/tell-hmrc-that-youre-planning-to-claim-research-and-development-rd-tax-relief) within six months of the end of the accounting period in which the qualifying expenditure was incurred. Missing this deadline means you cannot claim for that period. If this is your first R&D claim, notify HMRC before you file your Corporation Tax return.",
       },
     },
     {
