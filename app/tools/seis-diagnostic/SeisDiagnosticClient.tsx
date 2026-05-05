@@ -355,14 +355,18 @@ function DiagnosticResult({
       </div>
 
       {/* Scheme verdict pills */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
         <SchemePill label="SEIS" verdict={data.schemes.seis} />
         <SchemePill label="EIS"  verdict={data.schemes.eis} />
         <SchemePill label="KIC"  verdict={data.schemes.kic} />
       </div>
 
+      {/* Inline CTA - verdict-aware copy. Sits right under the pills so the
+          read can act before they scroll into the per-check breakdown. */}
+      <PrimaryCta verdicts={data.schemes} onOpenModal={onOpenModal} />
+
       {/* Checks */}
-      <h3 className="font-display text-[18px] text-ink-900 mb-4">What we could check from Companies House</h3>
+      <h3 className="font-display text-[18px] text-ink-900 mb-4 mt-10">What we could check from Companies House</h3>
       <ul className="space-y-3 mb-8">
         {data.checks.map(c => (
           <li key={c.id} className="flex items-start gap-3 bg-white border border-ink-900/10 rounded-sm p-4">
@@ -444,6 +448,67 @@ function SchemePill({
     <div className={`border rounded-sm p-4 ${SCHEME_PILL[verdict]}`}>
       <p className="font-display text-[20px] tracking-tight">{label}</p>
       <p className="font-sans text-[13px] mt-0.5">{SCHEME_LABEL[verdict]}</p>
+    </div>
+  );
+}
+
+/**
+ * Inline CTA that adapts its tone to the diagnostic verdict.
+ * - All eligible       -> "make it real" — push toward execution
+ * - Any borderline     -> "confirm the grey" — push toward expert review
+ * - All / any ineligible -> "second opinion" — honest framing about restructuring options
+ */
+function PrimaryCta({
+  verdicts,
+  onOpenModal,
+}: {
+  verdicts: DiagnosticPayload['schemes'];
+  onOpenModal: () => void;
+}) {
+  const arr = [verdicts.seis, verdicts.eis, verdicts.kic];
+  const hasFail = arr.includes('ineligible');
+  const hasWarn = arr.includes('borderline');
+  const allOk  = arr.every(v => v === 'eligible');
+
+  let headline: string;
+  let body: string;
+  let buttonLabel: string;
+
+  if (allOk) {
+    headline = 'Looks clean. Make it real.';
+    body = "Public-data tests pass. The next step is the actual paperwork — advance assurance, share issue documents, SEIS1 filing, and SEIS3 distribution. A specialist runs that whole pack so investors see a clean process.";
+    buttonLabel = 'Get matched with a specialist';
+  } else if (hasFail && !allOk) {
+    headline = "Don't write SEIS off yet.";
+    body = "Most 'ineligible' verdicts from public data have options around them — a younger trading subsidiary, an IP carve-out into a fresh vehicle, or a knowledge-intensive route. A specialist can model whether any of those open scheme access for your situation.";
+    buttonLabel = 'Get a specialist second opinion';
+  } else if (hasWarn) {
+    headline = 'Confirm the borderline tests.';
+    body = "The amber-flagged tests above can swing either way depending on facts public data can't see (gross assets, employees, use of funds). A specialist confirms whether you qualify and drafts the application narrative HMRC needs to see.";
+    buttonLabel = 'Talk to a specialist';
+  } else {
+    headline = 'Want help with the paperwork?';
+    body = 'Specialist accountants in our network handle the full SEIS and EIS lifecycle — advance assurance through SEIS1 compliance through three-year monitoring.';
+    buttonLabel = 'Get matched';
+  }
+
+  return (
+    <div className="bg-white border border-ink-900/10 rounded-sm p-5 md:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-2">
+      <div className="flex-1">
+        <p className="font-display text-[18px] md:text-[20px] text-ink-900 leading-snug mb-1.5">
+          {headline}
+        </p>
+        <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed max-w-2xl">
+          {body}
+        </p>
+      </div>
+      <button
+        onClick={onOpenModal}
+        type="button"
+        className="btn-primary whitespace-nowrap self-start sm:self-center"
+      >
+        {buttonLabel} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+      </button>
     </div>
   );
 }
