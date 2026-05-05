@@ -92,8 +92,21 @@ const SCHEME_LABEL: Record<DiagnosticPayload['schemes']['seis'], string> = {
   ineligible: 'Likely ineligible',
 };
 
+// Companies House numbers are 8 chars: either 8 digits (England/Wales) or
+// 2 letters + 6 digits (Scotland "SC", NI "NI", LLP "OC", etc.).
+// Founders often quote them without leading zeros, so we accept 1-8 digits
+// here and pad when querying.
 function looksLikeNumber(s: string): boolean {
-  return /^[A-Z]{0,2}\d{6,8}$/i.test(s.trim());
+  return /^[A-Z]{2}\d{6}$/i.test(s.trim()) || /^\d{1,8}$/.test(s.trim());
+}
+
+function normaliseNumber(s: string): string {
+  const t = s.trim().toUpperCase();
+  // 2-letter prefix + 6 digits — already canonical
+  if (/^[A-Z]{2}\d{6}$/.test(t)) return t;
+  // All digits — left-pad to 8
+  if (/^\d{1,8}$/.test(t)) return t.padStart(8, '0');
+  return t;
 }
 
 export default function SeisDiagnosticClient() {
@@ -102,18 +115,37 @@ export default function SeisDiagnosticClient() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
 
+  // Helper: read a fetch response defensively. Returns { ok, status, json,
+  // rawText } so the caller can give the user a useful message instead of
+  // a generic "Network error" when the server crashes / returns HTML.
+  async function readResponse(url: string) {
+    const res = await fetch(url);
+    const text = await res.text();
+    let json: { error?: string; items?: SearchHit[]; diagnostic?: DiagnosticPayload } = {};
+    try { json = JSON.parse(text); } catch { /* leave json empty */ }
+    return { res, text, json };
+  }
+
   async function runDiagnosticByNumber(number: string) {
     setView({ kind: 'diagnosing' });
     try {
-      const res = await fetch(`/api/companies-house/company/${encodeURIComponent(number)}`);
-      const json = await res.json();
+      const { res, text, json } = await readResponse(`/api/companies-house/company/${encodeURIComponent(number)}`);
       if (!res.ok) {
-        setView({ kind: 'error', message: json.error || `Lookup failed (HTTP ${res.status}).` });
+        const msg = json.error || `Lookup failed (HTTP ${res.status}).`;
+        const tail = !json.error ? ` See /api/companies-house/health for details.` : '';
+        setView({ kind: 'error', message: msg + tail });
+        return;
+      }
+      if (!json.diagnostic) {
+        console.error('[seis-diagnostic] unexpected response:', text.slice(0, 500));
+        setView({ kind: 'error', message: 'Server returned an unexpected response. Check the dev-server console.' });
         return;
       }
       setView({ kind: 'result', data: json.diagnostic });
-    } catch {
-      setView({ kind: 'error', message: 'Network error — please try again.' });
+    } catch (err) {
+      console.error('[seis-diagnostic] fetch failed:', err);
+      const detail = err instanceof Error ? err.message : 'unknown';
+      setView({ kind: 'error', message: `Could not reach the API (${detail}). Open /api/companies-house/health to diagnose.` });
     }
   }
 
@@ -123,16 +155,17 @@ export default function SeisDiagnosticClient() {
     if (!q) return;
 
     if (looksLikeNumber(q)) {
-      await runDiagnosticByNumber(q.toUpperCase());
+      await runDiagnosticByNumber(normaliseNumber(q));
       return;
     }
 
     setView({ kind: 'searching' });
     try {
-      const res = await fetch(`/api/companies-house/search?q=${encodeURIComponent(q)}`);
-      const json = await res.json();
+      const { res, json } = await readResponse(`/api/companies-house/search?q=${encodeURIComponent(q)}`);
       if (!res.ok) {
-        setView({ kind: 'error', message: json.error || `Search failed (HTTP ${res.status}).` });
+        const msg = json.error || `Search failed (HTTP ${res.status}).`;
+        const tail = !json.error ? ` See /api/companies-house/health for details.` : '';
+        setView({ kind: 'error', message: msg + tail });
         return;
       }
       const hits: SearchHit[] = json.items || [];
@@ -141,8 +174,10 @@ export default function SeisDiagnosticClient() {
         return;
       }
       setView({ kind: 'matches', hits });
-    } catch {
-      setView({ kind: 'error', message: 'Network error — please try again.' });
+    } catch (err) {
+      console.error('[seis-diagnostic] fetch failed:', err);
+      const detail = err instanceof Error ? err.message : 'unknown';
+      setView({ kind: 'error', message: `Could not reach the API (${detail}). Open /api/companies-house/health to diagnose.` });
     }
   }
 
