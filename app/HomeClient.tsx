@@ -86,79 +86,67 @@ export default function HomeClient() {
                 </button>
               </div>
 
-              {/* Polaroid collage */}
-              <div className="lg:col-span-5 order-1 lg:order-2 relative min-h-[360px] md:min-h-[440px]">
+              {/* Editorial card stack — matches the hero's tear-sheet
+                  aesthetic. Photo card + dark stat card, both tilted with
+                  restrained tape strips. Hidden on mobile (text column
+                  only); visible from md up. */}
+              <div className="hidden lg:block lg:col-span-5 order-1 lg:order-2 relative min-h-[460px]">
 
-                {/* Back polaroid - top, tilted right */}
+                {/* Photo card — back-left, slight left tilt */}
                 <div
-                  className="absolute top-0 right-0 w-[62%]"
-                  style={{ transform: 'rotate(3deg)' }}
+                  className="absolute top-[4%] left-[2%] w-[68%] z-20 bg-white border border-ink-900/8 p-3 pb-3 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)]"
+                  style={{ transform: 'rotate(-3deg)' }}
                 >
                   <span
-                    className="tape tape-sm"
-                    style={{ top: '-9px', left: '30%', transform: 'rotate(4deg)' }}
+                    className="absolute -top-[7px] left-[36%] w-[46px] h-[14px] bg-accent-200/60 z-10"
+                    style={{ transform: 'rotate(-3deg)' }}
                     aria-hidden="true"
                   />
-                  <div className="bg-white p-2 pb-7 border border-ink-900/8 shadow-sm">
-                    <div className="relative aspect-[4/3] overflow-hidden bg-paper-300">
-                      <Image
-                        src={problemFraming.images[0].src}
-                        alt={problemFraming.images[0].alt}
-                        fill
-                        sizes="(min-width: 1024px) 26vw, (min-width: 640px) 40vw, 62vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <span className="polaroid-caption">THE FLOOR</span>
+                  <div className="relative aspect-[4/5] overflow-hidden bg-paper-300">
+                    <Image
+                      src={problemFraming.images[0].src}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 30vw, 60vw"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
 
-                {/* Front polaroid - left, tilted left */}
+                {/* Dark stat card — top-right, opposite tilt */}
                 <div
-                  className="absolute top-24 left-0 w-[54%]"
-                  style={{ transform: 'rotate(-4deg)' }}
-                >
-                  <span
-                    className="tape tape-sm"
-                    style={{ top: '-9px', right: '22%', transform: 'rotate(-5deg)' }}
-                    aria-hidden="true"
-                  />
-                  <div className="bg-white p-2 pb-7 border border-ink-900/8 shadow-sm">
-                    <div className="relative aspect-[4/3] overflow-hidden bg-paper-300">
-                      <Image
-                        src={problemFraming.images[1].src}
-                        alt={problemFraming.images[1].alt}
-                        fill
-                        sizes="(min-width: 1024px) 23vw, (min-width: 640px) 35vw, 54vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <span className="polaroid-caption">THE DETAIL</span>
-                  </div>
-                </div>
-
-                {/* Small accent polaroid - bottom right */}
-                <div
-                  className="absolute bottom-0 right-6 w-[40%]"
+                  className="absolute top-0 right-0 w-[44%] z-30 bg-ink-900 text-white p-5 lg:p-6 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)]"
                   style={{ transform: 'rotate(4deg)' }}
                 >
                   <span
-                    className="tape tape-sm"
-                    style={{ top: '-8px', left: '30%', transform: 'rotate(3deg)' }}
+                    className="absolute -top-[6px] right-[18%] w-[42px] h-[13px] bg-brand-300/45 z-10"
+                    style={{ transform: 'rotate(3deg)' }}
                     aria-hidden="true"
                   />
-                  <div className="bg-white p-2 pb-6 border border-ink-900/8 shadow-sm">
-                    <div className="relative aspect-square overflow-hidden bg-paper-300">
-                      <Image
-                        src={problemFraming.images[2].src}
-                        alt={problemFraming.images[2].alt}
-                        fill
-                        sizes="(min-width: 1024px) 17vw, (min-width: 640px) 26vw, 40vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <span className="polaroid-caption">THE BRIEF</span>
-                  </div>
+                  <p className="font-display text-[42px] lg:text-[48px] leading-none mb-2 tracking-[-0.02em]">
+                    <em className="not-italic md:italic text-brand-300 font-normal">3 yrs</em>
+                  </p>
+                  <p className="font-sans text-[12px] text-paper-300 leading-[1.55]">
+                    is the SEIS qualifying-period clock. Most clawback events happen because no one is monitoring it after the round closes.
+                  </p>
+                </div>
+
+                {/* Footer eyebrow card — bottom-right, slight left tilt */}
+                <div
+                  className="absolute bottom-[2%] right-[4%] w-[44%] z-10 bg-white border border-ink-900/8 p-5 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)]"
+                  style={{ transform: 'rotate(-2deg)' }}
+                >
+                  <span
+                    className="absolute -top-[5px] left-[14%] w-[38px] h-[12px] bg-accent-200/50 z-10"
+                    style={{ transform: 'rotate(-2deg)' }}
+                    aria-hidden="true"
+                  />
+                  <p className="font-display text-[15px] text-ink-900 leading-snug mb-1.5">
+                    <em className="text-brand-500 italic">Specialist</em> caseload, not generalist.
+                  </p>
+                  <p className="font-sans text-[12.5px] text-ink-500 leading-relaxed">
+                    Network practices file SEIS work weekly, not yearly.
+                  </p>
                 </div>
               </div>
             </div>
