@@ -185,12 +185,38 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
 
               {/* Introduction */}
               {content && (
-                <div className="mb-12 space-y-5">
+                <div className="mb-10 space-y-5">
                   {content.introduction.map((p, i) => (
                     <p key={i} className="font-sans text-[15px] text-ink-700 leading-[1.75]">{p}</p>
                   ))}
                 </div>
               )}
+
+              {/* SEIS Diagnostic feature card. Surfaces the Companies House
+                  diagnostic to guide readers — most actionable thing on the
+                  page and a stronger conversion signal than the inline
+                  calculators. */}
+              <Link
+                href="/tools/seis-diagnostic/"
+                className="group block mb-12 bg-ink-900 text-white rounded-sm p-6 hover:bg-brand-700 transition-colors"
+              >
+                <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
+                  <div className="flex-1">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
+                      Companies House diagnostic &middot; Free
+                    </span>
+                    <h3 className="font-display text-[20px] md:text-[24px] text-white leading-[1.15] tracking-tight mb-2">
+                      Run your own company through the SEIS rules. <em className="text-brand-300 italic">Now.</em>
+                    </h3>
+                    <p className="font-sans text-[13.5px] text-paper-300 leading-relaxed max-w-xl">
+                      Type your company name, we pull the record from Companies House, and we run age, structure, jurisdiction, and excluded-trades tests automatically. Saves you reading another 10 paragraphs to figure out if you qualify.
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-300 whitespace-nowrap mt-2 group-hover:translate-x-1 transition-transform">
+                    Open the diagnostic <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
+                </div>
+              </Link>
 
               {/* Tool (registry-driven). The tool result itself is the
                   conversion moment; each tool component carries its own

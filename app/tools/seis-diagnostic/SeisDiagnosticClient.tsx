@@ -109,7 +109,14 @@ function normaliseNumber(s: string): string {
   return t;
 }
 
-export default function SeisDiagnosticClient() {
+interface SeisDiagnosticClientProps {
+  /** SEO/UX FAQ pairs rendered below the tool. Source of truth lives in
+   *  the parent server component so the FAQPage JSON-LD and the visible
+   *  copy stay in lockstep. */
+  faqs?: { q: string; a: string }[];
+}
+
+export default function SeisDiagnosticClient({ faqs = [] }: SeisDiagnosticClientProps) {
   const [query, setQuery] = useState('');
   const [view, setView] = useState<ViewState>({ kind: 'idle' });
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -263,6 +270,11 @@ export default function SeisDiagnosticClient() {
             <ExplainerCards />
           )}
         </section>
+
+        {/* SEO content: long-form intro + FAQ. Sits below the tool so the
+            tool stays the primary action; the content satisfies Google
+            and AI Overviews looking for substance behind the calculator. */}
+        <SeoContent faqs={faqs} />
 
         <Footer />
       </main>
@@ -536,5 +548,140 @@ function ExplainerCards() {
         </div>
       ))}
     </div>
+  );
+}
+
+/* =====================================================================
+   SEO content rendered below the tool. Long-form intro + FAQ.
+   Source of truth for the FAQ pairs is the parent server component
+   (mirrors the FAQPage JSON-LD).
+   ===================================================================== */
+
+function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
+  return (
+    <section
+      className="border-t border-ink-900/10"
+      style={{ backgroundColor: 'var(--paper-50)' }}
+    >
+      <div className="container-width py-14 md:py-20">
+
+        <div className="max-w-3xl">
+          <h2 className="font-display text-[28px] md:text-[34px] text-ink-900 leading-[1.1] tracking-tight mb-6">
+            How the <em className="text-brand-500 italic">SEIS eligibility check</em> works
+          </h2>
+
+          <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.75]">
+            <p>
+              Most UK founders raising under the Seed Enterprise Investment Scheme (SEIS)
+              or the Enterprise Investment Scheme (EIS) want to know one thing first: <em className="italic text-ink-900">does my company actually qualify?</em> The legislation
+              is precise but the qualifying tests are spread across several Companies House
+              fields, HMRC&apos;s excluded-trades guidance (s192 ITA 2007), and a set of
+              accountant-only checks on assets, employees, and use of funds.
+            </p>
+            <p>
+              This tool runs the structural tests that can be answered from public data
+              automatically. Type your company name, we pull your Companies House record
+              over the official Public Data API, and the diagnostic returns a verdict per
+              scheme:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 marker:text-brand-500">
+              <li>
+                <strong>SEIS</strong> — the company must be UK-incorporated, active,
+                under 3 years past the start of its qualifying trade, with gross assets
+                under £350,000 and fewer than 25 full-time-equivalent employees, and
+                carrying on a qualifying trade. SEIS investors get 50% income tax
+                relief on subscriptions up to £200,000 per tax year.
+              </li>
+              <li>
+                <strong>EIS</strong> — extends past the SEIS lifetime cap. Up to £5
+                million per year and £12 million over the company&apos;s lifetime,
+                available throughout the first 7 years of commercial sale, with 30%
+                investor relief and a £15 million gross-asset limit.
+              </li>
+              <li>
+                <strong>KIC</strong> (knowledge-intensive company) — an enhanced EIS
+                variant for R&amp;D-heavy companies. Doubles the EIS caps to £10 million
+                annual / £20 million lifetime, raises the employee limit to 500, and
+                stretches the commercial-sale window to 10 years.
+              </li>
+            </ul>
+            <p>
+              The verdict is conservative on purpose. Where Companies House data alone
+              cannot decide a test (the company is borderline on age, the SIC code is
+              ambiguous, the structure is unusual), the diagnostic flags the test as
+              amber rather than guessing. The harder qualifying conditions — gross
+              assets at the moment of share issue, FTE headcount, the use-of-funds
+              plan, the control test, and the risk-to-capital condition for EIS — are
+              listed separately as &ldquo;what your accountant still needs to confirm&rdquo;.
+            </p>
+            <p>
+              An ineligible verdict is not always final. Companies that have outgrown
+              the SEIS or EIS age window can sometimes still raise scheme-relieved
+              capital through a younger trading subsidiary, an IP carve-out into a
+              fresh vehicle, or by claiming knowledge-intensive status to extend the
+              EIS window. A specialist can model whether the structural cost of any
+              of those is worth the relief unlocked.
+            </p>
+          </div>
+        </div>
+
+        {faqs.length > 0 && (
+          <div className="max-w-3xl mt-14">
+            <h2 className="font-display text-[28px] md:text-[34px] text-ink-900 leading-[1.1] tracking-tight mb-8">
+              Frequently <em className="text-brand-500 italic">asked</em>
+            </h2>
+            <div className="space-y-3">
+              {faqs.map(({ q, a }) => (
+                <details
+                  key={q}
+                  className="group bg-white border border-ink-900/10 rounded-sm"
+                >
+                  <summary className="cursor-pointer p-5 flex items-baseline justify-between gap-4 list-none">
+                    <span className="font-display text-[16px] md:text-[17px] text-ink-900 leading-snug flex-1">{q}</span>
+                    <span aria-hidden="true" className="text-brand-500 text-[20px] leading-none transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <div className="px-5 pb-5 font-sans text-[14px] text-ink-700 leading-[1.7]">
+                    {a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Cross-links to canonical guides. Internal-link equity into
+            the long-form pillars; helps the diagnostic page rank and
+            sends the diagnostic visitor toward deeper reading. */}
+        <div className="max-w-3xl mt-14">
+          <h2 className="font-display text-[22px] md:text-[26px] text-ink-900 leading-[1.1] tracking-tight mb-5">
+            Read more
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link
+              href="/guides/seis-eis-guide-uk-startups/"
+              className="group block bg-white border border-ink-900/10 rounded-sm p-4 hover:border-brand-500 transition-colors"
+            >
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-1.5">
+                Guide
+              </p>
+              <p className="font-display text-[15px] text-ink-900 group-hover:text-brand-500 leading-snug transition-colors">
+                The Complete Guide to SEIS and EIS for UK Founders
+              </p>
+            </Link>
+            <Link
+              href="/services/seis-advance-assurance/"
+              className="group block bg-white border border-ink-900/10 rounded-sm p-4 hover:border-brand-500 transition-colors"
+            >
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-1.5">
+                Service
+              </p>
+              <p className="font-display text-[15px] text-ink-900 group-hover:text-brand-500 leading-snug transition-colors">
+                SEIS Advance Assurance specialists, end-to-end
+              </p>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

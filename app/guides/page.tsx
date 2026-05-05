@@ -102,6 +102,32 @@ export default function GuidesIndexPage() {
               Skip to the guide that matches your decision.
             </p>
           </div>
+
+          {/* Feature card: SEIS Diagnostic. Sits above the guide grid so
+              the most actionable surface is the first thing readers see. */}
+          <Link
+            href="/tools/seis-diagnostic/"
+            className="group block mt-10 bg-ink-900 text-white rounded-sm p-6 md:p-7 hover:bg-brand-700 transition-colors"
+          >
+            <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
+              <div className="flex-1">
+                <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
+                  <Calculator className="w-3 h-3" aria-hidden="true" /> Free tool
+                </span>
+                <h2 className="font-display text-[24px] md:text-[28px] text-white leading-[1.1] tracking-tight mb-2">
+                  Is your company SEIS-eligible? <em className="text-brand-300 italic">Check it now.</em>
+                </h2>
+                <p className="font-sans text-[14px] text-paper-300 leading-relaxed max-w-xl">
+                  Type your UK company name. We pull your record from Companies House
+                  and run it through the SEIS, EIS, and knowledge-intensive qualifying
+                  tests we can verify from public data. Takes 5 seconds.
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-2 font-display italic text-[15px] text-brand-300 whitespace-nowrap mt-3 md:mt-2 group-hover:translate-x-1 transition-transform">
+                Run the check <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </span>
+            </div>
+          </Link>
         </section>
 
         {/* GUIDE GRID */}
