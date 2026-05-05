@@ -66,7 +66,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
           title={
             <>
               {service.title}<br />
-              for <em className="text-accent-600 italic">SEIS founders</em>
+              for <em className="text-brand-500 italic">SEIS founders</em>
             </>
           }
           subtitle={service.description}

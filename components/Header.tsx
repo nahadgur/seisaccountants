@@ -85,7 +85,7 @@ export function Header({ onOpenModal }: HeaderProps) {
               aria-hidden="true"
             />
             <span className="font-display text-[17px] md:text-[19px] leading-none tracking-tight text-ink-900">
-              seis<em className="text-accent-600 not-italic md:italic">accountants</em>
+              seis<em className="text-brand-500 not-italic md:italic">accountants</em>
             </span>
           </Link>
 
@@ -217,7 +217,7 @@ export function Header({ onOpenModal }: HeaderProps) {
                     >
                       {guide.shortTitle}
                       {guide.hasCalculator && (
-                        <span className="ml-2 text-[10px] text-accent-600 font-semibold tracking-widest uppercase">+ tool</span>
+                        <span className="ml-2 text-[10px] text-brand-500 font-semibold tracking-widest uppercase">+ tool</span>
                       )}
                     </Link>
                   ))}

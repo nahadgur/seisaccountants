@@ -50,7 +50,7 @@ export default async function Image() {
             textTransform: 'uppercase',
           }}
         >
-          <span style={{ color: '#0E5E62' }}>SEIS Accountants</span>
+          <span style={{ color: '#6B1F2E' }}>SEIS Accountants</span>
         </div>
 
         {/* Main masthead headline, bottom-anchored */}
@@ -67,7 +67,7 @@ export default async function Image() {
               letterSpacing: '4.5px',
               fontWeight: 600,
               textTransform: 'uppercase',
-              color: '#0E5E62',
+              color: '#6B1F2E',
               marginBottom: '24px',
             }}
           >
@@ -88,7 +88,7 @@ export default async function Image() {
             }}
           >
             <span>SEIS Accountants</span>
-            <span style={{ fontStyle: 'italic', color: '#C9821B' }}>UK.</span>
+            <span style={{ fontStyle: 'italic', color: '#6B1F2E' }}>UK.</span>
           </div>
 
           <div

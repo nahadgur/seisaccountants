@@ -70,12 +70,12 @@ const TOOL_REGISTRY: Record<
   'rd-tax-credits-uk-startups': {
     Component: RdCalculator,
     sectionEyebrow: 'CALCULATOR',
-    sectionHeading: <>How much could your company <em className="text-accent-600 italic">claim?</em></>,
+    sectionHeading: <>How much could your company <em className="text-brand-500 italic">claim?</em></>,
   },
   'seis-eis-guide-uk-startups': {
     Component: SeisChecker,
     sectionEyebrow: 'CHECKER',
-    sectionHeading: <>Does your company <em className="text-accent-600 italic">qualify?</em></>,
+    sectionHeading: <>Does your company <em className="text-brand-500 italic">qualify?</em></>,
   },
 };
 

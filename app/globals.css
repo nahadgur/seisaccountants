@@ -14,9 +14,10 @@
   --ink-700:   #3A372D;
   --ink-500:   #6B6759;
   --ink-300:   #9A9588;
-  --brand-500: #0E5E62;
-  --brand-600: #0B4E51;
-  --brand-50:  #EEF6F6;
+  --brand-500: #6B1F2E;
+  --brand-600: #571827;
+  --brand-50:  #FAEEEE;
+  --brand-300: #D4A8B0;
   --accent-500: #C9821B;
   --accent-600: #A66913;
   --accent-50:  #FCF6EC;
@@ -31,10 +32,10 @@
     @apply font-display font-normal tracking-tight;
     color: var(--ink-900);
   }
-  /* Italic display type carries the amber accent by default for emphasis
-     in editorial headlines. Pair with <em> tags inside headings. */
+  /* Italic display type carries the oxblood brand accent by default for
+     emphasis in editorial headlines. Pair with <em> tags inside headings. */
   h1 em, h2 em, h3 em {
-    @apply text-accent-600;
+    @apply text-brand-500;
     font-style: italic;
   }
   p { line-height: 1.65; }
@@ -137,10 +138,11 @@
   .polaroid-tilt-slight-left  { transform: rotate(-1.5deg); }
   .polaroid-tilt-slight-right { transform: rotate(1.5deg);  }
 
-  /* AMBER TAPE - the signature element. Use absolute positioning and
-     wrap over the top edge of a polaroid or card. Tilt via rotate() */
+  /* TAPE - decorative editorial paper-tape strip. Absolute-positioned over
+     the top edge of a card or polaroid; tilt via rotate(). Restrained
+     amber/cream tone so it reads as a paper artifact, not brand decoration. */
   .tape {
-    @apply absolute bg-accent-500/90 z-10;
+    @apply absolute bg-accent-500/60 z-10;
     width: 72px;
     height: 22px;
   }
@@ -156,7 +158,7 @@
 
   /* STATS */
   .stat-num {
-    @apply font-display font-normal italic text-accent-600 text-4xl leading-none;
+    @apply font-display font-normal italic text-brand-500 text-4xl leading-none;
   }
   .stat-label {
     @apply font-sans text-[10px] font-medium text-ink-500 tracking-[0.18em]

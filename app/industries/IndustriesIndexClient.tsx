@@ -37,7 +37,7 @@ export default function IndustriesIndexClient() {
               <span>&sect; INDUSTRIES &nbsp;&middot;&nbsp; {industries.length} VERTICALS</span>
             </div>
             <h1 className="font-display text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.02] tracking-tight text-ink-900 mb-6">
-              SEIS and EIS specialist accountants <em className="text-accent-600 italic">by industry</em>.
+              SEIS and EIS specialist accountants <em className="text-brand-500 italic">by industry</em>.
             </h1>
             <p className="font-sans text-[16px] md:text-[17px] text-ink-700 leading-[1.7] mb-6">
               SEIS and EIS qualifying conditions are uniform, but how they apply to

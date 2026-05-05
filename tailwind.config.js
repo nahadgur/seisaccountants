@@ -1,6 +1,8 @@
 // tailwind.config.js
-// SEIS Accountants design system - deep teal primary, bone-paper background,
-// amber accent for highlights and CTAs. Editorial serif display, modern sans body.
+// SEIS Accountants design system - oxblood primary (#6B1F2E) for buttons,
+// links, headings, and italic emphasis. Bone-paper background. Amber kept
+// as a secondary/decorative accent for tape strips and editorial flourishes.
+// Editorial serif display, modern sans body.
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -10,20 +12,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Brand (deep teal) - primary accent for buttons, links, headings,
-        // tape strips, italic emphasis. #0E5E62 anchors the palette: cool,
-        // institutional, money-coded without being corporate-blue.
+        // Brand (oxblood) - primary for buttons, links, headings, italic
+        // emphasis. #6B1F2E anchors the palette: warm, editorial, private-
+        // bank, distinctly UK-mag rather than corporate-blue.
         brand: {
-          50:  '#EEF6F6',
-          100: '#D7EAEB',
-          200: '#A8D0D2',
-          300: '#6FAFB2',
-          400: '#3D8A8E',
-          500: '#0E5E62',  // primary
-          600: '#0B4E51',
-          700: '#08393C',
-          800: '#052A2C',
-          900: '#021718',
+          50:  '#FAEEEE',
+          100: '#F4D9DC',
+          200: '#E9B0B7',
+          300: '#D4A8B0',  // dusty pink, used on dark surfaces and tape
+          400: '#A1404F',
+          500: '#6B1F2E',  // primary
+          600: '#571827',
+          700: '#421120',
+          800: '#2D0A16',
+          900: '#18050B',
         },
         // Paper (bone) - warm off-white backgrounds. paper-50 near-white,
         // paper-100 the hero tone, paper-200 inset, paper-300+ for dividers.

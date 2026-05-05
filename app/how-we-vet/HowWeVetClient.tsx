@@ -115,7 +115,7 @@ export default function HowWeVetClient() {
               <span>&sect; 01 &nbsp;&middot;&nbsp; WHY IT MATTERS</span>
             </div>
             <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 mb-6 tracking-tight leading-tight">
-              Why vetting matters <em className="text-accent-600 italic">for SEIS founders.</em>
+              Why vetting matters <em className="text-brand-500 italic">for SEIS founders.</em>
             </h2>
             <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.75]">
               <p>

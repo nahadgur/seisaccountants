@@ -31,20 +31,20 @@ export function Footer() {
                 aria-hidden="true"
               />
               <span className="font-display text-xl text-white tracking-tight">
-                seis<em className="text-accent-300">accountants</em>
+                seis<em className="text-brand-300">accountants</em>
               </span>
             </div>
             <p className="text-[13.5px] text-paper-100/75 leading-relaxed mb-5 max-w-sm">
               Free matching service for UK founders raising SEIS and EIS. We connect you with vetted, scheme-experienced accountants who handle the full lifecycle from advance assurance through three-year qualifying-period monitoring.
             </p>
-            <p className="font-display italic text-[12.5px] text-paper-300/60 border-l-2 border-accent-500 pl-4 leading-relaxed">
+            <p className="font-display italic text-[12.5px] text-paper-300/60 border-l-2 border-brand-500 pl-4 leading-relaxed">
               We are a referral and matching service, not an accountancy firm. All services are provided by independent, qualified accountants in our vetted network.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-accent-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
+            <h4 className="text-brand-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
               &sect; Services
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
@@ -63,12 +63,12 @@ export function Footer() {
 
           {/* Guides */}
           <div>
-            <h4 className="text-accent-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
+            <h4 className="text-brand-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
               &sect; Guides
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
               <li>
-                <Link href="/guides/" className="font-display italic text-accent-300 hover:text-white">
+                <Link href="/guides/" className="font-display italic text-brand-300 hover:text-white">
                   All guides &rarr;
                 </Link>
               </li>
@@ -80,7 +80,7 @@ export function Footer() {
                   >
                     {g.shortTitle}
                     {g.hasCalculator && (
-                      <span className="ml-1 text-[10px] text-accent-300 tracking-widest uppercase">+ tool</span>
+                      <span className="ml-1 text-[10px] text-brand-300 tracking-widest uppercase">+ tool</span>
                     )}
                   </Link>
                 </li>
@@ -90,7 +90,7 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h4 className="text-accent-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
+            <h4 className="text-brand-300 font-semibold uppercase tracking-[0.22em] text-[10px] mb-5">
               &sect; About
             </h4>
             <ul className="space-y-2.5 text-[13.5px]">
