@@ -38,17 +38,31 @@ export const rdTaxCreditsContent: {
   citySectionIntro: string;
 } = {
   introduction: [
-    "R&D tax credits are one of the most underused reliefs available to UK startups. HMRC's own data shows that tens of thousands of qualifying companies do not file a claim each year, not because they do not qualify, but because their accountants do not specialise in the scheme, or because founders assume their work is not technical enough to count.",
-    "This guide covers everything a UK startup founder needs to know about R&D tax credits in 2025–26: what qualifies, what the merged scheme means for your claim, how to calculate your credit, what records HMRC expects, and how to find a specialist accountant in your city who has a proven track record with claims in your sector.",
+    "For most SEIS-backed and EIS-backed UK companies, R&D tax credits are the single largest non-equity cash inflow in the first three years of operation. SEIS and EIS bring investor capital onto the balance sheet at favourable investor economics; the R&D credit returns a meaningful percentage of the underlying R&D spend back to the company itself. Stack the two correctly and a £200,000 SEIS round funding £150,000 of qualifying R&D produces an additional £30,000-£40,500 in HMRC cash on top of the original investor capital.",
+    "This guide covers how R&D credits work specifically for companies inside the SEIS / EIS ecosystem: the SEIS + R&D interaction (which does not affect SEIS qualification but does affect cash-flow modelling), the merged scheme rules under HMRC's post-April-2024 regime, what qualifies, how to size and prepare a claim that survives HMRC enquiry, and how to find a specialist accountant whose live caseload covers both SEIS work and R&D filings.",
   ],
   sections: [
     {
-      id: "what-qualifies",
-      h2: "What counts as qualifying R&D for a UK startup?",
+      id: "seis-rd-interaction",
+      h2: "How do R&D tax credits interact with SEIS and EIS funding?",
       paragraphs: [
-        "The most common misconception about R&D tax credits is that they are only for companies with laboratories, researchers, or academic partnerships. HMRC's definition is considerably broader and covers the vast majority of UK tech startups.",
+        "SEIS and EIS investor capital is private investment for the purpose of the R&D scheme, not state aid or subsidy. That means SEIS / EIS-funded R&D activity is fully claimable under the merged R&D scheme at the standard rate, with no reduction or carve-out applied to the qualifying expenditure base. A SEIS-backed company spending the entirety of a £200,000 SEIS round on qualifying R&D claims R&D credits on the full amount.",
+        "This is materially different from the treatment of grant funding. Notified state aid grants (Innovate UK Smart Grants, Wellcome Trust, MRC, certain Horizon Europe schemes) reduce the qualifying R&D expenditure available for the enhanced SME-intensive R&D rate, because the company is treated as having received state aid on those costs. SEIS and EIS rounds carry none of this restriction.",
+        "The practical implication for SEIS-backed founders is that the funding-stack matters. Stacking SEIS, EIS, and R&D credits cleanly is one of the recurring engagements for specialist accountants in the SEIS network. Where a company also takes a notified state aid grant in the same period, the qualifying R&D expenditure has to be split between grant-funded costs (claimed at the lower 20 percent merged-scheme rate) and equity-funded costs (claimed at the SME-intensive 27 percent rate, where applicable). Specialists model this split before the financial year-end so the claim treatment is documented at filing time.",
+      ],
+      callout: {
+        type: 'tip',
+        heading: 'Cash-flow modelling for SEIS-backed companies',
+        text: 'The R&D credit cash payment typically arrives 4-8 weeks after a well-prepared claim is filed alongside the Corporation Tax return. For loss-making early-stage SEIS-backed companies where the credit is the largest single annual cash inflow, the timing assumption can make or break the runway calculation. Specialists model the credit receipt as an uncertain inflow in the month following submission, with a contingency for HMRC enquiry delays of 3-6 months.',
+      },
+    },
+    {
+      id: "what-qualifies",
+      h2: "What counts as qualifying R&D for a SEIS-backed company?",
+      paragraphs: [
+        "The most common misconception about R&D tax credits is that they are only for companies with laboratories, researchers, or academic partnerships. HMRC's definition is considerably broader and covers the vast majority of SEIS-stage and EIS-stage tech, biotech, and engineering companies.",
         "The statutory definition requires that your company is seeking an advance in science or technology by resolving a scientific or technological uncertainty, meaning a problem whose solution is not readily available from existing knowledge in the field. This does not require a breakthrough. It requires that your team did not know the answer at the start and had to experiment, iterate, or investigate to find it.",
-        "In practice, this covers building a new software architecture that solves a performance problem no known approach has addressed, developing a machine learning model whose output behaviour was uncertain during training, creating a new manufacturing process that overcomes material limitations, or designing a medical device whose clinical performance was not established from prior literature. It also covers failures: work that did not produce the desired outcome still qualifies if it involved genuine technical investigation.",
+        "In practice, this covers building a new software architecture that solves a performance problem no known approach has addressed, developing a machine learning model whose output behaviour was uncertain during training, creating a new manufacturing process that overcomes material limitations, or designing a medical device whose clinical performance was not established from prior literature. It also covers failures: work that did not produce the desired outcome still qualifies if it involved genuine technical investigation. For most SEIS-funded software companies in their first two or three years, the substantial part of engineering activity qualifies.",
       ],
       callout: {
         type: 'definition',
@@ -90,7 +104,7 @@ export const rdTaxCreditsContent: {
     },
     {
       id: "merged-scheme-rates",
-      h2: "How much can a UK startup claim in R&D tax credits under the merged scheme?",
+      h2: "How much can a SEIS or EIS-backed company claim in R&D tax credits under the merged scheme?",
       paragraphs: [
         "The merged R&D scheme, introduced for accounting periods beginning on or after 1 April 2024, replaced the previous two-track system (SME enhanced deduction and RDEC) with a single scheme available to most UK companies.",
         "Under the merged scheme, qualifying companies receive a 20% above-the-line credit on qualifying R&D expenditure. For a paying company (one that is profitable and paying Corporation Tax), the net benefit after tax is approximately 15p for every £1 of qualifying spend at a 25% Corporation Tax rate. For loss-making companies, the credit is fully payable in cash at 20% of qualifying costs, meaning a startup spending £200,000 on qualifying R&D in a year where it makes a loss receives a £40,000 cash payment from HMRC.",
@@ -289,5 +303,5 @@ export const rdTaxCreditsContent: {
       ],
     },
   ],
-  citySectionIntro: "R&D tax credits are available to UK startups in every city and region, the HMRC scheme is national, not regional. However, finding an accountant with genuine sector-specific experience in your city can make a material difference to the size and defensibility of your claim. The following links connect you with our vetted R&D tax credit specialists in each major UK startup location.",
+  citySectionIntro: "R&D tax credits are available UK-wide and HMRC's Venture Capital Reliefs and R&D teams are centralised, so the scheme has no regional component. What does vary by location is the supply of accountants whose live caseload covers both SEIS / EIS scheme work and R&D filings together — most network practices in the major UK SEIS hubs do both, and the matching service surfaces specialists with genuine sector-specific experience in your catchment.",
 };

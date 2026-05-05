@@ -10,17 +10,17 @@ export const seisEisContent: {
   citySectionIntro: string;
 } = {
   introduction: [
-    "SEIS and EIS are two of the most powerful fundraising tools available to UK founders, and two of the most widely misunderstood. Many founders discover them too late, structure their companies in ways that inadvertently disqualify them, or miss the advance assurance step that makes their shares genuinely investable.",
-    "This guide covers every aspect of SEIS and EIS that a UK startup founder needs to understand: the eligibility criteria, the differences between the two schemes, how to obtain advance assurance, what investors actually receive, the activities that disqualify companies, and how to maintain compliance after the shares are issued. It also covers the Knowledge-Intensive Company rules that give certain deep-tech and life sciences startups access to more generous thresholds.",
+    "SEIS and EIS are the central reliefs UK founders use to attract early investor capital, and the central focus of every accountant in the seisaccountants.uk specialist network. The schemes themselves are well-defined; what fails them in practice is the documentation chain — the advance assurance application, the share-class structure at issue, the SEIS1 and EIS1 compliance statements, the SEIS3 and EIS3 investor certificate distribution, and the three-year qualifying-period monitoring after the round closes.",
+    "This guide is the structural reference for founders running through that chain. It covers eligibility for SEIS, EIS, and knowledge-intensive EIS; the documentation HMRC's Venture Capital Reliefs team expects at each stage; the share class and cap table requirements; and the qualifying-period tests that protect investor relief from clawback. Where you would benefit from a specialist running the actual filings, the matching service surfaces accountants whose live caseload is dominated by SEIS work.",
   ],
   sections: [
     {
       id: "seis-vs-eis",
-      h2: "What is the difference between SEIS and EIS founders?",
+      h2: "What is the difference between SEIS and EIS?",
       paragraphs: [
         "SEIS (Seed Enterprise Investment Scheme) and EIS (Enterprise Investment Scheme) are two related but distinct HMRC schemes designed to encourage investment in early-stage UK companies by offering significant tax reliefs to investors. They have different eligibility criteria, different investment limits, and different investor tax relief rates, but they are designed to be used sequentially, with most companies graduating from SEIS to EIS as they grow.",
         "SEIS is for the earliest-stage companies: fewer than three years old, fewer than 25 employees, gross assets below £350,000. It offers investors 50% income tax relief on investments up to £200,000 per investor per tax year, meaning an investor who puts in £20,000 can reclaim £10,000 from HMRC regardless of what happens to the company. EIS is for larger companies with higher investment requirements: up to seven years old (ten for Knowledge-Intensive Companies), fewer than 250 employees, gross assets below £15m. It offers 30% investor income tax relief on investments up to £1m per investor per year.",
-        "The two schemes cannot be used simultaneously for the same share issue, but a company can issue SEIS shares first and then, once the SEIS limit is exhausted, issue EIS shares in a subsequent round. This sequential use is the standard path for UK SEIS and EIS founders.",
+        "The two schemes cannot be used simultaneously for the same share issue, but a company can issue SEIS shares first and then, once the SEIS limit is exhausted, issue EIS shares in a subsequent round (or even the same round, on a later trading day). This sequenced SEIS-then-EIS pattern is the most common round structure for first priced raises in our network.",
       ],
       dataTable: {
         caption: "SEIS vs EIS: key criteria comparison",
@@ -46,7 +46,7 @@ export const seisEisContent: {
     },
     {
       id: "seis-eligibility",
-      h2: "Does my UK startup qualify for SEIS?",
+      h2: "Does my company qualify for SEIS?",
       paragraphs: [
         "SEIS eligibility is determined at the point of share issuance, the moment you issue qualifying shares to an investor. All of the following conditions must be met at that moment. A company that meets the criteria when it applies for advance assurance can still fail to qualify if its circumstances change before shares are actually issued.",
       ],
@@ -75,7 +75,7 @@ export const seisEisContent: {
           h3: "What share structure does SEIS require?",
           paragraphs: [
             "SEIS shares must be new ordinary shares that carry no preferential rights to dividends or to the company's assets on a winding up, and no right of redemption. In practice, this means that the most common startup share structures, including standard preference shares used in institutional venture rounds, do not qualify for SEIS. The shares issued under SEIS must sit in a class that has no liquidation preference over ordinary shares.",
-            "Most early-stage UK startups issue a single class of ordinary shares for their SEIS round and then create a separate preference share class for later institutional investment. This is the standard approach recommended by startup solicitors and does not create any issue with SEIS qualification, provided the SEIS ordinary shares genuinely carry no preferential rights to assets on winding up relative to any other class of ordinary share.",
+            "Most early-stage SEIS-stage companies issue a single class of ordinary shares for their SEIS round and then create a separate preference share class for later institutional investment. This is the standard approach recommended by startup solicitors and does not create any issue with SEIS qualification, provided the SEIS ordinary shares genuinely carry no preferential rights to assets on winding up relative to any other class of ordinary share.",
             "Anti-dilution provisions, drag-along rights, and tag-along rights are generally acceptable. Liquidation preferences, cumulative dividends, and redemption rights are not compatible with SEIS share qualification.",
           ],
         },
@@ -92,7 +92,7 @@ export const seisEisContent: {
     },
     {
       id: "eis-eligibility",
-      h2: "Does my UK startup qualify for EIS?",
+      h2: "Does my company qualify for EIS?",
       paragraphs: [
         "EIS has more generous thresholds than SEIS, allowing older, larger companies to qualify, but maintains most of the same qualifying trade restrictions and share structure requirements. Companies often transition from SEIS to EIS as they grow past the SEIS employee and asset thresholds, using the two schemes sequentially to support multiple funding rounds.",
         "The key EIS eligibility conditions are: the company must be incorporated in the UK (or have a permanent establishment in the UK), it must be fewer than seven years old at the time of the first EIS investment (extended to ten years for Knowledge-Intensive Companies), gross assets must be below £15m before investment and £16m after, the company must have fewer than 250 full-time equivalent employees, and it must carry on a qualifying trade.",
@@ -155,7 +155,7 @@ export const seisEisContent: {
       subsections: [
         {
           id: "before-assurance",
-          h3: "What should a UK startup do before applying for advance assurance?",
+          h3: "What should a founder do before applying for advance assurance?",
           paragraphs: [
             "Before submitting an advance assurance application, your accountant should review the company's existing share structure for any terms that would disqualify the SEIS shares, confirm that the company's trade is qualifying and that no substantial excluded activities exist, check whether any State Aid has been received that could affect SEIS eligibility, and confirm that the company meets all the age, employee, and asset thresholds at the anticipated date of share issuance.",
             "This pre-application review typically takes two to three hours with a specialist accountant and is the step most frequently skipped by founders who prepare their own applications. The consequence of submitting without this review is either an HMRC rejection (typically on grounds of share structure or excluded activity) or, more seriously, issuing shares that appear to qualify but are subsequently found to be disqualifying, which triggers clawback of investor tax relief.",
@@ -174,7 +174,7 @@ export const seisEisContent: {
     },
     {
       id: "maintaining-compliance",
-      h2: "How does a UK startup maintain SEIS and EIS compliance after the investment?",
+      h2: "How do you maintain SEIS and EIS compliance after the investment?",
       paragraphs: [
         "Obtaining advance assurance and issuing qualifying shares is the beginning of SEIS and EIS compliance, not the end. Both schemes impose ongoing conditions that the company must satisfy for the three-year period following the share issue. Breaching these conditions during the three-year window triggers clawback of investor tax relief, which is an investor relations and legal exposure that founders underestimate at the time of investment.",
         "The primary ongoing compliance requirements are: the company must continue to carry on the qualifying trade for three years, it must not become quoted on a recognised stock exchange within three years, it must use the invested funds for the qualifying business activity within two years of investment, and it must not make a return of value to SEIS/EIS investors within three years (including share buybacks or arrangements that effectively return capital).",
@@ -198,7 +198,7 @@ export const seisEisContent: {
     },
     {
       id: "crowdfunding",
-      h2: "Can UK startups use SEIS and EIS on crowdfunding platforms?",
+      h2: "Can SEIS and EIS shares be issued via crowdfunding platforms?",
       paragraphs: [
         "Yes, several UK crowdfunding platforms are specifically designed to facilitate SEIS and EIS investment at scale, including Crowdcube, Seedrs (now Republic Europe), and SeedLegals. These platforms handle the share issuance process, investor communications, and (in most cases) the advance assurance and compliance statement process as part of their service.",
         "Crowdfunding under SEIS and EIS works identically to direct angel investment from an HMRC perspective, the qualifying conditions are the same, the advance assurance process is the same, and the compliance statements are issued in the same way. The platform typically acts as a nominee shareholder, holding shares on behalf of multiple individual investors, which simplifies the company's cap table while each investor retains their personal SEIS or EIS relief.",
@@ -212,7 +212,7 @@ export const seisEisContent: {
     },
     {
       id: "common-mistakes",
-      h2: "What are the most common SEIS and EIS mistakes UK startups make?",
+      h2: "What are the most common SEIS and EIS mistakes founders make?",
       paragraphs: [
         "After reviewing hundreds of SEIS and EIS advance assurance applications, the specialist accountants in our network consistently identify the same set of structural and timing mistakes that either disqualify companies from the schemes or create compliance risks after investment is received.",
       ],
@@ -244,5 +244,5 @@ export const seisEisContent: {
       ],
     },
   ],
-  citySectionIntro: "SEIS and EIS advance assurance applications are submitted to HMRC centrally and are not location-specific. However, finding an accountant with hands-on advance assurance experience in your sector, and familiarity with any regional funding interactions in your city, makes a material difference to the quality and speed of your application.",
+  citySectionIntro: "SEIS and EIS advance assurance applications are submitted to HMRC's Venture Capital Reliefs team centrally — there is no regional component to the actual filing. What matters by location is the supply of accountants whose live caseload is dominated by scheme work and who have specific experience with the sector and any regional funding interactions (NPIF II in the North, MEIF in the Midlands, Development Bank of Wales, regional grant programmes) in your catchment. The matching service surfaces practices in each major UK SEIS hub.",
 };
