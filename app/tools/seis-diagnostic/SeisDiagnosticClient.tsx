@@ -19,6 +19,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { AuthoritativeSources } from '@/components/AuthoritativeSources';
 
 interface SearchHit {
   company_name: string;
@@ -681,6 +682,11 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
             </Link>
           </div>
         </div>
+
+        {/* Outbound authoritative sources. Same component used on guide
+            and service pages so the diagnostic page reads as a peer of
+            the long-form content rather than an isolated tool. */}
+        <AuthoritativeSources topics={['seis', 'eis', 'kic', 'companies-house', 'compliance']} />
       </div>
     </section>
   );

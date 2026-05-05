@@ -25,6 +25,15 @@ import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import RdCalculator from '@/components/tools/RdCalculator';
 import SeisChecker from '@/components/tools/SeisChecker';
+import { AuthoritativeSources } from '@/components/AuthoritativeSources';
+import type { ExternalRef } from '@/data/externalReferences';
+
+// Per-guide topic mapping. Each guide surfaces only the references it
+// actually needs, deduplicated, in source order.
+const GUIDE_REF_TOPICS: Record<string, ExternalRef['topics'][number][]> = {
+  'rd-tax-credits-uk-startups':   ['rd', 'companies-house'],
+  'seis-eis-guide-uk-startups':   ['seis', 'eis', 'kic', 'compliance', 'companies-house', 'professional'],
+};
 
 interface CityLink { slug: string; name: string; region: string; }
 interface Props {
@@ -305,6 +314,12 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
                   ))}
                 </section>
               ))}
+
+              {/* Authoritative sources — outbound links to HMRC, Companies
+                  House, and professional bodies. Real value for the reader
+                  (verify the rules); SEO value for the site (outbound .gov.uk
+                  links signal topical authority). */}
+              <AuthoritativeSources topics={GUIDE_REF_TOPICS[guide.slug] ?? ['seis', 'eis']} />
 
               {/* City spoke grid */}
               <section id="by-city" className="mb-14 scroll-mt-24">

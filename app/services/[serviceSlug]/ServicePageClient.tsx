@@ -22,6 +22,20 @@ import { HeroLeadForm }  from '@/components/HeroLeadForm';
 import { PricingSection }from '@/components/PricingSection';
 import { SlashHero }     from '@/components/SlashHero';
 import { serviceContent }from '@/data/serviceContent';
+import { AuthoritativeSources } from '@/components/AuthoritativeSources';
+import type { ExternalRef } from '@/data/externalReferences';
+
+// Per-service topic mapping. Each pillar surfaces references relevant to
+// the specific area of the SEIS lifecycle it covers.
+const SERVICE_REF_TOPICS: Record<string, ExternalRef['topics'][number][]> = {
+  'seis-advance-assurance':       ['seis', 'eis', 'companies-house'],
+  'eis-advance-assurance':        ['eis', 'kic', 'companies-house'],
+  'share-issuance-cap-table':     ['seis', 'eis', 'companies-house', 'compliance'],
+  'seis1-eis1-compliance':        ['seis', 'eis', 'compliance'],
+  'investor-tax-certificates':    ['seis', 'eis', 'compliance'],
+  'qualifying-period-monitoring': ['seis', 'eis', 'kic'],
+  'rd-tax-credits':               ['rd', 'seis', 'eis'],
+};
 
 interface Props {
   service: Service;
@@ -316,6 +330,9 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
               <div>
                 <FAQ faqs={combinedFaqs} title={`${service.title} FAQs`} />
               </div>
+
+              {/* Outbound authoritative sources for this service area. */}
+              <AuthoritativeSources topics={SERVICE_REF_TOPICS[service.id] ?? ['seis', 'eis']} />
             </div>
 
             {/* SIDEBAR */}
