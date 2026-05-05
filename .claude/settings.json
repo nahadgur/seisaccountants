@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/nealdougan/.claude/plugins/cache/agricidaniel-seo/claude-seo/1.8.1/skills/seo-audit/**)",
+      "Bash(mkdir -p /Users/nealdougan/startupaccountantharrow/public/fonts)",
+      "Bash(curl -sL -o PTSerif-Bold.ttf https://github.com/google/fonts/raw/main/ofl/ptserif/PTSerif-Bold.ttf)",
+      "Bash(curl -sL -o PTSerif-BoldItalic.ttf https://github.com/google/fonts/raw/main/ofl/ptserif/PTSerif-BoldItalic.ttf)",
+      "Bash(curl -sL -o Inter-SemiBold.ttf https://github.com/rsms/inter/raw/master/docs/font-files/Inter-SemiBold.ttf)",
+      "Bash(file /Users/nealdougan/startupaccountantharrow/public/fonts/*.ttf)",
+      "Bash(rm *.ttf)",
+      "Bash(curl -sL -o PTSerif-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/ptserif/PTSerif-Bold.ttf)",
+      "Bash(curl -sL -o PTSerif-BoldItalic.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/ptserif/PTSerif-BoldItalic.ttf)",
+      "Bash(curl -sL -o Inter-SemiBold.ttf https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-SemiBold.ttf)",
+      "Bash(file *.ttf)",
+      "Bash(curl -svL https://raw.githubusercontent.com/google/fonts/main/ofl/ptserif/PTSerif-Bold.ttf)",
+      "Bash(curl -s https://api.github.com/repos/google/fonts/contents/ofl/ptserif)",
+      "Bash(curl -s 'https://api.github.com/repos/rsms/inter/contents/docs/font-files')",
+      "Bash(curl -s 'https://api.github.com/repos/google/fonts/contents/ofl/inter')",
+      "Bash(curl -sL -o PTSerif-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/ptserif/PT_Serif-Web-Bold.ttf)",
+      "Bash(curl -sL -o PTSerif-BoldItalic.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/ptserif/PT_Serif-Web-BoldItalic.ttf)",
+      "Bash(node -e ' *)",
+      "Bash(command -v cwebp sharp magick)",
+      "Bash(identify --version)",
+      "Bash(sips -h)",
+      "Bash(sed -i '' 's|/images/\\\\\\([a-z0-9-]*\\\\\\)\\\\.png|/images/\\\\1.webp|g' data/services.ts data/homepage.ts components/Hero.tsx components/Polaroid.tsx app/services/ServicesIndexClient.tsx)",
+      "Bash(grep -l '/images/.*\\\\.png' data/*.ts components/*.tsx app/**/*.tsx)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(awk '{print $1}')",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ],
+    "additionalDirectories": [
+      "/Users/nealdougan/startupaccountantharrow/public/fonts",
+      "/Users/nealdougan/startupaccountantharrow/public/images"
+    ]
+  }
+}

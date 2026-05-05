@@ -1,0 +1,393 @@
+{
+  "london": {
+    "slug": "london",
+    "name": "London",
+    "region": "London & South East",
+    "businessDistrict": "City of London, Canary Wharf, Shoreditch Tech City",
+    "dominantIndustries": [
+      "Fintech",
+      "SaaS",
+      "Creative Tech",
+      "Financial Services",
+      "Media",
+      "Life Sciences"
+    ],
+    "universities": [
+      "University College London",
+      "Imperial College London",
+      "King's College London",
+      "London Business School"
+    ],
+    "chamber": "London Chamber of Commerce and Industry",
+    "accelerators": [
+      "Techstars London",
+      "Seedcamp",
+      "Entrepreneur First",
+      "Level39 Canary Wharf",
+      "Google for Startups Campus"
+    ],
+    "regulatoryNotes": "Standard UK Companies House registration. London startups frequently utilise EIS and SEIS given the dense angel investor network. EMI share option schemes widely used for talent retention.",
+    "localContext": "London hosts more than 40% of all UK startup investment, with particular concentration in fintech around Canary Wharf and Silicon Roundabout. The density of angel investors and VC funds makes SEIS and EIS advance assurance essential before any fundraising conversation.",
+    "keyBusinessHubs": [
+      "Silicon Roundabout",
+      "Canary Wharf",
+      "King's Cross",
+      "White City Innovation District"
+    ]
+  },
+  "guildford": {
+    "slug": "guildford",
+    "name": "Guildford",
+    "region": "London & South East",
+    "businessDistrict": "Guildford town centre, Slyfield Industrial Estate",
+    "dominantIndustries": [
+      "Gaming",
+      "Technology",
+      "Financial Services",
+      "Defence Tech",
+      "Life Sciences"
+    ],
+    "universities": [
+      "University of Surrey",
+      "Guildford School of Acting"
+    ],
+    "chamber": "Surrey Chambers of Commerce",
+    "accelerators": [
+      "Surrey Research Park",
+      "University of Surrey Innovation",
+      "SETsquared Surrey"
+    ],
+    "regulatoryNotes": "Standard UK registration. Guildford's gaming cluster generates significant R&D tax credit activity. Surrey Research Park hosts high-value spin-outs requiring careful IP and equity structuring.",
+    "localContext": "Guildford is the UK's gaming capital, hosting more game studios per square mile than almost anywhere else in the country. This concentration of qualifying R&D activity makes specialist accountants with gaming and tech experience particularly valuable here.",
+    "keyBusinessHubs": [
+      "Surrey Research Park",
+      "Guildford town centre",
+      "Slyfield Industrial Estate"
+    ]
+  },
+  "northampton": {
+    "slug": "northampton",
+    "name": "Northampton",
+    "region": "Midlands",
+    "businessDistrict": "Northampton town centre, Riverside Business Park, Moulton Park",
+    "dominantIndustries": [
+      "Logistics",
+      "Footwear",
+      "Financial Services",
+      "Food Manufacturing",
+      "Technology"
+    ],
+    "universities": [
+      "University of Northampton",
+      "Northampton Business School"
+    ],
+    "chamber": "Northamptonshire Chamber of Commerce",
+    "accelerators": [
+      "University of Northampton Enterprise Hub",
+      "South East Midlands LEP Growth Hub"
+    ],
+    "regulatoryNotes": "Standard UK registration. Northampton's central UK location makes it a logistics hub relevant for businesses requiring warehouse structures, import/export VAT planning, and distribution-related accounting.",
+    "localContext": "Northampton's central UK location has made it a major logistics and distribution hub. The town is also home to a significant financial services cluster around Barclaycard and Aviva, alongside a surviving footwear manufacturing sector.",
+    "keyBusinessHubs": [
+      "Moulton Park Industrial Estate",
+      "Riverside Business Park",
+      "Northampton town centre",
+      "Brackmills"
+    ]
+  },
+  "nottingham": {
+    "slug": "nottingham",
+    "name": "Nottingham",
+    "region": "Midlands",
+    "businessDistrict": "Nottingham city centre, Nottingham Science Park, Mediacity",
+    "dominantIndustries": [
+      "Fintech",
+      "Life Sciences",
+      "Pharmaceutical",
+      "Digital Health",
+      "Retail Tech",
+      "Creative"
+    ],
+    "universities": [
+      "University of Nottingham",
+      "Nottingham Trent University",
+      "Nottingham Business School"
+    ],
+    "chamber": "East Midlands Chamber",
+    "accelerators": [
+      "Nottingham Science Park",
+      "Nottingham Business Incubation Centre",
+      "Creative Quarter Company"
+    ],
+    "regulatoryNotes": "Standard UK registration. Nottingham has a designated Creative Quarter with business rate relief for eligible companies. Life sciences and pharmaceutical companies benefit from significant R&D credit opportunities.",
+    "localContext": "Nottingham punches above its weight in fintech and digital health, home to Experian, Boots, and Capital One. The Creative Quarter provides affordable workspace for early-stage startups, and University of Nottingham's life sciences spin-out activity is substantial.",
+    "keyBusinessHubs": [
+      "Nottingham Science Park",
+      "Creative Quarter",
+      "Lace Market",
+      "BioCity Nottingham"
+    ]
+  },
+  "manchester": {
+    "slug": "manchester",
+    "name": "Manchester",
+    "region": "North West",
+    "businessDistrict": "Manchester city centre, Spinningfields, NOMA, MediaCityUK Salford",
+    "dominantIndustries": [
+      "Fintech",
+      "HealthTech",
+      "EdTech",
+      "Creative Tech",
+      "AI",
+      "Advanced Manufacturing"
+    ],
+    "universities": [
+      "University of Manchester",
+      "Manchester Metropolitan University",
+      "Manchester Business School",
+      "Salford University"
+    ],
+    "chamber": "Greater Manchester Chamber of Commerce",
+    "accelerators": [
+      "Barclays Eagle Labs Manchester",
+      "Manchester Digital",
+      "Bruntwood SciTech",
+      "Ignite Accelerator"
+    ],
+    "regulatoryNotes": "Standard UK registration. Greater Manchester Combined Authority provides devolved business support through the Growth Hub with specific innovation grant programmes. GMCA has a particularly active angel network making SEIS advance assurance essential.",
+    "localContext": "Manchester is the UK's most significant tech city outside London, with particular strength in fintech, health tech, and the UK's graphene commercialisation cluster at the University of Manchester. The density of VC and angel investment rivals London in many sectors.",
+    "keyBusinessHubs": [
+      "Spinningfields",
+      "NOMA district",
+      "Manchester Science Park",
+      "Piccadilly Station quarter",
+      "MediaCityUK Salford"
+    ]
+  },
+  "salford": {
+    "slug": "salford",
+    "name": "Salford",
+    "region": "North West",
+    "businessDistrict": "MediaCityUK, Salford Quays, Greengate",
+    "dominantIndustries": [
+      "Media",
+      "Creative Tech",
+      "HealthTech",
+      "Digital",
+      "PropTech"
+    ],
+    "universities": [
+      "University of Salford",
+      "Salford Business School"
+    ],
+    "chamber": "Greater Manchester Chamber of Commerce",
+    "accelerators": [
+      "MediaCityUK accelerator",
+      "Salford Innovation Forum",
+      "The Landing MediaCityUK"
+    ],
+    "regulatoryNotes": "Standard UK registration. Salford's MediaCityUK hosts BBC, ITV, and dock10 Studios, creating significant High-End TV and digital production activity eligible for creative industry tax reliefs distinct from standard R&D credits.",
+    "localContext": "Salford is home to MediaCityUK, the UK's largest creative cluster outside London, hosting BBC North, ITV, and over 250 media businesses. Creative industry tax reliefs are particularly relevant alongside standard R&D credits for tech companies.",
+    "keyBusinessHubs": [
+      "MediaCityUK",
+      "Salford Quays",
+      "Greengate",
+      "The Landing"
+    ]
+  },
+  "newcastle": {
+    "slug": "newcastle",
+    "name": "Newcastle",
+    "region": "North East & Yorkshire",
+    "businessDistrict": "Newcastle city centre, Quayside, Science Central",
+    "dominantIndustries": [
+      "HealthTech",
+      "Digital",
+      "Gaming",
+      "Offshore Energy",
+      "Financial Services",
+      "Creative"
+    ],
+    "universities": [
+      "Newcastle University",
+      "Northumbria University",
+      "Newcastle Business School"
+    ],
+    "chamber": "North East England Chamber of Commerce",
+    "accelerators": [
+      "Newcastle Helix (Science Central)",
+      "Ignite",
+      "North East Business and Innovation Centre",
+      "Generator creative"
+    ],
+    "regulatoryNotes": "Standard UK registration. North East England Growth Hub provides devolved regional support. Newcastle's Innovation Zone at Science Central provides enhanced R&D support. The region's offshore energy supply chains are active with significant R&D credit activity.",
+    "localContext": "Newcastle's Science Central development is one of the UK's most significant urban innovation districts, co-anchored by Newcastle University's world-class biomedical research. The city's gaming sector and growing health tech and offshore energy clusters generate substantial R&D credit activity.",
+    "keyBusinessHubs": [
+      "Newcastle Helix",
+      "Quayside",
+      "Science Central",
+      "Ouseburn Valley creative quarter"
+    ]
+  },
+  "wakefield": {
+    "slug": "wakefield",
+    "name": "Wakefield",
+    "region": "North East & Yorkshire",
+    "businessDistrict": "Wakefield city centre, Calder Park, West Yorkshire Distribution Park",
+    "dominantIndustries": [
+      "Logistics",
+      "Advanced Manufacturing",
+      "Creative Industries",
+      "Professional Services",
+      "Healthcare"
+    ],
+    "universities": [
+      "University of Leeds",
+      "Leeds Beckett",
+      "Wakefield College"
+    ],
+    "chamber": "Mid Yorkshire Chamber of Commerce",
+    "accelerators": [
+      "Wakefield Council Business Growth",
+      "West Yorkshire Growth Hub",
+      "The Hepworth business community"
+    ],
+    "regulatoryNotes": "Standard UK registration. Wakefield's Creative Spine, anchored by The Hepworth gallery and Yorkshire Sculpture Park, provides creative industry rate relief for qualifying businesses.",
+    "localContext": "Wakefield is a major logistics hub on the M62/M1 interchange and home to The Hepworth gallery anchoring a growing creative sector. The Creative Spine initiative supports arts and creative businesses with dedicated workspace and business support.",
+    "keyBusinessHubs": [
+      "Calder Park",
+      "Wakefield Europort",
+      "The Hepworth district"
+    ]
+  },
+  "cheltenham": {
+    "slug": "cheltenham",
+    "name": "Cheltenham",
+    "region": "South West & Wales",
+    "businessDistrict": "Cheltenham town centre, Golden Valley, GCHQ campus",
+    "dominantIndustries": [
+      "Cyber Security",
+      "Defence Tech",
+      "FinTech",
+      "Creative",
+      "Professional Services"
+    ],
+    "universities": [
+      "University of Gloucestershire",
+      "Hartpury University",
+      "University of Bath"
+    ],
+    "chamber": "Gloucestershire Chamber of Commerce",
+    "accelerators": [
+      "GCHQ Cyber Accelerator NCSC",
+      "Cheltenham Innovation Centre",
+      "GFirst LEP"
+    ],
+    "regulatoryNotes": "Standard UK registration. GCHQ's National Cyber Security Centre runs the Cyber Accelerator programme from Cheltenham, one of the UK's most prestigious accelerators. Security-cleared businesses have specific corporate structure requirements distinct from standard startups.",
+    "localContext": "Cheltenham is the UK's cyber capital, home to GCHQ, the National Cyber Security Centre, and a nationally recognised cyber security cluster attracting significant government and private sector R&D investment. The Golden Valley development will create a 3,000-person tech campus adjacent to GCHQ.",
+    "keyBusinessHubs": [
+      "GCHQ campus",
+      "Golden Valley development",
+      "Cheltenham town centre",
+      "Lansdown business district"
+    ]
+  },
+  "swansea": {
+    "slug": "swansea",
+    "name": "Swansea",
+    "region": "South West & Wales",
+    "businessDistrict": "Swansea city centre, SA1 Waterfront, Swansea Bay Tech Hub",
+    "dominantIndustries": [
+      "Digital Health",
+      "Wave Energy",
+      "Steel Tech",
+      "Creative Digital",
+      "Advanced Manufacturing"
+    ],
+    "universities": [
+      "Swansea University",
+      "University of Wales Trinity Saint David",
+      "Swansea Business School"
+    ],
+    "chamber": "Swansea Bay Business Club",
+    "accelerators": [
+      "Swansea University Innovation",
+      "FinTech Wales",
+      "Technium Digital Swansea",
+      "Wales Innovation Network",
+      "Development Bank of Wales"
+    ],
+    "regulatoryNotes": "IMPORTANT: Wales devolved support via Business Wales and Development Bank of Wales. Welsh Government grants available for qualifying businesses. The Swansea Bay City Deal provides specific investment in digital, smart manufacturing, and life science clusters with associated grant funding.",
+    "localContext": "Swansea Bay City Deal is investing 1.3 billion into digital, smart manufacturing, and life sciences. The Bay campus at Swansea University hosts significant wave energy and advanced materials research. FinTech Wales provides dedicated support for financial technology startups.",
+    "keyBusinessHubs": [
+      "SA1 Swansea Waterfront",
+      "Swansea Bay Tech Hub",
+      "Bay Campus",
+      "Technium Digital"
+    ]
+  },
+  "edgware": {
+    "slug": "edgware",
+    "name": "Edgware",
+    "region": "London & South East",
+    "businessDistrict": "Edgware Broadway, HA8 commercial corridor",
+    "dominantIndustries": [
+      "Healthcare and Dental",
+      "Legal Services",
+      "Property Investment",
+      "Professional Services"
+    ],
+    "universities": [
+      "Middlesex University (Hendon, nearby)",
+      "Royal Holloway (Egham, nearby)"
+    ],
+    "chamber": "Harrow Chamber of Commerce",
+    "accelerators": [
+      "London-wide accelerators (Techstars, Seedcamp, EF) accessible via Northern Line + Edgware Road bus routes"
+    ],
+    "regulatoryNotes": "HA8 catchment with proximity to City and Tech City. Edgware startups commonly utilise SEIS/EIS given established London angel network access. R&D tax credits frequent in fintech, healthtech, and digital-services startups operating from the area.",
+    "localContext": "Edgware sits at the northern terminus of the Northern Line in HA8, anchored by Edgware Broadway shopping centre and a substantial mid-1900s residential and commercial corridor. The startup population skews toward healthtech, dental and medical practice spinouts, legaltech, and digital services serving London while operating from lower-cost outer-zone premises. Strong local concentration of property-investment SPVs and family-owned trading companies expanding into new ventures.",
+    "keyBusinessHubs": [
+      "Edgware Broadway",
+      "Burnt Oak Broadway",
+      "Stanmore commercial belt",
+      "Mill Hill business park"
+    ]
+  },
+  "cambridge": {
+    "slug": "cambridge",
+    "name": "Cambridge",
+    "region": "London & South East",
+    "businessDistrict": "Cambridge Science Park, St John's Innovation Centre, Cambridge Biomedical Campus",
+    "dominantIndustries": [
+      "Life Sciences and Biotech",
+      "DeepTech",
+      "AI / Machine Learning",
+      "Software",
+      "Quantum Computing",
+      "Medical Devices"
+    ],
+    "universities": [
+      "University of Cambridge",
+      "Anglia Ruskin University"
+    ],
+    "chamber": "Cambridgeshire Chambers of Commerce",
+    "accelerators": [
+      "Cambridge Innovation Capital",
+      "Accelerate Cambridge (Judge Business School)",
+      "Allia Future Business Centre",
+      "IdeaSpace",
+      "St John's Innovation Centre"
+    ],
+    "regulatoryNotes": "Cambridge is the UK's densest concentration of deep-tech, biotech and life-sciences startups. R&D tax credits are operationally critical here — most pre-revenue tech startups depend on them as their largest annual cash inflow. SEIS and EIS rounds are routine; advance assurance is table stakes. EMI option schemes are universal for talent retention given the competitive academic-spinout hiring market.",
+    "localContext": "The Cambridge cluster (sometimes called the \"Cambridge Phenomenon\") is the most concentrated deep-tech startup ecosystem in Europe outside of the Bay Area, with over 4,500 active startups and scale-ups generating £15bn+ aggregate revenue. The accountancy needs are exceptional — pre-revenue R&D-heavy companies relying on R&D tax credit cash receipts as runway, complex SEIS/EIS round structuring, EMI schemes valued at high option strike prices, and increasingly common US-flip restructures for series A and beyond.",
+    "keyBusinessHubs": [
+      "Cambridge Science Park (Milton Road)",
+      "St John's Innovation Park",
+      "Cambridge Biomedical Campus (Addenbrooke's)",
+      "Cambridge North station business district",
+      "Granta Park (Babraham)",
+      "AstraZeneca Discovery Centre cluster"
+    ]
+  }
+}

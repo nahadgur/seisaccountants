@@ -1,0 +1,18 @@
+{
+  "lastUpdated": "2026-04-21",
+  "totalTarget": 140,
+  "totalCompleted": 140,
+  "percentComplete": 100,
+  "serviceCityComplete": {
+    "business-registration": 20,
+    "startup-tax-relief": 20,
+    "rd-tax-credits": 20,
+    "seis-eis-advice": 20,
+    "cash-flow-forecasting": 20,
+    "growth-planning": 20
+  },
+  "cityHubsComplete": 20,
+  "remainingServiceCity": 0,
+  "remainingCityHubs": 0,
+  "status": "COMPLETE"
+}

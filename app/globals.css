@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts loaded via next/font in app/layout.tsx - no @import needed */
+
+:root {
+  /* SEIS Accountants tokens exposed as CSS vars for components that need raw hex */
+  --paper-50:  #FBFAF6;
+  --paper-100: #F2EFE5;
+  --paper-200: #EAE5D6;
+  --paper-300: #DDD6C1;
+  --ink-900:   #0F1314;
+  --ink-700:   #3A372D;
+  --ink-500:   #6B6759;
+  --ink-300:   #9A9588;
+  --brand-500: #0E5E62;
+  --brand-600: #0B4E51;
+  --brand-50:  #EEF6F6;
+  --accent-500: #C9821B;
+  --accent-600: #A66913;
+  --accent-50:  #FCF6EC;
+}
+
+@layer base {
+  body {
+    @apply font-body text-ink-900 antialiased;
+    background-color: var(--paper-100);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-normal tracking-tight;
+    color: var(--ink-900);
+  }
+  /* Italic display type carries the amber accent by default for emphasis
+     in editorial headlines. Pair with <em> tags inside headings. */
+  h1 em, h2 em, h3 em {
+    @apply text-accent-600;
+    font-style: italic;
+  }
+  p { line-height: 1.65; }
+  ::selection { background: var(--brand-500); color: #fff; }
+}
+
+@layer components {
+
+  /* LAYOUT */
+  .container-width { @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-8; }
+  .section-padding { @apply py-14 md:py-20 lg:py-24; }
+
+  /* BUTTONS */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-500 hover:bg-brand-600 active:bg-brand-700
+           text-white font-medium py-4 px-6 rounded-sm
+           transition-colors duration-150 text-sm tracking-wide uppercase;
+    letter-spacing: 1.5px;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent hover:bg-ink-900 hover:text-white
+           text-ink-900 font-medium py-4 px-6 rounded-sm
+           border border-ink-900 transition-colors duration-150
+           text-sm tracking-wide uppercase;
+    letter-spacing: 1.5px;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 text-brand-500
+           hover:text-brand-700 font-display italic text-base;
+  }
+
+  /* EDITORIAL MARKERS */
+  /* Use as small eyebrow labels: § 01 · SERVICES */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-brand-500 text-[10px]
+           font-semibold tracking-[0.22em] uppercase;
+  }
+  .eyebrow-dark {
+    @apply inline-flex items-center gap-2 text-white/80 text-[10px]
+           font-semibold tracking-[0.22em] uppercase;
+  }
+
+  /* DISPLAY HEADLINES */
+  .h-display-lg {
+    @apply font-display font-normal text-display-lg md:text-display-xl
+           text-ink-900 tracking-tighter;
+  }
+  .h-display-md {
+    @apply font-display font-normal text-display-md md:text-display-lg
+           text-ink-900 tracking-tight;
+  }
+  .h-display-sm {
+    @apply font-display font-normal text-display-sm md:text-display-md
+           text-ink-900 tracking-tight;
+  }
+
+  /* BODY */
+  .lead {
+    @apply font-sans text-[15px] md:text-base text-ink-700 leading-relaxed;
+  }
+  .caption {
+    @apply font-sans text-[11px] text-ink-500 tracking-widest uppercase;
+  }
+
+  /* DIVIDERS */
+  /* Thin hard rule - for section boundaries */
+  .rule-hard {
+    @apply block w-full h-px bg-ink-900/20;
+  }
+  /* Dotted paper rule - editorial receipt-style divider */
+  .rule-dotted {
+    border: 0;
+    border-top: 1px dotted var(--ink-300);
+    width: 100%;
+    margin: 0;
+  }
+  /* Short brand rule - accent under eyebrows */
+  .rule-short {
+    @apply block w-10 h-px bg-brand-500;
+  }
+
+  /* POLAROID - images framed as photo cards, used selectively on
+     hero/service/city pages. Use .polaroid-tilt-* variants for stacks. */
+  .polaroid {
+    @apply bg-white p-2 pb-8 border border-ink-900/5 relative;
+  }
+  .polaroid::after {
+    /* Caption placeholder baseline - allows for caption text centered below
+       the image. Component passes caption as a <span class="polaroid-caption">. */
+    content: '';
+  }
+  .polaroid-caption {
+    @apply absolute bottom-2 left-0 right-0 text-center font-mono text-[9px]
+           text-ink-500 tracking-[0.12em] uppercase;
+  }
+  .polaroid-tilt-left  { transform: rotate(-3deg); }
+  .polaroid-tilt-right { transform: rotate(3deg);  }
+  .polaroid-tilt-slight-left  { transform: rotate(-1.5deg); }
+  .polaroid-tilt-slight-right { transform: rotate(1.5deg);  }
+
+  /* AMBER TAPE - the signature element. Use absolute positioning and
+     wrap over the top edge of a polaroid or card. Tilt via rotate() */
+  .tape {
+    @apply absolute bg-accent-500/90 z-10;
+    width: 72px;
+    height: 22px;
+  }
+  .tape-sm { width: 52px; height: 18px; }
+
+  /* CARDS */
+  .card-paper {
+    @apply bg-white border border-ink-900/8 rounded-md p-5;
+  }
+  .card-inset {
+    @apply bg-paper-200 rounded-md p-5 border border-ink-900/6;
+  }
+
+  /* STATS */
+  .stat-num {
+    @apply font-display font-normal italic text-accent-600 text-4xl leading-none;
+  }
+  .stat-label {
+    @apply font-sans text-[10px] font-medium text-ink-500 tracking-[0.18em]
+           uppercase mt-2 block;
+  }
+
+  /* SECTION LABEL - § 01 · SERVICES style mastheads */
+  .masthead {
+    @apply flex items-center justify-between text-[10px] font-semibold
+           tracking-[0.22em] uppercase text-ink-900 pb-3 border-b border-ink-900/40;
+  }
+
+  /* PULL QUOTE */
+  .pullquote {
+    @apply font-display italic text-[19px] md:text-[22px] leading-[1.35]
+           tracking-tight text-ink-900 pl-4 border-l-2 border-brand-500;
+  }
+
+  /* FORMS */
+  .form-input {
+    @apply w-full bg-white border border-ink-900/15 rounded-sm px-4 py-3
+           text-ink-900 placeholder-ink-300 focus:outline-none
+           focus:border-brand-500 transition-colors;
+  }
+
+  /* NAV LINK */
+  .nav-link {
+    @apply text-ink-700 hover:text-brand-500 font-sans text-[14px] transition-colors;
+  }
+
+  /* LINK */
+  .link-underline {
+    @apply text-brand-500 hover:text-brand-700 underline underline-offset-4
+           decoration-1 transition-colors;
+  }
+}
+
+/* LEGACY CLASSES retained for backward compat until components migrate */
+.card {
+  background: #fff;
+  border: 1px solid rgba(15, 15, 20, 0.08);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--brand-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans), 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-600);
+  flex-shrink: 0;
+}
+
+.label-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-50);
+  color: var(--brand-600);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.section-heading {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.0;
+  letter-spacing: -0.8px;
+  color: var(--ink-900);
+}
+
+@keyframes backdrop-in  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes backdrop-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes modal-in     { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes modal-out    { from { opacity: 1; transform: scale(1) translateY(0); } to { opacity: 0; transform: scale(0.95) translateY(10px); } }
+
+.animate-backdrop-in  { animation: backdrop-in  0.2s ease-out forwards; }
+.animate-backdrop-out { animation: backdrop-out 0.2s ease-in  forwards; }
+.animate-modal-in     { animation: modal-in     0.3s ease-out forwards; }
+.animate-modal-out    { animation: modal-out    0.2s ease-in  forwards; }
