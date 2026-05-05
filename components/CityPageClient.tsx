@@ -53,13 +53,9 @@ const iconMap: Record<string, React.ReactNode> = {
   CheckCircle: <CheckCircle className="w-28 h-28" />,
 };
 
-function SectionHeading({ number, label, title }: { number: string; label: string; title: React.ReactNode }) {
+function SectionHeading({ title }: { title: React.ReactNode }) {
   return (
-    <div className="mb-5">
-      <div className="masthead mb-4">
-        <span>{number} &nbsp;&middot;&nbsp; {label}</span>
-      </div>
-      <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
+    <div className="mb-5"><h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
         {title}
       </h2>
     </div>
@@ -111,7 +107,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
                 </div>
 
                 <h1 className="font-display text-[44px] md:text-[56px] lg:text-[64px] text-ink-900 leading-[0.98] tracking-tighter mb-6">
-                  Startup accountants<br />
+                  SEIS accountants<br />
                   in <em className="text-brand-500 italic">{cityName}</em>
                 </h1>
 
@@ -171,8 +167,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {/* Services grid */}
               <section>
                 <SectionHeading
-                  number="01"
-                  label="SERVICES"
                   title={<>Services available in <em className="text-brand-500 italic">{cityName}</em></>}
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -203,8 +197,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {deep && deep.deepNarrative.length > 0 && (
                 <section>
                   <SectionHeading
-                    number="02"
-                    label="THE LOCAL PICTURE"
                     title={<>Inside the <em className="text-brand-500 italic">{cityName}</em> startup ecosystem</>}
                   />
                   <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
@@ -217,8 +209,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {deep && deep.whyMattersHere.length > 0 && (
                 <section>
                   <SectionHeading
-                    number="03"
-                    label="WHY IT MATTERS"
                     title={<>Where specialism <em className="text-brand-500 italic">moves the needle</em> in {cityName}</>}
                   />
                   <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
@@ -231,8 +221,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {deep && deep.localExamples.length > 0 && (
                 <section>
                   <SectionHeading
-                    number="04"
-                    label="LOCAL ENGAGEMENTS"
                     title={<>Recent matches in <em className="text-brand-500 italic">{cityName}</em></>}
                   />
                   <div className="space-y-4">
@@ -258,8 +246,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {hub?.ecosystemDeep && (
                 <section>
                   <SectionHeading
-                    number="02"
-                    label="THE ECOSYSTEM"
                     title={<>Inside the <em className="text-brand-500 italic">{cityName}</em> startup ecosystem</>}
                   />
                   <div className="font-sans text-[15px] text-ink-700 leading-[1.75] whitespace-pre-line">
@@ -272,8 +258,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {hub?.whyMatchHere && (
                 <section>
                   <SectionHeading
-                    number="03"
-                    label="WHY MATCH HERE"
                     title={<>Why founders in {cityName} choose a <em className="text-brand-500 italic">matched specialist</em></>}
                   />
                   <div className="font-sans text-[15px] text-ink-700 leading-[1.75] whitespace-pre-line">
@@ -285,8 +269,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {/* Local ecosystem grid - always shown */}
               <section>
                 <SectionHeading
-                  number={hub?.ecosystemDeep ? '04' : '02'}
-                  label="THE LOCAL CONTEXT"
                   title={<>{cityName} <em className="text-brand-500 italic">startup</em> ecosystem</>}
                 />
                 <div className="grid sm:grid-cols-3 gap-6 bg-white border border-ink-900/10 rounded-sm p-6">
@@ -357,8 +339,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
               {/* Why us cards */}
               <section>
                 <SectionHeading
-                  number={hub?.ecosystemDeep ? '05' : '03'}
-                  label="WHY THROUGH US"
                   title={<>What you get when we match you in <em className="text-brand-500 italic">{cityName}</em></>}
                 />
                 <div className="grid sm:grid-cols-2 gap-3">

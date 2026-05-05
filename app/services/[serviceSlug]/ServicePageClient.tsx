@@ -30,13 +30,9 @@ interface Props {
   relatedGuide?: Guide | null;
 }
 
-function SectionHeading({ number, label, title }: { number: string; label: string; title: React.ReactNode }) {
+function SectionHeading({ title }: { title: React.ReactNode }) {
   return (
-    <div className="mb-5">
-      <div className="masthead mb-4">
-        <span>{number} &nbsp;&middot;&nbsp; {label}</span>
-      </div>
-      <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
+    <div className="mb-5"><h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
         {title}
       </h2>
     </div>
@@ -96,8 +92,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
 
               <section>
                 <SectionHeading
-                  number="01"
-                  label="THE OVERVIEW"
                   title={<>{service.title}: <em className="text-brand-500 italic">what you need to know</em></>}
                 />
                 <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
@@ -149,8 +143,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
 
               <section>
                 <SectionHeading
-                  number="02"
-                  label="THE BENEFITS"
                   title={<>Benefits of <em className="text-brand-500 italic">{service.title.toLowerCase()}</em></>}
                 />
                 <div className="grid sm:grid-cols-2 gap-3">
@@ -177,8 +169,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
               {/* Deep dive — long-form regulatory and mechanical detail */}
               <section>
                 <SectionHeading
-                  number="03"
-                  label="DEEP DIVE"
                   title={<>How {service.title.toLowerCase()} <em className="text-brand-500 italic">actually works</em></>}
                 />
                 <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
@@ -189,8 +179,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
               {/* Edge cases — nuance and where the standard playbook breaks */}
               <section>
                 <SectionHeading
-                  number="04"
-                  label="EDGE CASES"
                   title={<>Where the standard playbook <em className="text-brand-500 italic">doesn&apos;t apply</em></>}
                 />
                 <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
@@ -201,8 +189,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
               {/* Worked examples — real-world scenarios with concrete numbers */}
               <section>
                 <SectionHeading
-                  number="05"
-                  label="WORKED EXAMPLES"
                   title={<>How a real engagement <em className="text-brand-500 italic">plays out</em></>}
                 />
                 <div className="space-y-4">
@@ -228,8 +214,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
                   toggle approach was overkill; everything fits cleanly here. */}
               <section>
                 <SectionHeading
-                  number="06"
-                  label="LOCATIONS"
                   title={<>Find {service.title.toLowerCase()} <em className="text-brand-500 italic">in your city</em></>}
                 />
                 <p className="font-sans text-[14px] text-ink-700 mb-6 leading-relaxed">
@@ -260,8 +244,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
 
               <section>
                 <SectionHeading
-                  number="07"
-                  label="FIT CHECK"
                   title={<>Is {service.title.toLowerCase()} <em className="text-brand-500 italic">right for you?</em></>}
                 />
                 <p className="font-sans text-[15px] text-ink-700 mb-5 leading-relaxed">{content.candidateIntro}</p>
@@ -280,8 +262,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
 
               <section>
                 <SectionHeading
-                  number="08"
-                  label="THE PROCESS"
                   title={<>How the process <em className="text-brand-500 italic">works</em></>}
                 />
                 <div className="space-y-3">

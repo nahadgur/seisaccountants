@@ -39,17 +39,6 @@ const iconMap: Record<string, React.ReactNode> = {
   Clock:    <Clock    className="w-5 h-5" />,
 };
 
-// Small helper for the editorial section masthead. Inlined so no extra
-// component import required.
-function Masthead({ number, label, note }: { number: string; label: string; note?: string }) {
-  return (
-    <div className="masthead mb-6">
-      <span>{number} &nbsp;&middot;&nbsp; {label}</span>
-      {note && <span className="text-ink-500">{note}</span>}
-    </div>
-  );
-}
-
 export default function HomeClient() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
@@ -82,7 +71,6 @@ export default function HomeClient() {
 
               {/* Text */}
               <div className="lg:col-span-7 order-2 lg:order-1">
-                <Masthead number="01" label="THE LANDSCAPE" note="" />
                 <h2 className="h-display-md mb-6">
                   {problemFraming.heading}
                 </h2>
@@ -185,7 +173,6 @@ export default function HomeClient() {
         >
           <div className="container-width">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <Masthead number="02" label="WHO WE MATCH" />
               <h2 className="h-display-md mb-4 text-center">{propertyTypes.heading}</h2>
               <p className="font-sans text-[15px] text-ink-700 max-w-2xl mx-auto leading-relaxed">
                 {propertyTypes.subheading}
@@ -224,7 +211,6 @@ export default function HomeClient() {
         >
           <div className="container-width">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <Masthead number="03" label="SERVICES" />
               <h2 className="h-display-md mb-4 text-center">{serviceCardsHeading.title}</h2>
               <p className="font-sans text-[15px] text-ink-700 max-w-2xl mx-auto leading-relaxed">
                 {serviceCardsHeading.subtitle}
@@ -271,7 +257,6 @@ export default function HomeClient() {
         >
           <div className="container-width">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <Masthead number="04" label="THE PROCESS" />
               <h2 className="h-display-md mb-4 text-center">{howItWorks.heading}</h2>
               <p className="font-sans text-[15px] text-ink-700 max-w-xl mx-auto leading-relaxed">
                 {howItWorks.subheading}
@@ -333,7 +318,6 @@ export default function HomeClient() {
           <div className="container-width">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-5">
-                <Masthead number="05" label="COVERAGE" />
                 <h2 className="h-display-md mb-6">{regionalContext.heading}</h2>
                 <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
                   {regionalContext.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
@@ -376,7 +360,6 @@ export default function HomeClient() {
         >
           <div className="container-width">
             <div className="text-center max-w-3xl mx-auto mb-10">
-              <Masthead number="06" label="CITIES" />
               <h2 className="h-display-md mb-4 text-center">{areasSection.heading}</h2>
               <p className="font-sans text-[15px] text-ink-700 max-w-2xl mx-auto leading-relaxed">
                 {areasSection.subheading}
@@ -417,7 +400,6 @@ export default function HomeClient() {
         >
           <div className="container-width">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <Masthead number="07" label="TYPICAL FEES" />
               <h2 className="h-display-md mb-4 text-center">{pricingSection.heading}</h2>
               <p className="font-sans text-[15px] text-ink-700 max-w-2xl mx-auto leading-relaxed">
                 {pricingSection.subheading}
@@ -485,7 +467,6 @@ export default function HomeClient() {
         >
           <div className="container-width">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <Masthead number="08" label="WHY US" />
               <h2 className="h-display-md mb-4 text-center">{trustPoints.heading}</h2>
               <p className="font-sans text-[15px] text-ink-700 max-w-2xl mx-auto leading-relaxed">
                 {trustPoints.subheading}

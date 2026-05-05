@@ -31,13 +31,9 @@ interface Props {
   allServices: Service[];
 }
 
-function SectionHeading({ number, label, title }: { number: string; label: string; title: React.ReactNode }) {
+function SectionHeading({ title }: { title: React.ReactNode }) {
   return (
-    <div className="mb-5">
-      <div className="masthead mb-4">
-        <span>{number} &nbsp;&middot;&nbsp; {label}</span>
-      </div>
-      <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
+    <div className="mb-5"><h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight">
         {title}
       </h2>
     </div>
@@ -108,8 +104,6 @@ export default function IndustryPageClient({
               {/* Section 01 - Overview */}
               <section>
                 <SectionHeading
-                  number="01"
-                  label="THE OVERVIEW"
                   title={<>Why <em className="text-brand-500 italic">{industry.title.toLowerCase()}</em> accounting is different</>}
                 />
                 <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
@@ -120,8 +114,6 @@ export default function IndustryPageClient({
               {/* Section 02 - Benefits */}
               <section>
                 <SectionHeading
-                  number="02"
-                  label="THE BENEFITS"
                   title={<>What a specialist <em className="text-brand-500 italic">brings</em></>}
                 />
                 <div className="grid sm:grid-cols-2 gap-3">
@@ -148,8 +140,6 @@ export default function IndustryPageClient({
               {/* Section 03 - Playbook. Long-form specialist content. */}
               <section>
                 <SectionHeading
-                  number="03"
-                  label="THE PLAYBOOK"
                   title={<>The {industry.title.toLowerCase()} <em className="text-brand-500 italic">accounting playbook</em></>}
                 />
                 <div className="space-y-10">
@@ -171,8 +161,6 @@ export default function IndustryPageClient({
                   framing. */}
               <section>
                 <SectionHeading
-                  number="04"
-                  label="KEY SERVICES"
                   title={<>Services most relevant to <em className="text-brand-500 italic">{industry.title.toLowerCase()}</em></>}
                 />
                 <div className="space-y-3">
@@ -204,8 +192,6 @@ export default function IndustryPageClient({
               {/* Section 05 - Fit check */}
               <section>
                 <SectionHeading
-                  number="05"
-                  label="FIT CHECK"
                   title={<>Is a specialist <em className="text-brand-500 italic">right for you?</em></>}
                 />
                 <p className="font-sans text-[15px] text-ink-700 mb-5 leading-relaxed">{content.fitCheckIntro}</p>
@@ -228,8 +214,6 @@ export default function IndustryPageClient({
                   toggle" complexity). */}
               <section>
                 <SectionHeading
-                  number="06"
-                  label="LOCATIONS"
                   title={<>Find a {industry.title.toLowerCase()} accountant <em className="text-brand-500 italic">in your city</em></>}
                 />
                 <p className="font-sans text-[14px] text-ink-700 mb-6 leading-relaxed">
