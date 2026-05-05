@@ -115,14 +115,14 @@ export default function HowWeVetClient() {
               <span>&sect; 01 &nbsp;&middot;&nbsp; WHY IT MATTERS</span>
             </div>
             <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 mb-6 tracking-tight leading-tight">
-              Why vetting matters <em className="text-brand-500 italic">for startups.</em>
+              Why vetting matters <em className="text-accent-600 italic">for SEIS founders.</em>
             </h2>
             <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.75]">
               <p>
-                The terms &ldquo;accountant&rdquo; and &ldquo;tax advisor&rdquo; are not legally protected in the United Kingdom. That means startup founders searching for professional help face a real risk of engaging someone without the qualifications, insurance, or startup experience to handle their financial affairs competently.
+                The terms &ldquo;accountant&rdquo; and &ldquo;tax advisor&rdquo; are not legally protected in the United Kingdom. That means SEIS and EIS founders searching for professional help face a real risk of engaging someone without the qualifications, insurance, or scheme experience to handle their HMRC submissions competently. The cost of getting it wrong is paid by your investors as a relief clawback, not by you.
               </p>
               <p>
-                Startup accounting is not the same as general small business accounting. SEIS/EIS structuring, R&amp;D tax credit claims, investor-ready financial reporting, and cap table management all require specialist knowledge. An accountant who handles sole traders and landlords may not understand your world.
+                SEIS and EIS work is not the same as general startup or small-business accounting. Advance assurance drafting, share issuance sequencing, SEIS1 and EIS1 compliance, SEIS3 distribution, and three-year qualifying-period monitoring all require specialist knowledge. An accountant who files three SEIS applications a year is not the same as a specialist who files three a week.
               </p>
               <p>
                 Our vetting process eliminates that risk. Before any accountant appears in our matching results, they must clear five independent checks. Roughly 35% of applicants do not make it through. We re-verify every accountant annually.

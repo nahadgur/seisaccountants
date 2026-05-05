@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityName = getCityBySlug(params.city);
   if (!profile || !cityName) return {};
 
-  const title = `Startup Accountants in ${cityName} | Vetted ACA/ACCA Specialists`;
+  const title = `SEIS Accountants in ${cityName} | Vetted ACA/ACCA Specialists`;
   const description = `Find vetted startup accountants in ${cityName}. Specialists in R&D tax credits, SEIS/EIS, company formation and growth planning. Free quotes, no obligation.`;
 
   return {

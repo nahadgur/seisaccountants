@@ -8,7 +8,7 @@ import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'Terms of Use',
-  description: 'The terms on which you may use startupaccountants.uk as a free matching service for UK startup accountants.',
+  description: 'The terms on which you may use seisaccountants.uk as a free matching service for UK SEIS and EIS specialist accountants.',
   alternates: { canonical: `${siteConfig.url}/terms/` },
   robots: { index: true, follow: true },
 };
@@ -50,7 +50,7 @@ export default function TermsPage() {
             <section>
               <SectionH2 num="01">About this service</SectionH2>
               <p>
-                startupaccountants.uk is a free online matching service that connects UK startup founders with independent, qualified accountants in our partner network. We are not an accountancy firm, we do not provide accountancy, tax, or legal advice directly, and we do not carry out any accounting work for you.
+                seisaccountants.uk is a free online matching service that connects UK SEIS and EIS founders with independent, qualified accountants in our partner network. We are not an accountancy firm, we do not provide accountancy, tax, or legal advice directly, and we do not carry out any accounting work for you.
               </p>
               <p className="mt-3">
                 When you submit an enquiry, we match you with a carefully selected UK accountancy practice in our network. That accountancy firm will contact you directly. Any engagement you then enter into is between you and that accountant, under their own terms and fees. We are not a party to that engagement.
@@ -116,7 +116,7 @@ export default function TermsPage() {
             <section>
               <SectionH2 num="08">Intellectual property</SectionH2>
               <p>
-                All site content, design, and code is owned by startupaccountants.uk. You may view and share content for personal, non-commercial purposes. You may not republish, modify, or sell any part of the site without written permission.
+                All site content, design, and code is owned by seisaccountants.uk. You may view and share content for personal, non-commercial purposes. You may not republish, modify, or sell any part of the site without written permission.
               </p>
             </section>
 
@@ -130,7 +130,7 @@ export default function TermsPage() {
             <section>
               <SectionH2 num="10">Contact</SectionH2>
               <p>
-                Questions about these terms? Email <a href="mailto:hello@startupaccountants.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@startupaccountants.uk</a>.
+                Questions about these terms? Email <a href="mailto:hello@seisaccountants.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.uk</a>.
               </p>
             </section>
 

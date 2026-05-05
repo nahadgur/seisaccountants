@@ -27,8 +27,8 @@ export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: 
     : `Areas we cover around ${cityName}`;
 
   const description = serviceName
-    ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? Our vetted accountants serve startups across ${cityName} and the surrounding areas listed below.`
-    : `Our accountants in ${cityName} serve startups from across the surrounding area. If your business is based in any of the nearby areas, you are within reach of specialist startup accounting services.`;
+    ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? Our vetted accountants serve SEIS and EIS founders across ${cityName} and the surrounding areas listed below.`
+    : `Our accountants in ${cityName} serve SEIS and EIS founders from across the surrounding area. If your company is based in any of the nearby areas, you are within reach of specialist SEIS accounting services.`;
 
   return (
     <section className="mb-16">

@@ -16,24 +16,24 @@ import { buildBreadcrumbSchema } from '@/lib/breadcrumbs';
 const pageUrl = `${siteConfig.url}/guides/`;
 
 export const metadata: Metadata = {
-  title: 'UK Startup Accounting Guides | R&D Credits, SEIS/EIS, Tax Relief & More',
+  title: 'SEIS, EIS & R&D Guides for UK Founders | Free SEIS Specialist Matching',
   description:
-    'Free in-depth guides for UK startup founders: R&D tax credits under the merged scheme, SEIS and EIS structuring, startup tax relief, cash flow forecasting, company registration, and growth planning.',
+    'Free in-depth guides for UK SEIS and EIS founders: SEIS and EIS eligibility, advance assurance, share issuance, the three-year qualifying period, and R&D tax credits for SEIS-backed companies under the merged scheme.',
   alternates: { canonical: pageUrl },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     url: pageUrl,
     siteName: siteConfig.name,
-    title: 'UK Startup Accounting Guides',
+    title: 'SEIS, EIS & R&D Guides for UK Founders',
     description:
-      'In-depth guides for UK startup founders covering every major accounting and tax decision from incorporation to Series A.',
+      'In-depth guides for UK SEIS and EIS founders covering scheme eligibility, advance assurance, share issuance, the three-year qualifying period, and the R&D credit interaction with SEIS funding.',
     locale: 'en_GB',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UK Startup Accounting Guides',
-    description: 'Free in-depth guides for UK startup founders covering R&D, SEIS/EIS, tax relief, cash flow, registration, and growth.',
+    title: 'SEIS, EIS & R&D Guides for UK Founders',
+    description: 'Free in-depth guides for UK SEIS and EIS founders covering scheme eligibility, advance assurance, and R&D credits.',
   },
 };
 
@@ -44,9 +44,9 @@ export default function GuidesIndexPage() {
     '@type': 'CollectionPage',
     '@id': `${pageUrl}#collection`,
     url: pageUrl,
-    name: 'UK Startup Accounting Guides',
+    name: 'SEIS, EIS & R&D Guides for UK Founders',
     description:
-      'In-depth guides written for UK startup founders, covering accounting and tax decisions from incorporation to Series A.',
+      'In-depth guides written for UK SEIS and EIS founders, covering scheme eligibility, advance assurance, and R&D credits.',
     isPartOf: { '@id': `${siteConfig.url}/#website` },
     hasPart: guides.map(g => ({
       '@type': 'Article',
@@ -64,7 +64,7 @@ export default function GuidesIndexPage() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     '@id': `${pageUrl}#itemlist`,
-    name: 'UK startup accounting guides',
+    name: 'SEIS, EIS and R&D guides for UK founders',
     numberOfItems: guides.length,
     itemListElement: guides.map((g, i) => ({
       '@type': 'ListItem',
@@ -93,10 +93,10 @@ export default function GuidesIndexPage() {
               <span>&sect; GUIDES &nbsp;&middot;&nbsp; {guides.length} IN-DEPTH PIECES</span>
             </div>
             <h1 className="font-display text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.02] tracking-tight text-ink-900 mb-6">
-              UK startup accounting <em className="text-brand-500 italic">guides</em>.
+              SEIS, EIS and R&amp;D <em className="text-accent-600 italic">guides</em>.
             </h1>
             <p className="font-sans text-[16px] md:text-[17px] text-ink-700 leading-[1.7]">
-              In-depth guides written for UK startup founders. Each piece covers
+              In-depth guides written for UK SEIS and EIS founders. Each piece covers
               the regulatory mechanics under current legislation, worked examples
               with HMRC data, and where applicable an interactive calculator.
               Skip to the guide that matches your decision.

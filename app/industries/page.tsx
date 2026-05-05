@@ -11,25 +11,25 @@ import IndustriesIndexClient from './IndustriesIndexClient';
 const pageUrl = `${siteConfig.url}/industries/`;
 
 export const metadata: Metadata = {
-  title: 'Specialist Startup Accountants by Industry | Free Matching Service',
+  title: 'Specialist SEIS Accountants by Industry | Free Matching Service',
   description:
-    'Browse specialist startup accountants by industry: SaaS, tech, fintech, ecommerce, and more. Vetted ACA/ACCA practitioners with genuine sector expertise. Free matching, no obligation.',
+    'Browse SEIS and EIS specialist accountants by industry: SaaS, tech, fintech, ecommerce, life sciences, and creative & media. Vetted ACA/ACCA practitioners with genuine sector expertise. Free matching, no obligation.',
   alternates: { canonical: pageUrl },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     url: pageUrl,
     siteName: siteConfig.name,
-    title: 'Specialist Startup Accountants by Industry | Free Matching Service',
+    title: 'Specialist SEIS Accountants by Industry | Free Matching Service',
     description:
-      'Specialist startup accountants by industry: SaaS, tech, fintech, ecommerce, and more. Free matching with vetted ACA/ACCA practitioners.',
+      'SEIS and EIS specialist accountants by industry: SaaS, tech, fintech, ecommerce, life sciences, and creative & media. Free matching with vetted ACA/ACCA practitioners.',
     locale: 'en_GB',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Specialist Startup Accountants by Industry',
+    title: 'Specialist SEIS Accountants by Industry',
     description:
-      'Free matching with vetted UK startup accountants by industry specialism.',
+      'Free matching with vetted UK SEIS and EIS specialist accountants by industry specialism.',
   },
 };
 
@@ -38,9 +38,9 @@ export default function IndustriesIndexPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     '@id': `${pageUrl}#collection`,
-    name: 'Startup Accountants by Industry',
+    name: 'SEIS Accountants by Industry',
     description:
-      'The full list of industry verticals we match UK startup founders to specialist accountants for.',
+      'The full list of industry verticals we match UK SEIS and EIS founders to specialist accountants for.',
     url: pageUrl,
     isPartOf: { '@id': `${siteConfig.url}/#website` },
     about: { '@id': `${siteConfig.url}/#referral-service` },

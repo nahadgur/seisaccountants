@@ -60,13 +60,13 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
           breadcrumbs={[{ label: 'Services', href: '/services/' }, { label: service.title }]}
           eyebrow={
             <span className="eyebrow">
-              &sect; SPECIALIST STARTUP ACCOUNTANTS
+              &sect; SEIS SPECIALIST ACCOUNTANTS
             </span>
           }
           title={
             <>
               {service.title}<br />
-              for <em className="text-brand-500 italic">startups</em>
+              for <em className="text-accent-600 italic">SEIS founders</em>
             </>
           }
           subtitle={service.description}

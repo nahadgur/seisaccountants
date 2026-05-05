@@ -182,92 +182,47 @@ const nextConfig = {
 
       ...cullRedirects,
 
+      // -----------------------------------------------------------------
+      // Blog removed entirely on the SEIS pivot. The startup-fleet blog
+      // covered general business-formation, payroll, and US-flavoured
+      // tax topics that do not fit a SEIS-specialist site. Catch-all
+      // redirects every blog URL to the SEIS and EIS guide, which is
+      // the single most relevant surviving surface.
+      // -----------------------------------------------------------------
+      {
+        source: '/blog/',
+        destination: '/guides/seis-eis-guide-uk-startups/',
+        permanent: true,
+      },
+      {
+        source: '/blog/:path*',
+        destination: '/guides/seis-eis-guide-uk-startups/',
+        permanent: true,
+      },
 
       // -----------------------------------------------------------------
-      // Blog cleanup redirects (2026-04-24).
-      // 11 articles deleted because content was US-specific (IRS tax law,
-      // USD currency, LLC/C-Corp entity types) and would actively mislead
-      // UK readers. Each redirect points the deleted slug at the closest
-      // surviving UK-native surface: the matching guide where one exists,
-      // or the relevant industry page, or the /guides/ hub as final fallback.
-      // All 301 permanent to transfer any accumulated link equity.
+      // Retired guides on the SEIS pivot: business-registration,
+      // startup-tax-relief, cash-flow-forecasting, and growth-planning.
+      // Each redirected to the closest surviving SEIS-aligned guide.
       // -----------------------------------------------------------------
       {
-        // US LLC/C-Corp/S-Corp content. UK equivalent is the business
-        // registration guide which covers sole trader vs Ltd vs LLP.
-        source: '/blog/choosing-the-right-business-structure/',
-        destination: '/guides/startup-business-registration-uk/',
+        source: '/guides/startup-tax-relief-uk/',
+        destination: '/guides/seis-eis-guide-uk-startups/',
         permanent: true,
       },
       {
-        // US tax planning (QSBS, pass-through, C-Corp election). UK
-        // equivalent is the tax relief guide covering SEIS/EIS/R&D/EMI.
-        source: '/blog/tax-planning-for-startup-founders/',
-        destination: '/guides/startup-tax-relief-uk/',
+        source: '/guides/startup-business-registration-uk/',
+        destination: '/guides/seis-eis-guide-uk-startups/',
         permanent: true,
       },
       {
-        // US tax incentives (IRC Section 41, QSBS Section 1202). UK
-        // equivalent is the tax relief guide.
-        source: '/blog/startup-tax-incentives-explained/',
-        destination: '/guides/startup-tax-relief-uk/',
-        permanent: true,
-      },
-      {
-        // US R&D credit under IRS Section 41, Form 6765. Would actively
-        // mislead UK readers. Redirect to UK R&D guide.
-        source: '/blog/rd-tax-credits-for-startups/',
+        source: '/guides/cash-flow-forecasting-startups/',
         destination: '/guides/rd-tax-credits-uk-startups/',
         permanent: true,
       },
       {
-        // US payroll (EIN, FICA, W-2). UK equivalent is PAYE/NI setup
-        // covered in the business registration guide.
-        source: '/blog/startup-payroll-setup/',
-        destination: '/guides/startup-business-registration-uk/',
-        permanent: true,
-      },
-      {
-        // US legal/tax compliance (IRS filings, state registrations).
-        // UK equivalent is the business registration guide.
-        source: '/blog/startup-legal-and-tax-compliance/',
-        destination: '/guides/startup-business-registration-uk/',
-        permanent: true,
-      },
-      {
-        // US accounting basics, USD-denominated. Redirect to UK
-        // registration guide as the closest topical surface.
-        source: '/blog/startup-accounting-basics/',
-        destination: '/guides/startup-business-registration-uk/',
-        permanent: true,
-      },
-      {
-        // US-framed accounting software (QuickBooks, US focus).
-        // Redirect to guides hub; no direct UK equivalent article.
-        source: '/blog/accounting-software-for-startups/',
-        destination: '/guides/',
-        permanent: true,
-      },
-      {
-        // US GAAP reporting. UK equivalent is FRS 102, not covered
-        // by a single existing article. Redirect to guides hub.
-        source: '/blog/startup-financial-reporting/',
-        destination: '/guides/',
-        permanent: true,
-      },
-      {
-        // US-framed "when do you need an accountant" piece. UK
-        // equivalent falls naturally under the business registration
-        // guide which covers HMRC/Companies House compliance needs.
-        source: '/blog/when-startups-need-an-accountant/',
-        destination: '/guides/startup-business-registration-uk/',
-        permanent: true,
-      },
-      {
-        // US-framed growth strategies with USD benchmarks. UK
-        // equivalent is the growth planning guide.
-        source: '/blog/startup-growth-financial-strategies/',
-        destination: '/guides/growth-planning-uk-startups/',
+        source: '/guides/growth-planning-uk-startups/',
+        destination: '/guides/seis-eis-guide-uk-startups/',
         permanent: true,
       },
     ];

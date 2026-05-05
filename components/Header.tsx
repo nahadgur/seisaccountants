@@ -227,7 +227,6 @@ export function Header({ onOpenModal }: HeaderProps) {
 
             <Link href="/location/" className="nav-link">Areas</Link>
             <Link href="/how-we-vet/" className="nav-link">Vetting</Link>
-            <Link href="/blog/" className="nav-link">Blog</Link>
 
             {onOpenModal ? (
               <button
@@ -321,9 +320,6 @@ export function Header({ onOpenModal }: HeaderProps) {
             </Link>
             <Link href="/how-we-vet/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
               How we vet
-            </Link>
-            <Link href="/blog/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
-              Blog
             </Link>
 
             <div className="pt-6">

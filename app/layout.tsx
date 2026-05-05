@@ -28,7 +28,7 @@ const display = PT_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Free Matching Service for UK Startup Accountants`,
+    default: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Free Matching Service for UK Startup Accountants`,
+    title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
     description: siteConfig.description,
     // Images auto-populated from app/opengraph-image.tsx (file-based convention).
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteConfig.name} | Free Matching Service for UK Startup Accountants`,
+    title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
     description: siteConfig.description,
     // Images auto-populated from app/twitter-image.tsx (file-based convention).
   },
@@ -74,17 +74,17 @@ const organizationSchema = {
   url: siteConfig.url,
   logo: `${siteConfig.url}/logo.png`,
   description:
-    'Independent UK referral and matching service connecting startup founders with qualified, insured, vetted accountancy practices. We are not an accountancy firm and do not deliver accountancy services ourselves; all professional work is performed by independent third-party accountants in our partner network.',
+    'Independent UK referral and matching service connecting SEIS and EIS founders with qualified, insured, vetted scheme-specialist accountancy practices. We are not an accountancy firm and do not deliver accountancy services ourselves; all professional work is performed by independent third-party accountants in our partner network.',
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
   knowsAbout: [
-    'UK startup accounting',
-    'R&D tax credits',
     'SEIS advance assurance',
     'EIS advance assurance',
-    'Company incorporation',
-    'Cash flow forecasting',
-    'Startup tax relief',
-    'EMI option schemes',
+    'Knowledge-intensive company status',
+    'SEIS1 and EIS1 compliance statements',
+    'SEIS3 and EIS3 investor tax certificates',
+    'Three-year qualifying period monitoring',
+    'Share issuance and cap table for SEIS and EIS',
+    'R&D tax credits for SEIS-backed companies',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -108,7 +108,7 @@ const referralServiceSchema = {
   name: `${siteConfig.name} matching service`,
   serviceType: 'Accountant referral and matching service',
   description:
-    'Free matching service connecting UK startup founders with independent, qualified, insured accountancy practices. Founders submit an enquiry; we match them to a carefully selected practice in our network based on location, sector, and service need; the accountant contacts them directly and sets their own fees. We receive a referral fee from the accountant only if the founder chooses to engage them.',
+    'Free matching service connecting UK SEIS and EIS founders with independent, scheme-specialist accountancy practices. Founders submit an enquiry; we match them to a carefully selected practice based on stage and sector; the accountant contacts them directly and sets their own fees. We receive a referral fee from the accountant only if the founder chooses to engage them.',
   provider: {
     '@type': 'Organization',
     '@id': `${siteConfig.url}/#organization`,
@@ -124,7 +124,7 @@ const referralServiceSchema = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Startup Accountants Services',
+    name: 'SEIS Accountants Services',
     itemListElement: services.map((s, i) => ({
       '@type': 'Offer',
       position: i + 1,

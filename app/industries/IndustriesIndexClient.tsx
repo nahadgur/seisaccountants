@@ -37,14 +37,15 @@ export default function IndustriesIndexClient() {
               <span>&sect; INDUSTRIES &nbsp;&middot;&nbsp; {industries.length} VERTICALS</span>
             </div>
             <h1 className="font-display text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.02] tracking-tight text-ink-900 mb-6">
-              Specialist startup accountants <em className="text-brand-500 italic">by industry</em>.
+              SEIS and EIS specialist accountants <em className="text-accent-600 italic">by industry</em>.
             </h1>
             <p className="font-sans text-[16px] md:text-[17px] text-ink-700 leading-[1.7] mb-6">
-              Different industries face genuinely different accounting challenges.
-              A SaaS startup needs IFRS 15 revenue recognition on subscriptions and
-              R&amp;D claim methodology tuned for platform engineering. A fintech
-              startup needs FCA-regulated audit and safeguarding support. An ecommerce
-              startup needs multi-channel VAT and inventory accounting.
+              SEIS and EIS qualifying conditions are uniform, but how they apply to
+              your sector is not. A SaaS startup raising on ARR projections needs an
+              advance assurance narrative that pre-empts HMRC questions on revenue
+              recognition. A fintech needs the excluded-trades borderline addressed
+              head-on. A biotech needs knowledge-intensive company status documented
+              from day one to unlock the £10m EIS annual cap.
             </p>
             <p className="font-sans text-[15px] md:text-[16px] text-ink-700 leading-[1.7]">
               The matching service surfaces accountants against both the service you

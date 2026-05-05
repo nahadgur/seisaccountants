@@ -25,8 +25,6 @@ import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import RdCalculator from '@/components/tools/RdCalculator';
 import SeisChecker from '@/components/tools/SeisChecker';
-import RunwayCalculator from '@/components/tools/RunwayCalculator';
-import SeriesAReadinessScorecard from '@/components/tools/SeriesAReadinessScorecard';
 
 interface CityLink { slug: string; name: string; region: string; }
 interface Props {
@@ -72,22 +70,12 @@ const TOOL_REGISTRY: Record<
   'rd-tax-credits-uk-startups': {
     Component: RdCalculator,
     sectionEyebrow: 'CALCULATOR',
-    sectionHeading: <>How much could your startup <em className="text-brand-500 italic">claim?</em></>,
+    sectionHeading: <>How much could your company <em className="text-accent-600 italic">claim?</em></>,
   },
   'seis-eis-guide-uk-startups': {
     Component: SeisChecker,
     sectionEyebrow: 'CHECKER',
-    sectionHeading: <>Does your startup <em className="text-brand-500 italic">qualify?</em></>,
-  },
-  'cash-flow-forecasting-startups': {
-    Component: RunwayCalculator,
-    sectionEyebrow: 'CALCULATOR',
-    sectionHeading: <>How much <em className="text-brand-500 italic">runway</em> do you have?</>,
-  },
-  'growth-planning-uk-startups': {
-    Component: SeriesAReadinessScorecard,
-    sectionEyebrow: 'SCORECARD',
-    sectionHeading: <>Are you ready for <em className="text-brand-500 italic">Series A?</em></>,
+    sectionHeading: <>Does your company <em className="text-accent-600 italic">qualify?</em></>,
   },
 };
 

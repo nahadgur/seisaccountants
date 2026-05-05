@@ -7,7 +7,6 @@ import { services } from '@/data/services';
 import { industries } from '@/data/industries';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
-import { blogArticles } from '@/data/blog';
 import { guides } from '@/data/guides';
 
 // Static date constants - update manually when content genuinely changes.
@@ -30,27 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/terms/`,          lastModified: SITE_MODIFIED, changeFrequency: 'yearly',  priority: 0.3 },
   ];
 
-  if (blogArticles.length > 0) {
-    staticPages.push({
-      url: `${base}/blog/`,
-      lastModified: SITE_MODIFIED,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    });
-  }
-
   const guidePages: MetadataRoute.Sitemap = guides.map(g => ({
     url: `${base}/guides/${g.slug}/`,
     lastModified: g.lastUpdated,
     changeFrequency: 'yearly' as const,
     priority: 0.7,
-  }));
-
-  const blogPages: MetadataRoute.Sitemap = blogArticles.map(article => ({
-    url: `${base}/blog/${article.slug}/`,
-    lastModified: SITE_MODIFIED,
-    changeFrequency: 'yearly' as const,
-    priority: 0.6,
   }));
 
   // 6 deep service pillars
@@ -80,7 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...guidePages,
-    ...blogPages,
     ...servicePages,
     ...industryPages,
     ...locationPages,
