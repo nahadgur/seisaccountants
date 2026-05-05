@@ -5,7 +5,7 @@
 //
 // Usage:
 //   <Polaroid
-//     src="/images/hero-main.webp"
+//     src="/images/hero-main.avif"
 //     alt="Coworking space"
 //     caption="THE FLOOR"
 //     tape="top-left"

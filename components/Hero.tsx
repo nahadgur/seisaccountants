@@ -24,9 +24,9 @@ const trustPoints = [
 
 export function Hero({ title, subtitle, image, showCta = true, onOpenModal }: HeroProps) {
   // Fallback images if the consumer doesn't pass specific ones
-  const primary = image || '/images/hero-main.webp';
-  const secondary1 = '/images/rd-tax-credits.webp';
-  const secondary2 = '/images/seis-eis-advice.webp';
+  const primary = image || '/images/hero-main.avif';
+  const secondary1 = '/images/rd-tax-credits.avif';
+  const secondary2 = '/images/seis-eis-advice.avif';
 
   return (
     <section

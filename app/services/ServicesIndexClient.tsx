@@ -22,7 +22,7 @@ export default function ServicesIndexClient() {
         <Hero
           title={`${siteConfig.name} Services`}
           subtitle="Browse our specialist service categories. Select the service that matches your requirements and get connected with vetted local professionals."
-          image="/images/hero-services.webp"
+          image="/images/hero-services.avif"
           showCta={false}
           showTrust={false}
         />
