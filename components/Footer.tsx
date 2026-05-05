@@ -23,11 +23,11 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
               <Image
-                src="/logo.png"
+                src="/logo-mark-white.svg"
                 alt=""
                 width={32}
                 height={32}
-                className="h-8 w-auto"
+                className="h-7 w-auto"
                 aria-hidden="true"
               />
               <span className="font-display text-xl text-white tracking-tight">

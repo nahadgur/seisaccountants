@@ -73,15 +73,15 @@ export function Header({ onOpenModal }: HeaderProps) {
       <div className="container-width">
         <div className="flex justify-between items-center h-16 md:h-18">
 
-          {/* LOGO - Georgia wordmark with amber italic on the last word */}
+          {/* LOGO - oxblood SVG mark + Georgia wordmark with italic on the last word */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <Image
-              src="/logo.png"
+              src="/logo-mark.svg"
               alt=""
               width={36}
               height={36}
               priority
-              className="h-8 w-auto md:h-9"
+              className="h-7 w-auto md:h-8"
               aria-hidden="true"
             />
             <span className="font-display text-[17px] md:text-[19px] leading-none tracking-tight text-ink-900">

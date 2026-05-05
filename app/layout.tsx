@@ -1,5 +1,5 @@
 // app/layout.tsx
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Inter, PT_Serif } from 'next/font/google';
 import './globals.css';
@@ -37,11 +37,13 @@ export const metadata: Metadata = {
   verification: {
     google: 'a1n9nuZyqriGqNIGkXbCE1VLxw4Or6duwwWmREmB3q8',
   },
+  manifest: '/site.webmanifest',
   icons: {
     icon: [
+      { url: '/favicon.ico' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.ico' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
@@ -52,14 +54,22 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
     description: siteConfig.description,
-    // Images auto-populated from app/opengraph-image.tsx (file-based convention).
+    images: [
+      { url: '/og-image.png', width: 1200, height: 630, alt: `${siteConfig.name} — SEIS & EIS specialist matching` },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
     description: siteConfig.description,
-    // Images auto-populated from app/twitter-image.tsx (file-based convention).
+    images: ['/og-image.png'],
   },
+};
+
+// Theme colour for the address bar / PWA chrome. Lives on its own export
+// in Next 14 (themeColor in metadata is deprecated).
+export const viewport: Viewport = {
+  themeColor: '#6B1F2E',
 };
 
 // Organization schema. We are the entity that OPERATES the referral
@@ -72,7 +82,7 @@ const organizationSchema = {
   '@id': `${siteConfig.url}/#organization`,
   name: siteConfig.name,
   url: siteConfig.url,
-  logo: `${siteConfig.url}/logo.png`,
+  logo: `${siteConfig.url}/logo-mark.svg`,
   description:
     'Independent UK referral and matching service connecting SEIS and EIS founders with qualified, insured, vetted scheme-specialist accountancy practices. We are not an accountancy firm and do not deliver accountancy services ourselves; all professional work is performed by independent third-party accountants in our partner network.',
   areaServed: { '@type': 'Country', name: 'United Kingdom' },

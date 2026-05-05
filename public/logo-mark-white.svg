@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="SEIS Accountants logo">
+  <title>SEIS Accountants</title>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="
+    M 304 220
+    L 720 220
+    A 84 84 0 0 1 804 304
+    L 804 720
+    A 84 84 0 0 1 720 804
+    L 304 804
+    A 84 84 0 0 1 220 720
+    L 220 304
+    A 84 84 0 0 1 304 220
+    Z
+    M 332 312
+    L 692 312
+    A 32 32 0 0 1 724 344
+    L 724 472
+    A 32 32 0 0 1 692 504
+    L 332 504
+    A 32 32 0 0 1 300 472
+    L 300 344
+    A 32 32 0 0 1 332 312
+    Z
+    M 332 552
+    L 692 552
+    A 32 32 0 0 1 724 584
+    L 724 712
+    A 32 32 0 0 1 692 744
+    L 332 744
+    A 32 32 0 0 1 300 712
+    L 300 584
+    A 32 32 0 0 1 332 552
+    Z
+  "/>
+</svg>
