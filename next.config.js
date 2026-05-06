@@ -67,24 +67,29 @@ const nextConfig = {
     // dynamic routes catch any URL the explicit list misses.
 
     // Helper: every retired city slug 301s to /location/. Source list is
-    // every slug that ever shipped (the original 96-city list minus the 12
-    // we kept) plus a few combo-only slugs (edgware, cambridge are NEW
-    // kept slugs whose old combo URLs need to redirect to the new pillar).
+    // every slug that ever shipped that is not in the current kept set.
+    // 2026-05-06 expansion: Birmingham, Liverpool, Leeds, Sheffield,
+    // Bristol, Bath, Cardiff, Edinburgh, Glasgow, Reading, Watford,
+    // Brighton, Oxford, Leicester were promoted from retired to kept and
+    // removed from this list — adding them back here would mask the new
+    // pages with a 301.
     const RETIRED_CITY_SLUGS = [
       // London & South East dropped
-      'croydon','bromley','ilford','romford','slough','reading','oxford','brighton','worthing','woking','crawley','luton','milton-keynes','watford',
+      'croydon','bromley','ilford','romford','slough','worthing','woking','crawley','luton','milton-keynes',
       // Midlands dropped
-      'birmingham','coventry','leicester','derby','wolverhampton','stoke-on-trent','walsall','west-bromwich','solihull','worcester','shrewsbury','telford','lincoln','peterborough',
+      'coventry','derby','wolverhampton','stoke-on-trent','walsall','west-bromwich','solihull','worcester','shrewsbury','telford','lincoln','peterborough',
       // North West dropped
-      'liverpool','bolton','oldham','rochdale','stockport','wigan','preston','blackpool','blackburn','chester','warrington','st-helens','birkenhead','southport',
+      'bolton','oldham','rochdale','stockport','wigan','preston','blackpool','blackburn','chester','warrington','st-helens','birkenhead','southport',
       // North East & Yorkshire dropped
-      'leeds','sheffield','bradford','huddersfield','hull','york','sunderland','gateshead','middlesbrough','hartlepool','stockton-on-tees','darlington','durham','doncaster',
+      'bradford','huddersfield','hull','york','sunderland','gateshead','middlesbrough','hartlepool','stockton-on-tees','darlington','durham','doncaster',
       // South West & Wales dropped
-      'bristol','cardiff','plymouth','exeter','bath','newport','swindon','gloucester','bournemouth','poole','southampton','portsmouth','torquay','bridgend',
-      // Scotland & Northern Ireland dropped (entire region)
-      'glasgow','edinburgh','aberdeen','dundee','inverness','perth','stirling','paisley','east-kilbride','belfast','derry','lisburn','newry','armagh','bangor','antrim',
+      'plymouth','exeter','newport','swindon','gloucester','bournemouth','poole','southampton','portsmouth','torquay','bridgend',
+      // Scotland dropped (Edinburgh and Glasgow now kept; rest still 301)
+      'aberdeen','dundee','inverness','perth','stirling','paisley','east-kilbride',
+      // Northern Ireland dropped (entire region)
+      'belfast','derry','lisburn','newry','armagh','bangor','antrim',
       // Other slugs that earned GSC impressions but were never in the kept list
-      'queensbury','harrow-town-centre','northolt','kenton','canons-park','sarratt','blackburn','bournemouth','salisbury','aylesbury','kettering','rugby','redditch','tamworth','grimsby','scunthorpe','dewsbury','barnsley','rotherham','southend','chelmsford','colchester','ipswich','norwich','cambridge-old',
+      'queensbury','harrow-town-centre','northolt','kenton','canons-park','sarratt','salisbury','aylesbury','kettering','rugby','redditch','tamworth','grimsby','scunthorpe','dewsbury','barnsley','rotherham','southend','chelmsford','colchester','ipswich','norwich','cambridge-old',
     ];
     const KEPT_SERVICE_SLUGS = [
       'seis-advance-assurance','eis-advance-assurance','share-issuance-cap-table',

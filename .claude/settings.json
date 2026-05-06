@@ -28,7 +28,16 @@
       "Bash(git add *)",
       "Bash(awk '{print $1}')",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(grep -E \"^  [a-z-]+: \\\\{$\" /Users/nealdougan/seisaccountants/data/cityDeepContent.ts)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('/Users/nealdougan/seisaccountants/data/locationProfilesData.json','utf8'\\)\\); console.log\\('JSON OK; key count:', Object.keys\\(JSON.parse\\(require\\('fs'\\).readFileSync\\('/Users/nealdougan/seisaccountants/data/locationProfilesData.json','utf8'\\)\\)\\).length\\)\")",
+      "Bash(grep -c \"^  [a-z-]*: {$\" /Users/nealdougan/seisaccountants/data/cityDeepContent.ts)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(grep -E \"^\\\\s*[0-9]+:\\\\s*[a-z-]+: \\\\{$\")",
+      "Bash(npx next *)",
+      "Bash(grep -E \"\\\\.html$\")"
     ],
     "additionalDirectories": [
       "/Users/nealdougan/startupaccountantharrow/public/fonts",
