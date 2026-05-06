@@ -133,7 +133,7 @@ export default function HomeClient() {
 
                 {/* Footer eyebrow card — bottom-right, slight left tilt */}
                 <div
-                  className="absolute bottom-[2%] right-[4%] w-[44%] z-10 bg-white border border-ink-900/8 p-5 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)]"
+                  className="absolute bottom-[2%] right-[4%] w-[44%] z-30 bg-white border border-ink-900/8 p-5 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)]"
                   style={{ transform: 'rotate(-2deg)' }}
                 >
                   <span

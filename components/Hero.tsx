@@ -130,7 +130,7 @@ export function Hero({ title, subtitle, image, showCta = true, onOpenModal }: He
 
             {/* Sheet 3: service list (bottom-right, mid-size, slight left tilt) */}
             <div
-              className="absolute bottom-[2%] right-0 w-[46%] lg:w-[44%] z-10 bg-white border border-ink-900/8 p-5 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)] transition-transform duration-300 hover:-translate-y-1"
+              className="absolute bottom-[2%] right-0 w-[46%] lg:w-[44%] z-30 bg-white border border-ink-900/8 p-5 shadow-[0_16px_40px_-16px_rgba(60,40,30,0.18),0_4px_12px_-4px_rgba(60,40,30,0.10)] transition-transform duration-300 hover:-translate-y-1"
               style={{ transform: 'rotate(-2deg)' }}
             >
               <span

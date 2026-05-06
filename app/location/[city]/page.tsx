@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!profile || !cityName) return {};
 
   const title = `SEIS Accountants in ${cityName} | Vetted ACA/ACCA Specialists`;
-  const description = `Find vetted startup accountants in ${cityName}. Specialists in R&D tax credits, SEIS/EIS, company formation and growth planning. Free quotes, no obligation.`;
+  const description = `Find vetted SEIS and EIS specialist accountants in ${cityName}. Network practices handle advance assurance, share issuance, SEIS1 and EIS1 compliance, investor tax certificates, and the full three-year qualifying period. Free matching, no obligation.`;
 
   return {
     title,

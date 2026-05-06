@@ -1,6 +1,7 @@
 // app/sitemap.ts
 // Post 2026-05-02 cull. No service-location combos (route deleted),
-// no /areas-we-cover/ (301'd). 12 location pages, 6 service pillars.
+// no /areas-we-cover/ (301'd). 26 location pages, 7 service pillars.
+// 2026-05-06: expanded from 12 to 26 city pages.
 
 import type { MetadataRoute } from 'next';
 import { services } from '@/data/services';
@@ -10,7 +11,7 @@ import { guides } from '@/data/guides';
 
 // Static date constants - update manually when content genuinely changes.
 // Never use `new Date()` here - it inflates freshness signals Google discounts.
-const SITE_MODIFIED = '2026-05-02';
+const SITE_MODIFIED = '2026-05-06';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -35,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // 6 deep service pillars
+  // 7 deep service pillars
   const servicePages: MetadataRoute.Sitemap = services.map(s => ({
     url: `${base}/services/${s.slug}/`,
     lastModified: SITE_MODIFIED,
@@ -43,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // 12 GSC-validated location pages
+  // 26 GSC-validated location pages (12 original + 14 added 2026-05-06)
   const locationPages: MetadataRoute.Sitemap = allCities.map(city => ({
     url: `${base}/location/${toSlug(city)}/`,
     lastModified: SITE_MODIFIED,
