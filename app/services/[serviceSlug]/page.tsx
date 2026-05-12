@@ -23,7 +23,7 @@ export function generateMetadata({ params }: Props): Metadata {
  const service = getServiceBySlug(params.serviceSlug);
  if (!service) return {};
 
- const title = `${service.title} | Free SEIS Specialist Matching Service`;
+ const title = service.title;
  const description = service.description;
  const url = `${siteConfig.url}/services/${service.slug}/`;
 

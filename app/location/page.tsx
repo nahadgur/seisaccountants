@@ -13,22 +13,22 @@ const pageUrl = `${siteConfig.url}/location/`;
 const allCities = Object.values(LOCATIONS).flat();
 
 export const metadata: Metadata = {
- title: 'Locations We Cover | SEIS Accountants',
- description: `Vetted UK SEIS and EIS specialist accountants matched in ${allCities.length} city catchments — London, Manchester, Cambridge, Edgware, Northampton, Nottingham, Newcastle, Wakefield, Cheltenham, Salford, Swansea, and Guildford. Free, no obligation.`,
+ title: 'Locations We Cover',
+ description: `Vetted UK SEIS/EIS specialists in ${allCities.length} city catchments: London, Manchester, Cambridge, Edgware, and 8 more. Free, no obligation.`,
  alternates: { canonical: pageUrl },
  robots: { index: true, follow: true },
  openGraph: {
  type: 'website',
  url: pageUrl,
  siteName: siteConfig.name,
- title: 'Locations We Cover | SEIS Accountants',
+ title: 'Locations We Cover',
  description: `Vetted UK SEIS and EIS specialist accountants matched in ${allCities.length} city catchments. Free matching, no obligation.`,
  locale: 'en_GB',
  },
  twitter: {
  card: 'summary_large_image',
- title: 'Locations We Cover | SEIS Accountants',
- description: `Vetted UK SEIS and EIS specialist accountants in ${allCities.length} city catchments — free matching service.`,
+ title: 'Locations We Cover',
+ description: `Vetted UK SEIS/EIS specialists in ${allCities.length} city catchments. Free matching service.`,
  },
 };
 

@@ -11,25 +11,25 @@ import ServicesIndexClient from './ServicesIndexClient';
 const pageUrl = `${siteConfig.url}/services/`;
 
 export const metadata: Metadata = {
- title: 'SEIS & EIS Lifecycle Services for UK Founders | Free Matching Service',
+ title: 'Our Services',
  description:
- 'Browse the full SEIS and EIS lifecycle: advance assurance, share issuance, SEIS1 and EIS1 compliance, investor certificates, three-year qualifying-period monitoring, and R&D credits for SEIS-backed companies. Free matching with vetted UK specialists.',
+ 'Full SEIS/EIS lifecycle: advance assurance, share issuance, SEIS1/EIS1 compliance, investor certificates, and qualifying-period monitoring.',
  alternates: { canonical: pageUrl },
  robots: { index: true, follow: true },
  openGraph: {
  type: 'website',
  url: pageUrl,
  siteName: siteConfig.name,
- title: 'SEIS & EIS Lifecycle Services for UK Founders | Free Matching Service',
+ title: 'Our Services | SEIS Accountants',
  description:
- 'SEIS and EIS specialist accountants for UK founders: advance assurance, share issuance, SEIS1 and EIS1 compliance, investor certificates, qualifying-period monitoring, and R&D credits. Free matching with vetted ACA/ACCA practitioners.',
+ 'SEIS/EIS specialists for UK founders: advance assurance, share issuance, SEIS1/EIS1 compliance, investor certificates, and R&D credits.',
  locale: 'en_GB',
  },
  twitter: {
  card: 'summary_large_image',
- title: 'Startup Accounting Services for UK Businesses',
+ title: 'Our Services | SEIS Accountants',
  description:
- 'Free matching with vetted UK SEIS and EIS specialist accountants who handle advance assurance, share issuance, compliance statements, and the three-year qualifying period.',
+ 'Vetted UK SEIS/EIS specialists for advance assurance, share issuance, compliance statements, and the three-year qualifying period.',
  },
 };
 
