@@ -28,7 +28,7 @@ const display = PT_Serif({
 export const metadata: Metadata = {
  metadataBase: new URL(siteConfig.url),
  title: {
- default: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
+ default: `SEIS/EIS Advance Assurance | ${siteConfig.name}`,
  template: `%s | ${siteConfig.name}`,
  },
  description: siteConfig.description,
@@ -52,15 +52,15 @@ export const metadata: Metadata = {
  locale: 'en_GB',
  url: siteConfig.url,
  siteName: siteConfig.name,
- title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
+ title: `SEIS/EIS Advance Assurance | ${siteConfig.name}`,
  description: siteConfig.description,
  images: [
- { url: '/og-image.png', width: 1200, height: 630, alt: `${siteConfig.name} — SEIS & EIS specialist matching` },
+ { url: '/og-image.png', width: 1200, height: 630, alt: `${siteConfig.name} | SEIS & EIS specialist matching` },
  ],
  },
  twitter: {
  card: 'summary_large_image',
- title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
+ title: `SEIS/EIS Advance Assurance | ${siteConfig.name}`,
  description: siteConfig.description,
  images: ['/og-image.png'],
  },

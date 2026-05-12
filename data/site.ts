@@ -3,7 +3,7 @@ export const siteConfig = {
   "name": "SEIS Accountants",
   "tagline": "Matching UK founders raising SEIS and EIS with vetted scheme-specialist accountants",
   "url": "https://www.seisaccountants.uk",
-  "description": "Free matching service connecting UK founders with vetted accountants who specialise in SEIS and EIS advance assurance, share issuance, SEIS1/EIS1 compliance, investor tax certificates, and the full three-year qualifying period.",
+  "description": "Free matching service. Vetted UK accountants for SEIS/EIS advance assurance, share issuance, SEIS1/EIS1, and investor certificates.",
   "contactEmail": "hello@seisaccountants.uk",
   "gaId": "G-XXXXXXXXXX"
 };
