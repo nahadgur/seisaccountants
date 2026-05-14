@@ -20,6 +20,16 @@ import {
 import { Guide } from '@/data/guides';
 import { rdTaxCreditsContent } from '@/data/guideContent/rdTaxCredits';
 import { seisEisContent } from '@/data/guideContent/seisEis';
+import { advanceAssuranceContent } from '@/data/guideContent/advanceAssurance';
+import { complianceCertificatesContent } from '@/data/guideContent/complianceCertificates';
+import { knowledgeIntensiveCompaniesContent } from '@/data/guideContent/knowledgeIntensiveCompanies';
+import { qualifyingTradesContent } from '@/data/guideContent/qualifyingTrades';
+import { pitfallsVoidingReliefContent } from '@/data/guideContent/pitfallsVoidingRelief';
+import { lossReliefContent } from '@/data/guideContent/lossRelief';
+import { reinvestmentReliefContent } from '@/data/guideContent/reinvestmentRelief';
+import { carryBackContent } from '@/data/guideContent/carryBack';
+import { shareIssueMechanicsContent } from '@/data/guideContent/shareIssueMechanics';
+import { investorMatchingMarketingContent } from '@/data/guideContent/investorMatchingMarketing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
@@ -54,6 +64,16 @@ const CALLOUT_STYLES = {
 function getContent(slug: string) {
  if (slug === 'rd-tax-credits-uk-startups') return rdTaxCreditsContent;
  if (slug === 'seis-eis-guide-uk-startups') return seisEisContent;
+ if (slug === 'seis-eis-advance-assurance-application') return advanceAssuranceContent;
+ if (slug === 'seis-eis-compliance-certificates-s1-s3') return complianceCertificatesContent;
+ if (slug === 'knowledge-intensive-companies-eis-rules') return knowledgeIntensiveCompaniesContent;
+ if (slug === 'seis-eis-qualifying-trades') return qualifyingTradesContent;
+ if (slug === 'seis-eis-pitfalls-void-relief') return pitfallsVoidingReliefContent;
+ if (slug === 'seis-eis-loss-relief-failed-investments') return lossReliefContent;
+ if (slug === 'eis-seis-reinvestment-relief-cgt-deferral') return reinvestmentReliefContent;
+ if (slug === 'seis-eis-carry-back-prior-tax-year') return carryBackContent;
+ if (slug === 'seis-eis-share-issue-mechanics') return shareIssueMechanicsContent;
+ if (slug === 'seis-eis-investor-matching-round-marketing') return investorMatchingMarketingContent;
  return null;
 }
 
