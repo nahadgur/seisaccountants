@@ -181,6 +181,7 @@ export function Header({ onOpenModal }: HeaderProps) {
  )}
  </div>
 
+ <Link href="/blog/" className="nav-link">Insights</Link>
  <Link href="/location/" className="nav-link">Areas</Link>
  <Link href="/tools/seis-diagnostic/" className="nav-link">SEIS Check</Link>
  <Link href="/how-we-vet/" className="nav-link">Vetting</Link>
@@ -258,6 +259,9 @@ export function Header({ onOpenModal }: HeaderProps) {
  ))}
  </div>
 
+ <Link href="/blog/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
+ Insights
+ </Link>
  <Link href="/location/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
  Areas we cover
  </Link>

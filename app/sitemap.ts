@@ -7,6 +7,7 @@ import { services } from '@/data/services';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
 import { guides } from '@/data/guides';
+import { blogArticles } from '@/data/blog';
 
 // Static date constants - update manually when content genuinely changes.
 // Never use `new Date()` here - it inflates freshness signals Google discounts.
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${base}/services/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.9 },
  { url: `${base}/location/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
  { url: `${base}/guides/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
+ { url: `${base}/blog/`, lastModified: SITE_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
  { url: `${base}/how-we-vet/`, lastModified: SITE_MODIFIED, changeFrequency: 'yearly', priority: 0.6 },
  { url: `${base}/tools/seis-diagnostic/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.75 },
  { url: `${base}/contact/`, lastModified: SITE_MODIFIED, changeFrequency: 'yearly', priority: 0.5 },
@@ -33,6 +35,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
  lastModified: g.lastUpdated,
  changeFrequency: 'yearly' as const,
  priority: 0.7,
+ }));
+
+ // Non-draft blog articles only. lastModified from publishDate (or dateModified).
+ const blogPages: MetadataRoute.Sitemap = blogArticles
+ .filter(a => !a.draft)
+ .map(a => ({
+ url: `${base}/blog/${a.slug}/`,
+ lastModified: a.dateModified ?? a.publishDate,
+ changeFrequency: 'monthly' as const,
+ priority: 0.6,
  }));
 
  // 6 deep service pillars
@@ -54,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  return [
  ...staticPages,
  ...guidePages,
+ ...blogPages,
  ...servicePages,
  ...locationPages,
  ];
