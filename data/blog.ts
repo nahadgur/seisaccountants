@@ -326,6 +326,320 @@ export const blogArticles: BlogArticle[] = [
     ],
   },
 
+  // ===========================================================
+  // SPOKE 4 of 6 - hub: seis-eis-guide-uk-startups (DRAFT)
+  // ===========================================================
+  {
+    slug: 'seis-eis-anti-avoidance-tax-motive-trading-substance',
+    title: 'SEIS and EIS Anti-Avoidance, When HMRC Sees Tax Motive Over Trading Substance',
+    metaTitle: 'SEIS and EIS Anti-Avoidance: Tax Motive Tests',
+    metaDescription: 'How HMRC tests SEIS and EIS for tax-avoidance motive, the no-main-purpose rule, the risk-to-capital condition, and the GAAR backdrop founders should know.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-06-01',
+    readingMins: 10,
+    excerpt: 'HMRC can refuse SEIS or EIS relief if a scheme looks engineered for tax. This guide walks through the no-main-purpose test, the risk-to-capital condition and the GAAR backdrop.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 4,
+    relatedSpokes: [
+      'seis-eis-three-year-holding-period-disposal-events',
+      'seis-eis-founder-multiple-roles-director-employee-investor',
+      'seis-vs-eis-key-differences-founders-must-know',
+      'founders-family-seis-30-percent-connected-person-rule',
+      'seis-eis-investment-limits-how-much-you-can-raise',
+    ],
+    draft: true,
+    content: [
+      { type: 'p', text: 'SEIS and EIS are deliberately generous, and that generosity is policed by a layer of anti-avoidance rules designed to make sure the relief flows to genuine risk capital backing real trading companies. The rules ask whether a transaction looks like investment in a young business or whether it looks like a tax-driven arrangement dressed up as one. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/, which is the right starting point if you have not yet read it.' },
+      { type: 'p', text: 'It pairs with two companion articles in the same drop. The first walks through the three-year holding period and the disposal events that can withdraw relief at /blog/seis-eis-three-year-holding-period-disposal-events/. The second covers founders holding several roles at once, where the director, employee and investor lines blur, at /blog/seis-eis-founder-multiple-roles-director-employee-investor/. Together the three articles cover the motive test, the holding test and the role test that HMRC apply when they look at a SEIS or EIS round.' },
+
+      { type: 'h2', text: 'Why HMRC police motive at all' },
+      { type: 'p', text: 'The schemes exist to subsidise genuine risk-taking by outside investors in young, trading companies. If an arrangement looks like a way to convert other taxable income into reliefed investment, or to take a cash return out of the company while wearing the badge of an SEIS or EIS investor, the policy purpose collapses. The anti-avoidance rules therefore sit alongside every other eligibility condition: even if the company, the shares and the investor all tick the structural boxes, relief can still be denied if the arrangement is judged to have tax avoidance as a main purpose.' },
+      { type: 'p', text: 'In practice, that means founders cannot rely on a checklist alone. A round that satisfies the gross assets test, the age test and the connection test can still fail if the wider picture suggests the investment is engineered to extract a tax outcome rather than to fund a trading business. The motive question is the lens through which the rest of the conditions are read.' },
+
+      { type: 'h2', text: 'The "no main purpose of tax avoidance" condition' },
+      { type: 'p', text: 'At the heart of the SEIS rules in ITA 2007 Part 5A, and the EIS rules in ITA 2007 Part 5, is a condition that the shares must not have been issued, and the investment must not have been made, as part of a scheme or arrangement the main purpose, or one of the main purposes, of which is the avoidance of tax. The condition is stated broadly on purpose, so that arrangements that pass the mechanical tests can still be caught.' },
+      { type: 'p', text: 'Two parts of the wording matter. The first is the word "main": HMRC are not asking whether tax was considered, since tax is openly the point of the relief. They are asking whether tax avoidance was a primary driver of how the deal was structured. The second is the word "scheme or arrangement": the test looks at the whole picture, not just the share issue in isolation. Side agreements, related transactions and circular flows of money are all in scope.' },
+
+      { type: 'h2', text: 'The risk-to-capital condition' },
+      { type: 'p', text: 'The risk-to-capital condition was introduced to push the schemes back towards genuine growth investment. It asks two principal-based questions about the issuing company at the time of the share issue. First, does the company have objectives to grow and develop its trade in the long term. Second, is there a significant risk that the investor will suffer a loss of capital that is greater than any net return.' },
+      { type: 'p', text: 'A company that fails either limb does not qualify, even if every other box is ticked. The test was designed to filter out asset-backed arrangements offering investors a soft landing, structured exits or preferential returns. It is a principles-based test, so HMRC look at the substance of the company and the deal, not just the legal form of the share class.' },
+
+      { type: 'h2', text: 'Common patterns that draw HMRC scrutiny' },
+      { type: 'p', text: 'A handful of structures recur in HMRC enquiries because they each undermine one of the rules above. The list below is not exhaustive, but it captures the shapes most likely to attract a question.' },
+      {
+        type: 'list',
+        items: [
+          'Investor money that loops back to the investor through related-party arrangements, loans or service agreements.',
+          'Preferential shares that look ordinary but carry preferred dividends, redemption rights or priority on a winding up.',
+          'Side letters promising a guaranteed exit, a put option, a buy-back or any other downside protection.',
+          'Companies with little trading substance whose main asset is a tax-attractive licence, lease or income stream.',
+          'Pre-arranged disposals timed to crystallise CGT exemption without genuine commercial reason.',
+          'Investment in a company that depends largely on a related party for its trade or its customers.',
+        ],
+      },
+
+      { type: 'h2', text: 'The preferential-rights trap' },
+      { type: 'p', text: 'Both schemes require the shares to be ordinary shares carrying no present or future preferential right to dividends and no preferential right to assets on a winding up. The rule is stricter than founders expect, because it bites on rights that might never be exercised. A right to a cumulative dividend, a fixed-rate dividend, a priority distribution on liquidation, or any priority over other shareholders, can fail the test even if it has not yet paid out anything.' },
+      { type: 'p', text: 'This is one of the most common technical traps for first-time founders who have copied a share class from a US-style term sheet. Preferred shares with liquidation preferences, common in venture deals abroad, do not qualify. The fix is to use plain ordinary shares for SEIS and EIS investors, even where other classes exist for non-relief capital. Where a company has a more complicated capital structure, the share class used for the relief round needs to be checked line by line.' },
+
+      { type: 'h2', text: 'The GAAR backdrop' },
+      { type: 'p', text: 'Sitting above the scheme-specific rules is the General Anti-Abuse Rule (GAAR), introduced in the Finance Act 2013. The GAAR can counter arrangements that would otherwise produce a tax advantage but that cannot reasonably be regarded as a reasonable course of action in relation to the tax provisions concerned. It is a backstop applied with caution, but its existence reinforces the message that the SEIS and EIS rules are not a series of mechanical boxes to be gamed.' },
+      { type: 'p', text: 'In practice, a round that passes the SEIS or EIS anti-avoidance conditions and the risk-to-capital test is unlikely to be challenged under the GAAR as well. But the GAAR is the reason that aggressive interpretations of the scheme rules carry real risk: even if a technical reading favours the taxpayer, the wider rule may catch the arrangement.' },
+
+      { type: 'h2', text: 'The motive tests at a glance' },
+      {
+        type: 'table',
+        headers: ['Test', 'What it asks', 'Where it lives'],
+        rows: [
+          ['No main purpose of tax avoidance', 'Was avoidance a main purpose of the share issue or the wider scheme', 'ITA 2007 Part 5 (EIS) and Part 5A (SEIS)'],
+          ['Risk-to-capital condition', 'Does the company aim to grow, and is there real risk of capital loss', 'ITA 2007 (introduced FA 2018)'],
+          ['Preferential rights', 'Do the shares carry any present or future priority to dividends or assets', 'Within the qualifying-shares rules'],
+          ['GAAR', 'Are the arrangements unreasonable in light of the SEIS/EIS provisions', 'Finance Act 2013, Part 5'],
+        ],
+      },
+
+      { type: 'h2', text: 'Substance over form' },
+      { type: 'p', text: 'Across all of the above, the watchword is substance. HMRC look at the company commercial reality: does it have a product, customers or a credible plan to acquire them, employees doing genuine work, a balance sheet that reflects trading activity rather than a shell. They look at the round commercial reality: was it marketed on commercial terms to investors taking real risk, with no side promises softening the downside.' },
+      { type: 'p', text: 'A young company will inevitably have less to show on those measures than a mature one, and that is exactly why the schemes exist. The point is not that an early company has to demonstrate revenue, but that it has to demonstrate it is trying to be a trading company rather than a wrapper for a tax outcome. Board minutes, business plans, hiring decisions and customer pipelines are all part of how that substance is evidenced.' },
+
+      { type: 'h2', text: 'Where founders most often go wrong' },
+      { type: 'p', text: 'The errors below recur often enough in HMRC enquiries that they are worth checking against your own round before you issue the shares.' },
+      {
+        type: 'list',
+        items: [
+          'Issuing a share class with even a small dividend or liquidation preference, then claiming it is "effectively" ordinary.',
+          'Promising a specific exit window or a buy-back to attract a reluctant investor.',
+          'Routing investor money into a related company, a personal loan or a service contract that returns value to the investor.',
+          'Treating a passive holding vehicle as the SEIS or EIS company, where the trade actually sits in a subsidiary or partner entity.',
+          'Marketing the round on the basis of "guaranteed" returns or "secured" assets, language that signals failure of the risk-to-capital test.',
+        ],
+      },
+
+      { type: 'h3', text: 'When you should pause and take advice' },
+      { type: 'p', text: 'If any part of your round involves related-party arrangements, side letters, unusual share classes, or a company structure where the trade and the investment sit in different entities, the anti-avoidance rules deserve a careful look before shares are issued. The cost of getting this wrong is not just rejected relief: it can be the unwinding of every investor relief in the round, with reputational consequences for future fundraising.' },
+
+      { type: 'h2', text: 'Advance assurance and disclosure' },
+      { type: 'p', text: 'Advance assurance is the practical way to test a round against HMRC view before money is committed. The application asks for the business plan, the latest accounts, draft articles, the share class to be issued and the names of intended investors. Where there is anything unusual in the structure, advance assurance is also the moment to disclose it: HMRC have the information they need to comment, and the founders have a clear signal of whether the structure will hold.' },
+      { type: 'p', text: 'Advance assurance is not a guarantee. It is given on the basis of the information supplied and can be revisited if the facts change. But it is the single best tool a founder has for de-risking the motive question before issuing shares, particularly where the round involves anything beyond a vanilla angel subscription on standard ordinary shares.' },
+
+      { type: 'h2', text: 'The interaction with the company-level tests' },
+      { type: 'p', text: 'The anti-avoidance rules do not operate in isolation. They sit alongside the other eligibility conditions covered in the flagship pillar at /guides/seis-eis-guide-uk-startups/ and in the earlier spokes on scheme differences at /blog/seis-vs-eis-key-differences-founders-must-know/, connected persons at /blog/founders-family-seis-30-percent-connected-person-rule/ and investment limits at /blog/seis-eis-investment-limits-how-much-you-can-raise/. A round that fails the connected-person test or breaches the company cap is not rescued by good motives; equally, a round that ticks the structural boxes can still be lost on anti-avoidance grounds.' },
+
+      { type: 'h2', text: 'What this means for founders' },
+      { type: 'p', text: 'The schemes are open to founders who use them as Parliament intended, and they are unforgiving of founders who try to engineer the rules. If your round looks like a young trading company raising risk capital from outside investors on ordinary shares with no side deals, the motive tests are not something to fear. If any part of the deal departs from that picture, the anti-avoidance rules become the most important paragraphs in the legislation. The detail is complex and the consequences are severe, so for any borderline case treat this article as orientation and take professional advice on the specific facts.' },
+    ],
+  },
+
+  // ===========================================================
+  // SPOKE 5 of 6 - hub: seis-eis-guide-uk-startups (DRAFT)
+  // ===========================================================
+  {
+    slug: 'seis-eis-three-year-holding-period-disposal-events',
+    title: 'The 3-Year Holding Period and Disposal Events That Withdraw SEIS or EIS Relief',
+    metaTitle: 'SEIS and EIS 3-Year Holding and Disposal Events',
+    metaDescription: 'How the SEIS and EIS three-year holding period works, the disposal events that withdraw relief, the sliding-scale clawback and permitted exceptions.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-06-01',
+    readingMins: 9,
+    excerpt: 'SEIS and EIS relief is conditional on holding the shares for at least three years. This guide explains the holding clock, the disposal events that withdraw relief, and the permitted exceptions.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 5,
+    relatedSpokes: [
+      'seis-eis-anti-avoidance-tax-motive-trading-substance',
+      'seis-eis-founder-multiple-roles-director-employee-investor',
+      'seis-vs-eis-key-differences-founders-must-know',
+      'founders-family-seis-30-percent-connected-person-rule',
+      'seis-eis-investment-limits-how-much-you-can-raise',
+    ],
+    draft: true,
+    content: [
+      { type: 'p', text: 'SEIS and EIS investors are buying time as well as shares. The headline relief is granted up front, but it only becomes secure once the investor has held the shares, and the company has continued to qualify, for at least three years. Disposing of the shares early, or doing things that count as a disposal under the rules, can claw back the income tax relief and remove the capital gains tax exemption. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/.' },
+      { type: 'p', text: 'It pairs with the other two new spokes in this drop. The first deals with anti-avoidance and how HMRC test for tax motive over trading substance at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/. The second covers founders holding several roles at once at /blog/seis-eis-founder-multiple-roles-director-employee-investor/. Together they cover the three big risks to relief after the round closes: motive, holding and role.' },
+
+      { type: 'h2', text: 'What the three-year holding period actually requires' },
+      { type: 'p', text: 'The three-year holding period runs from the date the shares were issued, not from the date the relief is claimed and not from the date of the SEIS3 or EIS3 certificate. The investor must hold the shares continuously throughout that period, and the company must remain a qualifying company carrying on a qualifying trade for the same three years. Both halves of the requirement matter: the investor cannot dispose of the shares early, and the company cannot stop qualifying.' },
+      { type: 'p', text: 'For most rounds, the practical effect is straightforward: the shares sit on the cap table, the company keeps trading, and the period elapses without incident. Where the period does become a live issue, it is usually because the investor wants liquidity, the company restructures, the company is sold, or the company qualifying status slips. Each of these scenarios has its own rule, and the consequences differ.' },
+
+      { type: 'h2', text: 'Early disposal, the headline rule' },
+      { type: 'p', text: 'If the investor disposes of the SEIS or EIS shares within the three-year window in a transaction that is not at arm length, the full amount of income tax relief claimed on those shares is withdrawn. If the disposal is at arm length, the income tax relief is reduced on a sliding basis tied to the proceeds: in broad terms, the lower the proceeds, the smaller the portion of the original relief that survives. The CGT exemption is also lost on an early disposal, so any gain on the shares becomes chargeable.' },
+      { type: 'p', text: 'The point of the sliding scale is to distinguish between an investor who exits early for less than they put in, where the policy is not to punish them for taking a loss, and an investor who exits early for a full return, where the relief was effectively a subsidy of a short-term gain. The mechanics are detailed and best run through with an accountant before a sale is signed.' },
+
+      { type: 'h2', text: 'Sliding-scale clawback at a glance' },
+      {
+        type: 'table',
+        headers: ['Scenario', 'Income tax relief', 'CGT exemption on disposal'],
+        rows: [
+          ['Held for three years or more, sold at arm length', 'Retained', 'Available on gain'],
+          ['Sold within three years at arm length, lower proceeds', 'Reduced on a sliding basis', 'Not available'],
+          ['Sold within three years at arm length, full or higher proceeds', 'Withdrawn in full', 'Not available'],
+          ['Sold within three years not at arm length', 'Withdrawn in full', 'Not available'],
+        ],
+      },
+
+      { type: 'h2', text: 'What counts as a disposal' },
+      { type: 'p', text: 'Disposal is a wider concept than a straight sale. It includes a transfer to another person, a redemption or buy-back of the shares by the company, a gift other than to a spouse or civil partner, the cancellation of the shares, and certain reorganisations that effectively change what the investor holds. Each of these can trigger the clawback rules if it occurs within the three-year period.' },
+      { type: 'p', text: 'It is also worth noting that not every change in the company capital structure is a disposal. A bonus issue, a sub-division of shares or a straight share-for-share exchange that meets the qualifying conditions may not count. The question of whether a given event is a disposal is technical and frequently turns on detail, so it is one to flag to an accountant whenever the cap table is about to be restructured during the holding period.' },
+
+      { type: 'h2', text: 'Permitted disposals: death and qualifying share-for-share exchanges' },
+      { type: 'p', text: 'The rules contain a small but important set of carve-outs. The most familiar is death: a disposal occasioned by the death of the investor does not trigger clawback. The shares pass with the relief preserved, although the CGT exemption interacts with the rules on inheritance and the base cost of the shares for the personal representatives.' },
+      { type: 'p', text: 'The second important carve-out is a qualifying share-for-share exchange. Where the SEIS or EIS company is taken over by another company in exchange for shares, and the conditions for a qualifying takeover are met, the new shares can be treated as if they were the original SEIS or EIS shares. The holding period continues on the new shares rather than resetting, and the relief is not withdrawn. The qualifying conditions are tightly drawn: in broad terms, the acquiring company must issue ordinary shares, the exchange must be the whole or substantially the whole of the original company shares, and certain ownership tests must be met.' },
+
+      { type: 'h2', text: 'Permitted disposals at a glance' },
+      {
+        type: 'list',
+        items: [
+          'Death of the investor: relief is preserved on the shares passing to personal representatives.',
+          'Qualifying share-for-share exchange on a takeover: the new shares step into the original holding for the three-year clock.',
+          'Compulsory winding up for genuine commercial reasons can be treated more sympathetically than a chosen exit, but the rules are detailed.',
+        ],
+      },
+
+      { type: 'h2', text: 'Company-side events that can withdraw relief' },
+      { type: 'p', text: 'The holding clock is not just about the investor. The company must continue to qualify for the same three years, and a number of company-side events can withdraw relief even though the investor has not sold a single share. The most important are the company ceasing to carry on the qualifying trade, the company beginning a substantial non-qualifying activity, the company becoming controlled by another company that fails the conditions, and certain "value received" payments to investors during the period.' },
+      { type: 'p', text: 'Value-received rules deserve a separate paragraph. Payments to an SEIS or EIS investor by the company during the qualifying period, including loans, share repurchases of other shares held by them, and certain disposals at undervalue, can withdraw relief whether or not the original shares are sold. The rules are designed to stop the investor effectively recovering their money through the back door while keeping the relief.' },
+
+      { type: 'h2', text: 'When does the clock start' },
+      { type: 'p', text: 'A point that sometimes catches founders out: the three-year clock for SEIS and EIS relief runs from the date the shares are issued, not from the date the company started trading, and not from the date of the compliance certificate. For investors who subscribe across several tranches in a single round, each tranche has its own clock from its own issue date. This is one reason that the issuing schedule and the share register need to be kept accurate: an inaccurate issue date can produce a clock that does not match the relief.' },
+
+      { type: 'h3', text: 'Tranches issued on different dates' },
+      { type: 'p', text: 'Where a single investor subscribes for shares across two or three issue dates in the same round, the holding period for each tranche runs from its own date. An investor who later wants to sell part of their holding may find that the earliest tranche has cleared the three years while the latest still sits inside the window. Mapping tranches to dates at the time of issue, rather than reconstructing them later, makes the position straightforward when the question comes up.' },
+
+      { type: 'h2', text: 'Why the same rule applies to SEIS and EIS' },
+      { type: 'p', text: 'The minimum holding period and the disposal-event consequences are essentially the same under SEIS and EIS: three years from issue, sliding-scale clawback on arm length disposals, full withdrawal on non-arm length disposals, and the death and share-for-share carve-outs. The scheme differences set out in the companion article at /blog/seis-vs-eis-key-differences-founders-must-know/ are about company size, age and limits; the holding rules sit on top of both schemes in the same shape. That is helpful for founders running blended rounds, because the same diligence covers both share classes.' },
+
+      { type: 'h2', text: 'What founders can and cannot do during the three years' },
+      { type: 'p', text: 'The holding period sits between investor and company, but it shapes the company own behaviour too. The bullet points below capture the most common actions that put relief at risk and the actions that do not.' },
+      {
+        type: 'list',
+        items: [
+          'High risk: buying back SEIS or EIS shares early, repaying value through loans or service contracts, varying share rights to add preferences.',
+          'High risk: a substantial change of trade, a switch into excluded activities, or a takeover that does not meet the qualifying share-for-share conditions.',
+          'Lower risk: business as usual trading, hiring, customer acquisition and ordinary growth funding from non-relief sources.',
+          'Neutral with conditions: bonus issues, share splits and qualifying reorganisations, provided they meet the detailed rules.',
+        ],
+      },
+
+      { type: 'h2', text: 'Interaction with the anti-avoidance rules' },
+      { type: 'p', text: 'The holding rules are also a backstop for the anti-avoidance rules covered in the companion article at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/. A pre-arranged early exit, or a payment that effectively returns money to the investor inside the three-year window, will fail both the holding tests and the motive tests. The two sets of rules reinforce each other: anti-avoidance catches arrangements engineered up front, while the holding rules catch arrangements that unwind the investment during the period it was meant to support.' },
+
+      { type: 'h2', text: 'The CGT exemption and disposal after three years' },
+      { type: 'p', text: 'Provided the shares are held for the full three years and the conditions continue to be met, a disposal after the period is normally exempt from CGT for both SEIS and EIS. The gain can be free of tax, which is a major part of the appeal for investors who back several companies expecting outsized returns from a few. The exemption only applies to the SEIS or EIS shares themselves and only where income tax relief was given and not withdrawn, so an investor whose income tax relief was clawed back also loses the CGT exemption.' },
+      { type: 'p', text: 'A clean exit therefore depends not just on letting the three years pass, but on the company continuing to qualify, the investor not receiving disqualifying value, and the disposal itself being on arm length terms. The reward for waiting is significant, but it is contingent.' },
+
+      { type: 'h2', text: 'What this means for founders and investors' },
+      { type: 'p', text: 'The three-year holding period is the most predictable rule in the schemes, but it interacts with disposal events, value-received rules, takeovers and the company own qualifying status in ways that are easy to overlook. A relief claim that was rock solid on day one can still be lost two years later through a poorly thought-through share buy-back or an opportunistic takeover. The flagship pillar at /guides/seis-eis-guide-uk-startups/ sets out the wider framework; the related spokes at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/ and /blog/seis-eis-founder-multiple-roles-director-employee-investor/ deal with the motive and role tests that sit alongside the holding rules. Because the consequences of getting any of this wrong are severe, take professional advice before any disposal, restructure or takeover during the holding period.' },
+    ],
+  },
+
+  // ===========================================================
+  // SPOKE 6 of 6 - hub: seis-eis-guide-uk-startups (DRAFT)
+  // ===========================================================
+  {
+    slug: 'seis-eis-founder-multiple-roles-director-employee-investor',
+    title: 'SEIS and EIS for Founders Holding Multiple Roles, Director, Employee and Investor Boundaries',
+    metaTitle: 'SEIS and EIS: Founder Director Employee Investor',
+    metaDescription: 'How SEIS and EIS treat founders who are also directors, employees and investors, the EIS business-angel director rule, and the qualifying activity test.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-06-01',
+    readingMins: 10,
+    excerpt: 'Founders often wear several hats at once. This guide explains how SEIS and EIS treat the director, employee and investor roles, where the schemes diverge, and the business-angel director exception.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 6,
+    relatedSpokes: [
+      'seis-eis-anti-avoidance-tax-motive-trading-substance',
+      'seis-eis-three-year-holding-period-disposal-events',
+      'seis-vs-eis-key-differences-founders-must-know',
+      'founders-family-seis-30-percent-connected-person-rule',
+      'seis-eis-investment-limits-how-much-you-can-raise',
+    ],
+    draft: true,
+    content: [
+      { type: 'p', text: 'Most founders are not just shareholders. They are directors, often paid, sometimes employees on a contract, and increasingly investors putting their own cash into the company alongside outside angels. SEIS and EIS treat each of those hats differently, and the lines move depending on which scheme you are using. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/, which you should read for the overall framework.' },
+      { type: 'p', text: 'It pairs with the other two new spokes in this drop. The first sets out the anti-avoidance and motive tests at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/. The second walks through the three-year holding period and disposal events at /blog/seis-eis-three-year-holding-period-disposal-events/. Together the three articles cover the post-issue rules that decide whether a founder relief actually sticks.' },
+
+      { type: 'h2', text: 'Why founder roles matter to the relief' },
+      { type: 'p', text: 'The schemes are designed to channel outside risk capital into young trading companies. To stop them being used as a way for founders to subsidise their own income, the rules limit when a person already inside the company, as a director or employee, can claim relief on their own subscription. Those limits sit on top of the connected-person rules covered separately in the spoke at /blog/founders-family-seis-30-percent-connected-person-rule/, and they apply differently to SEIS and EIS.' },
+      { type: 'p', text: 'A clean way to think about it: SEIS recognises that the earliest investors in a brand-new company often are the founder-directors themselves and lets them claim, subject to limits. EIS, designed for the growth stage, generally assumes investors are outside the company, with one narrow exception for business-angel directors. The detail of each rule sits below.' },
+
+      { type: 'h2', text: 'SEIS and the director who invests' },
+      { type: 'p', text: 'Under SEIS, a director, including a paid director, can subscribe for SEIS shares and claim relief on the subscription, provided the financial-interest test is not breached. The financial-interest test, often called the 30% test, looks at the share capital, voting rights and rights to assets on a winding up held by the investor and their associates. If the combined holding exceeds 30%, the director is connected and the relief is not available, regardless of which scheme is being used.' },
+      { type: 'p', text: 'For founder-directors of brand-new companies, the relief on offer is genuine: they can claim 50% income tax relief on up to their personal SEIS allowance for the tax year, provided they hold 30% or less of the company. The catch, of course, is that many founders hold far more than 30% at the very earliest stage, which is why the SEIS director route works best for second or third founders with smaller stakes and for founder-directors who have already brought in external investors and diluted below the threshold.' },
+
+      { type: 'h2', text: 'EIS and the general bar on employees' },
+      { type: 'p', text: 'EIS approaches the same question from the opposite direction. As a starting rule, employees of the company are barred from claiming EIS relief on shares in their employer, and directors are also generally treated as connected and cannot claim. The point is to keep the scheme focused on outside investors backing the company growth, rather than on people already drawing income from it.' },
+      { type: 'p', text: 'The employee bar is wider than founders sometimes assume. Contracts of employment, executive service agreements, and certain consultancy arrangements that have employee-like features can all trip the rule. A founder who has converted from a director role into a salaried executive can find themselves blocked from EIS on their own subscription even though SEIS would have allowed it earlier. Where the role is genuinely that of a director rather than an employee, the narrow business-angel director exception described below can sometimes apply.' },
+
+      { type: 'h2', text: 'The business-angel director exception' },
+      { type: 'p', text: 'EIS contains a narrow exception that allows certain directors to claim relief, often called the business-angel director rule. In broad terms, an unpaid director, or a director who only becomes paid after subscribing for EIS shares, can claim relief on those shares provided strict conditions are met. The director must not have been previously connected with the company in a way that disqualifies them, the remuneration after appointment must be reasonable for the services provided, and the role must be a genuine non-executive contribution.' },
+      { type: 'p', text: 'The exception is real, but it is not a workaround for executive founders. The wording of the legislation, the spirit of the rule, and HMRC practice all point towards a person who joined as an investor first and took a board seat to support the company, rather than an existing executive who has restructured their pay to slip inside the wording. As with everything in this area, the safe path is to map the facts against the rule with an accountant before any shares are issued.' },
+
+      { type: 'h2', text: 'Director, employee and investor across the two schemes' },
+      {
+        type: 'table',
+        headers: ['Role', 'SEIS', 'EIS'],
+        rows: [
+          ['Paid director investing, under 30% holding', 'Can claim', 'Generally cannot claim'],
+          ['Unpaid director investing, under 30%', 'Can claim', 'Business-angel director exception may allow it'],
+          ['Employee investing', 'Generally cannot claim', 'Generally cannot claim'],
+          ['Founder over 30% with associates', 'Cannot claim', 'Cannot claim'],
+          ['Outside angel with no role', 'Can claim if all conditions met', 'Can claim if all conditions met'],
+        ],
+      },
+
+      { type: 'h2', text: 'The qualifying business activity, what the company must be doing' },
+      { type: 'p', text: 'The role rules sit alongside a company-side requirement that often gets less attention. The company must be carrying on, or preparing to carry on, a qualifying business activity throughout the relevant period: a new qualifying trade for SEIS, and an existing or new qualifying trade for EIS. The trade must be carried on commercially with a view to profit and must not be wholly or substantially an excluded activity.' },
+      { type: 'p', text: 'Excluded activities are listed in detail in the legislation and include, among others, dealing in land, dealing in commodities or shares, banking, insurance, leasing, legal and accountancy services, property development, hotels and nursing homes. The list is technical and the boundaries are sometimes finer than they appear: a company whose trade looks like development might in fact qualify if it sits on the design side of a development chain, and vice versa. Borderline trades are an obvious case for advance assurance.' },
+
+      { type: 'h2', text: 'Why the qualifying activity matters to founders' },
+      { type: 'p', text: 'The qualifying-activity rule is not just a check on what the company does at the start. It must continue to qualify throughout the period during which the relief depends on the company, broadly the three-year holding window covered in the companion article at /blog/seis-eis-three-year-holding-period-disposal-events/. A pivot from a qualifying trade into an excluded activity inside that window can withdraw relief, even if the original business plan was rock solid.' },
+      { type: 'p', text: 'For founder-investors this is the link between role and relief: a founder claiming SEIS as a director relies not just on personally meeting the role and connection tests, but on the company continuing to meet the qualifying activity test. The relief is genuinely co-dependent on both halves.' },
+
+      { type: 'h2', text: 'Common founder structures and how they fare' },
+      { type: 'p', text: 'The shapes below come up often enough that they are worth running through. Each is a starting point for thought, not a definitive answer, because the conditions are layered and the facts always matter.' },
+      {
+        type: 'list',
+        items: [
+          'Solo founder-director holding 90% and subscribing for SEIS: blocked by the 30% connection rule, regardless of director status.',
+          'Two co-founders each holding 40% with no associate aggregation between them: both blocked under either scheme by the 30% rule.',
+          'Three co-founders each holding around 25% with no spouse aggregation: each can potentially claim SEIS on their own subscription, since each is under 30%.',
+          'Early employee taking a small EIS subscription as a thank-you: blocked by the employee rule.',
+          'External angel who joins the board after subscribing for EIS: potentially within the business-angel director exception, subject to conditions.',
+          'Founder-director who restructures pay to look unpaid at the moment of subscription: high risk of failing the exception in substance.',
+        ],
+      },
+
+      { type: 'h2', text: 'Pay, options and the practical traps' },
+      { type: 'p', text: 'Founder pay arrangements interact with the role rules in two specific ways. First, large salary packages or unusual bonus arrangements can colour the question of whether the director role is genuine and whether the remuneration is "reasonable" for the EIS exception. Second, share options granted to a director or employee can count towards the 30% financial-interest test, because the entitlement to acquire shares is included, even before the options are exercised.' },
+      { type: 'p', text: 'A founder who is genuinely under 30% on their issued shares but holds options that take them above 30% on a fully-diluted basis is treated as connected. This is a common and avoidable trap: the share register looks compliant, but the option grants tip the balance. The companion article on connection at /blog/founders-family-seis-30-percent-connected-person-rule/ covers the "entitled to acquire" point in more depth.' },
+
+      { type: 'h3', text: 'A worked example for a paid founder-director' },
+      { type: 'p', text: 'Suppose a founder-director draws a modest salary, holds 22% of the issued shares, and has been granted options over a further 10% under a forthcoming option pool. On issued shares alone they are under 30%. Once the option entitlement is added in, the combined figure is 32%, which fails the test. The director would not be able to claim SEIS or EIS relief on a personal subscription, even though the salary, the role and the cap-table headline all looked compliant.' },
+
+      { type: 'h2', text: 'When a founder should and should not invest personally' },
+      { type: 'p', text: 'Founders often want to invest because it sends a confidence signal to outside angels. The relief can be a meaningful part of the case, but the analysis needs to be done in the right order. The bullet points below capture the conditions under which a founder personal subscription is a sensible plan.' },
+      {
+        type: 'list',
+        items: [
+          'The founder is under 30% on a fully-diluted basis after associates are aggregated and options are counted in.',
+          'The company is using SEIS, where directors can claim; or the founder is an unpaid director sitting inside the EIS exception.',
+          'The shares are plain ordinary shares with no preferential rights, issued on the same commercial terms as outside investors in the round.',
+          'The subscription is genuinely from the founder personal funds, not from a related-party loan or a circular arrangement that risks falling foul of the anti-avoidance rules.',
+          'The personal allowance and the company-level allowance for the year are both still available.',
+        ],
+      },
+
+      { type: 'h2', text: 'Where founder roles intersect with anti-avoidance' },
+      { type: 'p', text: 'The role rules and the anti-avoidance rules are designed to dovetail. A founder who carefully meets the technical wording of the EIS director exception, but whose arrangement substantively converts salary into reliefed investment, runs straight into the no-main-purpose test discussed at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/. Equally, a founder whose director investment is part of a wider scheme that returns value back to them through loans or service payments fails both the role rules and the value-received rules in the holding-period spoke at /blog/seis-eis-three-year-holding-period-disposal-events/.' },
+
+      { type: 'h2', text: 'Documenting a founder subscription' },
+      { type: 'p', text: 'Where a founder is going to claim on their own subscription, the file should make the analysis explicit. Board minutes should record the share class as ordinary, the terms as identical to those offered to other investors in the round, and any remuneration arrangements as reasonable for the role. The cap table at the time of issue should be modelled on a fully-diluted basis and the connection position recorded. The SEIS1 or EIS1 compliance statement and the SEIS3 or EIS3 certificates should reflect the same facts. Good documentation does not prevent HMRC asking questions; it gives clear answers when they do.' },
+
+      { type: 'h2', text: 'What this means for founders' },
+      { type: 'p', text: 'Founder roles, SEIS and EIS work together when the structure is right, and they collide when it is not. SEIS is the scheme that lets founder-directors claim relief on their own money, subject to the 30% ceiling. EIS is the scheme that brings in outside growth capital, with a narrow window for unpaid director investors and a firm bar on employee investors. The qualifying business activity sits underneath both, requiring the company itself to keep trading in a way that satisfies the rules. The detail is technical and the cost of getting it wrong is the loss of relief, so for any founder considering a personal subscription, this article is orientation rather than authority and the specific facts deserve professional advice.' },
+      { type: 'p', text: 'For the full framework, read the flagship pillar at /guides/seis-eis-guide-uk-startups/, and pair this article with the other new spokes on anti-avoidance and on the three-year holding period.' },
+    ],
+  },
+
 ];
 
 /** Find a published or draft article by slug. */
