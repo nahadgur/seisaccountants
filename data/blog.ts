@@ -332,8 +332,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-anti-avoidance-tax-motive-trading-substance',
     title: 'SEIS and EIS Anti-Avoidance: The Risk-to-Capital Condition Explained',
-    metaTitle: 'SEIS and EIS Anti-Avoidance: Tax Motive Tests',
-    metaDescription: 'How HMRC tests SEIS and EIS for tax-avoidance motive, the no-main-purpose rule, the risk-to-capital condition, and the GAAR backdrop founders should know.',
+    metaTitle: 'SEIS and EIS Anti-Avoidance: Risk-to-Capital',
+    metaDescription: 'How the SEIS and EIS risk-to-capital condition blocks tax-motivated investments: the growth and risk tests, and how HMRC applies them.',
     category: 'SEIS & EIS',
     publishDate: '2026-06-01',
     readingMins: 10,
@@ -537,8 +537,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-founder-multiple-roles-director-employee-investor',
     title: 'SEIS and EIS for Founder-Directors: The 30% Connected-Person Rule',
-    metaTitle: 'SEIS and EIS: Founder Director Employee Investor',
-    metaDescription: 'How SEIS and EIS treat founders who are also directors, employees and investors, the EIS business-angel director rule, and the qualifying activity test.',
+    metaTitle: 'SEIS and EIS for Founder-Directors: 30% Rule',
+    metaDescription: 'SEIS and EIS for founder-directors: the 30% connected-person limit, why SEIS allows paid directors but EIS generally does not, and how associates count.',
     category: 'SEIS & EIS',
     publishDate: '2026-06-01',
     readingMins: 10,
