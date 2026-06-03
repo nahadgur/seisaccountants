@@ -331,7 +331,7 @@ export const blogArticles: BlogArticle[] = [
   // ===========================================================
   {
     slug: 'seis-eis-anti-avoidance-tax-motive-trading-substance',
-    title: 'SEIS and EIS Anti-Avoidance, When HMRC Sees Tax Motive Over Trading Substance',
+    title: 'SEIS and EIS Anti-Avoidance: The Risk-to-Capital Condition Explained',
     metaTitle: 'SEIS and EIS Anti-Avoidance: Tax Motive Tests',
     metaDescription: 'How HMRC tests SEIS and EIS for tax-avoidance motive, the no-main-purpose rule, the risk-to-capital condition, and the GAAR backdrop founders should know.',
     category: 'SEIS & EIS',
@@ -536,7 +536,7 @@ export const blogArticles: BlogArticle[] = [
   // ===========================================================
   {
     slug: 'seis-eis-founder-multiple-roles-director-employee-investor',
-    title: 'SEIS and EIS for Founders Holding Multiple Roles, Director, Employee and Investor Boundaries',
+    title: 'SEIS and EIS for Founder-Directors: The 30% Connected-Person Rule',
     metaTitle: 'SEIS and EIS: Founder Director Employee Investor',
     metaDescription: 'How SEIS and EIS treat founders who are also directors, employees and investors, the EIS business-angel director rule, and the qualifying activity test.',
     category: 'SEIS & EIS',
