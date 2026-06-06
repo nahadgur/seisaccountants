@@ -43,6 +43,8 @@ export interface BlogArticle {
    *  - Page would render with robots: noindex if reached directly
    */
   draft?: boolean;
+  /** Set false on new drafts; a human sets true after reading to release it to the drip. */
+  reviewed?: boolean;
   content: ContentBlock[];
 }
 
@@ -637,6 +639,74 @@ export const blogArticles: BlogArticle[] = [
       { type: 'h2', text: 'What this means for founders' },
       { type: 'p', text: 'Founder roles, SEIS and EIS work together when the structure is right, and they collide when it is not. SEIS is the scheme that lets founder-directors claim relief on their own money, subject to the 30% ceiling. EIS is the scheme that brings in outside growth capital, with a narrow window for unpaid director investors and a firm bar on employee investors. The qualifying business activity sits underneath both, requiring the company itself to keep trading in a way that satisfies the rules. The detail is technical and the cost of getting it wrong is the loss of relief, so for any founder considering a personal subscription, this article is orientation rather than authority and the specific facts deserve professional advice.' },
       { type: 'p', text: 'For the full framework, read the flagship pillar at /guides/seis-eis-guide-uk-startups/, and pair this article with the other new spokes on anti-avoidance and on the three-year holding period.' },
+    ],
+  },
+
+  {
+    slug: 'seis-eis-advance-assurance-hmrc',
+    title: 'How to Secure SEIS and EIS Advance Assurance from HMRC',
+    metaTitle: 'SEIS and EIS Advance Assurance Explained',
+    metaDescription: 'What SEIS and EIS advance assurance is, why investors expect it, what to include in the application, and how the HMRC process works for early-stage companies.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-06-05',
+    dateModified: '2026-06-05',
+    readingMins: 8,
+    excerpt: 'Advance assurance is HMRC\'s indication that a share issue is likely to qualify for SEIS or EIS relief. It is not compulsory, but most investors expect it before they commit, which makes it a practical prerequisite for raising under the schemes.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 7,
+    relatedSpokes: ['seis-eis-anti-avoidance-tax-motive-trading-substance', 'seis-eis-three-year-holding-period-disposal-events', 'seis-eis-founder-multiple-roles-director-employee-investor'],
+    draft: true,
+    reviewed: true,
+    content: [
+      { type: 'p', text: 'Advance assurance is the opinion HMRC gives, before any shares are issued, that a proposed share issue is likely to qualify for SEIS or EIS relief. It is not a legal requirement, and a company can issue shares and submit a compliance statement without ever asking for it. In practice, though, most investors will not write a cheque without it, because it gives them comfort that the relief they are investing for is likely to be available. That makes advance assurance a practical prerequisite for almost any SEIS or EIS round. This piece ladders up to the [SEIS and EIS guide for UK startups](/guides/seis-eis-guide-uk-startups/).' },
+
+      { type: 'h2', text: 'What advance assurance is and is not' },
+      { type: 'p', text: 'Advance assurance is a non-binding indication based on the information the company provides. It tells prospective investors that, on the facts presented, HMRC expects the share issue to meet the conditions for relief. It is not a guarantee: if the company\'s circumstances change, or the information given was incomplete or inaccurate, the relief can still be refused later at the compliance stage. The assurance reflects what HMRC was told, so the quality of the application matters.' },
+
+      { type: 'h2', text: 'The core SEIS conditions the application has to show' },
+      { type: 'p', text: 'For SEIS, the company has to fit within the scheme limits, and the application is essentially a demonstration that it does. The headline conditions, confirmed on [GOV.UK](https://www.gov.uk/guidance/venture-capital-schemes-apply-to-use-the-seed-enterprise-investment-scheme), have been stable through 2026.' },
+      { type: 'table',
+        headers: ['SEIS condition', 'Limit'],
+        rows: [
+          ['Maximum the company can raise under SEIS (lifetime)', '£250,000'],
+          ['Maximum an investor can claim relief on per year', '£200,000'],
+          ['Income tax relief rate for investors', '50%'],
+          ['Company gross assets before the share issue', 'No more than £350,000'],
+          ['Number of full-time equivalent employees', 'Fewer than 25'],
+          ['Age of the trade', 'Less than 3 years'],
+        ],
+      },
+      { type: 'p', text: 'EIS sits above SEIS for larger and slightly later-stage raises, with its own higher limits and a 30% relief rate. A company that has exhausted its SEIS allowance commonly moves to EIS for the next tranche, and an advance assurance application can cover the intended structure.' },
+
+      { type: 'h2', text: 'The risk-to-capital condition' },
+      { type: 'p', text: 'Both schemes require the share issue to meet the risk-to-capital condition. HMRC has to be satisfied that the company is genuinely seeking to grow and develop its trade over the long term, and that the investment carries a real risk that the investor could lose more capital than they stand to gain in tax relief. Arrangements engineered mainly to deliver tax relief with little genuine commercial risk are outside the schemes. The application needs to show a real growth plan, not a capital-preservation structure dressed up as a startup.' },
+
+      { type: 'h2', text: 'What to include in the application' },
+      { type: 'p', text: 'HMRC expects enough information to form a view on whether the share issue qualifies. A strong application typically includes the following, and gaps are the most common reason for delay.' },
+      { type: 'list', items: [
+        'A business plan and financial forecasts showing how the money will be used to grow the trade.',
+        'The latest accounts, if the company has any, and an up-to-date statement of the company\'s structure.',
+        'The memorandum and articles of association.',
+        'Details of the amounts to be raised and how the funds will be spent.',
+        'An up-to-date pitch deck or information memorandum if one is being shown to investors.',
+        'Details of prospective investors, which HMRC expects the application to identify rather than leave open-ended.',
+      ]},
+      { type: 'p', text: 'HMRC will not generally consider a speculative application with no identified prospective investors, so lining up at least some interested investors before applying is part of the preparation, not an afterthought.' },
+
+      { type: 'h2', text: 'How the process and timing work' },
+      { type: 'p', text: 'The application is submitted to HMRC\'s Venture Capital Reliefs team. HMRC reviews the information and either issues the advance assurance, asks follow-up questions, or declines. The turnaround is measured in weeks rather than days and varies with HMRC\'s workload, so a company raising to a deadline should apply well ahead of when it needs investors to commit. Once assurance is granted, it supports the round; after the shares are issued and the company has traded or spent the money as required, the company submits the compliance statement to HMRC, which then allows it to issue the relief certificates to investors.' },
+
+      { type: 'h2', text: 'Common questions about advance assurance' },
+      { type: 'h3', text: 'Is advance assurance compulsory?' },
+      { type: 'p', text: 'No. A company can issue shares and go straight to the compliance statement without advance assurance. But most investors expect it as a condition of investing, so in practice it is hard to run a round without it.' },
+      { type: 'h3', text: 'Does advance assurance guarantee the relief?' },
+      { type: 'p', text: 'No. It is a non-binding opinion based on the information provided. If the facts change or the information was incomplete, HMRC can still refuse relief at the compliance stage. It significantly reduces the risk but does not remove it.' },
+      { type: 'h3', text: 'Do I need named investors before I apply?' },
+      { type: 'p', text: 'Generally yes. HMRC expects the application to identify prospective investors rather than be a speculative request, so it is worth securing some genuine investor interest before submitting.' },
+      { type: 'h3', text: 'How long does it take?' },
+      { type: 'p', text: 'Typically several weeks, depending on HMRC\'s workload and how complete the application is. Build that time into the fundraising timeline rather than applying at the last minute.' },
+
+      { type: 'p', text: 'Advance assurance is where a lot of SEIS and EIS rounds are won or lost on presentation. A specialist adviser can prepare the application so the conditions are clearly evidenced and the risk-to-capital case is made properly, which is the difference between a clean assurance and a round of HMRC follow-up questions.' },
     ],
   },
 
