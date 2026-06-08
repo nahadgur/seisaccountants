@@ -655,7 +655,7 @@ export const blogArticles: BlogArticle[] = [
     hub: 'seis-eis-guide-uk-startups',
     hubSeriesNumber: 7,
     relatedSpokes: ['seis-eis-anti-avoidance-tax-motive-trading-substance', 'seis-eis-three-year-holding-period-disposal-events', 'seis-eis-founder-multiple-roles-director-employee-investor'],
-    draft: true,
+    draft: false,
     reviewed: true,
     content: [
       { type: 'p', text: 'Advance assurance is the opinion HMRC gives, before any shares are issued, that a proposed share issue is likely to qualify for SEIS or EIS relief. It is not a legal requirement, and a company can issue shares and submit a compliance statement without ever asking for it. In practice, though, most investors will not write a cheque without it, because it gives them comfort that the relief they are investing for is likely to be available. That makes advance assurance a practical prerequisite for almost any SEIS or EIS round. This piece ladders up to the [SEIS and EIS guide for UK startups](/guides/seis-eis-guide-uk-startups/).' },
