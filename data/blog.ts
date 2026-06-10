@@ -710,6 +710,83 @@ export const blogArticles: BlogArticle[] = [
     ],
   },
 
+  {
+    slug: 'seis1-compliance-statement-seis3-certificates',
+    title: 'The SEIS1 Compliance Statement and SEIS3 Certificate Process',
+    metaTitle: 'SEIS1 Compliance Statement and SEIS3 Certificates',
+    metaDescription: 'How a company files the SEIS1 compliance statement, when it can apply, how HMRC issues the authorisation, and how SEIS3 certificates let investors claim their relief.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-06-09',
+    readingMins: 9,
+    excerpt: 'Advance assurance tells investors a round should qualify; it does not let them claim anything. Relief only becomes claimable after the company files its SEIS1 compliance statement, HMRC authorises the round, and the company issues SEIS3 certificates. This is the step founders most often delay and investors most often chase.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 8,
+    relatedSpokes: [
+      'seis-eis-advance-assurance-hmrc',
+      'seis-eis-investment-limits-how-much-you-can-raise',
+      'seis-eis-founder-multiple-roles-director-employee-investor',
+    ],
+    draft: true,
+    reviewed: true,
+    content: [
+      { type: 'p', text: 'Founders often treat advance assurance as the finish line, but it is only HMRC\'s informal view that a proposed round should qualify. No investor can claim a penny of relief until the company has completed the compliance process: filing the SEIS1 compliance statement, receiving HMRC\'s authorisation, and issuing SEIS3 certificates to investors. This article is part of our SEIS and EIS series beneath the flagship pillar at /guides/seis-eis-guide-uk-startups/, and it follows on from the advance assurance walkthrough at /blog/seis-eis-advance-assurance-hmrc/. The amounts at stake, up to £250,000 raised by the company and up to £200,000 of investment per investor in a tax year, are covered at /blog/seis-eis-investment-limits-how-much-you-can-raise/.' },
+
+      { type: 'h2', text: 'Where compliance sits in the SEIS timeline' },
+      { type: 'p', text: 'The order matters. Advance assurance is optional and comes before the raise; it reassures investors. The shares are then issued and the money received. Only after that, and only once a timing condition is met, does the company file the compliance statement. HMRC reviews it, and if satisfied authorises the company to issue certificates. The investor receives an SEIS3 certificate and uses it to claim relief. Skipping or rushing the middle steps is the most common reason an otherwise-qualifying round leaves investors unable to claim on time.' },
+
+      { type: 'h2', text: 'When the company can file SEIS1' },
+      { type: 'p', text: 'A company cannot file the SEIS1 compliance statement the moment the shares are issued. It must first meet a trading or spending condition. The company has to have either been carrying on its qualifying trade for at least four months, or have spent at least 70 percent of the money raised under the SEIS share issue. Filing before one of those conditions is met is a wasted application, and HMRC will reject it. This four-month or 70-percent gate is the single point founders most often get wrong, applying too early because investors are pressing for their certificates.' },
+
+      { type: 'h2', text: 'What the SEIS1 compliance statement contains' },
+      { type: 'p', text: 'The SEIS1 is the company\'s formal declaration that the conditions for relief, other than those that depend on the individual investor, have been met and will continue to be met. It is filed online and asks for the detail HMRC needs to test the round.' },
+      {
+        type: 'list',
+        items: [
+          'The date the shares were issued, the amount raised and the number and class of shares.',
+          'Confirmation that the shares are ordinary shares carrying no preferential rights to dividends or to assets on a winding up.',
+          'The qualifying trade and confirmation the company meets the gross assets, employee and age conditions.',
+          'Confirmation the trading or 70 percent spending condition has been met.',
+          'A list of the investors, the amounts each subscribed and confirmation none is a disqualifying connected person where that matters.',
+        ],
+      },
+
+      { type: 'h2', text: 'HMRC authorisation: the SEIS2 and the UIR' },
+      { type: 'p', text: 'When HMRC is satisfied the compliance statement meets the conditions, it authorises the company to issue certificates. That authorisation comes back as a form SEIS2, which carries a Unique Investment Reference, the UIR. The UIR is the code the company must put on every SEIS3 certificate it then issues. Without the SEIS2 and its UIR, any certificate the company sends out is invalid and the investor\'s claim will fail. The company cannot self-issue certificates ahead of HMRC\'s authorisation.' },
+
+      { type: 'h2', text: 'Issuing SEIS3 certificates to investors' },
+      { type: 'p', text: 'Armed with the SEIS2 authorisation and the UIR, the company issues a separate SEIS3 compliance certificate to each investor. Each certificate records that investor\'s subscription and the UIR, and it is the document the investor needs to claim relief. The company should issue them promptly, because investors cannot claim until they hold their certificate, and a delay at the company end directly delays every investor\'s claim.' },
+
+      { type: 'h2', text: 'How the investor then claims relief' },
+      { type: 'p', text: 'The investor uses the SEIS3 to claim Income Tax relief, at 50 percent of the amount subscribed, through the Self Assessment return for the relevant year, or in some cases by asking HMRC to adjust their tax code. The certificate is also what underpins the capital gains reinvestment relief and the loss relief that can follow later. The investor does not send the SEIS3 to HMRC with the return but must keep it, since HMRC can ask to see it. A claim can be made for the year the shares were issued or, by carry-back, treated as made in the previous year.' },
+
+      { type: 'h2', text: 'Worked example: a seed round timeline' },
+      { type: 'p', text: 'A company raises £150,000 in SEIS shares in May, with the money earmarked for hires and product build. By September it has spent more than 70 percent of the funds, which meets the spending condition even though it has been trading under four months. It files SEIS1 in September. HMRC reviews the statement and issues the SEIS2 authorisation with a UIR in October. The company issues SEIS3 certificates to its investors the same week. The investors claim 50 percent Income Tax relief, worth up to £75,000 spread across the round, on their Self Assessment returns. Had the company waited until it had simply been trading four months and not tracked its spending, the certificates could have slipped a further month, pushing some investor claims into a later filing.' },
+
+      { type: 'h2', text: 'Common reasons a compliance statement is rejected or delayed' },
+      {
+        type: 'list',
+        items: [
+          'Filing before the four-month trading or 70 percent spending condition is met.',
+          'Share class carrying preferential rights, which fails the ordinary-shares test even where advance assurance was given on a different class.',
+          'The actual round differing from what advance assurance described, for example a larger raise or a changed trade.',
+          'Gross assets, employee numbers or company age drifting outside the limits between assurance and issue.',
+          'Investor connection problems, such as a founder or an associate subscribing where the connected-person rules bite.',
+        ],
+      },
+
+      { type: 'h2', text: 'Common questions about SEIS compliance certificates' },
+      { type: 'h3', text: 'Does advance assurance mean investors can claim straight away?' },
+      { type: 'p', text: 'No. Advance assurance is only HMRC\'s pre-raise view. Investors can only claim after the company files SEIS1, HMRC issues the SEIS2 authorisation, and the company issues SEIS3 certificates. Advance assurance does not shortcut any of those steps.' },
+      { type: 'h3', text: 'How soon after the raise can we file SEIS1?' },
+      { type: 'p', text: 'Once the company has either traded for at least four months or spent at least 70 percent of the money raised, whichever comes first. Tracking spend lets a fast-moving company file sooner than the four-month point, which gets certificates to investors earlier.' },
+      { type: 'h3', text: 'What is the UIR and why does it matter?' },
+      { type: 'p', text: 'The Unique Investment Reference is the code HMRC issues with the SEIS2 authorisation. It must appear on every SEIS3 certificate. Certificates issued without a valid UIR are invalid, so the company cannot issue them before HMRC authorises the round.' },
+      { type: 'h3', text: 'Can an investor claim for the previous tax year?' },
+      { type: 'p', text: 'Yes. SEIS allows the relief to be carried back and treated as made in the prior tax year, subject to that year\'s limits. The investor still needs the SEIS3 certificate before making the claim, so the company\'s timing still governs when they can act.' },
+
+      { type: 'p', text: 'The compliance step is where a qualifying round either reaches investors cleanly or stalls. A SEIS specialist can confirm when the company is first able to file, prepare the SEIS1 so it is not bounced, and get accurate SEIS3 certificates into investors\' hands so their relief is not delayed.' },
+    ],
+  },
 ];
 
 /** Find a published or draft article by slug. */
