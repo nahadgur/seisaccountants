@@ -183,22 +183,13 @@ const nextConfig = {
       ...cullRedirects,
 
       // -----------------------------------------------------------------
-      // Blog removed entirely on the SEIS pivot. The startup-fleet blog
-      // covered general business-formation, payroll, and US-flavoured
-      // tax topics that do not fit a SEIS-specialist site. Catch-all
-      // redirects every blog URL to the SEIS and EIS guide, which is
-      // the single most relevant surviving surface.
+      // NOTE: the old catch-all /blog -> guide redirect was removed on
+      // 2026-06-11. It dated from the SEIS pivot when the blog held
+      // off-niche startup-fleet content, but the blog now holds 8
+      // SEIS-specific, index-ready articles (data/blog.ts) that the
+      // redirect was silently 301ing away. The /blog index and
+      // /blog/[slug] routes are live again.
       // -----------------------------------------------------------------
-      {
-        source: '/blog/',
-        destination: '/guides/seis-eis-guide-uk-startups/',
-        permanent: true,
-      },
-      {
-        source: '/blog/:path*',
-        destination: '/guides/seis-eis-guide-uk-startups/',
-        permanent: true,
-      },
 
       // -----------------------------------------------------------------
       // Industries section removed (1:1 carryover from startup-fleet,
