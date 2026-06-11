@@ -349,7 +349,7 @@ export const blogArticles: BlogArticle[] = [
       'founders-family-seis-30-percent-connected-person-rule',
       'seis-eis-investment-limits-how-much-you-can-raise',
     ],
-    draft: true,
+    draft: false,
     content: [
       { type: 'p', text: 'SEIS and EIS are deliberately generous, and that generosity is policed by a layer of anti-avoidance rules designed to make sure the relief flows to genuine risk capital backing real trading companies. The rules ask whether a transaction looks like investment in a young business or whether it looks like a tax-driven arrangement dressed up as one. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/, which is the right starting point if you have not yet read it.' },
       { type: 'p', text: 'It pairs with two companion articles in the same drop. The first walks through the three-year holding period and the disposal events that can withdraw relief at /blog/seis-eis-three-year-holding-period-disposal-events/. The second covers founders holding several roles at once, where the director, employee and investor lines blur, at /blog/seis-eis-founder-multiple-roles-director-employee-investor/. Together the three articles cover the motive test, the holding test and the role test that HMRC apply when they look at a SEIS or EIS round.' },
