@@ -32,8 +32,11 @@ interface Props {
 //  - markdown [label](https://...) into external <a>
 function renderInlineNodes(text: string, keyPrefix: string): React.ReactNode[] {
   const nodes: React.ReactNode[] = [];
-  // Combined matcher: markdown external links OR bare internal paths.
-  const re = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(\/(?:blog|guides)\/[a-z0-9-]+\/)/g;
+  // Combined matcher: markdown links [label](url) where url is external OR
+  // internal, OR a bare internal path. The markdown alternative is listed
+  // first so an internal-href markdown link is consumed whole rather than
+  // the engine matching only the bare path inside the parens.
+  const re = /\[([^\]]+)\]\(([^)\s]+)\)|(\/(?:blog|guides)\/[a-z0-9-]+\/)/g;
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let n = 0;
@@ -43,18 +46,33 @@ function renderInlineNodes(text: string, keyPrefix: string): React.ReactNode[] {
       nodes.push(text.slice(lastIndex, match.index));
     }
     if (match[1] && match[2]) {
-      // markdown external link
-      nodes.push(
-        <a
-          key={`${keyPrefix}-a-${n}`}
-          href={match[2]}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-brand-500 hover:text-brand-700 underline underline-offset-[3px] decoration-[1.5px]"
-        >
-          {match[1]}
-        </a>
-      );
+      const label = match[1];
+      const url = match[2];
+      if (/^https?:\/\//.test(url)) {
+        // markdown external link
+        nodes.push(
+          <a
+            key={`${keyPrefix}-a-${n}`}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-500 hover:text-brand-700 underline underline-offset-[3px] decoration-[1.5px]"
+          >
+            {label}
+          </a>
+        );
+      } else {
+        // markdown internal link -> client-side navigation
+        nodes.push(
+          <Link
+            key={`${keyPrefix}-il-${n}`}
+            href={url}
+            className="text-brand-500 hover:text-brand-700 underline underline-offset-[3px] decoration-[1.5px]"
+          >
+            {label}
+          </Link>
+        );
+      }
     } else if (match[3]) {
       // bare internal path
       nodes.push(

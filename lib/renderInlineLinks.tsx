@@ -13,11 +13,13 @@
 //   "...most founders apply via [HMRC's advance assurance portal](https://www.gov.uk/...)..."
 
 import React from 'react';
+import Link from 'next/link';
 
-// Match markdown-style [label](url) where url starts with http(s).
-// Used 'g' flag is intentional — same regex object is reused via exec
-// inside the function-scoped let, so we reset its lastIndex on each call.
-const LINK_RE = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+// Match markdown-style [label](url) for both external (http/https) and
+// internal (/path) URLs. 'g' flag is intentional — the same regex object is
+// reused via exec inside the function-scoped let, so we reset its lastIndex
+// on each call.
+const LINK_RE = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
 export function renderInlineLinks(text: string): React.ReactNode[] {
   if (!text.includes('[')) {
@@ -35,17 +37,29 @@ export function renderInlineLinks(text: string): React.ReactNode[] {
       nodes.push(text.slice(lastIndex, match.index));
     }
     const [, label, url] = match;
-    nodes.push(
-      <a
-        key={`${match.index}-${url}`}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-brand-500 hover:text-brand-700 underline underline-offset-[3px] decoration-[1.5px]"
-      >
-        {label}
-      </a>,
-    );
+    if (/^https?:\/\//.test(url)) {
+      nodes.push(
+        <a
+          key={`${match.index}-${url}`}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-brand-500 hover:text-brand-700 underline underline-offset-[3px] decoration-[1.5px]"
+        >
+          {label}
+        </a>,
+      );
+    } else {
+      nodes.push(
+        <Link
+          key={`${match.index}-${url}`}
+          href={url}
+          className="text-brand-500 hover:text-brand-700 underline underline-offset-[3px] decoration-[1.5px]"
+        >
+          {label}
+        </Link>,
+      );
+    }
     lastIndex = match.index + match[0].length;
   }
 
