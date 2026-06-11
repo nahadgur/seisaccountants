@@ -17,7 +17,7 @@ interface HeroLeadFormProps {
 }
 
 const GOOGLE_SCRIPT_URL =
- 'https://script.google.com/macros/s/AKfycbwp1XIRQyZTzEH-wSVEJbHNLKMqSObg0n7z2CG9Va13II60x8ATztkjz_MgA1-r_yNy/exec';
+ 'https://script.google.com/macros/s/AKfycbyFy18cBf-RJ9bBPgF3Yu9S9ZDBwy6dHj2nfXvOkphUylgBOtEeT8Si9TByCljCb10l/exec';
 
 export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadFormProps) {
  const [isSubmitting, setIsSubmitting] = useState(false);

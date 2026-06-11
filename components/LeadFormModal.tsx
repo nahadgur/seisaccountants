@@ -15,7 +15,7 @@ interface LeadFormModalProps {
 }
 
 const GOOGLE_SCRIPT_URL =
- 'https://script.google.com/macros/s/AKfycbwp1XIRQyZTzEH-wSVEJbHNLKMqSObg0n7z2CG9Va13II60x8ATztkjz_MgA1-r_yNy/exec';
+ 'https://script.google.com/macros/s/AKfycbyFy18cBf-RJ9bBPgF3Yu9S9ZDBwy6dHj2nfXvOkphUylgBOtEeT8Si9TByCljCb10l/exec';
 
 const FOCUSABLE_SELECTOR =
  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
