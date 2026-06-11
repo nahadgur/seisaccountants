@@ -17,6 +17,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { SpokeHero } from '@/components/SpokeHero';
 import type { BlogArticle, ContentBlock } from '@/data/blog';
 import type { Guide } from '@/data/guides';
 
@@ -173,6 +174,19 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
       ]
     : [{ label: 'Insights', href: '/blog/' }, { label: article.title }];
 
+  // Read time: prefer the data field, else estimate from body word count.
+  const readMins =
+    article.readingMins ||
+    Math.max(
+      3,
+      Math.round(
+        article.content.reduce((sum, b) => {
+          const t = b.text || (b.items ? b.items.join(' ') : '');
+          return sum + t.trim().split(/\s+/).filter(Boolean).length;
+        }, 0) / 200
+      )
+    );
+
   return (
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
@@ -186,8 +200,17 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
         >
           <div className="container-width py-10 md:py-14">
             <Breadcrumbs items={breadcrumbItems} />
+            <div className="mt-5">
+              <SpokeHero
+                title={article.title}
+                hubName={hubGuide ? hubGuide.shortTitle : null}
+                hubSlug={hubGuide ? hubGuide.slug : article.slug}
+                readMins={readMins}
+              />
+            </div>
+            <h1 className="sr-only">{article.title}</h1>
             <div className="max-w-3xl">
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-5 text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-500">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-500">
                 {hubGuide ? (
                   <span className="inline-flex items-center gap-1.5 text-brand-500">
                     <Layers className="w-3.5 h-3.5" aria-hidden="true" />
@@ -203,15 +226,10 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
                     </span>
                   </>
                 )}
-                {article.readingMins && (
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5" aria-hidden="true" /> {article.readingMins} min read
-                  </span>
-                )}
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5" aria-hidden="true" /> {readMins} min read
+                </span>
               </div>
-              <h1 className="font-display text-[34px] md:text-[44px] lg:text-[52px] text-ink-900 leading-[1.0] tracking-tighter">
-                {article.title}
-              </h1>
             </div>
           </div>
         </section>

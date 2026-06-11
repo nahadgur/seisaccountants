@@ -33,6 +33,7 @@ import { investorMatchingMarketingContent } from '@/data/guideContent/investorMa
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { SpokeHero } from '@/components/SpokeHero';
 import RdCalculator from '@/components/tools/RdCalculator';
 import SeisChecker from '@/components/tools/SeisChecker';
 import { renderInlineLinks } from '@/lib/renderInlineLinks';
@@ -155,10 +156,17 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  <span className="eyebrow">GUIDE &middot; {guide.shortTitle.toUpperCase()}</span>
  </div>
 
+ <div className="mb-6">
+ <SpokeHero
+ title={guide.heroHeading}
+ hubName="Guide"
+ hubSlug={guide.slug}
+ readMins={guide.estimatedReadTime}
+ />
+ </div>
+ <h1 className="sr-only">{guide.heroHeading}</h1>
+
  <div className="max-w-3xl">
- <h1 className="font-display text-[40px] md:text-[52px] lg:text-[60px] text-ink-900 leading-[0.98] tracking-tighter mb-6">
- {guide.heroHeading}
- </h1>
  <p className="font-sans text-[15px] md:text-base text-ink-700 leading-relaxed mb-6">
  {guide.heroSubtitle}
  </p>
