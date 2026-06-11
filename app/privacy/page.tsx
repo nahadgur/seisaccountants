@@ -8,7 +8,7 @@ import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
  title: 'Privacy Policy',
- description: 'How seisaccountants.uk collects, uses, and protects your personal data, and what happens when you submit an enquiry.',
+ description: 'How seisaccountants.co.uk collects, uses, and protects your personal data, and what happens when you submit an enquiry.',
  alternates: { canonical: `${siteConfig.url}/privacy/` },
  robots: { index: true, follow: true },
 };
@@ -52,10 +52,10 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="01">Who we are</SectionH2>
  <p>
- seisaccountants.uk is an independent online matching service that connects UK SEIS and EIS founders with qualified accountants in our partner network. Throughout this policy, &apos;we&apos;, &apos;us&apos; and &apos;our&apos; refer to seisaccountants.uk as the operator of this website and the controller of the personal data you submit.
+ seisaccountants.co.uk is an independent online matching service that connects UK SEIS and EIS founders with qualified accountants in our partner network. Throughout this policy, &apos;we&apos;, &apos;us&apos; and &apos;our&apos; refer to seisaccountants.co.uk as the operator of this website and the controller of the personal data you submit.
  </p>
  <p className="mt-3">
- For transparency: this site operates under the trading name &apos;startupaccountants&apos;. We do not yet operate as a separately incorporated legal entity. If you need to identify a named individual for a data protection request, please contact us at <a href="mailto:hello@seisaccountants.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.uk</a> and we will provide one.
+ For transparency: this site operates under the trading name &apos;startupaccountants&apos;. We do not yet operate as a separately incorporated legal entity. If you need to identify a named individual for a data protection request, please contact us at <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a> and we will provide one.
  </p>
  </section>
 
@@ -130,7 +130,7 @@ export default function PrivacyPage() {
  <li>Complain to the Information Commissioner&apos;s Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="font-display italic text-brand-500 hover:text-brand-700">ico.org.uk</a></li>
  </ul>
  <p className="mt-3">
- To exercise any of these rights, email us at <a href="mailto:hello@seisaccountants.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.uk</a>. We will respond within 30 days.
+ To exercise any of these rights, email us at <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a>. We will respond within 30 days.
  </p>
  </section>
 
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="09">Contact</SectionH2>
  <p>
- For any privacy question, data access request, consent withdrawal, or complaint, email <a href="mailto:hello@seisaccountants.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.uk</a>.
+ For any privacy question, data access request, consent withdrawal, or complaint, email <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a>.
  </p>
  </section>
 

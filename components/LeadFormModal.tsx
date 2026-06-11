@@ -143,7 +143,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  } catch (err) {
  console.error(err);
  setIsSubmitting(false);
- setErrorMsg('Something went wrong. Please try again, or email hello@seisaccountants.uk.');
+ setErrorMsg('Something went wrong. Please try again, or email hello@seisaccountants.co.uk.');
  }
  };
 

@@ -1,4 +1,4 @@
-# seisaccountants.uk
+# seisaccountants.co.uk
 
 Free matching service connecting UK founders raising SEIS and EIS with
 vetted, scheme-specialist accountancy practices. Built on Next.js 14
@@ -6,7 +6,7 @@ vetted, scheme-specialist accountancy practices. Built on Next.js 14
 
 ## What this is
 
-A static-rendered Next.js site at `seisaccountants.uk` that:
+A static-rendered Next.js site at `seisaccountants.co.uk` that:
 
 - Routes founders through a single matching enquiry form
 - Indexes 7 service pillars covering the full SEIS and EIS lifecycle

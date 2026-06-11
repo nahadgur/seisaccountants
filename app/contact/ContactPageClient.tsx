@@ -115,10 +115,10 @@ export default function ContactPageClient() {
  Questions about how the service works, suggestions, or press enquiries.
  </p>
  <a
- href="mailto:hello@seisaccountants.uk"
+ href="mailto:hello@seisaccountants.co.uk"
  className="font-display italic text-[14px] text-brand-500 hover:text-brand-700 inline-flex items-center gap-1.5"
  >
- hello@seisaccountants.uk
+ hello@seisaccountants.co.uk
  <ArrowRight className="w-3.5 h-3.5" />
  </a>
  </div>
@@ -137,10 +137,10 @@ export default function ContactPageClient() {
  Request a copy of your data, ask us to delete your details, or make a GDPR enquiry.
  </p>
  <a
- href="mailto:hello@seisaccountants.uk"
+ href="mailto:hello@seisaccountants.co.uk"
  className="font-display italic text-[14px] text-brand-500 hover:text-brand-700 inline-flex items-center gap-1.5"
  >
- hello@seisaccountants.uk
+ hello@seisaccountants.co.uk
  <ArrowRight className="w-3.5 h-3.5" />
  </a>
  </div>
@@ -159,10 +159,10 @@ export default function ContactPageClient() {
  ACA, ACCA, or CIMA qualified UK accountants with startup experience can apply to join our referral network.
  </p>
  <a
- href="mailto:hello@seisaccountants.uk?subject=Accountant%20Network%20Application"
+ href="mailto:hello@seisaccountants.co.uk?subject=Accountant%20Network%20Application"
  className="font-display italic text-[14px] text-brand-500 hover:text-brand-700 inline-flex items-center gap-1.5"
  >
- hello@seisaccountants.uk
+ hello@seisaccountants.co.uk
  <ArrowRight className="w-3.5 h-3.5" />
  </a>
  </div>
@@ -196,7 +196,7 @@ export default function ContactPageClient() {
  About this service
  </h2>
  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed mb-3">
- seisaccountants.uk is an independent online matching service for UK SEIS and EIS founders. We are not an accountancy firm, we do not deliver accountancy work, and we do not provide tax or legal advice. All services are delivered by independent, qualified UK scheme-specialist accountants in our partner network.
+ seisaccountants.co.uk is an independent online matching service for UK SEIS and EIS founders. We are not an accountancy firm, we do not deliver accountancy work, and we do not provide tax or legal advice. All services are delivered by independent, qualified UK scheme-specialist accountants in our partner network.
  </p>
  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed">
  See our{' '}

@@ -169,8 +169,8 @@ const nextConfig = {
       // Host canonicalisation: non-www -> www
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'seisaccountants.uk' }],
-        destination: 'https://www.seisaccountants.uk/:path*',
+        has: [{ type: 'host', value: 'seisaccountants.co.uk' }],
+        destination: 'https://www.seisaccountants.co.uk/:path*',
         permanent: true,
       },
       // Orphan route from earlier build
