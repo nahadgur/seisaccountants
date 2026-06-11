@@ -172,7 +172,7 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
         { label: hubGuide.shortTitle, href: `/guides/${hubGuide.slug}/` },
         { label: article.title },
       ]
-    : [{ label: 'Insights', href: '/blog/' }, { label: article.title }];
+    : [{ label: 'Blog', href: '/blog/' }, { label: article.title }];
 
   // Read time: prefer the data field, else estimate from body word count.
   const readMins =

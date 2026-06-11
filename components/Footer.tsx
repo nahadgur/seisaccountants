@@ -96,7 +96,7 @@ export function Footer() {
  <ul className="space-y-2.5 text-[13.5px]">
  <li>
  <Link href="/blog/" className="text-paper-100/80 hover:text-white transition-colors">
- Insights
+ Blog
  </Link>
  </li>
  <li>

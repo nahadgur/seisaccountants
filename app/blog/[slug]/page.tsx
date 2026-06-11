@@ -94,7 +94,7 @@ export default function BlogArticlePage({ params }: Props) {
           { label: article.title },
         ]
       : [
-          { label: 'Insights', href: '/blog/' },
+          { label: 'Blog', href: '/blog/' },
           { label: article.title },
         ]
   );
