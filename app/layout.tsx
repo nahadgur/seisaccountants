@@ -35,7 +35,10 @@ export const metadata: Metadata = {
  alternates: { canonical: siteConfig.url },
  robots: { index: true, follow: true },
  verification: {
- google: 'a1n9nuZyqriGqNIGkXbCE1VLxw4Or6duwwWmREmB3q8',
+ google: [
+ 'a1n9nuZyqriGqNIGkXbCE1VLxw4Or6duwwWmREmB3q8',
+ 'T7C5QNd4nvBCnrt8gklkNQUXL6fQJz2rKVfbgtgnpdg',
+ ],
  },
  manifest: '/site.webmanifest',
  icons: {
