@@ -453,7 +453,7 @@ export const blogArticles: BlogArticle[] = [
       'founders-family-seis-30-percent-connected-person-rule',
       'seis-eis-investment-limits-how-much-you-can-raise',
     ],
-    draft: true,
+    draft: false,
     content: [
       { type: 'p', text: 'SEIS and EIS investors are buying time as well as shares. The headline relief is granted up front, but it only becomes secure once the investor has held the shares, and the company has continued to qualify, for at least three years. Disposing of the shares early, or doing things that count as a disposal under the rules, can claw back the income tax relief and remove the capital gains tax exemption. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/.' },
       { type: 'p', text: 'It pairs with the other two new spokes in this drop. The first deals with anti-avoidance and how HMRC test for tax motive over trading substance at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/. The second covers founders holding several roles at once at /blog/seis-eis-founder-multiple-roles-director-employee-investor/. Together they cover the three big risks to relief after the round closes: motive, holding and role.' },
