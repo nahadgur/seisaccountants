@@ -542,7 +542,7 @@ export const blogArticles: BlogArticle[] = [
     metaTitle: 'SEIS and EIS for Founder-Directors: 30% Rule',
     metaDescription: 'SEIS and EIS for founder-directors: the 30% connected-person limit, why SEIS allows paid directors but EIS generally does not, and how associates count.',
     category: 'SEIS & EIS',
-    publishDate: '2026-06-01',
+    publishDate: '2026-06-22',
     readingMins: 10,
     excerpt: 'Founders often wear several hats at once. This guide explains how SEIS and EIS treat the director, employee and investor roles, where the schemes diverge, and the business-angel director exception.',
     hub: 'seis-eis-guide-uk-startups',
@@ -554,7 +554,7 @@ export const blogArticles: BlogArticle[] = [
       'founders-family-seis-30-percent-connected-person-rule',
       'seis-eis-investment-limits-how-much-you-can-raise',
     ],
-    draft: true,
+    draft: false,
     content: [
       { type: 'p', text: 'Most founders are not just shareholders. They are directors, often paid, sometimes employees on a contract, and increasingly investors putting their own cash into the company alongside outside angels. SEIS and EIS treat each of those hats differently, and the lines move depending on which scheme you are using. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/, which you should read for the overall framework.' },
       { type: 'p', text: 'It pairs with the other two new spokes in this drop. The first sets out the anti-avoidance and motive tests at /blog/seis-eis-anti-avoidance-tax-motive-trading-substance/. The second walks through the three-year holding period and disposal events at /blog/seis-eis-three-year-holding-period-disposal-events/. Together the three articles cover the post-issue rules that decide whether a founder relief actually sticks.' },
