@@ -229,21 +229,12 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
             <h1 className="sr-only">{article.title}</h1>
             <div className="max-w-3xl">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-500">
-                {hubGuide ? (
-                  <span className="inline-flex items-center gap-1.5 text-brand-500">
-                    <Layers className="w-3.5 h-3.5" aria-hidden="true" />
-                    Part {article.hubSeriesNumber || ''} of the {hubGuide.shortTitle} series
-                  </span>
-                ) : (
-                  <>
-                    <span className="inline-flex items-center gap-1.5 text-brand-500">
-                      <Tag className="w-3.5 h-3.5" aria-hidden="true" /> {article.category}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5" aria-hidden="true" /> {article.publishDate}
-                    </span>
-                  </>
-                )}
+                <span className="inline-flex items-center gap-1.5 text-brand-500">
+                  <Tag className="w-3.5 h-3.5" aria-hidden="true" /> {article.category}
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5" aria-hidden="true" /> {article.publishDate}
+                </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" aria-hidden="true" /> {readMins} min read
                 </span>
@@ -265,7 +256,7 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
               {hubGuide && (
                 <div className="mt-12 bg-white border border-ink-900/10 rounded-sm p-6 relative">
                   <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-                  <p className="eyebrow mb-3">CONTINUE THE SERIES</p>
+                  <p className="eyebrow mb-3">RELATED GUIDE</p>
                   <Link
                     href={`/guides/${hubGuide.slug}/`}
                     className="group block font-display text-[20px] md:text-[22px] text-ink-900 hover:text-brand-500 leading-snug tracking-tight transition-colors"
@@ -274,7 +265,7 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
                     <ArrowRight className="inline w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                   </Link>
                   <p className="font-sans text-[14px] text-ink-700 mt-2 leading-relaxed">
-                    Read the complete pillar guide and the rest of the series.
+                    Read the broader guide for more context.
                   </p>
                 </div>
               )}
@@ -314,7 +305,7 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
                 {hubGuide && siblingSpokes.length > 0 && (
                   <div className="bg-paper-200 border border-ink-900/8 rounded-sm p-5">
                     <div className="masthead mb-4">
-                      <span>MORE IN THIS SERIES</span>
+                      <span>RELATED ARTICLES</span>
                     </div>
                     <div className="space-y-3">
                       {siblingSpokes.map((rel) => (
