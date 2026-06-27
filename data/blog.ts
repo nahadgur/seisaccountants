@@ -787,6 +787,103 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: 'The compliance step is where a qualifying round either reaches investors cleanly or stalls. A SEIS specialist can confirm when the company is first able to file, prepare the SEIS1 so it is not bounced, and get accurate SEIS3 certificates into investors\' hands so their relief is not delayed.' },
     ],
   },
+
+  {
+    slug: 'seis-reinvestment-relief-cgt-exemption-investors',
+    title: 'SEIS Reinvestment Relief: Halving the Capital Gains Tax on a Reinvested Gain',
+    metaTitle: 'SEIS Reinvestment Relief: 50% CGT Exemption',
+    metaDescription: 'SEIS reinvestment relief exempts 50% of a reinvested gain from CGT, up to £100,000. How it works, the conditions, and how it differs from EIS deferral relief.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-06-27',
+    dateModified: '2026-06-27',
+    readingMins: 9,
+    excerpt: 'Beyond the 50% income tax relief, SEIS carries a second, quieter benefit for investors who reinvest a capital gain: half of that gain can be wiped out of capital gains tax entirely. This guide explains the reinvestment relief, its conditions, and how it differs from the EIS deferral that founders often confuse it with.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 9,
+    relatedSpokes: [
+      'seis-eis-investment-limits-how-much-you-can-raise',
+      'seis-eis-three-year-holding-period-disposal-events',
+      'seis-eis-advance-assurance-hmrc',
+    ],
+    draft: false,
+    reviewed: true,
+    content: [
+      { type: 'p', text: 'Most founders pitch SEIS on the 50% income tax relief, and most investors come for it. But SEIS carries a second capital gains tax benefit that is easy to miss and surprisingly generous: an investor who reinvests a chargeable gain into SEIS shares can have half of that gain exempted from capital gains tax outright. It is a separate relief from the well-known exemption on the SEIS shares themselves, and it is one of the strongest cards a founder can play with an angel sitting on a recent gain. This article is part of our SEIS and EIS series and sits beneath the flagship pillar, the complete SEIS and EIS founders guide at /guides/seis-eis-guide-uk-startups/.' },
+      { type: 'p', text: 'It works alongside the companion articles on how much you can raise, at /blog/seis-eis-investment-limits-how-much-you-can-raise/, and on the three-year holding period and the disposal events that can unwind relief, at /blog/seis-eis-three-year-holding-period-disposal-events/. Reinvestment relief depends on getting the income tax relief first, so it also leans on the advance assurance and compliance steps covered at /blog/seis-eis-advance-assurance-hmrc/.' },
+
+      { type: 'h2', text: 'Three SEIS reliefs, not one' },
+      { type: 'p', text: 'It helps to keep the three SEIS reliefs distinct, because investors and founders routinely blur them. The first is income tax relief: 50% of the amount subscribed, on up to £200,000 of investment per tax year. The second is the capital gains tax exemption on a disposal of the SEIS shares after three years, so any growth in the value of the SEIS shares can be tax free. The third, the subject of this article, is reinvestment relief, which applies not to the SEIS shares but to a separate gain the investor is reinvesting into them.' },
+      { type: 'p', text: 'Reinvestment relief is the one most often overlooked, because it only matters to investors who have recently realised a gain elsewhere. For those investors, though, it can transform the economics of backing a startup, layering a capital gains saving on top of the income tax saving.' },
+
+      { type: 'h2', text: 'How reinvestment relief works' },
+      { type: 'p', text: 'The mechanism is simple at its core. If an investor makes a chargeable gain on disposing of any asset, and reinvests an amount of that gain into qualifying SEIS shares, they can claim to treat 50% of the gain as exempt from capital gains tax. According to [HMRC guidance for investors](https://www.gov.uk/guidance/venture-capital-schemes-tax-relief-for-investors), the exemption is capped: the maximum reinvestment relief is £100,000, which is half of the £200,000 maximum SEIS investment an investor can make in a tax year. That £100,000 ceiling applies to investments made from 6 April 2023, having previously been £50,000.' },
+      { type: 'p', text: 'The asset that produced the gain does not have to be anything special. It can be a property, a portfolio of shares, a business sold, or any other chargeable asset. What matters is that the investor takes the gain, puts money into SEIS shares, and meets the conditions below. Half of the gain reinvested then drops out of charge.' },
+
+      { type: 'h2', text: 'The conditions that have to be met' },
+      { type: 'p', text: 'Reinvestment relief is not automatic, and it is bolted firmly to the income tax relief. The conditions below are the ones that decide whether a claim succeeds.' },
+      {
+        type: 'list',
+        items: [
+          'You must also get SEIS income tax relief on the same shares: no income tax relief, no reinvestment relief. The two are inseparable.',
+          'To get the full 50% exemption on a gain, you must invest in qualifying SEIS shares an amount at least equal to the chargeable gain. Invest less, and the reinvestment relief is limited to half the amount actually invested.',
+          'The relief is capped at £100,000 of exemption, mirroring the £200,000 annual SEIS investment limit.',
+          'If the gain arose after the SEIS shares were issued to you, you must still hold those shares at the time the gain arose.',
+        ],
+      },
+      { type: 'p', text: 'The link to income tax relief is the condition founders most often miss. An investor who is connected with the company, and so cannot claim income tax relief because they breach the 30% rule, also cannot claim reinvestment relief. The capital gains benefit rides on the back of the income tax claim and falls away with it.' },
+
+      { type: 'h3', text: 'A worked example' },
+      { type: 'p', text: 'Suppose an angel sells a buy-to-let property and makes a chargeable gain of £80,000. In the same tax year they subscribe £80,000 for qualifying SEIS shares and claim SEIS income tax relief. Because they have reinvested an amount at least equal to the gain, they can treat 50% of the £80,000 gain, so £40,000, as exempt from capital gains tax. On top of that, the £80,000 subscription attracts 50% income tax relief, a further £40,000 off their income tax bill. The same £80,000 has now generated two separate tax savings, before any account is taken of the future exemption on the SEIS shares themselves or the loss relief available if the company fails.' },
+      { type: 'p', text: 'If instead the angel had reinvested only £40,000 of the £80,000 gain, the reinvestment relief would be limited to half the amount invested, so £20,000 of the gain would be exempt rather than £40,000. The lesson is that to extract the full 50%, the investment must at least match the gain being sheltered.' },
+
+      { type: 'h2', text: 'Where SEIS reinvestment relief differs from EIS deferral relief' },
+      { type: 'p', text: 'This is the single most common point of confusion, and it is worth being precise. SEIS reinvestment relief is an exemption: half the reinvested gain is wiped out and never comes back into charge, provided the conditions hold. EIS offers a different mechanism, deferral relief, which postpones the gain rather than removing it. Under EIS, the whole of a reinvested gain can be deferred, but it is only deferred: it comes back into charge when the EIS shares are disposed of or otherwise cease to qualify.' },
+      { type: 'p', text: 'The practical difference is large. SEIS hands back tax permanently on half the gain; EIS hands back tax temporarily on potentially all of the gain. An investor choosing between schemes on capital gains grounds alone is weighing a permanent 50% exemption against a full but temporary deferral. The table below sets the two side by side.' },
+      {
+        type: 'table',
+        headers: ['Feature', 'SEIS reinvestment relief', 'EIS deferral relief'],
+        rows: [
+          ['Type of relief', 'Exemption (gain removed)', 'Deferral (gain postponed)'],
+          ['Proportion of gain relieved', '50% of the reinvested gain', 'Up to 100% of the reinvested gain'],
+          ['Does the gain come back', 'No, the relieved half is permanently exempt', 'Yes, on disposal of the EIS shares'],
+          ['Maximum relief', '£100,000 of exemption', 'No fixed cap on the gain deferred'],
+          ['Must also claim income tax relief', 'Yes', 'No, deferral can be claimed alone'],
+        ],
+      },
+      { type: 'p', text: 'Note the last row. EIS deferral can be claimed even where the investor cannot get income tax relief, for example because they are connected with the company. SEIS reinvestment relief cannot: it is welded to the income tax claim. That asymmetry occasionally makes EIS the better capital gains route even for a company that would otherwise prefer SEIS.' },
+
+      { type: 'h2', text: 'How the relief interacts with the holding period' },
+      { type: 'p', text: 'Reinvestment relief is not immune to the clawback rules that govern the SEIS shares. If the income tax relief is withdrawn, for example because the investor disposes of the SEIS shares inside the three-year window covered at /blog/seis-eis-three-year-holding-period-disposal-events/, the reinvestment relief can be withdrawn with it. Because the two reliefs are linked, an event that unwinds the income tax claim tends to unwind the capital gains exemption as well.' },
+      { type: 'p', text: 'This is why an investor claiming reinvestment relief has to think about the same three-year discipline as any other SEIS investor. The capital gains saving is not banked the moment the gain is reinvested; it firms up only as the underlying SEIS investment runs its course cleanly. A premature exit that costs the income tax relief can cost the reinvestment relief too.' },
+
+      { type: 'h2', text: 'Timing the claim' },
+      { type: 'p', text: 'Reinvestment relief is claimed through the Self Assessment return, supported by the SEIS3 certificate that the company issues after HMRC authorises the round. The investor cannot claim until they hold that certificate, so the company compliance timing, set out at /blog/seis-eis-advance-assurance-hmrc/, governs when the investor can act on both the income tax relief and the reinvestment relief. The gain being sheltered and the SEIS subscription generally need to fall in a way that the legislation permits to be matched, so where the timing is tight it is worth modelling before the disposal, not after.' },
+      { type: 'p', text: 'The interaction with the income tax carry-back option adds a further wrinkle. An investor can carry back SEIS income tax relief to the previous tax year, and the matching of the gain to the reinvestment needs to be handled consistently. This is detailed territory and an area where a small timing error can cost the relief, so the sequencing of the disposal, the subscription and the claim deserves care.' },
+
+      { type: 'h2', text: 'Why this matters when raising a round' },
+      { type: 'p', text: 'For a founder, reinvestment relief is a targeted selling point rather than a universal one. It does nothing for an investor with no recent gain, but it is powerful for an angel who has just sold a property, a business or a block of shares and is facing a capital gains bill. To that investor, SEIS offers a way to shelter half of the gain permanently while also getting income tax relief on the new investment, which can make the effective cost of backing the company strikingly low once both reliefs are counted.' },
+      { type: 'p', text: 'Knowing which of your prospective investors are sitting on a gain therefore changes how you pitch. The combined effect of income tax relief, reinvestment relief and the eventual exemption on the SEIS shares is the strongest version of the SEIS case, and it is worth making explicitly to the right investor. The amounts each investor can put in, and how that fits the company £250,000 SEIS ceiling, are covered at /blog/seis-eis-investment-limits-how-much-you-can-raise/.' },
+
+      { type: 'h2', text: 'Common mistakes that cost the relief' },
+      { type: 'p', text: 'Because reinvestment relief is less familiar than the headline income tax relief, the errors below recur. They are worth checking before an investor relies on the saving.' },
+      {
+        type: 'list',
+        items: [
+          'Assuming reinvestment relief stands alone, when it is forfeited if the investor cannot also get SEIS income tax relief.',
+          'Reinvesting less than the full gain and expecting full exemption, when the relief is then limited to half the amount invested.',
+          'Confusing the SEIS 50% exemption with the EIS full deferral, and budgeting for the wrong capital gains outcome.',
+          'Losing the income tax relief through an early disposal or a connection problem, and so losing the reinvestment relief alongside it.',
+          'Overlooking the £100,000 cap on the exemption when a very large gain is being reinvested.',
+        ],
+      },
+
+      { type: 'h2', text: 'A note on the figures' },
+      { type: 'p', text: 'The figures in this article, the 50% exemption, the £100,000 cap, the £200,000 annual SEIS investment limit and the three-year holding period, are the current SEIS rules as published by HMRC. The detail of how a reinvested gain is matched to a subscription, and how reinvestment relief interacts with other capital gains reliefs an investor may be claiming, is technical. HMRC sets out the mechanics in its [Venture Capital Schemes Manual](https://www.gov.uk/hmrc-internal-manuals/venture-capital-schemes-manual/vcm45010). Because the rules carry detailed conditions and the figures can change, confirm the current position on GOV.UK and take advice on a specific gain before relying on the relief.' },
+
+      { type: 'h2', text: 'What this means for founders and investors' },
+      { type: 'p', text: 'SEIS reinvestment relief is the quiet third leg of the SEIS proposition. It will not apply to every investor, but for an angel reinvesting a recent capital gain it can be the difference that gets a cheque written, exempting half the gain permanently while the income tax relief and the future share exemption do their own work. The relief is bolted to the income tax claim, capped at £100,000, and unwound by the same events that unwind the rest of the SEIS reliefs, so it rewards the same clean execution as everything else in the scheme. For the full framework, read the flagship pillar at /guides/seis-eis-guide-uk-startups/, and pair this article with the companion spokes on the investment limits and the three-year holding period.' },
+    ],
+  },
 ];
 
 /** Find a published or draft article by slug. */
