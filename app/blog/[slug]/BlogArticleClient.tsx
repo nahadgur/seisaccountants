@@ -31,16 +31,16 @@ interface Props {
 // the same lead-form modal the removed sidebar button opened.
 function LeadCtaBanner({ onOpen }: { onOpen: () => void }) {
   return (
-    <div className="my-12 bg-ink-900 text-paper-100 rounded-sm p-7 md:p-9 relative overflow-hidden">
+    <div className="my-10 bg-ink-900 text-paper-100 rounded-sm px-6 py-6 md:px-10 md:py-7 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-      <h2 className="font-display text-[22px] md:text-[26px] text-white leading-snug tracking-tight mb-3">
+      <h2 className="font-display text-[18px] lg:text-[21px] text-white leading-snug tracking-tight mb-1.5">
         Raising SEIS or EIS?
       </h2>
-      <p className="font-sans text-[14.5px] text-paper-300 leading-relaxed mb-6 max-w-2xl">
+      <p className="font-sans text-[14.5px] text-paper-300 leading-snug mb-4 max-w-2xl">
         Get matched with a vetted, scheme-experienced accountant who handles advance
         assurance through to investor certificates. Free, no obligation.
       </p>
-      <button onClick={onOpen} className="btn-primary" type="button">
+      <button onClick={onOpen} className="btn-primary py-2.5" type="button">
         Get matched &nbsp;&rarr;
       </button>
     </div>
