@@ -12,7 +12,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Layers, Clock, Tag, Calendar } from 'lucide-react';
+import { ArrowLeft, Clock, Tag, Calendar } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
@@ -25,6 +25,26 @@ interface Props {
   article: BlogArticle;
   hubGuide?: Guide;
   siblingSpokes?: BlogArticle[];
+}
+
+// Reusable lead-capture banner, reusing the site's existing match CTA copy and
+// the same lead-form modal the removed sidebar button opened.
+function LeadCtaBanner({ onOpen }: { onOpen: () => void }) {
+  return (
+    <div className="my-12 bg-ink-900 text-paper-100 rounded-sm p-7 md:p-9 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
+      <h2 className="font-display text-[22px] md:text-[26px] text-white leading-snug tracking-tight mb-3">
+        Raising SEIS or EIS?
+      </h2>
+      <p className="font-sans text-[14.5px] text-paper-300 leading-relaxed mb-6 max-w-2xl">
+        Get matched with a vetted, scheme-experienced accountant who handles advance
+        assurance through to investor certificates. Free, no obligation.
+      </p>
+      <button onClick={onOpen} className="btn-primary" type="button">
+        Get matched &nbsp;&rarr;
+      </button>
+    </div>
+  );
 }
 
 // Split paragraph text into nodes, converting:
@@ -181,8 +201,20 @@ function renderBlock(block: ContentBlock, index: number) {
   }
 }
 
-export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [] }: Props) {
+export default function BlogArticleClient({ article, hubGuide }: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Inject a mid-article lead CTA immediately before the 2nd h2 in the body.
+  const secondH2Index = (() => {
+    let count = 0;
+    for (let i = 0; i < article.content.length; i += 1) {
+      if (article.content[i].type === 'h2') {
+        count += 1;
+        if (count === 2) return i;
+      }
+    }
+    return -1;
+  })();
 
   const breadcrumbItems = hubGuide
     ? [
@@ -247,101 +279,30 @@ export default function BlogArticleClient({ article, hubGuide, siblingSpokes = [
           className="container-width py-12 md:py-16"
           style={{ backgroundColor: 'var(--paper-100)' }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <article className="max-w-none">
+            {article.content.flatMap((block, i) => {
+              const rendered = renderBlock(block, i);
+              if (i === secondH2Index) {
+                return [
+                  <LeadCtaBanner key={`cta-mid-${i}`} onOpen={() => setIsModalOpen(true)} />,
+                  rendered,
+                ];
+              }
+              return [rendered];
+            })}
 
-            <article className="lg:col-span-2 max-w-none">
-              {article.content.map((block, i) => renderBlock(block, i))}
+            {/* End-of-article lead CTA */}
+            <LeadCtaBanner onOpen={() => setIsModalOpen(true)} />
 
-              {/* Hub upward link at end of article */}
-              {hubGuide && (
-                <div className="mt-12 bg-white border border-ink-900/10 rounded-sm p-6 relative">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-                  <p className="eyebrow mb-3">RELATED GUIDE</p>
-                  <Link
-                    href={`/guides/${hubGuide.slug}/`}
-                    className="group block font-display text-[20px] md:text-[22px] text-ink-900 hover:text-brand-500 leading-snug tracking-tight transition-colors"
-                  >
-                    {hubGuide.title}
-                    <ArrowRight className="inline w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                  </Link>
-                  <p className="font-sans text-[14px] text-ink-700 mt-2 leading-relaxed">
-                    Read the broader guide for more context.
-                  </p>
-                </div>
-              )}
-
-              <div className="mt-10 pt-6 border-t border-ink-900/10">
-                <Link
-                  href="/blog/"
-                  className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-500 hover:text-brand-700 transition-colors"
-                >
-                  <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to all articles
-                </Link>
-              </div>
-            </article>
-
-            <aside className="lg:col-span-1">
-              <div className="sticky top-24 space-y-8">
-
-                {/* Match CTA */}
-                <div className="bg-white border border-ink-900/10 rounded-sm p-6">
-                  <h2 className="font-display text-[19px] text-ink-900 leading-snug tracking-tight mb-3">
-                    Raising SEIS or EIS?
-                  </h2>
-                  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed mb-5">
-                    Get matched with a vetted, scheme-experienced accountant who handles advance
-                    assurance through to investor certificates. Free, no obligation.
-                  </p>
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="block w-full btn-primary"
-                    type="button"
-                  >
-                    Get matched &nbsp;&rarr;
-                  </button>
-                </div>
-
-                {/* Sibling spokes */}
-                {hubGuide && siblingSpokes.length > 0 && (
-                  <div className="bg-paper-200 border border-ink-900/8 rounded-sm p-5">
-                    <div className="masthead mb-4">
-                      <span>RELATED ARTICLES</span>
-                    </div>
-                    <div className="space-y-3">
-                      {siblingSpokes.map((rel) => (
-                        <Link
-                          key={rel.slug}
-                          href={`/blog/${rel.slug}/`}
-                          className="block font-display text-[14.5px] text-ink-900 hover:text-brand-500 leading-snug tracking-tight transition-colors"
-                        >
-                          {rel.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Hub link card */}
-                {hubGuide && (
-                  <Link
-                    href={`/guides/${hubGuide.slug}/`}
-                    className="group block bg-ink-900 text-white rounded-sm p-5 hover:bg-brand-700 transition-colors"
-                  >
-                    <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-2">
-                      Pillar guide
-                    </span>
-                    <p className="font-display text-[16px] text-white leading-snug tracking-tight">
-                      {hubGuide.shortTitle}: the complete guide
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 font-display italic text-[13px] text-brand-300 mt-3 group-hover:translate-x-1 transition-transform">
-                      Read the guide <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
-                    </span>
-                  </Link>
-                )}
-
-              </div>
-            </aside>
-          </div>
+            <div className="mt-10 pt-6 border-t border-ink-900/10">
+              <Link
+                href="/blog/"
+                className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-500 hover:text-brand-700 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to all articles
+              </Link>
+            </div>
+          </article>
         </div>
       </main>
       <Footer />
