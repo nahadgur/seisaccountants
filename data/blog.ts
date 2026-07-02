@@ -884,6 +884,62 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: 'SEIS reinvestment relief is the quiet third leg of the SEIS proposition. It will not apply to every investor, but for an angel reinvesting a recent capital gain it can be the difference that gets a cheque written, exempting half the gain permanently while the income tax relief and the future share exemption do their own work. The relief is bolted to the income tax claim, capped at £100,000, and unwound by the same events that unwind the rest of the SEIS reliefs, so it rewards the same clean execution as everything else in the scheme. The same clean execution that protects the [investment limits](/blog/seis-eis-investment-limits-how-much-you-can-raise/) and the [three-year holding period](/blog/seis-eis-three-year-holding-period-disposal-events/) is what keeps this third leg of the relief intact.' },
     ],
   },
+
+  // ===========================================================
+  // Hub: seis-eis-guide-uk-startups - why investors demand the schemes
+  // ===========================================================
+  {
+    slug: 'why-investors-demand-seis-eis-before-investing',
+    title: 'Why Investors Demand SEIS or EIS Before Writing a Cheque',
+    metaTitle: 'Why Investors Demand SEIS or EIS',
+    metaDescription: 'Why UK angels and seed funds insist on SEIS or EIS eligibility: how the reliefs cut an investor\'s net cost, cap the downside, and reshape early-stage portfolio maths.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readingMins: 9,
+    excerpt: 'Most UK angels and seed funds will not commit to an early-stage round unless the shares qualify for SEIS or EIS. The reliefs cut the investor\'s net cost, cap the downside if the company fails, and change the arithmetic of a whole portfolio, which is why eligibility is treated as a gating condition rather than a bonus.',
+    hub: 'seis-eis-guide-uk-startups',
+    hubSeriesNumber: 3,
+    draft: true,
+    reviewed: false,
+    content: [
+      { type: 'p', text: 'For a founder raising a first round, it can feel as though investors are more interested in a piece of HMRC paperwork than in the product. Angels ask whether the company qualifies for the schemes before they ask about the roadmap, and seed funds write eligibility into their term sheets as a condition of completion. The reason is not sentiment about tax breaks. The Seed Enterprise Investment Scheme and the Enterprise Investment Scheme change the economics of backing an unproven company so decisively that, for most UK early-stage investors, a non-qualifying round is a different and far less attractive proposition. Understanding why turns the schemes from a compliance hurdle into a fundraising advantage, and the [SEIS and EIS guide for UK startups](/guides/seis-eis-guide-uk-startups/) sets out the full framework these reliefs sit within.' },
+
+      { type: 'h2', text: 'The relief cuts the real cost of the cheque' },
+      { type: 'p', text: 'The most immediate reason investors insist on eligibility is that the income tax relief reduces what the investment actually costs them. SEIS gives an investor 50% income tax relief on the amount subscribed, up to £200,000 of investment in a tax year. EIS gives 30% relief, on up to £1,000,000 a year, rising to £2,000,000 where at least the amount above £1,000,000 goes into knowledge-intensive companies. Those rates are set by HMRC and are published in the guidance on tax relief for investors on [GOV.UK](https://www.gov.uk/guidance/venture-capital-schemes-tax-relief-for-investors).' },
+      { type: 'p', text: 'The effect on a single cheque is stark. An angel who commits £20,000 to a SEIS-qualifying company can claim £10,000 back against their income tax bill, so the money genuinely at stake is £10,000. The same £20,000 into a non-qualifying company is £20,000 at stake. Before the company has shipped a single feature, the relief has halved the investor\'s exposure. That is why an investor who would happily back a qualifying seed round will often decline the identical company if the shares do not qualify: the risk-adjusted return simply is not the same. The way the two schemes ration that relief across company age, size and headcount is covered in the comparison of [the key differences between SEIS and EIS](/blog/seis-vs-eis-key-differences-founders-must-know/).' },
+
+      { type: 'h2', text: 'Loss relief caps the downside when a company fails' },
+      { type: 'p', text: 'Early-stage investing assumes most companies will fail, so the more important question for a professional investor is not how good the upside looks but how much they lose when a company folds. This is where the schemes do their heaviest lifting. If a qualifying company fails and the shares become worthless, the investor can claim share loss relief on the amount they lost after income tax relief, and can set that loss against income rather than only against capital gains.' },
+      { type: 'p', text: 'Take the same £20,000 SEIS investment. The investor has already recovered £10,000 through income tax relief, so their net cost is £10,000. If the company then fails completely, they can claim loss relief on that £10,000. An additional-rate taxpayer setting the loss against income at 45% recovers a further £4,500. Their total real loss on a failed £20,000 investment is £5,500, roughly a quarter of the headline figure. For an investor building a portfolio on the expectation that most bets will not return capital, compressing the downside to that degree is the difference between a viable asset class and a reckless one. A non-qualifying company offers none of this cushioning, which is why the eligibility question is not negotiable for most seed backers.' },
+
+      { type: 'h2', text: 'A tax-free exit on the winners' },
+      { type: 'p', text: 'The schemes also improve the upside. Where an investor has claimed income tax relief and held the shares for at least three years, the gain on a qualifying disposal is exempt from capital gains tax entirely. For the small number of portfolio companies that succeed, that exemption is worth a great deal: a stake bought for £20,000 that returns £200,000 hands the investor the whole £180,000 gain with no capital gains tax to pay, against a rate that would otherwise reach 24% on the gain above the annual exempt amount.' },
+      { type: 'p', text: 'For SEIS investors there is a further capital gains sweetener. An investor who reinvests a recent capital gain into SEIS shares can exempt half of that reinvested gain from tax, up to a £100,000 exemption, on top of the income tax relief on the same money. That mechanic is set out in detail in the article on [SEIS reinvestment relief](/blog/seis-reinvestment-relief-cgt-exemption-investors/), and it explains why an angel who has just banked a gain elsewhere is often the most motivated buyer of a qualifying seed round.' },
+
+      { type: 'h2', text: 'How the reliefs reshape portfolio maths' },
+      { type: 'p', text: 'Put the three reliefs together and the arithmetic of an entire early-stage portfolio shifts. Angel investing has historically depended on a small number of large winners paying for a large number of write-offs. The British Business Bank, the UK government-owned development bank, has documented this power-law pattern in its research on the angel market at [british-business-bank.co.uk](https://www.british-business-bank.co.uk/), where most returns come from a handful of investments. The reliefs bend that curve in the investor\'s favour at both ends: they cut the entry cost on every bet, they recover most of the money on the failures, and they take the tax off the winners.' },
+      { type: 'p', text: 'A simplified portfolio shows the effect. Consider ten SEIS investments of £20,000 each, £200,000 committed in total.' },
+      { type: 'table',
+        headers: ['Stage', 'Without SEIS', 'With SEIS'],
+        rows: [
+          ['Cash committed across 10 deals', '£200,000', '£200,000'],
+          ['Income tax relief at 50%', 'None', '£100,000 recovered'],
+          ['Net cash at risk', '£200,000', '£100,000'],
+          ['Loss relief if the failures fold', 'Capital losses only', 'Set against income, further recovery'],
+          ['Tax on the gain from a winner', 'Up to 24% CGT', 'Exempt after 3 years'],
+        ],
+      },
+      { type: 'p', text: 'The figures are illustrative and the actual outcome depends on each investor\'s tax position, but the direction is the point. Halving the net cash at risk before any company has proved itself is what makes an investor willing to back ten unproven teams rather than one. Founders who understand this can pitch the schemes as part of the investment case rather than treating eligibility as an accounting afterthought.' },
+
+      { type: 'h2', text: 'Why eligibility becomes a condition of the deal' },
+      { type: 'p', text: 'Because the reliefs matter so much, investors do not take eligibility on trust. Angels and funds routinely make completion conditional on the company holding advance assurance from HMRC, the pre-issue indication that a share issue is likely to qualify. Term sheets often state that funds will not be released until assurance is in hand, and syndicate leads will not circulate a deal to their network without it. An investor who commits to a round that later turns out not to qualify loses the relief they invested for, so they push that risk back onto the company by insisting the paperwork is settled first. The mechanics of securing that indication are set out in the article on [SEIS and EIS advance assurance](/blog/seis-eis-advance-assurance-hmrc/).' },
+      { type: 'p', text: 'The practical consequence for a founder is that eligibility work belongs at the start of a raise, not the end. A company that approaches investors with advance assurance already granted removes the single largest source of investor hesitation and signals that the round has been run properly. That is where specialist [SEIS advance assurance](/services/seis-advance-assurance/) support earns its place: a clean application that pre-empts HMRC\'s questions is what lets a founder open conversations with the reliefs already locked in rather than promised.' },
+
+      { type: 'h2', text: 'Turning the schemes into a fundraising advantage' },
+      { type: 'p', text: 'Investors demand SEIS or EIS because the reliefs do three things no amount of pitching can replicate: they cut the cost of the cheque, they cap the loss when a company fails, and they take the tax off the rare success. For a founder, the lesson is to stop treating eligibility as red tape and start treating it as part of the product being sold to investors. Get the qualifying conditions confirmed early, secure advance assurance before you market the round, and lead with the fact that the shares qualify. The figures here reflect the current SEIS and EIS rules as published by HMRC, and because the detail carries conditions that can change, confirm the current position on GOV.UK and take professional advice on a specific round before relying on it.' },
+    ],
+  },
 ];
 
 /** Find a published or draft article by slug. */
