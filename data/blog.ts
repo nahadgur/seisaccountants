@@ -940,6 +940,74 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: 'Investors demand SEIS or EIS because the reliefs do three things no amount of pitching can replicate: they cut the cost of the cheque, they cap the loss when a company fails, and they take the tax off the rare success. For a founder, the lesson is to stop treating eligibility as red tape and start treating it as part of the product being sold to investors. Get the qualifying conditions confirmed early, secure advance assurance before you market the round, and lead with the fact that the shares qualify. The figures here reflect the current SEIS and EIS rules as published by HMRC, and because the detail carries conditions that can change, confirm the current position on GOV.UK and take professional advice on a specific round before relying on it.' },
     ],
   },
+
+  // ===========================================================
+  // Hub: rd-tax-credits-uk-startups - choosing an R&D adviser (DRAFT)
+  // ===========================================================
+  {
+    slug: 'choosing-an-rd-tax-credit-adviser-avoiding-a-failed-claim',
+    title: 'Choosing an R&D Tax Credit Adviser and Avoiding a Claim That Fails HMRC',
+    metaTitle: 'Choosing an R&D Tax Credit Adviser',
+    metaDescription: 'How to pick an R&D tax credit adviser for a UK startup, why contingent-fee boutiques carry enquiry risk, and the sign-off you personally give on every claim.',
+    category: 'SEIS & EIS',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    readingMins: 9,
+    excerpt: 'A weak R&D claim is worse than no claim: HMRC now checks a large share of submissions, and a claim that unravels can leave the company repaying the money with interest. Who prepares the claim, and how they are paid, has become one of the biggest determinants of whether it survives.',
+    hub: 'rd-tax-credits-uk-startups',
+    hubSeriesNumber: 1,
+    draft: true,
+    reviewed: false,
+    content: [
+      { type: 'p', text: 'For a SEIS-backed or EIS-backed startup, the R&D tax credit is often the largest cash the company gets back from HMRC in its first few years, so the temptation to maximise it is understandable. The problem is that a claim which is too aggressive, or simply badly evidenced, is now a liability rather than a windfall. HMRC has moved from waving claims through to actively testing them, and a claim that falls apart on enquiry can mean repaying the credit with interest and, in some cases, a penalty. The mechanics of qualifying, sizing and filing a claim are set out in the [complete R&D tax credits guide](/guides/rd-tax-credits-uk-startups/); this article is about the decision that sits before all of that, which is who prepares the claim and how they are paid.' },
+
+      { type: 'h2', text: 'Why the choice of adviser has become a risk decision' },
+      { type: 'p', text: 'A few years ago the R&D market was full of firms promising to find credits in almost any business, often working on a contingent fee, a percentage of whatever HMRC paid out. That model rewards volume and optimism rather than accuracy, and it produced a wave of claims that did not stand up. The National Audit Office estimated over a billion pounds of error and fraud in SME R&D relief in a single year, and HMRC responded by standing up a dedicated compliance unit and sharply raising the proportion of claims it checks.' },
+      { type: 'p', text: 'The professional bodies have been blunt about the pattern. The Institute of Chartered Accountants has warned that many R&D boutiques employ no qualified tax or accountancy staff, are entirely unregulated, and market themselves with claims such as a perfect approval record or an HMRC-approved methodology that do not survive scrutiny. Its [guidance on the R&D claims market](https://www.icaew.com/technical/economy/resilience-and-renewal/r-and-d-tax-relief-what-you-need-to-know) sets out how a regulated, professionally qualified adviser differs from a cold-calling commission operation. For a founder, the practical takeaway is that the identity and standards of the person preparing the claim now weigh as heavily as the underlying R&D itself.' },
+
+      { type: 'h2', text: 'The claim is signed off in the company name, not the adviser\'s' },
+      { type: 'p', text: 'The single most important fact founders miss is that the company, not the adviser, carries the risk if a claim is wrong. HMRC has closed the gap that once let a boutique file a claim while staying invisible. Since 8 August 2023, an R&D claim must be accompanied by a mandatory Additional Information Form, and that form names a senior officer of the company who is responsible for the claim, alongside every agent who advised on it. HMRC\'s [guidance on the Additional Information Form](https://www.gov.uk/guidance/submit-detailed-information-before-you-claim-research-and-development-rd-tax-relief) confirms that a director has to stand behind the figures.' },
+      { type: 'p', text: 'That changes the calculus. A founder who signs off a claim prepared by an adviser they did not vet is personally attaching their name to project descriptions and cost figures they may not fully understand. If the claim is later found to include non-qualifying work or inflated costs, it is the company that repays and the named director whose judgement is questioned. An adviser working purely for a share of the payout has every incentive to push the number up; the person carrying the consequence of that number is the founder.' },
+
+      { type: 'h2', text: 'What a good adviser actually does differently' },
+      { type: 'p', text: 'The difference between a durable claim and a fragile one is mostly in the preparation, and it is visible in how the adviser works with the technical team. A specialist starts from the engineering, identifying the specific projects where the team faced a genuine scientific or technological uncertainty, then builds the cost analysis around that rather than the other way round. A commission-driven operation tends to start from the headline cost base and reverse-engineer a narrative to justify it.' },
+      { type: 'p', text: 'A well-run engagement produces a technical narrative that a competent professional could read cold and accept, describing the actual uncertainty and the approach taken to resolve it, and a cost schedule that reconciles to the payroll, contractor invoices and cloud bills. This is the same discipline HMRC looks for when it decides whether to open an enquiry, and it is why claims prepared to that standard are usually processed without one. The good adviser also tells a founder when something does not qualify, which a contingent-fee operator rarely has an incentive to do.' },
+      {
+        type: 'list',
+        items: [
+          'Works from the technical facts first, interviewing the engineers who did the work rather than filling in a template from the accounts.',
+          'Writes project-specific narratives that name the uncertainty and the method, not generic descriptions of the company\'s technology.',
+          'Reconciles every claimed cost to source records, and excludes routine development, production infrastructure and clearly non-qualifying spend.',
+          'Is a member of a professional body with enforceable standards, so there is a regulator to answer to if the work is poor.',
+          'Charges in a way that does not reward inflating the claim, and is willing to say a project or a cost does not qualify.',
+        ],
+      },
+
+      { type: 'h2', text: 'How fee structures shape the incentive' },
+      { type: 'p', text: 'Fee model is not a detail. A pure contingent fee, calculated as a percentage of the credit, aligns the adviser with a bigger claim, not a correct one. A fixed fee, or a fee capped so it does not scale endlessly with the number claimed, removes that pull. This does not mean every contingent arrangement is improper, but it does mean a founder should understand what the fee rewards before signing. Where the adviser earns more the larger the claim, the founder has to supply the caution the fee structure removes.' },
+      { type: 'p', text: 'It is also worth asking what happens if HMRC opens an enquiry. A serious adviser stands behind the claim and handles the correspondence as part of the engagement. A boutique that has taken its percentage and moved on may be unreachable when the questions arrive, leaving the founder to defend a claim they did not write. The cost of enquiry support, and who bears it, should be settled at the outset rather than discovered mid-dispute.' },
+
+      { type: 'h2', text: 'Where the R&D claim sits in the wider funding picture' },
+      { type: 'p', text: 'For a scheme-backed company the R&D credit rarely stands alone. It stacks on top of the investor capital raised, and the interaction with other funding matters. Because SEIS and EIS money is private investment rather than state aid, it does not restrict the R&D claim, which is part of why the two work so well together within the [company\'s overall funding limits](/blog/seis-eis-investment-limits-how-much-you-can-raise/). Grant funding behaves differently and can reduce the expenditure available for the enhanced rate, so a company juggling a grant, an equity round and an R&D claim needs the treatment planned before the year-end.' },
+      { type: 'p', text: 'The same substance-over-form thinking that governs a defensible R&D narrative runs through the reliefs generally. HMRC\'s scrutiny of whether a claim reflects real activity mirrors the way it tests investor reliefs against genuine trading substance rather than a tax motive, which is the theme running through the treatment of the [anti-avoidance and risk-to-capital rules](/blog/seis-eis-anti-avoidance-tax-motive-trading-substance/). A company that keeps contemporaneous technical records and honest cost allocation is protecting all of these positions at once, not just the R&D number.' },
+
+      { type: 'h2', text: 'Questions to put to an R&D adviser before you engage them' },
+      { type: 'p', text: 'A short conversation surfaces most of what matters. The answers tell a founder whether they are dealing with a qualified specialist or a sales operation, and whether the resulting claim is likely to survive contact with HMRC.' },
+      {
+        type: 'list',
+        items: [
+          'Are you a member of a professional body, and who regulates the tax work you do?',
+          'Will a qualified person interview our engineers, or is the narrative built from a questionnaire?',
+          'How are your fees calculated, and do they rise with the size of the claim?',
+          'If HMRC opens an enquiry, do you handle it, and is that included or charged separately?',
+          'Are you willing to tell us a project or a cost does not qualify, and can you give an example where you have?',
+        ],
+      },
+
+      { type: 'h2', text: 'Getting the R&D claim right the first time' },
+      { type: 'p', text: 'An R&D tax credit is a real and valuable relief, and a scheme-backed startup doing genuine technical work is exactly the kind of company it exists for. The way to capture it safely is to treat the claim as a piece of tax filing that a director personally stands behind, prepared by an adviser whose standards and incentives point towards accuracy rather than volume. Specialist [R&D tax credit support](/services/rd-tax-credits/) that starts from the engineering, reconciles the costs, and would defend the claim on enquiry is the version that pays back reliably, rather than the version that has to be repaid later. Because HMRC\'s approach and the figures can change, confirm the current requirements on GOV.UK and take advice on a specific claim before relying on it.' },
+    ],
+  },
 ];
 
 /** Find a published or draft article by slug. */
