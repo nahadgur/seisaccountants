@@ -900,7 +900,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: 'Most UK angels and seed funds will not commit to an early-stage round unless the shares qualify for SEIS or EIS. The reliefs cut the investor\'s net cost, cap the downside if the company fails, and change the arithmetic of a whole portfolio, which is why eligibility is treated as a gating condition rather than a bonus.',
     hub: 'seis-eis-guide-uk-startups',
     hubSeriesNumber: 3,
-    draft: true,
+    draft: false,
     reviewed: false,
     content: [
       { type: 'p', text: 'For a founder raising a first round, it can feel as though investors are more interested in a piece of HMRC paperwork than in the product. Angels ask whether the company qualifies for the schemes before they ask about the roadmap, and seed funds write eligibility into their term sheets as a condition of completion. The reason is not sentiment about tax breaks. The Seed Enterprise Investment Scheme and the Enterprise Investment Scheme change the economics of backing an unproven company so decisively that, for most UK early-stage investors, a non-qualifying round is a different and far less attractive proposition. Understanding why turns the schemes from a compliance hurdle into a fundraising advantage, and the [SEIS and EIS guide for UK startups](/guides/seis-eis-guide-uk-startups/) sets out the full framework these reliefs sit within.' },
