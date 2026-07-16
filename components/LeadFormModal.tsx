@@ -154,7 +154,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  // Paper Tape form input style - white on paper background, ink border,
  // brand focus ring. ink-900 placeholder at 40% (readable on all).
  const inputClass =
- 'w-full px-4 py-3.5 rounded-sm border border-ink-900/15 bg-white text-ink-900 placeholder:text-ink-500 text-[14px] focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors';
+ 'w-full px-4 py-3.5 rounded-sm border border-ink-900/15 bg-white text-ink-900 placeholder:text-ink-500 text-base focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors';
 
  return (
  <div
