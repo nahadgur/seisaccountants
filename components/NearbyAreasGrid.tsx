@@ -27,7 +27,7 @@ export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: 
  : `Areas we cover around ${cityName}`;
 
  const description = serviceName
- ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? Our vetted accountants serve SEIS and EIS founders across ${cityName} and the surrounding areas listed below.`
+ ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? We serve SEIS and EIS founders across ${cityName} and the surrounding areas listed below.`
  : `Our accountants in ${cityName} serve SEIS and EIS founders from across the surrounding area. If your company is based in any of the nearby areas, you are within reach of specialist SEIS accounting services.`;
 
  return (
@@ -79,10 +79,10 @@ export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: 
  {/* SEO paragraph */}
  <div className="mt-6 max-w-3xl">
  <p className="font-sans text-[13px] text-ink-500 leading-relaxed">
- Startups from {areas.slice(0, 5).join(', ')}, and other areas around {cityName} regularly use our service to find specialist accountants.{' '}
+ Startups from {areas.slice(0, 5).join(', ')}, and other areas around {cityName} regularly work with us for specialist SEIS and EIS accounting.{' '}
  {serviceName
- ? `If you need ${serviceName.toLowerCase()} and your startup is in or near ${cityName}, our vetted accountants offer flexible consultation times including evenings and weekends.`
- : `All of our ${cityName} partner accountants are experienced, fully insured, and offer flexible appointment times to suit your startup's schedule.`
+ ? `If you need ${serviceName.toLowerCase()} and your startup is in or near ${cityName}, we offer flexible consultation times including evenings and weekends.`
+ : `We are experienced, fully insured, and offer flexible appointment times to suit your ${cityName} startup's schedule.`
  }
  </p>
  </div>

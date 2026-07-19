@@ -88,5 +88,5 @@ export const shareIssueMechanicsContent: {
     },
   ],
   citySectionIntro:
-    "Share-issue mechanics are corporate-secretarial work supported by HMRC compliance knowledge; the geographic location of the company or its accountant does not affect the process. What matters is the specialist's experience running clean SEIS / EIS issues from board resolution through SEIS3 / EIS3 distribution. The matching service surfaces specialist accountants whose live caseloads include SEIS / EIS share-issue documentation and Companies House filings.",
+    "Share-issue mechanics are corporate-secretarial work supported by HMRC compliance knowledge; the geographic location of the company or its accountant does not affect the process. What matters is the specialist's experience running clean SEIS / EIS issues from board resolution through SEIS3 / EIS3 distribution. Our day-to-day caseload includes SEIS / EIS share-issue documentation and Companies House filings.",
 };

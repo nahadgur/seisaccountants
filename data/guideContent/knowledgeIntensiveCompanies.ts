@@ -92,5 +92,5 @@ export const knowledgeIntensiveCompaniesContent: {
     },
   ],
   citySectionIntro:
-    "KIC EIS applications are processed by HMRC's Venture Capital Reliefs Unit centrally, so the geographic location of the company or its accountant does not affect processing. What matters is the specialist's experience with KIC R&D intensity evidence and innovation-condition documentation. The matching service surfaces specialist accountants whose live caseloads include KIC EIS engagements.",
+    "KIC EIS applications are processed by HMRC's Venture Capital Reliefs Unit centrally, so the geographic location of the company or its accountant does not affect processing. What matters is the specialist's experience with KIC R&D intensity evidence and innovation-condition documentation. Our day-to-day caseload includes KIC EIS engagements.",
 };

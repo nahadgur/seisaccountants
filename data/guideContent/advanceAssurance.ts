@@ -84,5 +84,5 @@ export const advanceAssuranceContent: {
     },
   ],
   citySectionIntro:
-    "Advance Assurance applications are handled centrally by HMRC's Venture Capital Reliefs Unit, not by regional offices, so the geographic location of the company or its accountant does not affect the application directly. What matters is the specialist's recent caseload with the VCR team. The matching service surfaces specialist accountants whose live caseloads are dominated by SEIS / EIS work and who maintain ongoing working relationships with the VCR Unit.",
+    "Advance Assurance applications are handled centrally by HMRC's Venture Capital Reliefs Unit, not by regional offices, so the geographic location of the company or its accountant does not affect the application directly. What matters is the specialist's recent caseload with the VCR team. Our own live caseload is dominated by SEIS / EIS work and we maintain ongoing working relationships with the VCR Unit.",
 };

@@ -83,5 +83,5 @@ export const carryBackContent: {
     },
   ],
   citySectionIntro:
-    "SEIS / EIS carry-back is a Self-Assessment matter handled centrally; the geographic location of the investor's accountant does not affect the mechanics. What matters is the specialist's familiarity with the cross-year planning and the timing of SEIS3 / EIS3 certificate availability vs amendment windows. The matching service surfaces specialist accountants whose live caseloads include cross-year SEIS / EIS investor planning.",
+    "SEIS / EIS carry-back is a Self-Assessment matter handled centrally; the geographic location of the investor's accountant does not affect the mechanics. What matters is the specialist's familiarity with the cross-year planning and the timing of SEIS3 / EIS3 certificate availability vs amendment windows. Our day-to-day caseload includes cross-year SEIS / EIS investor planning.",
 };

@@ -86,5 +86,5 @@ export const lossReliefContent: {
     },
   ],
   citySectionIntro:
-    "SEIS / EIS loss relief is a personal-tax calculation; the geographic location of the company or the investor's accountant does not affect the analysis. What matters is the specialist's familiarity with the share-loss-relief rules and the broader tax planning around investor portfolios. The matching service surfaces specialist accountants whose live caseloads include SEIS / EIS investors managing portfolio-level loss recognition.",
+    "SEIS / EIS loss relief is a personal-tax calculation; the geographic location of the company or the investor's accountant does not affect the analysis. What matters is the specialist's familiarity with the share-loss-relief rules and the broader tax planning around investor portfolios. Our day-to-day caseload includes SEIS / EIS investors managing portfolio-level loss recognition.",
 };

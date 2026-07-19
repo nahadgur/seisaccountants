@@ -29,7 +29,7 @@ export const metadata: Metadata = {
  card: 'summary_large_image',
  title: 'Our Services | SEIS Accountants',
  description:
- 'Vetted UK SEIS/EIS specialists for advance assurance, share issuance, compliance statements, and the three-year qualifying period.',
+ 'SEIS and EIS specialist accountants for advance assurance, share issuance, compliance statements, and the three-year qualifying period.',
  },
 };
 
@@ -40,10 +40,10 @@ export default function ServicesIndexPage() {
  '@id': `${pageUrl}#collection`,
  name: 'SEIS & EIS Lifecycle Services',
  description:
- 'The full catalogue of SEIS and EIS specialist services we match UK founders with through our vetted accountant network.',
+ 'The full catalogue of SEIS and EIS specialist services we provide to UK founders.',
  url: pageUrl,
  isPartOf: { '@id': `${siteConfig.url}/#website` },
- about: { '@id': `${siteConfig.url}/#referral-service` },
+ about: { '@id': `${siteConfig.url}/#service` },
  hasPart: services.map((s) => ({
  '@type': 'Service',
  name: s.title,

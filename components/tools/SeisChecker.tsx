@@ -485,7 +485,7 @@ export default function SeisChecker() {
  onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent('open-lead-modal')); }}
  className="btn-primary text-center flex-1 sm:flex-none"
  >
- Get matched with a specialist &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </a>
  </div>
 

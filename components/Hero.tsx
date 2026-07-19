@@ -20,8 +20,8 @@ interface HeroProps {
 }
 
 const trustPoints = [
- 'FREE MATCHING',
- 'VETTED ACA/ACCA',
+ 'FREE QUOTE',
+ 'ACCA-REGULATED',
  'UK-WIDE',
  'NO OBLIGATION',
 ];
@@ -59,11 +59,11 @@ export function Hero({ title, subtitle, image, showCta = true, onOpenModal }: He
  <div className="flex flex-col sm:flex-row gap-3 mb-8">
  {onOpenModal ? (
  <button onClick={onOpenModal} className="btn-primary" type="button">
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  ) : (
  <Link href="/contact/" className="btn-primary">
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </Link>
  )}
  <Link href="/services/" className="btn-secondary">

@@ -196,7 +196,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  Request <em className="text-brand-500 italic">received</em>
  </h2>
  <p className="font-sans text-[14px] text-ink-700 leading-relaxed max-w-sm">
- We will match you with a vetted accountant. Check your email, and expect a call within 24 hours.
+ We have your enquiry and will come back within 48 hours with a fixed written quote. Check your email for next steps.
  </p>
  </div>
  ) : (
@@ -204,16 +204,16 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  {/* Masthead */}
  <div className="mb-6 pb-4 border-b border-ink-900/15">
  <div className="flex items-center mb-4">
- <span className="eyebrow">FREE MATCHING</span>
+ <span className="eyebrow">FREE QUOTE</span>
  </div>
  <h2
  id="lead-form-title"
  className="font-display text-[30px] md:text-[34px] text-ink-900 leading-[1.0] tracking-tight"
  >
- Find your <em className="text-brand-500 italic">accountant.</em>
+ Get your <em className="text-brand-500 italic">fixed quote.</em>
  </h2>
  <p id="lead-form-desc" className="font-sans text-ink-700 text-[13.5px] mt-3 leading-relaxed">
- Tell us the basics. We will match you with screened accountants in your area within a week.
+ Tell us the basics and we come back within 48 hours with a fixed written quote, with no obligation.
  </p>
  </div>
 
@@ -317,7 +317,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  className="mt-0.5 w-4 h-4 rounded-sm border-ink-900/30 text-brand-500 focus:ring-brand-500 focus:ring-offset-0 flex-shrink-0 cursor-pointer"
  />
  <span className="text-[12px] text-ink-700 leading-[1.65]">
- I agree that my details will be shared with a carefully selected UK accountancy practice in our network who will contact me directly. See the{' '}
+ I agree that my details will be used to contact me about my enquiry and prepare a written quote. See the{' '}
  <Link href="/privacy/" className="text-brand-500 hover:text-brand-700 underline underline-offset-2">
  Privacy Policy
  </Link>.
@@ -329,7 +329,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  disabled={isSubmitting}
  className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium py-4 px-6 rounded-sm transition-colors text-[13px] tracking-[0.15em] uppercase mt-3"
  >
- {isSubmitting ? 'Sending ...' : 'Get matched \u2009\u2192'}
+ {isSubmitting ? 'Sending ...' : 'Get a Fixed Quote \u2009\u2192'}
  </button>
 
  <p className="text-center text-[10.5px] font-medium text-ink-500 mt-2 tracking-[0.18em] uppercase">

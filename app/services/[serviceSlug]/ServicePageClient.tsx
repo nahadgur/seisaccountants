@@ -68,15 +68,15 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  subtitle={service.description}
  image={service.image}
  bullets={[
- 'Compare up to 3 free quotes',
- 'Every accountant vetted and insured',
+ 'Fixed written quote in 48 hours',
+ 'ACCA-regulated and insured',
  `${totalCities}+ locations covered`,
  ]}
- mobileBadges={['ACA/ACCA', 'VETTED', `${totalCities}+ LOCATIONS`]}
+ mobileBadges={['ACCA', 'INSURED', `${totalCities}+ LOCATIONS`]}
  right={
  <HeroLeadForm
  service={service.title}
- ctaButton="Get quotes"
+ ctaButton="Get a quote"
  />
  }
  />
@@ -217,7 +217,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  title={<>Find {service.title.toLowerCase()} <em className="text-brand-500 italic">in your city</em></>}
  />
  <p className="font-sans text-[14px] text-ink-700 mb-6 leading-relaxed">
- Vetted {service.title.toLowerCase()} specialists across {totalCities} UK city catchments. The matching service covers the whole UK by remote engagement; these are the cities with the strongest local query demand.
+ Specialist {service.title.toLowerCase()} across {totalCities} UK city catchments. We cover the whole UK by remote engagement; these are the cities with the strongest local query demand.
  </p>
  <div className="space-y-6">
  {Object.entries(LOCATIONS).map(([region, cities]) => (
@@ -323,19 +323,19 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  <div className="sticky top-24 space-y-5">
 
  <div className="bg-white p-6 border border-ink-900/10 rounded-sm">
- <span className="eyebrow mb-3 block">GET MATCHED</span>
+ <span className="eyebrow mb-3 block">GET A QUOTE</span>
  <h3 className="font-display text-[18px] text-ink-900 mb-2 leading-tight tracking-tight">
- Match for <em className="text-brand-500 italic">{service.title}</em>
+ Quote for <em className="text-brand-500 italic">{service.title}</em>
  </h3>
  <p className="font-sans text-[13px] text-ink-700 mb-5 leading-relaxed">
- Free, no-obligation match with vetted accountants in your area.
+ Free, no-obligation fixed written quote for your SEIS or EIS scheme work.
  </p>
  <button
  onClick={openModal}
  className="btn-primary w-full text-center"
  type="button"
  >
- Find specialists &nbsp;&rarr;
+ Get a fixed quote &nbsp;&rarr;
  </button>
  <div className="mt-5 pt-5 border-t border-ink-900/10 space-y-3">
  {[
@@ -432,7 +432,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  className="font-sans text-[15px] max-w-2xl mx-auto mb-8 leading-relaxed"
  style={{ color: 'rgba(255, 255, 255, 0.88)' }}
  >
- Submit your enquiry in under two minutes. We match you with up to three vetted specialists. Free consultations. No obligation.
+ Submit your enquiry in under two minutes and we come back within 48 hours with a fixed written quote. No obligation.
  </p>
  <button
  onClick={openModal}
@@ -440,7 +440,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  style={{ color: 'var(--brand-700)' }}
  type="button"
  >
- Get matched now &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  </div>
  </section>

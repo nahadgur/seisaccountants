@@ -1,11 +1,11 @@
 // components/VettingStrip.tsx - Paper Tape edition
 import Link from 'next/link';
-import { ShieldCheck, BadgeCheck, FileCheck, Award } from 'lucide-react';
+import { ShieldCheck, BadgeCheck, Cloud, Award } from 'lucide-react';
 
 const checks = [
- { icon: BadgeCheck, label: 'Qualifications verified' },
- { icon: FileCheck, label: 'PI insurance confirmed' },
- { icon: Award, label: 'References contacted' },
+ { icon: BadgeCheck, label: 'ACCA-regulated' },
+ { icon: Award, label: 'FreeAgent Gold Partner' },
+ { icon: Cloud, label: 'Cloud practice since 2009' },
 ];
 
 export function VettingStrip() {
@@ -26,10 +26,10 @@ export function VettingStrip() {
  </div>
  <div>
  <p className="font-display text-[15px] text-ink-900 tracking-tight leading-snug">
- Every accountant in our network is <em className="text-brand-500 italic">vetted.</em>
+ Accountancy by an <em className="text-brand-500 italic">ACCA-regulated</em> practice.
  </p>
  <p className="font-sans text-[11.5px] text-ink-700 mt-0.5 leading-relaxed">
- ACA, ACCA, or CIMA qualified &middot; &pound;1M+ PI insurance &middot; Startup experience confirmed
+ Tidy Money Ltd &middot; Preetesh Parmar FCCA &middot; verifiable at tidymoney.com
  </p>
  </div>
  </div>
@@ -44,10 +44,10 @@ export function VettingStrip() {
  ))}
  </div>
  <Link
- href="/how-we-vet/"
+ href="/about/"
  className="font-display italic text-[13.5px] text-brand-500 hover:text-brand-700 transition-colors whitespace-nowrap"
  >
- Our vetting process &rarr;
+ About the practice &rarr;
  </Link>
  </div>
  </div>

@@ -75,10 +75,9 @@ export const viewport: Viewport = {
  themeColor: '#6B1F2E',
 };
 
-// Organization schema. We are the entity that OPERATES the referral
-// service. "knowsAbout" signals our subject-matter focus. The description
-// makes the referral model explicit so Google and AI crawlers cannot
-// misread the site as an accountancy firm.
+// Organization schema. "knowsAbout" signals our subject-matter focus.
+// parentOrganization names the ACCA-regulated practice that delivers the
+// accountancy work so Google and AI crawlers can verify the firm.
 const organizationSchema = {
  '@context': 'https://schema.org',
  '@type': 'Organization',
@@ -87,7 +86,18 @@ const organizationSchema = {
  url: siteConfig.url,
  logo: `${siteConfig.url}/logo-mark.svg`,
  description:
- 'Independent UK referral and matching service connecting SEIS and EIS founders with qualified, insured, vetted scheme-specialist accountancy practices. We are not an accountancy firm and do not deliver accountancy services ourselves; all professional work is performed by independent third-party accountants in our partner network.',
+ 'SEIS and EIS accountants for UK founders. We file HMRC advance assurance, draft SEIS1 and EIS1 compliance statements, distribute investor certificates, and monitor the three-year qualifying period. Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice.',
+ parentOrganization: {
+ '@type': 'AccountingService',
+ name: 'Tidy Money Ltd',
+ url: 'https://www.tidymoney.com/',
+ employee: {
+ '@type': 'Person',
+ name: 'Preetesh Parmar',
+ honorificSuffix: 'FCCA',
+ jobTitle: 'Owner',
+ },
+ },
  areaServed: { '@type': 'Country', name: 'United Kingdom' },
  knowsAbout: [
  'SEIS advance assurance',
@@ -107,21 +117,19 @@ const organizationSchema = {
  },
 };
 
-// Service schema declaring the referral/matching service itself at the
+// Service schema declaring the SEIS and EIS accountancy service at the
 // organisation level. Uses @id so other schemas (page-level Service
 // schemas in GeoSchema.tsx, CollectionPage schemas, etc.) can cite it
 // and the whole site reads as one linked graph. Provider = Organization
-// above. This is the explicit, site-wide statement: what we do is a
-// free matching service. Prevents Google/AI crawlers from defaulting to
-// "accountancy firm" interpretation based on the domain name.
-const referralServiceSchema = {
+// above.
+const serviceSchema = {
  '@context': 'https://schema.org',
  '@type': 'Service',
- '@id': `${siteConfig.url}/#referral-service`,
- name: `${siteConfig.name} matching service`,
- serviceType: 'Accountant referral and matching service',
+ '@id': `${siteConfig.url}/#service`,
+ name: `${siteConfig.name} - SEIS and EIS accountancy`,
+ serviceType: 'SEIS and EIS accountancy',
  description:
- 'Free matching service connecting UK SEIS and EIS founders with independent, scheme-specialist accountancy practices. Founders submit an enquiry; we match them to a carefully selected practice based on stage and sector; the accountant contacts them directly and sets their own fees. We receive a referral fee from the accountant only if the founder chooses to engage them.',
+ 'SEIS and EIS accountancy for UK founders: advance assurance applications, share issuance and cap table work, SEIS1 and EIS1 compliance statements, SEIS3 and EIS3 investor certificate distribution, and three-year qualifying-period monitoring. Submit a short enquiry and we come back within 48 hours with a fixed written quote, with no obligation.',
  provider: {
  '@type': 'Organization',
  '@id': `${siteConfig.url}/#organization`,
@@ -129,10 +137,9 @@ const referralServiceSchema = {
  areaServed: { '@type': 'Country', name: 'United Kingdom' },
  offers: {
  '@type': 'Offer',
- price: '0',
  priceCurrency: 'GBP',
  description:
- 'Free to the founder. Matched accountants set their own fees directly with the founder. We are paid a referral fee by the accountant only on successful engagement.',
+ 'Every engagement starts with a fixed written quote based on your round and the scheme work involved. No obligation to proceed.',
  availability: 'https://schema.org/InStock',
  },
  hasOfferCatalog: {
@@ -150,7 +157,7 @@ const referralServiceSchema = {
  },
  termsOfService: `${siteConfig.url}/terms/`,
  url: siteConfig.url,
- category: 'Professional services referral',
+ category: 'Accountancy',
 };
 
 const websiteSchema = {
@@ -161,7 +168,7 @@ const websiteSchema = {
  name: siteConfig.name,
  description: siteConfig.description,
  publisher: { '@id': `${siteConfig.url}/#organization` },
- about: { '@id': `${siteConfig.url}/#referral-service` },
+ about: { '@id': `${siteConfig.url}/#service` },
  // potentialAction.SearchAction deliberately omitted: the site has no
  // /search endpoint, so advertising one would point Google at a 404.
  // Reinstate when a real search page exists.
@@ -179,10 +186,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
  dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
  />
  <Script
- id="referral-service-schema"
+ id="service-schema"
  type="application/ld+json"
  strategy="beforeInteractive"
- dangerouslySetInnerHTML={{ __html: JSON.stringify(referralServiceSchema) }}
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
  />
  <Script
  id="website-schema"

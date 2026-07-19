@@ -31,4 +31,4 @@ export const treatmentIncludes = [
   "Annual qualifying-conditions review, transaction clearance, HMRC clearance applications",
   "Project scoping, technical narrative, cost schedule, Advance Notification, claim filing"
 ];
-export const financeInfo = { available: true, interestFree: false, monthlyFrom: 149, spreadOver: 'monthly fixed-fee arrangements', description: 'Many accountants in our network offer fixed monthly fees that bundle the SEIS or EIS lifecycle work across a financial year. Payment terms are agreed directly with your matched accountant.' };
+export const financeInfo = { available: true, interestFree: false, monthlyFrom: 149, spreadOver: 'monthly fixed-fee arrangements', description: 'Many we offer fixed monthly fees that bundle the SEIS or EIS lifecycle work across a financial year. Payment terms are agreed directly with your matched accountant.' };

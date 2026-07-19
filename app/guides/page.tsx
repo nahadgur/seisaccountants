@@ -190,21 +190,21 @@ export default function GuidesIndexPage() {
  <section className="section-padding border-t border-ink-900/10">
  <div className="container-width max-w-content">
  <div className="masthead mb-4">
- <span>READY TO MATCH</span>
+ <span>READY WHEN YOU ARE</span>
  </div>
  <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-5">
- The guides explain the landscape. <em className="text-brand-500 italic">The matching service connects you.</em>
+ The guides explain the landscape. <em className="text-brand-500 italic">We handle the filings.</em>
  </h2>
  <div className="space-y-4 font-sans text-[15px] text-ink-700 leading-[1.7] max-w-3xl mb-8">
  <p>
- Reading the guide is the start. Finding the right specialist accountant
- for your specific sector, stage, and city is the next step. The matching
- service is free, the consultations are free, and there&apos;s no
+ Reading the guide is the start. Getting the filings right for your
+ specific sector, stage, and city is the next step. The initial
+ consultation is free, the written quote is free, and there&apos;s no
  obligation at any point.
  </p>
  <p>
  Pick a guide above to read first, or jump straight to the city
- catchments where the network has live engagements:
+ catchments where we have live engagements:
  </p>
  </div>
  <div className="flex flex-wrap gap-3">
@@ -246,8 +246,8 @@ export default function GuidesIndexPage() {
  className="font-sans text-[15px] max-w-2xl mx-auto mb-8 leading-relaxed"
  style={{ color: 'rgba(255, 255, 255, 0.88)' }}
  >
- Submit your enquiry in under two minutes. We match you with up to three
- vetted UK accountants for free consultations, transparent quotes, and no
+ Submit your enquiry in under two minutes and we come back within 48 hours
+ with a fixed written quote for UK SEIS and EIS scheme work, with no
  obligation at any stage.
  </p>
  <Link
@@ -255,7 +255,7 @@ export default function GuidesIndexPage() {
  className="bg-white font-sans font-medium text-[13px] py-4 px-10 rounded-sm hover:bg-paper-100 transition-colors uppercase tracking-[0.15em] inline-block"
  style={{ color: 'var(--brand-700)' }}
  >
- Get matched now &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </Link>
  </div>
  </section>

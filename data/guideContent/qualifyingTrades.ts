@@ -92,5 +92,5 @@ export const qualifyingTradesContent: {
     },
   ],
   citySectionIntro:
-    "Qualifying-trade tests are a paper exercise based on the company's commercial activity and HMRC's guidance, so the geographic location of the company or its accountant does not affect the analysis. What matters is the specialist's track record getting borderline trades approved in their specific sector. The matching service surfaces specialist accountants whose live caseloads include the structurally similar borderline trades.",
+    "Qualifying-trade tests are a paper exercise based on the company's commercial activity and HMRC's guidance, so the geographic location of the company or its accountant does not affect the analysis. What matters is the specialist's track record getting borderline trades approved in their specific sector. Our day-to-day caseload includes the structurally similar borderline trades.",
 };

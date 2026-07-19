@@ -84,7 +84,7 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  Request <em className="text-brand-500 italic">received</em>
  </h3>
  <p className="font-sans text-[14px] text-ink-700 leading-relaxed max-w-sm">
- We have matched you with a vetted accountant{city ? ` in ${city}` : ''}. Check your email for next steps.
+ We have your enquiry{city ? ` for ${city}` : ''}. We will come back within 48 hours with a fixed written quote. Check your email for next steps.
  </p>
  </div>
  );
@@ -94,13 +94,13 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  <div className="bg-white text-ink-900 rounded-sm p-6 md:p-7 border border-ink-900/10">
  <div className="mb-5 pb-4 border-b border-ink-900/10">
  <div className="flex items-center mb-3">
- <span className="eyebrow">FREE MATCHING</span>
+ <span className="eyebrow">FREE QUOTE</span>
  </div>
  <h3 className="font-display text-[26px] md:text-[28px] leading-[1.0] tracking-tight">
- {ctaHeading || (city ? <>Get matched<br /><em className="text-brand-500 italic">in {city}</em></> : <>Get <em className="text-brand-500 italic">matched</em></>)}
+ {ctaHeading || (city ? <>Get a Fixed Quote<br /><em className="text-brand-500 italic">in {city}</em></> : <>Get a <em className="text-brand-500 italic">fixed quote</em></>)}
  </h3>
  <p className="font-sans text-ink-700 text-[13px] mt-2 leading-relaxed">
- Up to 3 vetted accountants will contact you within 24 hours.
+ We will come back within 48 hours with a fixed written quote.
  </p>
  </div>
 
@@ -128,7 +128,7 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  type="submit"
  className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 text-white font-medium py-3.5 px-6 rounded-sm transition-colors text-[13px] tracking-[0.15em] uppercase mt-2"
  >
- {isSubmitting ? 'Sending ...' : (ctaButton || 'Get matched \u2009\u2192')}
+ {isSubmitting ? 'Sending ...' : (ctaButton || 'Get a Fixed Quote \u2009\u2192')}
  </button>
 
  <div className="flex items-center justify-center gap-3 pt-1">

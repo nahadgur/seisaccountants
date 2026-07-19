@@ -52,10 +52,10 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="01">Who we are</SectionH2>
  <p>
- seisaccountants.co.uk is an independent online matching service that connects UK SEIS and EIS founders with qualified accountants in our partner network. Throughout this policy, &apos;we&apos;, &apos;us&apos; and &apos;our&apos; refer to seisaccountants.co.uk as the operator of this website and the controller of the personal data you submit.
+ seisaccountants.co.uk provides SEIS and EIS accountancy for UK founders. Throughout this policy, &apos;we&apos;, &apos;us&apos; and &apos;our&apos; refer to seisaccountants.co.uk as the operator of this website and the controller of the personal data you submit.
  </p>
  <p className="mt-3">
- For transparency: this site operates under the trading name &apos;startupaccountants&apos;. We do not yet operate as a separately incorporated legal entity. If you need to identify a named individual for a data protection request, please contact us at <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a> and we will provide one.
+ Accountancy services on this site are delivered by Tidy Money Ltd, an ACCA-regulated practice. If you need to identify a named individual for a data protection request, please contact us at <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a> and we will provide one.
  </p>
  </section>
 
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
  <li>Your phone number</li>
  <li>Your email address</li>
  <li>Your town or postcode</li>
- <li>The page you submitted from (so the accountant knows which service interested you)</li>
+ <li>The page you submitted from (so we know which service interested you)</li>
  </ul>
  <p className="mt-3">
  We also collect standard web analytics data (pages viewed, approximate location, device type, referring source) through Google Analytics. This data is aggregated and does not identify you personally.
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="03">Why we collect it</SectionH2>
  <p>
- We use your enquiry details for one purpose: to pass them to a carefully selected UK accountancy practice in our network, so that a qualified accountant can contact you directly about your startup&apos;s accounting needs. We do not sell your data to advertisers, list brokers, or unrelated third parties.
+ We use your enquiry details for one purpose: so that we can contact you and prepare a fixed written quote for the SEIS or EIS work you need. We do not sell your data to advertisers, list brokers, or unrelated third parties.
  </p>
  <p className="mt-3">
  Our lawful basis for processing is your consent, which you give by submitting the enquiry form. You can withdraw consent at any time by emailing us (see section 09).
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="04">Who we share it with</SectionH2>
  <p>
- Your enquiry details are shared with <strong className="text-ink-900">a carefully selected UK accountancy practice in our network</strong> for the purpose of them contacting you to discuss your accounting needs. The accountant becomes an independent data controller of your data from that point, and their use of your data is governed by their own privacy policy, which they will share with you.
+ Your enquiry details are handled by <strong className="text-ink-900">Tidy Money Ltd, the ACCA-regulated practice</strong> that delivers the accountancy services on this site, so that we can contact you and prepare your quote. We do not pass your details to any unrelated third party.
  </p>
  <p className="mt-3">We also use the following third-party processors to run the site:</p>
  <ul className="list-disc pl-6 space-y-1 mt-3 marker:text-brand-500">
@@ -103,7 +103,7 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="05">How long we keep it</SectionH2>
  <p>
- We retain your enquiry details for up to 24 months in our Google Sheets log, to allow us to respond to follow-up queries, audit the matching process, and resolve any disputes. After 24 months, enquiries are deleted. The accountant you were matched with retains your data under their own retention schedule, which they will disclose to you.
+ We retain your enquiry details for up to 24 months in our Google Sheets log, to allow us to respond to follow-up queries, prepare your quote, and resolve any disputes. After 24 months, enquiries are deleted. Where you go on to engage us, your records are retained under our standard client retention schedule.
  </p>
  <p className="mt-3">
  Analytics data is retained for the standard Google Analytics period (26 months by default).
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
  <section>
  <SectionH2 num="08">Security</SectionH2>
  <p>
- We protect your data with HTTPS encryption in transit, restricted access to the enquiry log (only the matching team and the matched accountant see it), and standard Google Workspace security controls. No online service is 100% secure, but we take reasonable steps to protect your information.
+ We protect your data with HTTPS encryption in transit, restricted access to the enquiry log, and standard Google Workspace security controls. No online service is 100% secure, but we take reasonable steps to protect your information.
  </p>
  </section>
 

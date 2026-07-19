@@ -14,7 +14,7 @@ const allCities = Object.values(LOCATIONS).flat();
 
 export const metadata: Metadata = {
  title: 'Locations We Cover',
- description: `Vetted UK SEIS/EIS specialists in ${allCities.length} city catchments: London, Manchester, Cambridge, Edgware, and 8 more. Free, no obligation.`,
+ description: `SEIS and EIS specialist accountants covering ${allCities.length} UK city catchments: London, Manchester, Cambridge, Edgware, and 8 more. Free quote, no obligation.`,
  alternates: { canonical: pageUrl },
  robots: { index: true, follow: true },
  openGraph: {
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
  url: pageUrl,
  siteName: siteConfig.name,
  title: 'Locations We Cover',
- description: `Vetted UK SEIS and EIS specialist accountants matched in ${allCities.length} city catchments. Free matching, no obligation.`,
+ description: `SEIS and EIS specialist accountants covering ${allCities.length} UK city catchments. Free fixed quote, no obligation.`,
  locale: 'en_GB',
  },
  twitter: {
  card: 'summary_large_image',
  title: 'Locations We Cover',
- description: `Vetted UK SEIS/EIS specialists in ${allCities.length} city catchments. Free matching service.`,
+ description: `SEIS and EIS specialist accountants covering ${allCities.length} UK city catchments. Free fixed quote, no obligation.`,
  },
 };
 
@@ -41,7 +41,7 @@ export default function LocationIndexPage() {
  url: pageUrl,
  name: 'Locations We Cover',
  description:
- 'UK city catchments where the network has dedicated landing pages and live engagements.',
+ 'UK city catchments where we have dedicated landing pages and live engagements.',
  isPartOf: { '@id': `${siteConfig.url}/#website` },
  hasPart: allCities.map(city => ({
  '@type': 'WebPage',
@@ -57,7 +57,7 @@ export default function LocationIndexPage() {
  '@context': 'https://schema.org',
  '@type': 'ItemList',
  '@id': `${pageUrl}#itemlist`,
- name: 'UK city catchments covered by the matching service',
+ name: 'UK city catchments we cover',
  numberOfItems: allCities.length,
  itemListElement: allCities.map((city, i) => ({
  '@type': 'ListItem',

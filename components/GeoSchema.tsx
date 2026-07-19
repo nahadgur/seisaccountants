@@ -1,8 +1,7 @@
 // components/GeoSchema.tsx
-// Honest schema for a UK referral/matching service.
-// No LocalBusiness (site is not a shopfront and does not deliver services).
+// Honest schema for a UK first-party SEIS and EIS accountancy practice.
 // No AggregateRating (no real reviews on-site).
-// No priceRange (partner sets their own fees, not us).
+// No fabricated pricing; fees are confirmed per filing in the written quote.
 // Types used: Service / CollectionPage / FAQPage / BreadcrumbList / WebPage.
 
 import { buildBreadcrumbSchema } from '@/lib/breadcrumbs';
@@ -47,15 +46,15 @@ export default function GeoSchema(props: GeoSchemaProps) {
  const { serviceName, serviceSlug, cityName, locationSlug, siteUrl, siteName, faqPairs } = props;
  const pageUrl = `${siteUrl}/services/${serviceSlug}/${locationSlug}/`;
 
- // 1. Service schema, the matching service offered in this city, provided by our Organization
+ // 1. Service schema, the SEIS and EIS accountancy service offered in this city, provided by our Organization
  schemas.push({
  '@context': 'https://schema.org',
  '@type': 'Service',
  '@id': `${pageUrl}#service`,
- name: `${serviceName} Accountant Matching in ${cityName}`,
- description: SERVICE_DESCRIPTIONS[serviceSlug] ?? `${serviceName} matching service for UK SEIS and EIS founders in ${cityName}.`,
+ name: `${serviceName} in ${cityName}`,
+ description: SERVICE_DESCRIPTIONS[serviceSlug] ?? `${serviceName} for UK SEIS and EIS founders in ${cityName}.`,
  url: pageUrl,
- serviceType: 'Accountant referral and matching service',
+ serviceType: 'SEIS and EIS accountancy service',
  provider: {
  '@type': 'Organization',
  '@id': `${siteUrl}/#organization`,
@@ -71,7 +70,7 @@ export default function GeoSchema(props: GeoSchemaProps) {
  '@type': 'Offer',
  price: '0',
  priceCurrency: 'GBP',
- description: 'Free matching service. You are connected with an independent UK accountant who sets their own fees directly with you.',
+ description: 'Free fixed written quote within 48 hours, with no obligation. Fees are set per filing and confirmed in the quote before any work begins.',
  availability: 'https://schema.org/InStock',
  },
  });
@@ -121,18 +120,18 @@ export default function GeoSchema(props: GeoSchemaProps) {
  const { cityName, locationSlug, siteUrl, siteName, dominantIndustries } = props;
  const pageUrl = `${siteUrl}/location/${locationSlug}/`;
 
- // 1. CollectionPage, a catalogue of the services we match in this city
+ // 1. CollectionPage, a catalogue of the services we provide in this city
  schemas.push({
  '@context': 'https://schema.org',
  '@type': 'CollectionPage',
  '@id': `${pageUrl}#collection`,
- name: `SEIS Accountant Matching in ${cityName}`,
- description: `Matching service connecting ${cityName} founders with independent UK accountants specialising in SEIS and EIS advance assurance, share issuance, SEIS1 and EIS1 compliance, investor certificate distribution, and three-year qualifying-period monitoring.`,
+ name: `SEIS & EIS Accountants in ${cityName}`,
+ description: `SEIS and EIS accountancy for ${cityName} founders, specialising in advance assurance, share issuance, SEIS1 and EIS1 compliance, investor certificate distribution, and three-year qualifying-period monitoring.`,
  url: pageUrl,
  about: {
  '@type': 'Service',
- name: 'SEIS Accountant Matching',
- serviceType: 'Accountant referral and matching service',
+ name: 'SEIS and EIS Accountancy',
+ serviceType: 'SEIS and EIS accountancy service',
  provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: siteName },
  areaServed: {
  '@type': 'City',
@@ -143,7 +142,7 @@ export default function GeoSchema(props: GeoSchemaProps) {
  '@type': 'Offer',
  price: '0',
  priceCurrency: 'GBP',
- description: 'Free matching. Accountants in our network set their own fees directly with you.',
+ description: 'Free fixed written quote within 48 hours, with no obligation. Fees are set per filing and confirmed in the quote before any work begins.',
  availability: 'https://schema.org/InStock',
  },
  hasOfferCatalog: {
@@ -177,7 +176,7 @@ export default function GeoSchema(props: GeoSchemaProps) {
  name: `How much does a SEIS specialist accountant cost in ${cityName}?`,
  acceptedAnswer: {
  '@type': 'Answer',
- text: `SEIS specialist accountants in ${cityName} typically price scheme work as fixed fees per filing rather than monthly retainers. SEIS advance assurance applications run £750-£2,000, SEIS1 or EIS1 compliance statements run £500-£1,500, and three-year qualifying-period monitoring is typically £600-£2,400 as an annual retainer. Our matching service is free and connects you with up to three SEIS specialists so you can compare real ${cityName} market rates with no obligation.`,
+ text: `SEIS specialist accountants in ${cityName} typically price scheme work as fixed fees per filing rather than monthly retainers. SEIS advance assurance applications run £750-£2,000, SEIS1 or EIS1 compliance statements run £500-£1,500, and three-year qualifying-period monitoring is typically £600-£2,400 as an annual retainer. We give you a free fixed written quote within 48 hours so you can see real ${cityName} scheme rates with no obligation.`,
  },
  },
  {
@@ -185,7 +184,7 @@ export default function GeoSchema(props: GeoSchemaProps) {
  name: `What qualifications should a SEIS specialist accountant in ${cityName} have?`,
  acceptedAnswer: {
  '@type': 'Answer',
- text: `Look for ACA (Institute of Chartered Accountants) or ACCA (Association of Chartered Certified Accountants) qualification as a minimum. Accountants in our ${cityName} network hold one of these qualifications and carry professional indemnity insurance. SEIS and EIS-specific experience, including a live caseload of advance assurance and SEIS1 work with HMRC's Venture Capital Reliefs team, is verified separately from general practice qualification.`,
+ text: `Look for ACA (Institute of Chartered Accountants) or ACCA (Association of Chartered Certified Accountants) qualification as a minimum. We are ACCA-regulated and carry professional indemnity insurance. SEIS and EIS-specific experience, including a live caseload of advance assurance and SEIS1 work with HMRC's Venture Capital Reliefs team, is the day-to-day work of the practice rather than an occasional add-on.`,
  },
  },
  {

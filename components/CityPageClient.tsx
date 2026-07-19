@@ -37,10 +37,10 @@ function isRegionalFlag(region: string) {
 }
 
 const whyCards = [
- { icon: 'Star', title: 'Sector-matched', desc: 'Accountants with hands-on experience in your specific sector, not generalists.' },
- { icon: 'Shield', title: 'Vetted and insured', desc: 'ACA or ACCA qualification and professional indemnity insurance required before any referral.' },
- { icon: 'Clock', title: 'Within a week', desc: 'Most accountants offer an initial consultation within seven days, evenings and weekends available.' },
- { icon: 'CheckCircle', title: 'Up to three quotes', desc: 'Compare fees, approach, and specialism. No pressure or obligation at any stage.' },
+ { icon: 'Star', title: 'Sector specialists', desc: 'Hands-on experience in your specific sector, not generalists.' },
+ { icon: 'Shield', title: 'ACCA and insured', desc: 'ACCA-regulated with professional indemnity insurance in place.' },
+ { icon: 'Clock', title: 'Within a week', desc: 'We offer an initial consultation within seven days, evenings and weekends available.' },
+ { icon: 'CheckCircle', title: 'Fixed written quote', desc: 'A fixed written quote within 48 hours. No pressure or obligation at any stage.' },
 ];
 
 // Icons rendered at w-28/h-28 for watermark treatment in why-card grid.
@@ -339,7 +339,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  {/* Why us cards */}
  <section>
  <SectionHeading
- title={<>What you get when we match you in <em className="text-brand-500 italic">{cityName}</em></>}
+ title={<>What you get from your accountants in <em className="text-brand-500 italic">{cityName}</em></>}
  />
  <div className="grid sm:grid-cols-2 gap-3">
  {whyCards.map((item, i) => (
@@ -433,7 +433,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  className="font-sans text-[15px] max-w-2xl mx-auto mb-8 leading-relaxed"
  style={{ color: 'rgba(255, 255, 255, 0.88)' }}
  >
- Submit your enquiry in under two minutes. We match you with up to three vetted {cityName} accountants for free consultations, transparent quotes, and no obligation at any stage.
+ Submit your enquiry in under two minutes and we come back within 48 hours with a fixed written quote for your {cityName} SEIS and EIS work, with no obligation at any stage.
  </p>
  <button
  onClick={openModal}
@@ -441,7 +441,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  style={{ color: 'var(--brand-700)' }}
  type="button"
  >
- Get matched now &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  </div>
  </section>

@@ -192,14 +192,14 @@ export function Header({ onOpenModal }: HeaderProps) {
  className="ml-3 bg-brand-500 hover:bg-brand-600 text-white text-[12px] font-medium py-2.5 px-5 rounded-sm uppercase tracking-[0.15em] transition-colors"
  type="button"
  >
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  ) : (
  <Link
  href="/contact/"
  className="ml-3 bg-brand-500 hover:bg-brand-600 text-white text-[12px] font-medium py-2.5 px-5 rounded-sm uppercase tracking-[0.15em] transition-colors"
  >
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </Link>
  )}
  </nav>
@@ -278,7 +278,7 @@ export function Header({ onOpenModal }: HeaderProps) {
  className="block w-full btn-primary"
  type="button"
  >
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  </div>
  </div>

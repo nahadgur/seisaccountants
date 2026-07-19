@@ -88,5 +88,5 @@ export const investorMatchingMarketingContent: {
     },
   ],
   citySectionIntro:
-    "Round-marketing for SEIS / EIS companies is a specialised process where the specialist's investor network and platform relationships matter more than geographic proximity. The matching service surfaces specialist accountants whose live caseloads include active SEIS / EIS rounds and who can introduce founders to relevant syndicates and funds.",
+    "Round-marketing for SEIS / EIS companies is a specialised process where the specialist's investor network and platform relationships matter more than geographic proximity. Our day-to-day caseload includes active SEIS / EIS rounds and who can introduce founders to relevant syndicates and funds.",
 };

@@ -20,6 +20,7 @@ import { Hero } from '@/components/Hero';
 import { TrustBadges } from '@/components/TrustBadges';
 import { FAQ } from '@/components/FAQ';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { PracticeCard } from '@/components/PracticeCard';
 import {
  topAreas, heroContent, problemFraming, propertyTypes,
  serviceCardsHeading, howItWorks, regionalContext, areasSection,
@@ -82,7 +83,7 @@ export default function HomeClient() {
  className="btn-primary mt-8"
  type="button"
  >
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  </div>
 
@@ -487,6 +488,11 @@ export default function HomeClient() {
  </div>
  </section>
 
+ {/* ============ PRACTICE CARD ============
+ Named accountant behind the service. Placed late, after the
+ main sections and before the FAQ / final CTA. */}
+ <PracticeCard onOpenModal={openModal} />
+
  {/* ============ FAQ ============ */}
  <section
  className="section-padding border-t border-ink-900/10"
@@ -530,7 +536,7 @@ export default function HomeClient() {
  style={{ color: 'var(--brand-700)' }}
  type="button"
  >
- Get matched now &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  <p
  className="font-sans text-[11px] mt-6 tracking-[0.18em] uppercase"

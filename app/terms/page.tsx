@@ -8,7 +8,7 @@ import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
  title: 'Terms of Use',
- description: 'The terms on which you may use seisaccountants.co.uk as a free matching service for UK SEIS and EIS specialist accountants.',
+ description: 'The terms on which you may use seisaccountants.co.uk, SEIS and EIS accountants for UK founders.',
  alternates: { canonical: `${siteConfig.url}/terms/` },
  robots: { index: true, follow: true },
 };
@@ -50,10 +50,10 @@ export default function TermsPage() {
  <section>
  <SectionH2 num="01">About this service</SectionH2>
  <p>
- seisaccountants.co.uk is a free online matching service that connects UK SEIS and EIS founders with independent, qualified accountants in our partner network. We are not an accountancy firm, we do not provide accountancy, tax, or legal advice directly, and we do not carry out any accounting work for you.
+ seisaccountants.co.uk provides SEIS and EIS accountancy for UK founders. Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice. The guides, blog articles, and calculators on this site are general information and do not by themselves create an engagement or amount to advice.
  </p>
  <p className="mt-3">
- When you submit an enquiry, we match you with a carefully selected UK accountancy practice in our network. That accountancy firm will contact you directly. Any engagement you then enter into is between you and that accountant, under their own terms and fees. We are not a party to that engagement.
+ When you submit an enquiry, we come back within 48 hours with a fixed written quote for the scope of work. An engagement begins only once you accept that quote in writing, under our own terms of engagement.
  </p>
  </section>
 
@@ -76,37 +76,37 @@ export default function TermsPage() {
  </section>
 
  <section>
- <SectionH2 num="04">The matching process</SectionH2>
- <p>Our matching process is:</p>
+ <SectionH2 num="04">How an engagement works</SectionH2>
+ <p>The process is:</p>
  <ul className="list-disc pl-6 space-y-1 mt-3 marker:text-brand-500">
  <li>You submit your enquiry via the form on any page of this site.</li>
- <li>We review your details and match you with a qualified accountant in our network based on location and service needs.</li>
- <li>The matched accountant contacts you directly, usually within 24 hours.</li>
- <li>You and the accountant decide whether to work together, on terms agreed between you.</li>
+ <li>We review your details and come back within 48 hours with a fixed written quote for the scope of work.</li>
+ <li>If you accept the quote, we prepare the work and file it with HMRC as your authorised agent.</li>
+ <li>There is no obligation to proceed before you accept the quote.</li>
  </ul>
  <p className="mt-3">
- We do not guarantee that a match will be made in every case, nor that the matched accountant will agree to take you on as a client. We also do not guarantee the outcome of any accounting, tax, or compliance work that the accountant carries out for you.
+ We do not guarantee that we will be able to take on every enquiry, nor do we guarantee any particular outcome of the accounting, tax, or compliance work, which depends on HMRC and on the accuracy of the information you provide.
  </p>
  </section>
 
  <section>
  <SectionH2 num="05">Cost</SectionH2>
  <p>
- Our matching service is free to you. We are paid a referral fee by the accountant when they accept you as a client. You pay the accountant directly for any accounting work they perform, under fees agreed between you and them.
+ There is no cost to submit an enquiry or to receive a quote. Every engagement starts with a fixed written quote based on your round and the scheme work involved. The price we quote is the price you pay for that work, and there is no obligation to proceed before you accept the quote.
  </p>
  </section>
 
  <section>
- <SectionH2 num="06">Vetting of accountants</SectionH2>
+ <SectionH2 num="06">The practice</SectionH2>
  <p>
- Accountants in our network are verified as holding ACA, ACCA, or CIMA qualifications and carrying professional indemnity insurance. We do not, however, audit their work, supervise their advice, or take responsibility for their conduct. If you have a complaint about an accountant, you should raise it with the accountant directly and, if unresolved, with their regulatory body (ICAEW, ACCA, or CIMA).
+ Accountancy services on this site are delivered by Tidy Money Ltd, an ACCA-regulated practice owned by Preetesh Parmar FCCA, a Fellow of the Association of Chartered Certified Accountants. You can verify the practice independently at tidymoney.com. If you have a complaint about the work, please raise it with us directly and, if it remains unresolved, with the ACCA.
  </p>
  </section>
 
  <section>
  <SectionH2 num="07">Limitation of liability</SectionH2>
  <p>
- To the extent permitted by law, we are not liable for any loss, damage, or cost arising from your use of information on this site, or from the accounting, tax, or advisory work performed by any accountant in our network. Your remedy for any issue with the accountant&apos;s work lies with the accountant directly and their regulator.
+ To the extent permitted by law, we are not liable for any loss, damage, or cost arising from your use of the general information on this site. Liability for accountancy work we carry out under an accepted engagement is governed by our terms of engagement and the professional standards of the ACCA.
  </p>
  <p className="mt-3">
  Nothing in these terms excludes liability for fraud, death or personal injury caused by negligence, or anything else that cannot lawfully be excluded under UK law.

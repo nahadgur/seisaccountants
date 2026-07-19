@@ -87,5 +87,5 @@ export const complianceCertificatesContent: {
     },
   ],
   citySectionIntro:
-    "SEIS1 / EIS1 filings and SEIS3 / EIS3 distributions are administrative tasks that can be done from anywhere; geography of the accountant does not affect the process. What matters is the specialist's familiarity with the Venture Capital Reliefs Unit's review patterns and the specific evidence required for each qualifying test. The matching service surfaces accountants whose live caseloads cover SEIS / EIS compliance work end-to-end.",
+    "SEIS1 / EIS1 filings and SEIS3 / EIS3 distributions are administrative tasks that can be done from anywhere; geography of the accountant does not affect the process. What matters is the specialist's familiarity with the Venture Capital Reliefs Unit's review patterns and the specific evidence required for each qualifying test. Our day-to-day caseload covers SEIS / EIS compliance work end-to-end.",
 };

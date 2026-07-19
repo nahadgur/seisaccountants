@@ -9,7 +9,7 @@
 // Otherwise we hit /api/companies-house/search and show matches.
 // 3) User picks a match → we hit /api/companies-house/company/[number] →
 // server returns the full diagnostic payload → we render the verdict.
-// 4) "Get matched with a specialist" CTA at the bottom converts the
+// 4) "Get a Fixed Quote" CTA at the bottom converts the
 // diagnostic into a matching enquiry.
 
 import { useState } from 'react';
@@ -435,14 +435,14 @@ function DiagnosticResult({
  <div className="bg-ink-900 text-white rounded-sm p-6 md:p-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
  <div>
  <p className="font-display text-[18px] md:text-[20px]">
- Match with a SEIS specialist <em className="not-italic md:italic text-brand-300">in 24 hours</em>
+ Get a fixed quote from a SEIS specialist <em className="not-italic md:italic text-brand-300">in 48 hours</em>
  </p>
  <p className="font-sans text-[13.5px] text-paper-300 mt-1">
- We send your diagnostic to up to three vetted scheme specialists. Free to you, no obligation.
+ Send us your diagnostic and we come back within 48 hours with a fixed written quote. Free to you, no obligation.
  </p>
  </div>
  <button onClick={onOpenModal} className="btn-primary whitespace-nowrap" type="button">
- Get matched <ArrowRight className="w-4 h-4" aria-hidden="true" />
+ Get a Fixed Quote <ArrowRight className="w-4 h-4" aria-hidden="true" />
  </button>
  </div>
  </div>
@@ -489,7 +489,7 @@ function PrimaryCta({
  if (allOk) {
  headline = 'Looks clean. Make it real.';
  body = "Public-data tests pass. The next step is the actual paperwork — advance assurance, share issue documents, SEIS1 filing, and SEIS3 distribution. A specialist runs that whole pack so investors see a clean process.";
- buttonLabel = 'Get matched with a specialist';
+ buttonLabel = 'Get a Fixed Quote';
  } else if (hasFail && !allOk) {
  headline = "Don't write SEIS off yet.";
  body = "Most 'ineligible' verdicts from public data have options around them — a younger trading subsidiary, an IP carve-out into a fresh vehicle, or a knowledge-intensive route. A specialist can model whether any of those open scheme access for your situation.";
@@ -500,8 +500,8 @@ function PrimaryCta({
  buttonLabel = 'Talk to a specialist';
  } else {
  headline = 'Want help with the paperwork?';
- body = 'Specialist accountants in our network handle the full SEIS and EIS lifecycle — advance assurance through SEIS1 compliance through three-year monitoring.';
- buttonLabel = 'Get matched';
+ body = 'We handle the full SEIS and EIS lifecycle — advance assurance through SEIS1 compliance through three-year monitoring.';
+ buttonLabel = 'Get a Fixed Quote';
  }
 
  return (

@@ -80,5 +80,5 @@ export const pitfallsVoidingReliefContent: {
     },
   ],
   citySectionIntro:
-    "Pitfalls that void relief are general structural rules; the geographic location of the company or its accountant does not affect the analysis. What matters is the specialist's experience identifying borderline situations before the share issue rather than after, when the rescue options narrow. The matching service surfaces specialist accountants who run pre-issue compliance checks on every SEIS / EIS engagement.",
+    "Pitfalls that void relief are general structural rules; the geographic location of the company or its accountant does not affect the analysis. What matters is the specialist's experience identifying borderline situations before the share issue rather than after, when the rescue options narrow. We run pre-issue compliance checks on every SEIS / EIS engagement.",
 };

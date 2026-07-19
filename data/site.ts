@@ -1,9 +1,9 @@
 // data/site.ts
 export const siteConfig = {
   "name": "SEIS Accountants",
-  "tagline": "Matching UK founders raising SEIS and EIS with vetted scheme-specialist accountants",
+  "tagline": "SEIS and EIS accountants for UK founders raising seed and growth capital",
   "url": "https://www.seisaccountants.co.uk",
-  "description": "Free matching service. Vetted UK accountants for SEIS/EIS advance assurance, share issuance, SEIS1/EIS1, and investor certificates.",
+  "description": "SEIS and EIS accountants for UK founders. Advance assurance, share issuance, SEIS1/EIS1 compliance, and investor certificates. Fixed written quotes, no obligation.",
   "contactEmail": "hello@seisaccountants.co.uk",
   "gaId": "G-XXXXXXXXXX"
 };
@@ -14,15 +14,15 @@ export const TESTIMONIALS: never[] = [];
 export const testimonials = TESTIMONIALS;
 
 export const TRUST_BADGES = [
-  { "icon": "Award", "title": "SEIS and EIS Specialists", "description": "Accountants in our network are verified as having active experience filing SEIS and EIS advance assurance, SEIS1 and EIS1 compliance statements, and SEIS3 or EIS3 investor certificates with HMRC." },
-  { "icon": "ShieldCheck", "title": "HMRC-Experienced Accountants", "description": "Matched practices work day-to-day with HMRC's Venture Capital Reliefs team, so they understand the common follow-up queries on advance assurance and have track records resolving them quickly." },
-  { "icon": "UserCheck", "title": "Cap Table and Share Issuance", "description": "Network accountants understand how to structure founder, employee, and SEIS or EIS investor shares correctly at first issuance, including timing rules between SEIS and EIS within the same round." },
-  { "icon": "PoundSterling", "title": "No Cost to You", "description": "Our matching service is completely free to UK founders. You engage the matched accountant directly under their own terms and fees." }
+  { "icon": "Award", "title": "SEIS and EIS Focus", "description": "We file SEIS and EIS advance assurance, SEIS1 and EIS1 compliance statements, and SEIS3 or EIS3 investor certificates with HMRC as day-to-day work." },
+  { "icon": "ShieldCheck", "title": "HMRC Venture Capital Reliefs", "description": "We work day-to-day with HMRC's Venture Capital Reliefs team, so we know the common follow-up queries on advance assurance and resolve them quickly." },
+  { "icon": "UserCheck", "title": "Cap Table and Share Issuance", "description": "We structure founder, employee, and SEIS or EIS investor shares correctly at first issuance, including timing rules between SEIS and EIS within the same round." },
+  { "icon": "PoundSterling", "title": "Fixed Written Quotes", "description": "Every engagement starts with a fixed written quote based on your round and the scheme work involved. The price we quote is the price you pay, with no obligation." }
 ];
 export const trustBadges = TRUST_BADGES;
 
 export const FAQS_HOME = [
-  { "question": "How does the SEIS accountant matching service work?", "answer": "We connect you with pre-vetted SEIS and EIS specialist accountants based on your stage, sector, and the specific scheme work you need. Tell us whether you are at advance assurance, post-share-issue compliance, or graduating from SEIS to EIS, and we match you with up to three qualified accountants. You choose who to work with directly and engage them under their own terms." },
-  { "question": "How much does it cost to use the matching service?", "answer": "Our matching service is completely free for founders. We are paid by accountants in our network when successful matches are made, so there is no cost to you. You only pay the accountant directly for their services if you choose to work together." },
-  { "question": "What if I am not satisfied with the accountant I was matched with?", "answer": "If you are not satisfied with your initial match, let us know and we will connect you with alternative accountants at no extra cost. Accountants in our network are vetted for SEIS and EIS experience specifically, but finding the right professional fit is important, and we will help you find it." }
+  { "question": "How does working with SEIS Accountants work?", "answer": "Tell us your stage, sector, and the scheme work you need through the short enquiry form. Whether you are at advance assurance, post-share-issue compliance, or graduating from SEIS to EIS, we come back within 48 hours with a fixed written quote covering the scope of work. There is no obligation to proceed." },
+  { "question": "How much does SEIS and EIS scheme work cost?", "answer": "Scheme work is priced as fixed fees per filing rather than hourly. Advance assurance typically runs £750-£2,000, SEIS1 or EIS1 compliance statements £500-£1,500, and three-year qualifying-period monitoring £600-£2,400 as an annual retainer. We give you a fixed written quote up front so you know the price before you commit." },
+  { "question": "Who delivers the accountancy work?", "answer": "Accountancy services on this site are delivered by Tidy Money Ltd, an ACCA-regulated cloud practice owned by Preetesh Parmar FCCA. You can verify the practice independently at tidymoney.com before you get in touch." }
 ];

@@ -56,17 +56,17 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  Locations <em className="text-brand-500 italic">we cover</em>.
  </h1>
  <p className="font-sans text-[16px] md:text-[17px] text-ink-700 leading-[1.7] mb-8">
- We match UK startups with vetted specialist accountants nationwide.
- These are the {totalCities} city catchments where the network has live
- engagements and dedicated landing pages — although the matching service
- itself covers the whole of the UK by remote and cloud accounting.
+ We are SEIS and EIS specialist accountants working with UK startups
+ nationwide. These are the {totalCities} city catchments where we have live
+ engagements and dedicated landing pages, although we cover the whole of
+ the UK by remote and cloud accounting.
  </p>
  <button
  onClick={openModal}
  className="btn-primary"
  type="button"
  >
- Get matched in any UK city &rarr;
+ Get a Fixed Quote &rarr;
  </button>
  </div>
  </section>
@@ -89,7 +89,7 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  <p className="font-sans text-[14px] md:text-[15px] text-ink-700 leading-relaxed">
  Each city page carries hand-written ecosystem context, sector
  specialism notes, recent local engagement examples, and city-specific
- FAQs. The matching service is the same nationwide; the depth of
+ FAQs. The service is the same nationwide; the depth of
  local context differs.
  </p>
  </div>
@@ -139,17 +139,17 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  <span>OUTSIDE THESE CITIES</span>
  </div>
  <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-5">
- Not on the list? <em className="text-brand-500 italic">The match still works.</em>
+ Not on the list? <em className="text-brand-500 italic">We can still act for you.</em>
  </h2>
  <div className="space-y-4 font-sans text-[15px] text-ink-700 leading-[1.7] max-w-3xl">
  <p>
- The network covers the whole of the UK by cloud accounting. Most
- engagements run remote regardless of where the accountant is physically
- based — Xero, QuickBooks, and FreeAgent make geographic proximity
+ We cover the whole of the UK by cloud accounting. Most
+ engagements run remotely regardless of where you are physically
+ based, as Xero, QuickBooks, and FreeAgent make geographic proximity
  effectively irrelevant for the day-to-day work. The 12 cities listed
  above are where we have hand-written local content because they earned
- search demand. If your city is not on the list, the matching
- process is exactly the same; the public-facing page is generic.
+ search demand. If your city is not on the list, the service
+ is exactly the same; the public-facing page is generic.
  </p>
  <p>
  Cities currently watched but not yet added (will appear when query demand
@@ -162,7 +162,7 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  className="btn-primary mt-8"
  type="button"
  >
- Get matched in any UK city &rarr;
+ Get a Fixed Quote &rarr;
  </button>
  </div>
  </section>
@@ -199,8 +199,8 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  className="font-sans text-[15px] max-w-2xl mx-auto mb-8 leading-relaxed"
  style={{ color: 'rgba(255, 255, 255, 0.88)' }}
  >
- Submit your enquiry in under two minutes. We match you with up to three
- vetted UK accountants for free consultations, transparent quotes, and no
+ Submit your enquiry in under two minutes and we come back within 48 hours
+ with a fixed written quote for UK SEIS and EIS scheme work, with no
  obligation at any stage.
  </p>
  <button
@@ -209,7 +209,7 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  style={{ color: 'var(--brand-700)' }}
  type="button"
  >
- Get matched now &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  </div>
  </section>

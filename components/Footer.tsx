@@ -35,10 +35,10 @@ export function Footer() {
  </span>
  </div>
  <p className="text-[13.5px] text-paper-100/75 leading-relaxed mb-5 max-w-sm">
- Free matching service for UK founders raising SEIS and EIS. We connect you with vetted, scheme-experienced accountants who handle the full lifecycle from advance assurance through three-year qualifying-period monitoring.
+ SEIS and EIS accountants for UK founders. We handle the full lifecycle from advance assurance through SEIS1 and EIS1 compliance to three-year qualifying-period monitoring. Fixed written quotes within 48 hours.
  </p>
  <p className="font-display italic text-[12.5px] text-paper-300/60 border-l-2 border-brand-500 pl-4 leading-relaxed">
- We are a referral and matching service, not an accountancy firm. All services are provided by independent, qualified accountants in our vetted network.
+ Accountancy services are provided by Tidy Money Ltd, an ACCA-regulated practice.
  </p>
  </div>
 
@@ -105,8 +105,8 @@ export function Footer() {
  </Link>
  </li>
  <li>
- <Link href="/how-we-vet/" className="text-paper-100/80 hover:text-white transition-colors">
- How we vet accountants
+ <Link href="/about/" className="text-paper-100/80 hover:text-white transition-colors">
+ About the practice
  </Link>
  </li>
  <li>
@@ -129,7 +129,7 @@ export function Footer() {
  style={{ borderColor: 'rgba(245,242,234,0.12)' }}
  >
  <p className="max-w-md leading-relaxed">
- &copy; {COPYRIGHT_YEAR} {siteConfig.name}. Matching service, not an accountancy firm.
+ &copy; {COPYRIGHT_YEAR} {siteConfig.name}. Accountancy services provided by Tidy Money Ltd, an ACCA-regulated practice.
  </p>
  <div className="flex flex-wrap gap-x-5 gap-y-2">
  <Link href="/contact/" className="hover:text-white transition-colors">Contact</Link>

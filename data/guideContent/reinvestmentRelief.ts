@@ -89,5 +89,5 @@ export const reinvestmentReliefContent: {
     },
   ],
   citySectionIntro:
-    "Reinvestment relief is a tax calculation done on the investor's Self-Assessment return; the geographic location of the investor's accountant does not affect the mechanics. What matters is the specialist's experience modelling the combined CGT + income tax + loss-relief picture across the qualifying period. The matching service surfaces specialist accountants whose live caseloads include reinvestment-relief planning for investors with substantial recent disposals.",
+    "Reinvestment relief is a tax calculation done on the investor's Self-Assessment return; the geographic location of the investor's accountant does not affect the mechanics. What matters is the specialist's experience modelling the combined CGT + income tax + loss-relief picture across the qualifying period. Our day-to-day caseload includes reinvestment-relief planning for investors with substantial recent disposals.",
 };

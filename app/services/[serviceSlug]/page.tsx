@@ -65,7 +65,7 @@ export default function ServicePage({ params }: Props) {
  name: service.title,
  description: service.description,
  url: pageUrl,
- serviceType: `${service.title} - Accountant referral and matching service`,
+ serviceType: `${service.title}, SEIS and EIS accountancy service`,
  provider: { '@id': `${siteConfig.url}/#organization` },
  areaServed: {
  '@type': 'AdministrativeArea',
@@ -76,7 +76,7 @@ export default function ServicePage({ params }: Props) {
  '@type': 'Offer',
  price: '0',
  priceCurrency: 'GBP',
- description: 'Free matching service. Accountants in our network set their own fees directly with you.',
+ description: 'Free fixed written quote within 48 hours, with no obligation. Fees are set per filing and confirmed in the quote before any work begins.',
  availability: 'https://schema.org/InStock',
  },
  };

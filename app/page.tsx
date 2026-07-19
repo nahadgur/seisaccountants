@@ -2,7 +2,7 @@
 // Server component. Owns metadata and JSON-LD schema.
 // All interactivity lives in HomeClient.tsx.
 //
-// Note: the site-wide Service ("#referral-service") and its OfferCatalog live
+// Note: the site-wide Service ("#service") and its OfferCatalog live
 // on the root layout. The homepage only emits WebPage + FAQPage + Breadcrumb
 // to avoid an `@id` collision on the Service node.
 
@@ -13,7 +13,7 @@ import { buildBreadcrumbSchema } from '@/lib/breadcrumbs';
 import HomeClient from './HomeClient';
 
 export const metadata: Metadata = {
- title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
+ title: `${siteConfig.name} | SEIS & EIS Accountants for UK Founders`,
  description: siteConfig.description,
  alternates: { canonical: `${siteConfig.url}/` },
  robots: { index: true, follow: true },
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
  type: 'website',
  url: `${siteConfig.url}/`,
  siteName: siteConfig.name,
- title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
+ title: `${siteConfig.name} | SEIS & EIS Accountants for UK Founders`,
  description: siteConfig.description,
  locale: 'en_GB',
  // Images auto-populated from app/opengraph-image.tsx (file-based convention).
  },
  twitter: {
  card: 'summary_large_image',
- title: `${siteConfig.name} | Free Matching Service for UK SEIS Accountants`,
+ title: `${siteConfig.name} | SEIS & EIS Accountants for UK Founders`,
  description: siteConfig.description,
  // Images auto-populated from app/twitter-image.tsx (file-based convention).
  },
@@ -43,7 +43,7 @@ export default function HomePage() {
  description: siteConfig.description,
  url: siteConfig.url,
  isPartOf: { '@id': `${siteConfig.url}/#website` },
- about: { '@id': `${siteConfig.url}/#referral-service` },
+ about: { '@id': `${siteConfig.url}/#service` },
  primaryImageOfPage: `${siteConfig.url}/og-image.png`,
  };
 

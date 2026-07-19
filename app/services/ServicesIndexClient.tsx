@@ -21,7 +21,7 @@ export default function ServicesIndexClient() {
  <main className="flex-grow">
  <Hero
  title={`${siteConfig.name} Services`}
- subtitle="Browse our specialist service categories. Select the service that matches your requirements and get connected with vetted local professionals."
+ subtitle="Browse our specialist service categories. Select the service you need and we come back within 48 hours with a fixed written quote."
  image="/images/hero-services.avif"
  showCta={false}
  showTrust={false}

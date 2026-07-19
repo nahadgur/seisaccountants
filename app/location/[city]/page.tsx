@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  if (!profile || !cityName) return {};
 
  const title = cityName;
- const description = `Find vetted startup accountants in ${cityName}. Specialists in R&D tax credits, SEIS/EIS, company formation and growth planning. Free quotes, no obligation.`;
+ const description = `SEIS and EIS specialist accountants in ${cityName}. R&D tax credits, advance assurance, company formation and growth planning. Free quote, no obligation.`;
 
  return {
  title,

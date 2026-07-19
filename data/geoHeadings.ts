@@ -34,7 +34,7 @@ export const geoHeadings: Record<string, ServiceGeoContent> = {
   },
   'share-issuance-cap-table': {
     directQuestion: (city) => `How do I issue SEIS shares correctly in my ${city} company?`,
-    directAnswer: (city) => `SEIS share issuance for a ${city} company requires board minutes, subscription documentation, share certificates, an SH01 return of allotments filed at Companies House within one month, and an updated register of members. The shares must be ordinary shares with no preferential rights to dividends, no preferential rights on winding up, and no rights of redemption. ${city} specialists in our network handle the full pack so the share issue documentation matches HMRC's expectations on the SEIS1 review later.`,
+    directAnswer: (city) => `SEIS share issuance for a ${city} company requires board minutes, subscription documentation, share certificates, an SH01 return of allotments filed at Companies House within one month, and an updated register of members. The shares must be ordinary shares with no preferential rights to dividends, no preferential rights on winding up, and no rights of redemption. As ${city} SEIS specialists we handle the full pack so the share issue documentation matches HMRC's expectations on the SEIS1 review later.`,
     h2How: (city) => `How does SEIS share issuance work for a ${city} startup?`,
     h2Why: (city) => `Why do ${city} founders need a specialist for cap table maintenance?`,
     h2Cost: (city) => `What does SEIS share issuance cost in ${city}?`,
@@ -61,7 +61,7 @@ export const geoHeadings: Record<string, ServiceGeoContent> = {
   },
   'qualifying-period-monitoring': {
     directQuestion: (city) => `What can break SEIS or EIS for my ${city} startup in the three years after share issue?`,
-    directAnswer: (city) => `The most common SEIS and EIS clawback events for ${city} startups are: an acquisition that breaches the independence test (cured by a qualifying share-for-share rollover), a return of value to investors through buyback or dividend, a pivot into an excluded trade, or a gross asset position that exceeds the relevant limit. ${city} specialists in our network monitor the qualifying conditions annually and provide transaction-by-transaction clearance for material events before they complete.`,
+    directAnswer: (city) => `The most common SEIS and EIS clawback events for ${city} startups are: an acquisition that breaches the independence test (cured by a qualifying share-for-share rollover), a return of value to investors through buyback or dividend, a pivot into an excluded trade, or a gross asset position that exceeds the relevant limit. As ${city} SEIS specialists we monitor the qualifying conditions annually and provide transaction-by-transaction clearance for material events before they complete.`,
     h2How: (city) => `How does three-year qualifying-period monitoring work for a ${city} startup?`,
     h2Why: (city) => `Why is qualifying-period monitoring critical for ${city} SEIS rounds?`,
     h2Cost: (city) => `What does qualifying-period monitoring cost in ${city}?`,

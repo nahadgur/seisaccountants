@@ -390,7 +390,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  className="font-sans text-[14px] max-w-xl mx-auto mb-6 leading-relaxed"
  style={{ color: 'rgba(255, 255, 255, 0.88)' }}
  >
- Get matched with a vetted specialist. Free initial consultation, transparent fees, no obligation.
+ Get a Fixed Quote. Free initial consultation, transparent fees, no obligation.
  </p>
  <button
  onClick={openModal}
@@ -398,7 +398,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  style={{ color: 'var(--brand-700)' }}
  type="button"
  >
- Get matched &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </button>
  </div>
  </article>

@@ -30,7 +30,7 @@ export default function ContactPageClient() {
  Contact <em className="text-brand-500 italic">us.</em>
  </h1>
  <p className="font-sans text-[15px] text-ink-700 leading-relaxed mb-12 max-w-2xl">
- We are a free matching service connecting UK SEIS and EIS founders with qualified accountants in our network. Here is how to reach us depending on what you need.
+ We are SEIS and EIS accountants for UK founders. Here is how to reach us depending on what you need.
  </p>
 
  {/* Option 1: Find an accountant */}
@@ -46,10 +46,10 @@ export default function ContactPageClient() {
  <div>
  <span className="eyebrow mb-2 block">MAIN SERVICE</span>
  <h2 className="font-display text-[22px] text-ink-900 mb-3 tracking-tight leading-snug">
- Looking to find an <em className="text-brand-500 italic">accountant?</em>
+ Need SEIS or EIS <em className="text-brand-500 italic">scheme work?</em>
  </h2>
  <p className="font-sans text-[14.5px] text-ink-700 leading-relaxed">
- Submit an enquiry through our matching form. We will match you with a carefully selected UK accountant in our network, and they will contact you directly, usually within 24 hours.
+ Submit a short enquiry with your stage and what you need. We come back within 48 hours with a fixed written quote for the scope of work, with no obligation to proceed.
  </p>
  </div>
  </div>
@@ -68,14 +68,14 @@ export default function ContactPageClient() {
  <span>THE PROCESS</span>
  </div>
  <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 mb-6 tracking-tight leading-tight">
- How the <em className="text-brand-500 italic">matching</em> works
+ How an <em className="text-brand-500 italic">engagement</em> works
  </h2>
  <div className="space-y-3">
  {[
- { num: 1, title: 'You submit your details', desc: 'Tell us your name, contact details, location, and what you need help with. This takes under 60 seconds.' },
- { num: 2, title: 'We match you with an accountant', desc: 'We match you with a carefully selected UK accountancy practice in our network based on location and your specific needs (for example, R&D credits, SEIS/EIS, or limited company formation).' },
- { num: 3, title: 'The accountant contacts you directly', desc: 'Usually within 24 hours. You speak to them, ask questions, get a quote for their services, and decide whether to work together. No obligation.' },
- { num: 4, title: 'You engage them directly', desc: 'If you decide to proceed, you engage the accountant under their own fees and terms. Our matching service is free to you. We are not party to your engagement with the accountant.' },
+ { num: 1, title: 'You submit your details', desc: 'Tell us your name, contact details, and the SEIS or EIS stage you are at. This takes under 60 seconds, and no sensitive figures are needed at this point.' },
+ { num: 2, title: 'We send a fixed written quote', desc: 'We come back within 48 hours with a fixed written quote based on your round and the scheme work involved (for example advance assurance, SEIS1 compliance, or qualifying-period monitoring). The price we quote is the price you pay.' },
+ { num: 3, title: 'We prepare and file', desc: 'Once you accept the quote, we prepare the work and file it with HMRC as your authorised agent, well ahead of any round or deadline.' },
+ { num: 4, title: 'No obligation', desc: 'There is no obligation to proceed before you accept the quote, and no cost to ask.' },
  ].map(step => (
  <div key={step.num} className="flex gap-4 p-5 bg-white border border-ink-900/10 rounded-sm">
  <div
@@ -154,15 +154,17 @@ export default function ContactPageClient() {
  <Mail className="w-32 h-32" />
  </div>
  <div className="relative">
- <h3 className="font-display text-[17px] text-ink-900 mb-2 tracking-tight leading-snug">Accountants: join our network</h3>
+ <h3 className="font-display text-[17px] text-ink-900 mb-2 tracking-tight leading-snug">Verify the practice</h3>
  <p className="font-sans text-[13.5px] text-ink-700 mb-4 leading-relaxed">
- ACA, ACCA, or CIMA qualified UK accountants with startup experience can apply to join our referral network.
+ Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice. You can check the firm independently before you get in touch.
  </p>
  <a
- href="mailto:hello@seisaccountants.co.uk?subject=Accountant%20Network%20Application"
+ href="https://www.tidymoney.com/"
+ target="_blank"
+ rel="noopener"
  className="font-display italic text-[14px] text-brand-500 hover:text-brand-700 inline-flex items-center gap-1.5"
  >
- hello@seisaccountants.co.uk
+ tidymoney.com
  <ArrowRight className="w-3.5 h-3.5" />
  </a>
  </div>
@@ -196,7 +198,7 @@ export default function ContactPageClient() {
  About this service
  </h2>
  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed mb-3">
- seisaccountants.co.uk is an independent online matching service for UK SEIS and EIS founders. We are not an accountancy firm, we do not deliver accountancy work, and we do not provide tax or legal advice. All services are delivered by independent, qualified UK scheme-specialist accountants in our partner network.
+ seisaccountants.co.uk provides SEIS and EIS accountancy for UK founders, covering advance assurance, share issuance, SEIS1 and EIS1 compliance, investor certificates, and three-year qualifying-period monitoring. Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice.
  </p>
  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed">
  See our{' '}

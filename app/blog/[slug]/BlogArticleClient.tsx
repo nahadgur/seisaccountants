@@ -37,11 +37,11 @@ function LeadCtaBanner({ onOpen }: { onOpen: () => void }) {
         Raising SEIS or EIS?
       </h2>
       <p className="font-sans text-[14.5px] text-paper-300 leading-snug mb-4 max-w-2xl">
-        Get matched with a vetted, scheme-experienced accountant who handles advance
-        assurance through to investor certificates. Free, no obligation.
+        Get a fixed quote for SEIS and EIS scheme work, from advance assurance through
+        to investor certificates. Free, no obligation.
       </p>
       <button onClick={onOpen} className="btn-primary py-2.5" type="button">
-        Get matched &nbsp;&rarr;
+        Get a Fixed Quote &nbsp;&rarr;
       </button>
     </div>
   );

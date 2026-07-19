@@ -308,7 +308,7 @@ export default function RdCalculator() {
  onClick={e => { e.preventDefault(); document.dispatchEvent(new CustomEvent('open-lead-modal')); }}
  className="btn-primary text-center block w-full sm:inline-block sm:w-auto"
  >
- Get matched with an R&amp;D specialist &nbsp;&rarr;
+ Get a Fixed Quote &nbsp;&rarr;
  </a>
  </div>
  </div>

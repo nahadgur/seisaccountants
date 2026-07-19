@@ -11,7 +11,7 @@ export const seisEisContent: {
 } = {
   introduction: [
     "SEIS and EIS are the central reliefs UK founders use to attract early investor capital, and the central focus of every accountant in the seisaccountants.co.uk specialist network. The schemes themselves are well-defined; what fails them in practice is the documentation chain — the [advance assurance application](https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance), the share-class structure at issue, the SEIS1 and EIS1 compliance statements, the SEIS3 and EIS3 investor certificate distribution, and the three-year qualifying-period monitoring after the round closes.",
-    "This guide is the structural reference for founders running through that chain. It covers eligibility for SEIS, EIS, and knowledge-intensive EIS; the documentation HMRC's Venture Capital Reliefs team expects at each stage; the share class and cap table requirements; and the qualifying-period tests that protect investor relief from clawback. Where you would benefit from a specialist running the actual filings, the matching service surfaces accountants whose live caseload is dominated by SEIS work.",
+    "This guide is the structural reference for founders running through that chain. It covers eligibility for SEIS, EIS, and knowledge-intensive EIS; the documentation HMRC's Venture Capital Reliefs team expects at each stage; the share class and cap table requirements; and the qualifying-period tests that protect investor relief from clawback. Where you would benefit from a specialist running the actual filings, our own live caseload is dominated by SEIS work.",
   ],
   sections: [
     {
@@ -20,7 +20,7 @@ export const seisEisContent: {
       paragraphs: [
         "SEIS (Seed Enterprise Investment Scheme) and EIS (Enterprise Investment Scheme) are two related but distinct HMRC schemes designed to encourage investment in early-stage UK companies by offering significant tax reliefs to investors. They have different eligibility criteria, different investment limits, and different investor tax relief rates, but they are designed to be used sequentially, with most companies graduating from SEIS to EIS as they grow.",
         "SEIS is for the earliest-stage companies: fewer than three years old, fewer than 25 employees, gross assets below £350,000. It offers investors 50% income tax relief on investments up to £200,000 per investor per tax year, meaning an investor who puts in £20,000 can reclaim £10,000 from HMRC regardless of what happens to the company. EIS is for larger companies with higher investment requirements: up to seven years old (ten for Knowledge-Intensive Companies), fewer than 250 employees, gross assets below £15m. It offers 30% investor income tax relief on investments up to £1m per investor per year.",
-        "The two schemes cannot be used simultaneously for the same share issue, but a company can issue SEIS shares first and then, once the SEIS limit is exhausted, issue EIS shares in a subsequent round (or even the same round, on a later trading day). This sequenced SEIS-then-EIS pattern is the most common round structure for first priced raises in our network.",
+        "The two schemes cannot be used simultaneously for the same share issue, but a company can issue SEIS shares first and then, once the SEIS limit is exhausted, issue EIS shares in a subsequent round (or even the same round, on a later trading day). This sequenced SEIS-then-EIS pattern is the most common round structure for first priced raises we handle.",
       ],
       dataTable: {
         caption: "SEIS vs EIS: key criteria comparison",
@@ -214,7 +214,7 @@ export const seisEisContent: {
       id: "common-mistakes",
       h2: "What are the most common SEIS and EIS mistakes founders make?",
       paragraphs: [
-        "After reviewing hundreds of SEIS and EIS advance assurance applications, the specialist accountants in our network consistently identify the same set of structural and timing mistakes that either disqualify companies from the schemes or create compliance risks after investment is received.",
+        "After reviewing hundreds of SEIS and EIS advance assurance applications, we consistently identify the same set of structural and timing mistakes that either disqualify companies from the schemes or create compliance risks after investment is received.",
       ],
       subsections: [
         {
@@ -244,5 +244,5 @@ export const seisEisContent: {
       ],
     },
   ],
-  citySectionIntro: "SEIS and EIS advance assurance applications are submitted to HMRC's Venture Capital Reliefs team centrally — there is no regional component to the actual filing. What matters by location is the supply of accountants whose live caseload is dominated by scheme work and who have specific experience with the sector and any regional funding interactions (NPIF II in the North, MEIF in the Midlands, Development Bank of Wales, regional grant programmes) in your catchment. The matching service surfaces practices in each major UK SEIS hub.",
+  citySectionIntro: "SEIS and EIS advance assurance applications are submitted to HMRC's Venture Capital Reliefs team centrally — there is no regional component to the actual filing. What matters by location is the supply of accountants whose live caseload is dominated by scheme work and who have specific experience with the sector and any regional funding interactions (NPIF II in the North, MEIF in the Midlands, Development Bank of Wales, regional grant programmes) in your catchment. Our practice works with founders in each major UK SEIS hub.",
 };

@@ -22,8 +22,8 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
  : 'Pricing guide';
 
  const intro = cityName
- ? `Fees in ${cityName} vary depending on the service and startup complexity. Below are typical costs from vetted accountants in the ${cityName} area. All prices are in GBP.`
- : 'Fees vary depending on the service and startup complexity. Below are typical costs from accountants in our network. All prices are in GBP.';
+ ? `Fees in ${cityName} vary depending on the service and startup complexity. Below are typical costs for SEIS and EIS scheme work in the ${cityName} area. All prices are in GBP.`
+ : 'Fees vary depending on the service and startup complexity. Below are our typical costs. All prices are in GBP.';
 
  return (
  <section>
