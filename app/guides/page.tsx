@@ -148,8 +148,20 @@ export default function GuidesIndexPage() {
  <Link
  key={guide.slug}
  href={`/guides/${guide.slug}/`}
- className="group flex flex-col bg-white border border-ink-900/10 rounded-sm p-6 hover:border-brand-500 transition-colors"
+ className="group flex flex-col overflow-hidden bg-white border border-ink-900/10 rounded-sm hover:border-brand-500 transition-colors"
  >
+ <div className="h-44 overflow-hidden bg-ink-900">
+ <img
+ src={guide.featuredImage}
+ alt={guide.featuredImageAlt}
+ width={1536}
+ height={1024}
+ loading="lazy"
+ decoding="async"
+ className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+ />
+ </div>
+ <div className="flex flex-1 flex-col p-6">
  <div className="flex items-center justify-between mb-5">
  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium">
  GUIDE {String(i + 1).padStart(2, '0')}
@@ -179,6 +191,7 @@ export default function GuidesIndexPage() {
  Read guide
  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
  </span>
+ </div>
  </div>
  </Link>
  ))}

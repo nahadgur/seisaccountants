@@ -24,6 +24,9 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!article) return {};
 
   const url = `${siteConfig.url}/blog/${article.slug}/`;
+  const imageUrl = article.featuredImage
+    ? `${siteConfig.url}${article.featuredImage}`
+    : undefined;
 
   return {
     title: article.metaTitle,
@@ -40,11 +43,15 @@ export function generateMetadata({ params }: Props): Metadata {
       description: article.metaDescription,
       locale: 'en_GB',
       publishedTime: article.publishDate,
+      ...(imageUrl
+        ? { images: [{ url: imageUrl, width: 1536, height: 1024, alt: article.featuredImageAlt || article.title }] }
+        : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: article.metaTitle,
       description: article.metaDescription,
+      ...(imageUrl ? { images: [imageUrl] } : {}),
     },
   };
 }
@@ -84,6 +91,9 @@ export default function BlogArticlePage({ params }: Props) {
       url: siteConfig.url,
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    ...(article.featuredImage
+      ? { image: `${siteConfig.url}${article.featuredImage}` }
+      : {}),
   };
 
   const breadcrumbSchema = buildBreadcrumbSchema(

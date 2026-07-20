@@ -244,36 +244,60 @@ export default function BlogArticleClient({ article, hubGuide }: Props) {
       <main className="flex-grow">
 
         {/* HERO */}
-        <section
-          className="border-b border-ink-900/10"
-          style={{ backgroundColor: 'var(--paper-100)' }}
-        >
-          <div className="container-width py-10 md:py-14">
-            <Breadcrumbs items={breadcrumbItems} />
-            <div className="mt-5">
-              <SpokeHero
-                title={article.title}
-                hubName={hubGuide ? hubGuide.shortTitle : null}
-                hubSlug={hubGuide ? hubGuide.slug : article.slug}
-                readMins={readMins}
-              />
-            </div>
-            <h1 className="sr-only">{article.title}</h1>
-            <div className="max-w-3xl">
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-500">
-                <span className="inline-flex items-center gap-1.5 text-brand-500">
-                  <Tag className="w-3.5 h-3.5" aria-hidden="true" /> {article.category}
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5" aria-hidden="true" /> {article.publishDate}
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" aria-hidden="true" /> {readMins} min read
-                </span>
+        {article.featuredImage ? (
+          <section className="relative min-h-[430px] overflow-hidden border-b border-white/10 bg-ink-900 text-white md:min-h-[500px]">
+            <img
+              src={article.featuredImage}
+              alt=""
+              width={1536}
+              height={1024}
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 h-full w-full object-cover opacity-75 md:opacity-100"
+            />
+            <div className="absolute inset-0 bg-ink-900/15 md:bg-transparent" aria-hidden="true" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink-900/95 via-ink-900/75 to-ink-900/35 md:via-ink-900/70 md:to-ink-900/10" aria-hidden="true" />
+            <div className="container-width relative flex min-h-[430px] items-center py-10 md:min-h-[500px] md:py-16">
+              <div className="w-full lg:max-w-[62%]">
+                <div className="[&_ol]:!text-white/70 [&_li>span]:!text-white [&_li>span[aria-hidden]]:!text-white/40 [&_a]:hover:!text-brand-300">
+                  <Breadcrumbs items={breadcrumbItems} />
+                </div>
+                <p className="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-300">
+                  {hubGuide ? `${hubGuide.shortTitle} · ` : ''}{article.category}
+                </p>
+                <h1 className="font-display text-[36px] leading-[1.02] tracking-tight text-white md:text-[52px]">
+                  {article.title}
+                </h1>
+                <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
+                  <span className="inline-flex items-center gap-1.5 text-brand-300">
+                    <Tag className="h-3.5 w-3.5" aria-hidden="true" /> {article.category}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Calendar className="h-3.5 w-3.5" aria-hidden="true" /> {article.publishDate}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" aria-hidden="true" /> {readMins} min read
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : (
+          <section className="border-b border-ink-900/10" style={{ backgroundColor: 'var(--paper-100)' }}>
+            <div className="container-width py-10 md:py-14">
+              <Breadcrumbs items={breadcrumbItems} />
+              <div className="mt-5">
+                <SpokeHero
+                  title={article.title}
+                  hubName={hubGuide ? hubGuide.shortTitle : null}
+                  hubSlug={hubGuide ? hubGuide.slug : article.slug}
+                  readMins={readMins}
+                />
+              </div>
+              <h1 className="sr-only">{article.title}</h1>
+            </div>
+          </section>
+        )}
 
         <div
           className="container-width py-12 md:py-16"

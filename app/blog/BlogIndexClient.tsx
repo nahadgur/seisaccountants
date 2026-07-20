@@ -201,7 +201,21 @@ export default function BlogIndexClient() {
                       href={`/blog/${article.slug}/`}
                       className="group block bg-white border border-ink-900/10 rounded-sm overflow-hidden hover:border-brand-500 transition-colors"
                     >
-                      <CardArt slug={article.slug} />
+                      {article.featuredImage ? (
+                        <div className="h-44 overflow-hidden bg-ink-900">
+                          <img
+                            src={article.featuredImage}
+                            alt={article.featuredImageAlt || article.title}
+                            width={1536}
+                            height={1024}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+                          />
+                        </div>
+                      ) : (
+                        <CardArt slug={article.slug} />
+                      )}
                       <div className="p-5">
                         <div className="flex items-center gap-3 mb-3 text-[10px] font-semibold tracking-[0.18em] uppercase">
                           <span className="text-brand-500">{article.category}</span>

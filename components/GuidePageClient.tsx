@@ -33,7 +33,6 @@ import { investorMatchingMarketingContent } from '@/data/guideContent/investorMa
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
-import { SpokeHero } from '@/components/SpokeHero';
 import RdCalculator from '@/components/tools/RdCalculator';
 import SeisChecker from '@/components/tools/SeisChecker';
 import { renderInlineLinks } from '@/lib/renderInlineLinks';
@@ -144,44 +143,45 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  <Header onOpenModal={openModal} />
  <main className="flex-grow">
 
- {/* HERO - magazine masthead row removed. Kept the GUIDE eyebrow
- and UPDATED date signal in the inline metadata row. */}
- <section
- className="border-b border-ink-900/10"
- style={{ backgroundColor: 'var(--paper-100)' }}
- >
- <div className="container-width py-10 md:py-16">
- <div className="flex items-center gap-2 mb-5">
- <BookOpen className="w-3.5 h-3.5 text-brand-500" aria-hidden="true" />
- <span className="eyebrow">GUIDE &middot; {guide.shortTitle.toUpperCase()}</span>
- </div>
-
- <div className="mb-6">
- <SpokeHero
- title={guide.heroHeading}
- hubName="Guide"
- hubSlug={guide.slug}
- readMins={guide.estimatedReadTime}
+ {/* HERO */}
+ <section className="relative min-h-[430px] overflow-hidden border-b border-white/10 bg-ink-900 text-white md:min-h-[500px]">
+ <img
+ src={guide.featuredImage}
+ alt=""
+ width={1536}
+ height={1024}
+ fetchPriority="high"
+ decoding="async"
+ className="absolute inset-0 h-full w-full object-cover opacity-75 md:opacity-100"
  />
+ <div className="absolute inset-0 bg-ink-900/15 md:bg-transparent" aria-hidden="true" />
+ <div className="absolute inset-0 bg-gradient-to-r from-ink-900/95 via-ink-900/75 to-ink-900/35 md:via-ink-900/70 md:to-ink-900/10" aria-hidden="true" />
+ <div className="container-width relative flex min-h-[430px] items-center py-10 md:min-h-[500px] md:py-16">
+ <div className="w-full lg:max-w-[62%]">
+ <div className="mb-5 flex items-center gap-2">
+ <BookOpen className="h-3.5 w-3.5 text-brand-300" aria-hidden="true" />
+ <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-300">
+ GUIDE &middot; {guide.shortTitle.toUpperCase()}
+ </span>
  </div>
- <h1 className="sr-only">{guide.heroHeading}</h1>
-
- <div className="max-w-3xl">
- <p className="font-sans text-[15px] md:text-base text-ink-700 leading-relaxed mb-6">
+ <h1 className="font-display text-[36px] leading-[1.02] tracking-tight text-white md:text-[52px]">
+ {guide.heroHeading}
+ </h1>
+ <p className="mt-5 max-w-2xl font-sans text-[15px] leading-relaxed text-white/80 md:text-base">
  {guide.heroSubtitle}
  </p>
- <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-500">
+ <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
  <span className="flex items-center gap-1.5">
- <Clock className="w-3 h-3" aria-hidden="true" /> {guide.estimatedReadTime} MIN READ
+ <Clock className="h-3 w-3" aria-hidden="true" /> {guide.estimatedReadTime} MIN READ
  </span>
  <span aria-hidden="true">&middot;</span>
  <span className="flex items-center gap-1.5">
- <CheckCircle className="w-3 h-3 text-brand-500" aria-hidden="true" /> UPDATED {updatedLabel.toUpperCase()}
+ <CheckCircle className="h-3 w-3 text-brand-300" aria-hidden="true" /> UPDATED {updatedLabel.toUpperCase()}
  </span>
  {toolEntry && (
  <>
  <span aria-hidden="true">&middot;</span>
- <span className="text-brand-500">{guide.calculatorLabel.toUpperCase()} INCLUDED</span>
+ <span className="text-brand-300">{guide.calculatorLabel.toUpperCase()} INCLUDED</span>
  </>
  )}
  </div>

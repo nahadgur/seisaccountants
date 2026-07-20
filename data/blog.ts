@@ -6,9 +6,8 @@
 // carry `hub` + `hubSeriesNumber` so the article route can surface a series
 // breadcrumb, an upward link to the pillar guide, and a sibling-spoke list.
 //
-// No images are wired. `featuredImage` is intentionally omitted from the
-// interface, so nothing tries to render a broken/missing image. Decoration on
-// the blog routes is gradient/type only, in keeping with the design system.
+// Published articles can carry editorial featured images for cards, heroes,
+// social previews, and structured data. Drafts may omit them until release.
 
 export interface ContentBlock {
   type: string;          // 'h2' | 'h3' | 'p' | 'list' | 'table'
@@ -21,6 +20,8 @@ export interface ContentBlock {
 export interface BlogArticle {
   slug: string;
   title: string;
+  featuredImage?: string;
+  featuredImageAlt?: string;
   metaTitle: string;        // <= 60 chars
   metaDescription: string;  // <= 155 chars
   category: string;
@@ -56,6 +57,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-vs-eis-key-differences-founders-must-know',
     title: 'SEIS vs EIS and the Key Differences Founders Must Know',
+    featuredImage: '/images/blog/seis-vs-eis-key-differences-founders-must-know.webp',
+    featuredImageAlt: 'UK founder comparing an early prototype with a production-ready product for SEIS and EIS',
     metaTitle: 'SEIS vs EIS: Key Differences for Founders',
     metaDescription: 'SEIS vs EIS compared for UK founders: company age, gross assets, employee limits, how much you can raise, and the investor tax relief each scheme offers.',
     category: 'SEIS & EIS',
@@ -144,6 +147,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'founders-family-seis-30-percent-connected-person-rule',
     title: 'Can Founders and Their Family Benefit from SEIS, the 30% Connected-Person Rule',
+    featuredImage: '/images/blog/founders-family-seis-30-percent-connected-person-rule.webp',
+    featuredImageAlt: 'UK founder considering SEIS connected-person rules between family and company',
     metaTitle: 'SEIS Founders and Family: 30% Connected Rule',
     metaDescription: 'Can founders and family claim SEIS? How the 30% connected-person rule works, who counts as an associate, and why SEIS treats directors differently to EIS.',
     category: 'SEIS & EIS',
@@ -239,6 +244,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-investment-limits-how-much-you-can-raise',
     title: 'How Much You Can Raise, the SEIS and EIS Investment Limits Explained',
+    featuredImage: '/images/blog/seis-eis-investment-limits-how-much-you-can-raise.webp',
+    featuredImageAlt: 'Founder measuring two funding-capacity stacks representing SEIS and EIS limits',
     metaTitle: 'SEIS and EIS Investment Limits Explained',
     metaDescription: 'How much can you raise under SEIS and EIS? The £250,000 SEIS cap, the £5m annual and £12m lifetime EIS limits, KIC uplifts, and how the limits interact.',
     category: 'SEIS & EIS',
@@ -334,6 +341,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-anti-avoidance-tax-motive-trading-substance',
     title: 'SEIS and EIS Anti-Avoidance: The Risk-to-Capital Condition Explained',
+    featuredImage: '/images/blog/seis-eis-anti-avoidance-tax-motive-trading-substance.webp',
+    featuredImageAlt: 'Startup founder documenting a prototype stress test for the risk-to-capital condition',
     metaTitle: 'SEIS and EIS Anti-Avoidance: Risk-to-Capital',
     metaDescription: 'How the SEIS and EIS risk-to-capital condition blocks tax-motivated investments: the growth and risk tests, and how HMRC applies them.',
     category: 'SEIS & EIS',
@@ -438,6 +447,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-three-year-holding-period-disposal-events',
     title: 'The 3-Year Holding Period and Disposal Events That Withdraw SEIS or EIS Relief',
+    featuredImage: '/images/blog/seis-eis-three-year-holding-period-disposal-events.webp',
+    featuredImageAlt: 'Sealed investment case beside a three-tier bonsai representing the SEIS holding period',
     metaTitle: 'SEIS and EIS 3-Year Holding and Disposal Events',
     metaDescription: 'How the SEIS and EIS three-year holding period works, the disposal events that withdraw relief, the sliding-scale clawback and permitted exceptions.',
     category: 'SEIS & EIS',
@@ -539,6 +550,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-founder-multiple-roles-director-employee-investor',
     title: 'SEIS and EIS for Founder-Directors: The 30% Connected-Person Rule',
+    featuredImage: '/images/blog/seis-eis-founder-multiple-roles-director-employee-investor.webp',
+    featuredImageAlt: 'Founder-director carrying a prototype and governance folder between company roles',
     metaTitle: 'SEIS and EIS for Founder-Directors: 30% Rule',
     metaDescription: 'SEIS and EIS for founder-directors: the 30% connected-person limit, why SEIS allows paid directors but EIS generally does not, and how associates count.',
     category: 'SEIS & EIS',
@@ -645,6 +658,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-eis-advance-assurance-hmrc',
     title: 'How to Secure SEIS and EIS Advance Assurance from HMRC',
+    featuredImage: '/images/blog/seis-eis-advance-assurance-hmrc.webp',
+    featuredImageAlt: 'Founder posting an advance assurance application through a brass document slot',
     metaTitle: 'SEIS and EIS Advance Assurance Explained',
     metaDescription: 'What SEIS and EIS advance assurance is, why investors expect it, what to include in the application, and how the HMRC process works for early-stage companies.',
     category: 'SEIS & EIS',
@@ -791,6 +806,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'seis-reinvestment-relief-cgt-exemption-investors',
     title: 'SEIS Reinvestment Relief: Halving the Capital Gains Tax on a Reinvested Gain',
+    featuredImage: '/images/blog/seis-reinvestment-relief-cgt-exemption-investors.webp',
+    featuredImageAlt: 'Investor moving half of a capital gain into a burgundy startup investment case',
     metaTitle: 'SEIS Reinvestment Relief: 50% CGT Exemption',
     metaDescription: 'SEIS reinvestment relief exempts 50% of a reinvested gain from CGT, up to £100,000. How it works, the conditions, and how it differs from EIS deferral relief.',
     category: 'SEIS & EIS',
@@ -891,6 +908,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'why-investors-demand-seis-eis-before-investing',
     title: 'Why Investors Demand SEIS or EIS Before Writing a Cheque',
+    featuredImage: '/images/blog/why-investors-demand-seis-eis-before-investing.webp',
+    featuredImageAlt: 'Angel investor reviewing a SEIS assurance dossier before a startup pitch',
     metaTitle: 'Why Investors Demand SEIS or EIS',
     metaDescription: 'Why UK angels and seed funds insist on SEIS or EIS eligibility: how the reliefs cut an investor\'s net cost, cap the downside, and reshape early-stage portfolio maths.',
     category: 'SEIS & EIS',

@@ -18,6 +18,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
  const guide = getGuideBySlug(params.slug);
  if (!guide) return {};
+ const imageUrl = `${siteConfig.url}${guide.featuredImage}`;
  return {
  title: guide.metaTitle,
  description: guide.metaDescription,
@@ -28,6 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  url: `${siteConfig.url}/guides/${guide.slug}/`,
  siteName: siteConfig.name,
  type: 'article',
+ images: [{ url: imageUrl, width: 1536, height: 1024, alt: guide.featuredImageAlt }],
+ },
+ twitter: {
+ card: 'summary_large_image',
+ title: guide.metaTitle,
+ description: guide.metaDescription,
+ images: [imageUrl],
  },
  };
 }
@@ -68,6 +76,7 @@ export default function GuidePage({ params }: Props) {
  url: siteConfig.url,
  },
  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+ image: `${siteConfig.url}${guide.featuredImage}`,
  about: {
  '@type': 'Service',
  name: guide.shortTitle,
