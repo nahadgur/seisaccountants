@@ -28,7 +28,10 @@ export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: 
 
  const description = serviceName
  ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? We serve SEIS and EIS founders across ${cityName} and the surrounding areas listed below.`
- : `Our accountants in ${cityName} serve SEIS and EIS founders from across the surrounding area. If your company is based in any of the nearby areas, you are within reach of specialist SEIS accounting services.`;
+ // No "our accountants in <city>": there is one practice, not a
+ // local team, and the surrounding-area list describes where client
+ // companies are registered rather than where anyone sits.
+ : `We work with SEIS and EIS founders whose companies are registered across ${cityName} and the surrounding areas. The work runs the same way wherever the company is based.`;
 
  return (
  <section className="mb-16">
@@ -79,10 +82,10 @@ export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: 
  {/* SEO paragraph */}
  <div className="mt-6 max-w-3xl">
  <p className="font-sans text-[13px] text-ink-500 leading-relaxed">
- Startups from {areas.slice(0, 5).join(', ')}, and other areas around {cityName} regularly work with us for specialist SEIS and EIS accounting.{' '}
+ We work with companies in {areas.slice(0, 5).join(', ')} and elsewhere around {cityName} on SEIS and EIS scheme work.{' '}
  {serviceName
- ? `If you need ${serviceName.toLowerCase()} and your startup is in or near ${cityName}, we offer flexible consultation times including evenings and weekends.`
- : `We are experienced, fully insured, and offer flexible appointment times to suit your ${cityName} startup's schedule.`
+ ? `${serviceName} is handled remotely wherever your company is registered, so being in or near ${cityName} makes no difference to how the work runs.`
+ : `Engagements run remotely on cloud accounting software and filings go to HMRC and Companies House electronically, so there is no requirement to be near an office.`
  }
  </p>
  </div>

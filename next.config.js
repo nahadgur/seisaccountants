@@ -6,10 +6,10 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'images.pexels.com' },
-    ],
+    // No remote patterns. Unsplash and Pexels were allowlisted here but
+    // nothing on the site references either host, and stock imagery is not
+    // used on this fleet. Leaving the allowlist open invited it back in.
+    remotePatterns: [],
   },
   async headers() {
     // Content-Security-Policy allowlist. Each directive lists every origin
@@ -173,10 +173,19 @@ const nextConfig = {
         destination: 'https://www.seisaccountants.co.uk/:path*',
         permanent: true,
       },
-      // Orphan route from earlier build
+      // Orphan routes from the retired matching-service build. Both
+      // described an accountant vetting process that no longer exists;
+      // /how-we-vet/ was itself deleted, so the old redirect chained into
+      // a 404. Send them to /about/, which is now the page that explains
+      // who delivers the work.
       {
         source: '/vetting-process/:path*',
-        destination: '/how-we-vet/',
+        destination: '/about/',
+        permanent: true,
+      },
+      {
+        source: '/how-we-vet/:path*',
+        destination: '/about/',
         permanent: true,
       },
 

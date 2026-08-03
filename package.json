@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check:model && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:model": "node scripts/check-model-consistency.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^14.2.0",

@@ -36,11 +36,14 @@ function isRegionalFlag(region: string) {
  return REGIONAL_FLAGS.some(f => region.toLowerCase().includes(f.toLowerCase()));
 }
 
+// Claims here must match data/provider.ts. The regulated status belongs to
+// Tidy Money Ltd, not to this brand, and the site does not state insurance
+// cover. Nothing on this card set may promise an HMRC outcome or timescale.
 const whyCards = [
- { icon: 'Star', title: 'Sector specialists', desc: 'Hands-on experience in your specific sector, not generalists.' },
- { icon: 'Shield', title: 'ACCA and insured', desc: 'ACCA-regulated with professional indemnity insurance in place.' },
- { icon: 'Clock', title: 'Within a week', desc: 'We offer an initial consultation within seven days, evenings and weekends available.' },
- { icon: 'CheckCircle', title: 'Fixed written quote', desc: 'A fixed written quote within 48 hours. No pressure or obligation at any stage.' },
+ { icon: 'Star', title: 'Scheme work, not general practice', desc: 'Advance assurance, share issuance, compliance statements, investor certificates and qualifying-period monitoring are the day-to-day caseload rather than an occasional add-on.' },
+ { icon: 'Shield', title: 'A named regulated practice', desc: 'Accountancy is delivered by Tidy Money Ltd, an ACCA-regulated practice owned by Preetesh Parmar FCCA. Verifiable at tidymoney.com before you get in touch.' },
+ { icon: 'Clock', title: 'Worked in round order', desc: 'Eligibility first, then advance assurance, then the share issue, then the compliance statement. Steps taken out of order are the most common reason relief fails.' },
+ { icon: 'CheckCircle', title: 'Fixed written quote', desc: 'A fixed written quote within 48 hours, priced per filing or per round. No obligation at any stage.' },
 ];
 
 // Icons rendered at w-28/h-28 for watermark treatment in why-card grid.
@@ -70,18 +73,21 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  const hub = getCityHubContent(params.city);
  const deep = getCityDeepContent(params.city);
 
+ // Fallback set for cities without bespoke hub FAQs. Kept deliberately
+ // narrow: no market-rate figures we cannot evidence, no third-party
+ // "shop around" framing, and nothing that describes a local adviser.
  const cityFaqs = hub?.faqs && hub.faqs.length > 0 ? hub.faqs : [
  {
- question: `What should I look for in a startup accountant in ${cityName}?`,
- answer: `Look for ACA or ACCA qualification, specific startup sector experience, and familiarity with the ${cityName} funding ecosystem, particularly any regional grant programmes, Enterprise Zone benefits, or devolved support schemes relevant to your area. Ask specifically about their R&D credit claim experience and SEIS/EIS advance assurance track record.`,
+ question: `Do I need an accountant in ${cityName} to handle a SEIS or EIS round?`,
+ answer: `No. Advance assurance applications, compliance statements and investor certificates are all handled with HMRC electronically, and the supporting records run over cloud accounting software, so the work does not depend on being in the same place as you. What matters far more is whether the scheme work is routine for whoever does it. The practice behind this site is in Stanmore HA7 and works with founders across the UK, including ${cityName}.`,
  },
  {
- question: `How much does a startup accountant in ${cityName} cost?`,
- answer: `Most ${cityName} startup accountants charge on a fixed monthly retainer between £99 and £500 depending on company size and service scope. Year-end accounts, R&D credit claims, and SEIS/EIS applications are typically priced separately. Getting three quotes through our service gives you a realistic picture of current market rates without any obligation.`,
+ question: `What does SEIS and EIS work cost?`,
+ answer: `Scheme work is priced as a fixed fee per filing or per round rather than hourly. Advance assurance and compliance statements are quoted separately because they are separate pieces of work at different points in the round, and qualifying-period monitoring is an annual retainer. The quote sets out what is covered and what is not before you commit. Published ranges for each service are on the relevant service page.`,
  },
  {
- question: `Can a ${cityName} accountant help me claim R&D tax credits?`,
- answer: `Yes. R&D tax credits are a UK-wide HMRC scheme and any qualified accountant can prepare a claim. However, accountants with specific ${cityName} sector experience, particularly in ${profile.dominantIndustries.slice(0, 2).join(' and ')}, are better placed to identify all qualifying expenditure and present claims in a way that withstands HMRC review.`,
+ question: `Can you claim R&D tax credits alongside the scheme work?`,
+ answer: `Yes, and for companies in ${profile.dominantIndustries.slice(0, 2).join(' and ')} the two often run together. It is worth noting they are separate regimes: an R&D claim does not affect whether a company qualifies for SEIS or EIS, but the way costs are categorised in the accounts affects both, and the SEIS or EIS use-of-funds narrative given to HMRC should be consistent with what the R&D claim later says the money was spent on.`,
  },
  ];
 
@@ -185,7 +191,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  {blurb?.hook ?? service.description}
  </p>
  <span className="inline-flex items-center gap-1 font-display italic text-brand-500 text-[14px]">
- Get quotes <ArrowRight className="w-3.5 h-3.5" />
+ View this service <ArrowRight className="w-3.5 h-3.5" />
  </span>
  </Link>
  );
@@ -193,11 +199,14 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  </div>
  </section>
 
- {/* Long-form deep narrative — post-cull bespoke per-city content */}
+ {/* Local SEIS and EIS deal-flow narrative. Distinct heading from the
+ ecosystem section below, which covers the institutions rather than
+ the deal flow. Both used to be titled "Inside the X startup
+ ecosystem", which put two identical H2s on every hub city page. */}
  {deep && deep.deepNarrative.length > 0 && (
  <section>
  <SectionHeading
- title={<>Inside the <em className="text-brand-500 italic">{cityName}</em> startup ecosystem</>}
+ title={<>SEIS and EIS in <em className="text-brand-500 italic">{cityName}</em></>}
  />
  <div className="space-y-5 font-sans text-[15px] text-ink-700 leading-[1.8]">
  {deep.deepNarrative.map((p, i) => <p key={i}>{p}</p>)}
@@ -205,7 +214,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  </section>
  )}
 
- {/* Why specialist matching matters here */}
+ {/* Where specialist scheme work makes a difference here */}
  {deep && deep.whyMattersHere.length > 0 && (
  <section>
  <SectionHeading
@@ -217,18 +226,25 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  </section>
  )}
 
- {/* Local worked examples */}
+ {/* Illustrative worked examples. These are scenario types, NOT client
+ work: no real engagement is described, named or implied. The
+ heading and the per-card label must keep saying so. They were
+ previously presented as "Recent matches" / "MATCH 01", which read
+ as a real client list. */}
  {deep && deep.localExamples.length > 0 && (
  <section>
  <SectionHeading
- title={<>Recent matches in <em className="text-brand-500 italic">{cityName}</em></>}
+ title={<>Worked examples for <em className="text-brand-500 italic">{cityName}</em> founders</>}
  />
+ <p className="font-sans text-[13.5px] text-ink-500 leading-relaxed mb-4 max-w-2xl">
+ Illustrative scenarios showing how the scheme work runs in practice. They are constructed examples, not accounts of client engagements.
+ </p>
  <div className="space-y-4">
  {deep.localExamples.map((ex, i) => (
  <div key={i} className="bg-white border border-ink-900/10 rounded-sm p-6 relative">
  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
  <div className="masthead mb-3 !border-0 !pb-0">
- <span>MATCH {String(i + 1).padStart(2, '0')}</span>
+ <span>ILLUSTRATIVE EXAMPLE {String(i + 1).padStart(2, '0')}</span>
  </div>
  <h3 className="font-display text-[18px] md:text-[20px] text-ink-900 mb-3 tracking-tight leading-snug">
  {ex.title}
@@ -254,11 +270,11 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  </section>
  )}
 
- {/* Why match here */}
+ {/* What the local ecosystem changes about the scheme work */}
  {hub?.whyMatchHere && (
  <section>
  <SectionHeading
- title={<>Why founders in {cityName} choose a <em className="text-brand-500 italic">matched specialist</em></>}
+ title={<>What {cityName} <em className="text-brand-500 italic">changes</em> about a SEIS or EIS round</>}
  />
  <div className="font-sans text-[15px] text-ink-700 leading-[1.75] whitespace-pre-line">
  {hub.whyMatchHere}
@@ -339,7 +355,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  {/* Why us cards */}
  <section>
  <SectionHeading
- title={<>What you get from your accountants in <em className="text-brand-500 italic">{cityName}</em></>}
+ title={<>What you get on a <em className="text-brand-500 italic">{cityName}</em> engagement</>}
  />
  <div className="grid sm:grid-cols-2 gap-3">
  {whyCards.map((item, i) => (
@@ -427,7 +443,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"
  style={{ color: '#ffffff' }}
  >
- Ready to find your<br />{cityName} accountant?
+ Ready to move your<br />{cityName} round forward?
  </h2>
  <p
  className="font-sans text-[15px] max-w-2xl mx-auto mb-8 leading-relaxed"

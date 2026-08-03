@@ -303,5 +303,5 @@ export const rdTaxCreditsContent: {
       ],
     },
   ],
-  citySectionIntro: "R&D tax credits are available UK-wide and HMRC's Venture Capital Reliefs and R&D teams are centralised, so the scheme has no regional component. What does vary by location is the supply of accountants whose live caseload covers both SEIS / EIS scheme work and R&D filings together — we handle both together, with genuine sector-specific experience across the major UK SEIS hubs.",
+  citySectionIntro: "R&D tax credits are available UK-wide and HMRC's Venture Capital Reliefs and R&D teams are centralised, so the scheme has no regional component. What does vary by location is the supply of accountants whose live caseload covers both SEIS / EIS scheme work and R&D filings together, we handle both together, with genuine sector-specific experience across the major UK SEIS hubs.",
 };

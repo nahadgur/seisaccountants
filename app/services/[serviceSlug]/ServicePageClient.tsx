@@ -67,12 +67,17 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  }
  subtitle={service.description}
  image={service.image}
+ // Claims must match data/provider.ts. "ACCA-regulated and insured"
+ // attached regulated status and insurance to this brand rather than
+ // to the delivering practice, and the site does not state insurance
+ // cover at all. "N+ locations covered" implied a branch network:
+ // there is one service address and delivery is national and remote.
  bullets={[
  'Fixed written quote in 48 hours',
- 'ACCA-regulated and insured',
- `${totalCities}+ locations covered`,
+ 'Delivered by Tidy Money Ltd, an ACCA-regulated practice',
+ 'UK-wide, worked remotely',
  ]}
- mobileBadges={['ACCA', 'INSURED', `${totalCities}+ LOCATIONS`]}
+ mobileBadges={['ACCA-REGULATED PRACTICE', 'UK-WIDE', 'FIXED FEE']}
  right={
  <HeroLeadForm
  service={service.title}
@@ -338,10 +343,14 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  Get a fixed quote &nbsp;&rarr;
  </button>
  <div className="mt-5 pt-5 border-t border-ink-900/10 space-y-3">
+ {/* "Consultations this week" was manufactured scarcity: it was not
+ tied to any live capacity signal. "ACA/ACCA qualified only" was
+ panel-vetting language from the retired matching model, and read
+ oddly given there is one named delivering practice. */}
  {[
- { icon: <Clock className="w-3.5 h-3.5" />, text: 'Consultations this week' },
- { icon: <Shield className="w-3.5 h-3.5" />, text: 'ACA/ACCA qualified only' },
- { icon: <Star className="w-3.5 h-3.5" />, text: 'Free, no-obligation' },
+ { icon: <Clock className="w-3.5 h-3.5" />, text: 'Fixed written quote within 48 hours' },
+ { icon: <Shield className="w-3.5 h-3.5" />, text: 'Tidy Money Ltd, ACCA-regulated' },
+ { icon: <Star className="w-3.5 h-3.5" />, text: 'Free to enquire, no obligation' },
  ].map((item, i) => (
  <div key={i} className="flex items-center gap-3">
  <div

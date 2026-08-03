@@ -15,7 +15,7 @@ export const testimonials = TESTIMONIALS;
 
 export const TRUST_BADGES = [
   { "icon": "Award", "title": "SEIS and EIS Focus", "description": "We file SEIS and EIS advance assurance, SEIS1 and EIS1 compliance statements, and SEIS3 or EIS3 investor certificates with HMRC as day-to-day work." },
-  { "icon": "ShieldCheck", "title": "HMRC Venture Capital Reliefs", "description": "We work day-to-day with HMRC's Venture Capital Reliefs team, so we know the common follow-up queries on advance assurance and resolve them quickly." },
+  { "icon": "ShieldCheck", "title": "HMRC Venture Capital Reliefs", "description": "Applications, compliance statements and the follow-up correspondence they generate are submitted to HMRC's Venture Capital Reliefs team as routine work. Advance assurance is a non-binding indication, not an approval, and HMRC sets its own timescales." },
   { "icon": "UserCheck", "title": "Cap Table and Share Issuance", "description": "We structure founder, employee, and SEIS or EIS investor shares correctly at first issuance, including timing rules between SEIS and EIS within the same round." },
   { "icon": "PoundSterling", "title": "Fixed Written Quotes", "description": "Every engagement starts with a fixed written quote based on your round and the scheme work involved. The price we quote is the price you pay, with no obligation." }
 ];

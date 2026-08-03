@@ -1,7 +1,7 @@
 'use client';
 
 // app/tools/seis-diagnostic/SeisDiagnosticClient.tsx
-// SEIS Diagnostic — Companies House lookup + automatic SEIS/EIS rules check.
+// SEIS Diagnostic, Companies House lookup + automatic SEIS/EIS rules check.
 //
 // UX flow:
 // 1) User types a company name OR number into the search input.
@@ -88,7 +88,7 @@ const SCHEME_PILL: Record<DiagnosticPayload['schemes']['seis'], string> = {
 
 const SCHEME_LABEL: Record<DiagnosticPayload['schemes']['seis'], string> = {
  eligible: 'Likely eligible',
- borderline: 'Borderline — review needed',
+ borderline: 'Borderline, review needed',
  ineligible: 'Likely ineligible',
 };
 
@@ -102,9 +102,9 @@ function looksLikeNumber(s: string): boolean {
 
 function normaliseNumber(s: string): string {
  const t = s.trim().toUpperCase();
- // 2-letter prefix + 6 digits — already canonical
+ // 2-letter prefix + 6 digits, already canonical
  if (/^[A-Z]{2}\d{6}$/.test(t)) return t;
- // All digits — left-pad to 8
+ // All digits, left-pad to 8
  if (/^\d{1,8}$/.test(t)) return t.padStart(8, '0');
  return t;
 }
@@ -394,7 +394,7 @@ function DiagnosticResult({
  ))}
  </ul>
 
- {/* SIC verdicts (only if any are amber/red — green list is implicit) */}
+ {/* SIC verdicts (only if any are amber/red, green list is implicit) */}
  {data.sicVerdicts.length > 0 && (
  <details className="mb-8 bg-paper-50 border border-ink-900/8 rounded-sm">
  <summary className="cursor-pointer p-4 font-display text-[15px] text-ink-900">
@@ -466,9 +466,9 @@ function SchemePill({
 
 /**
  * Inline CTA that adapts its tone to the diagnostic verdict.
- * - All eligible -> "make it real" — push toward execution
- * - Any borderline -> "confirm the grey" — push toward expert review
- * - All / any ineligible -> "second opinion" — honest framing about restructuring options
+ * - All eligible -> "make it real", push toward execution
+ * - Any borderline -> "confirm the grey", push toward expert review
+ * - All / any ineligible -> "second opinion", honest framing about restructuring options
  */
 function PrimaryCta({
  verdicts,
@@ -488,11 +488,11 @@ function PrimaryCta({
 
  if (allOk) {
  headline = 'Looks clean. Make it real.';
- body = "Public-data tests pass. The next step is the actual paperwork — advance assurance, share issue documents, SEIS1 filing, and SEIS3 distribution. A specialist runs that whole pack so investors see a clean process.";
+ body = "Public-data tests pass. The next step is the actual paperwork, advance assurance, share issue documents, SEIS1 filing, and SEIS3 distribution. A specialist runs that whole pack so investors see a clean process.";
  buttonLabel = 'Get a Fixed Quote';
  } else if (hasFail && !allOk) {
  headline = "Don't write SEIS off yet.";
- body = "Most 'ineligible' verdicts from public data have options around them — a younger trading subsidiary, an IP carve-out into a fresh vehicle, or a knowledge-intensive route. A specialist can model whether any of those open scheme access for your situation.";
+ body = "Most 'ineligible' verdicts from public data have options around them, a younger trading subsidiary, an IP carve-out into a fresh vehicle, or a knowledge-intensive route. A specialist can model whether any of those open scheme access for your situation.";
  buttonLabel = 'Get a specialist second opinion';
  } else if (hasWarn) {
  headline = 'Confirm the borderline tests.';
@@ -500,7 +500,7 @@ function PrimaryCta({
  buttonLabel = 'Talk to a specialist';
  } else {
  headline = 'Want help with the paperwork?';
- body = 'We handle the full SEIS and EIS lifecycle — advance assurance through SEIS1 compliance through three-year monitoring.';
+ body = 'We handle the full SEIS and EIS lifecycle, advance assurance through SEIS1 compliance through three-year monitoring.';
  buttonLabel = 'Get a Fixed Quote';
  }
 
@@ -586,20 +586,20 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  </p>
  <ul className="list-disc pl-6 space-y-2 marker:text-brand-500">
  <li>
- <strong>SEIS</strong> — the company must be UK-incorporated, active,
+ <strong>SEIS</strong>: the company must be UK-incorporated, active,
  under 3 years past the start of its qualifying trade, with gross assets
  under £350,000 and fewer than 25 full-time-equivalent employees, and
  carrying on a qualifying trade. SEIS investors get 50% income tax
  relief on subscriptions up to £200,000 per tax year.
  </li>
  <li>
- <strong>EIS</strong> — extends past the SEIS lifetime cap. Up to £5
+ <strong>EIS</strong>: extends past the SEIS lifetime cap. Up to £5
  million per year and £12 million over the company&apos;s lifetime,
  available throughout the first 7 years of commercial sale, with 30%
  investor relief and a £15 million gross-asset limit.
  </li>
  <li>
- <strong>KIC</strong> (knowledge-intensive company) — an enhanced EIS
+ <strong>KIC</strong> (knowledge-intensive company), an enhanced EIS
  variant for R&amp;D-heavy companies. Doubles the EIS caps to £10 million
  annual / £20 million lifetime, raises the employee limit to 500, and
  stretches the commercial-sale window to 10 years.
@@ -609,9 +609,9 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  The verdict is conservative on purpose. Where Companies House data alone
  cannot decide a test (the company is borderline on age, the SIC code is
  ambiguous, the structure is unusual), the diagnostic flags the test as
- amber rather than guessing. The harder qualifying conditions — gross
+ amber rather than guessing. The harder qualifying conditions, gross
  assets at the moment of share issue, FTE headcount, the use-of-funds
- plan, the control test, and the risk-to-capital condition for EIS — are
+ plan, the control test, and the risk-to-capital condition for EIS, are
  listed separately as &ldquo;what your accountant still needs to confirm&rdquo;.
  </p>
  <p>

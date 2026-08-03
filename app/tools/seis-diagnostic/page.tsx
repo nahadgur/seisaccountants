@@ -69,7 +69,7 @@ const FAQS: { q: string; a: string }[] = [
  },
  {
  q: 'Is this a real SEIS qualification or just a guess?',
- a: "It is a first-pass eligibility check, not a final ruling. The tests we run are the structural ones HMRC and an accountant would run first, and where Companies House data alone says 'fail' (for example, the company is 12 years old) the verdict is reliable. The tests we cannot run from public data — gross assets, employee count, use of funds, control test, risk-to-capital, KIC R&D-spend percentage, SEIS lifetime cap headroom — are flagged for a specialist. Treat it as the same kind of pre-screen a SEIS accountant would do in the first ten minutes of a call.",
+ a: "It is a first-pass eligibility check, not a final ruling. The tests we run are the structural ones HMRC and an accountant would run first, and where Companies House data alone says 'fail' (for example, the company is 12 years old) the verdict is reliable. The tests we cannot run from public data, gross assets, employee count, use of funds, control test, risk-to-capital, KIC R&D-spend percentage, SEIS lifetime cap headroom, are flagged for a specialist. Treat it as the same kind of pre-screen a SEIS accountant would do in the first ten minutes of a call.",
  },
  {
  q: 'What does SEIS-eligible mean?',
@@ -85,15 +85,15 @@ const FAQS: { q: string; a: string }[] = [
  },
  {
  q: 'Why does my old company show as ineligible?',
- a: "SEIS has a hard 3-year window from the start of the qualifying trade; EIS has 7 years from first commercial sale (10 for KIC). If your company is older than these windows, the schemes are off the table for further investment in the existing entity. That does not necessarily mean SEIS is dead for the underlying business — common workarounds include incorporating a new spinout vehicle that licenses the IP, structuring an EIS-extended round around knowledge-intensive status, or carving the qualifying trade into a younger subsidiary. A specialist can model whether any of these are worth the structural cost.",
+ a: "SEIS has a hard 3-year window from the start of the qualifying trade; EIS has 7 years from first commercial sale (10 for KIC). If your company is older than these windows, the schemes are off the table for further investment in the existing entity. That does not necessarily mean SEIS is dead for the underlying business, common workarounds include incorporating a new spinout vehicle that licenses the IP, structuring an EIS-extended round around knowledge-intensive status, or carving the qualifying trade into a younger subsidiary. A specialist can model whether any of these are worth the structural cost.",
  },
  {
  q: 'Do I need an accountant to apply for SEIS?',
- a: "Technically no — you can file SEIS advance assurance and the SEIS1 compliance statement yourself. In practice the cost of a mistake is paid by your investors as a relief clawback rather than by you, and the documentation chain has more failure modes than first-time founders realise. Specialist accountants who file dozens of applications a month catch the issues that generalist DIY filers and even general-practice accountants routinely miss — particularly around the use-of-funds narrative and the share-class structure.",
+ a: "Technically no, you can file SEIS advance assurance and the SEIS1 compliance statement yourself. In practice the cost of a mistake is paid by your investors as a relief clawback rather than by you, and the documentation chain has more failure modes than first-time founders realise. Specialist accountants who file dozens of applications a month catch the issues that generalist DIY filers and even general-practice accountants routinely miss, particularly around the use-of-funds narrative and the share-class structure.",
  },
  {
  q: 'Is this tool free? Do you store my search?',
- a: 'Free. No sign-up. We do not store your search, your company name, or any of the diagnostic output. The Companies House API call goes from our server to Companies House and the result comes straight back to your browser — nothing is logged or persisted on our side.',
+ a: 'Free. No sign-up. We do not store your search, your company name, or any of the diagnostic output. The Companies House API call goes from our server to Companies House and the result comes straight back to your browser, nothing is logged or persisted on our side.',
  },
 ];
 
@@ -103,7 +103,7 @@ export default function SeisDiagnosticPage() {
  { label: 'SEIS Diagnostic' },
  ]);
 
- // SoftwareApplication schema — signals to Google that this page hosts
+ // SoftwareApplication schema, signals to Google that this page hosts
  // an interactive tool, not just a content page. Bumps eligibility for
  // tool-specific result features.
  const softwareSchema = {
@@ -133,7 +133,7 @@ export default function SeisDiagnosticPage() {
  ],
  };
 
- // FAQPage schema — feeds Google's FAQ rich results and AI overview
+ // FAQPage schema, feeds Google's FAQ rich results and AI overview
  // training. Mirrors the FAQ section rendered below so users and crawlers
  // see the same content.
  const faqSchema = {

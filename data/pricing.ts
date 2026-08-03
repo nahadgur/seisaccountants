@@ -31,4 +31,16 @@ export const treatmentIncludes = [
   "Annual qualifying-conditions review, transaction clearance, HMRC clearance applications",
   "Project scoping, technical narrative, cost schedule, Advance Notification, claim filing"
 ];
-export const financeInfo = { available: true, interestFree: false, monthlyFrom: 149, spreadOver: 'monthly fixed-fee arrangements', description: 'Many we offer fixed monthly fees that bundle the SEIS or EIS lifecycle work across a financial year. Payment terms are agreed directly with your matched accountant.' };
+// Annual retainer arrangement. Deliberately carries NO headline monthly
+// price: the previous `monthlyFrom: 149` implied a published £149/month
+// package that does not exist, and the description was ungrammatical and
+// referred to a "matched accountant" from the retired marketplace model.
+// If a real monthly package is introduced, add the figure here and state
+// what it includes, not before.
+export const financeInfo = {
+  available: true,
+  interestFree: false,
+  spreadOver: 'annual retainer, billed monthly',
+  description:
+    'Where a company has multiple live SEIS or EIS rounds, the lifecycle work can be bundled into an annual retainer billed monthly across the financial year, covering qualifying-period monitoring on rounds already closed alongside the application work for the next one. The retainer is quoted on the same fixed basis as a single filing: the scope is set out in writing before it starts. Payment terms are agreed directly with the practice.',
+};

@@ -222,7 +222,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  )}
 
  {/* SEIS Diagnostic feature card. Surfaces the Companies House
- diagnostic to guide readers — most actionable thing on the
+ diagnostic to guide readers, most actionable thing on the
  page and a stronger conversion signal than the inline
  calculators. */}
  <Link
@@ -403,7 +403,7 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  </div>
  </article>
 
- {/* Related guides strip — replaces the sidebar Other Guides widget */}
+ {/* Related guides strip, replaces the sidebar Other Guides widget */}
  {relatedGuides.length > 0 && (
  <section className="mt-16 pt-12 border-t border-ink-900/10">
  <div className="masthead mb-4">

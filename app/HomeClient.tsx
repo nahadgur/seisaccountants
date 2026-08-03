@@ -145,8 +145,12 @@ export default function HomeClient() {
  <p className="font-display text-[15px] text-ink-900 leading-snug mb-1.5">
  <em className="text-brand-500 italic">Specialist</em> caseload, not generalist.
  </p>
+ {/* Was "Network practices file SEIS work weekly, not yearly." Two
+ defects in one line: "network practices" was the retired
+ marketplace model, and the filing frequency was a volume claim
+ with no auditable basis. */}
  <p className="font-sans text-[12.5px] text-ink-500 leading-relaxed">
- Network practices file SEIS work weekly, not yearly.
+ Scheme work is the day-to-day caseload, not an occasional filing.
  </p>
  </div>
  </div>

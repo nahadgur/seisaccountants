@@ -125,14 +125,14 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
  className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase"
  style={{ color: '#AFA9EC' }}
  >
- FLEXIBLE PAYMENTS
+ ANNUAL RETAINER
  </span>
  </div>
  <h3
  className="font-display text-[17px] mb-4 tracking-tight"
  style={{ color: 'var(--paper-100)' }}
  >
- Monthly <em className="italic" style={{ color: '#AFA9EC' }}>payment plans</em>
+ Multi-round <em className="italic" style={{ color: '#AFA9EC' }}>retainers</em>
  </h3>
  <p
  className="font-sans text-[13px] leading-relaxed mb-4"
@@ -144,17 +144,21 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
  className="rounded-sm p-4 border"
  style={{ backgroundColor: 'rgba(255, 255, 255, 0.06)', borderColor: 'rgba(255, 255, 255, 0.12)' }}
  >
+ {/* No headline monthly figure. The retainer is quoted from the
+ qualifying-period monitoring range above, which varies with the
+ number of live rounds. A "from £X/month" number here would be
+ a price we cannot stand behind for any given company. */}
  <div
- className="font-display italic text-[22px] leading-none"
+ className="font-display italic text-[19px] leading-tight"
  style={{ color: 'var(--paper-100)' }}
  >
- From &pound;{financeInfo.monthlyFrom}<span className="text-[14px] opacity-70">/month</span>
+ Quoted from the monitoring range above
  </div>
  <span
- className="text-[11px] tracking-wide mt-1 block"
+ className="text-[11px] tracking-wide mt-1.5 block"
  style={{ color: 'rgba(245, 242, 234, 0.65)' }}
  >
- Fixed fees available with most accountants
+ {financeInfo.spreadOver}. Scope fixed in writing before it starts.
  </span>
  </div>
  </div>
@@ -164,7 +168,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
  {cityName && (
  <div className="mt-8 max-w-3xl">
  <p className="font-sans text-[13px] text-ink-500 leading-relaxed">
- Startup accountant fees in {cityName} depend on the services required and the complexity of your business. Accountants in our {cityName} network offer transparent, competitive pricing. Most provide a clear proposal following a free initial consultation.
+ SEIS and EIS fees for {cityName} companies depend on the scheme work involved and the complexity of the round, not on location. Each piece of work is quoted as a fixed fee per filing or per round, set out in writing before you commit.
  </p>
  </div>
  )}

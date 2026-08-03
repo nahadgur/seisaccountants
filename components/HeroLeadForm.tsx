@@ -132,7 +132,11 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  </button>
 
  <div className="flex items-center justify-center gap-3 pt-1">
- {['100% free', 'No spam', '24hr response'].map(item => (
+ {/* Must agree with responseStandard in data/provider.ts. The site
+ states one figure everywhere: 48 hours. "24hr response" was the
+ only place contradicting it. "100% free" described the retired
+ matching model; the quote is free, the work is not. */}
+ {['Free quote', 'No spam', '48-hour reply'].map(item => (
  <span key={item} className="flex items-center gap-1 text-[10.5px] font-medium text-ink-500 tracking-[0.1em] uppercase">
  <span className="w-1 h-1 bg-brand-500 rounded-full" />
  {item}

@@ -184,7 +184,11 @@ export function Header({ onOpenModal }: HeaderProps) {
  <Link href="/blog/" className="nav-link">Blog</Link>
  <Link href="/location/" className="nav-link">Areas</Link>
  <Link href="/tools/seis-diagnostic/" className="nav-link">SEIS Check</Link>
- <Link href="/how-we-vet/" className="nav-link">Vetting</Link>
+ {/* Was "Vetting" -> /how-we-vet/, a deleted route from the retired
+ matching model that had been 308ing from the primary nav. The
+ equivalent question now ("who actually does the work") is
+ answered on /about/. */}
+ <Link href="/about/" className="nav-link">About</Link>
 
  {onOpenModal ? (
  <button
@@ -268,8 +272,8 @@ export function Header({ onOpenModal }: HeaderProps) {
  <Link href="/tools/seis-diagnostic/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
  SEIS check
  </Link>
- <Link href="/how-we-vet/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
- How we vet
+ <Link href="/about/" className="block py-3 text-[15px] font-sans text-ink-900 border-b border-ink-900/10">
+ About the practice
  </Link>
 
  <div className="pt-6">

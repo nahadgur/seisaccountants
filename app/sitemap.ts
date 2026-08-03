@@ -23,7 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${base}/location/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
  { url: `${base}/guides/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
  { url: `${base}/blog/`, lastModified: SITE_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
- { url: `${base}/how-we-vet/`, lastModified: SITE_MODIFIED, changeFrequency: 'yearly', priority: 0.6 },
+ // /how-we-vet/ removed 2026-08-03: the route was deleted with the
+ // matching model and now 308s to /about/, so the sitemap was
+ // advertising a redirect.
  { url: `${base}/tools/seis-diagnostic/`, lastModified: SITE_MODIFIED, changeFrequency: 'monthly', priority: 0.75 },
  { url: `${base}/contact/`, lastModified: SITE_MODIFIED, changeFrequency: 'yearly', priority: 0.5 },
  { url: `${base}/privacy/`, lastModified: SITE_MODIFIED, changeFrequency: 'yearly', priority: 0.3 },

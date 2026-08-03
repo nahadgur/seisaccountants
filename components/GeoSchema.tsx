@@ -156,11 +156,15 @@ export default function GeoSchema(props: GeoSchemaProps) {
  { slug: 'investor-tax-certificates', name: 'Investor Tax Certificates' },
  { slug: 'qualifying-period-monitoring', name: 'Three-Year Qualifying Monitoring' },
  { slug: 'rd-tax-credits', name: 'R&D Tax Credits' },
+ // Point at the service pillar, NOT /services/<slug>/<city>/.
+ // The service x location combo routes were deleted in the
+ // 2026-05-02 cull and every one of them now 301s to the pillar,
+ // so the previous URLs advertised redirects in structured data.
  ].map((svc, i) => ({
  '@type': 'Offer',
  position: i + 1,
  name: `${svc.name} in ${cityName}`,
- url: `${siteUrl}/services/${svc.slug}/${locationSlug}/`,
+ url: `${siteUrl}/services/${svc.slug}/`,
  })),
  },
  },
@@ -184,7 +188,7 @@ export default function GeoSchema(props: GeoSchemaProps) {
  name: `What qualifications should a SEIS specialist accountant in ${cityName} have?`,
  acceptedAnswer: {
  '@type': 'Answer',
- text: `Look for ACA (Institute of Chartered Accountants) or ACCA (Association of Chartered Certified Accountants) qualification as a minimum. We are ACCA-regulated and carry professional indemnity insurance. SEIS and EIS-specific experience, including a live caseload of advance assurance and SEIS1 work with HMRC's Venture Capital Reliefs team, is the day-to-day work of the practice rather than an occasional add-on.`,
+ text: `Look for ACA (Institute of Chartered Accountants) or ACCA (Association of Chartered Certified Accountants) qualification as a minimum, then ask how often the firm actually does scheme work rather than general practice. Accountancy on this site is delivered by Tidy Money Ltd, an ACCA-regulated practice owned by Preetesh Parmar FCCA, which you can verify at tidymoney.com. Advance assurance applications, SEIS1 and EIS1 compliance statements and the follow-up correspondence they generate are submitted to HMRC's Venture Capital Reliefs team as part of the day-to-day work of the practice.`,
  },
  },
  {
