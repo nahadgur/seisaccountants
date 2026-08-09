@@ -23,12 +23,15 @@ export function generateMetadata({ params }: Props): Metadata {
  const service = getServiceBySlug(params.serviceSlug);
  if (!service) return {};
 
- const title = service.title;
- const description = service.description;
+ // Search title and snippet come from metaTitle/metaDescription where set.
+ // The title is absolute: the root template appends "| SEIS Accountants",
+ // which pushed the query terms past the SERP truncation point.
+ const title = service.metaTitle ?? service.title;
+ const description = service.metaDescription ?? service.description;
  const url = `${siteConfig.url}/services/${service.slug}/`;
 
  return {
- title,
+ title: { absolute: title },
  description,
  alternates: { canonical: url },
  robots: { index: true, follow: true },
