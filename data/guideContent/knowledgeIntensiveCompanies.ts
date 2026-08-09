@@ -19,7 +19,7 @@ export const knowledgeIntensiveCompaniesContent: {
       paragraphs: [
         "The headline benefit of KIC status is more runway and more capital. A standard EIS company has a 7-year window from first commercial trade to raise EIS investment and a £5m annual EIS cap (£12m lifetime). A KIC has 10 years and a £10m annual cap (£20m lifetime). For an R&D-heavy company where the early years are pre-revenue and the technical risk takes 5-7 years to resolve, the additional three years of EIS eligibility is the difference between being able to raise an EIS Series B and not.",
         "The investor-side limits also differ. Standard EIS lets an individual investor claim 30 percent relief on up to £1m per tax year. KIC EIS allows up to £2m per year, provided at least £1m of that goes into KIC-status companies. This matters for high-net-worth investors who want to scale their EIS allocation; without KIC status in the cap stack, they are constrained.",
-        "The qualifying tests, share rights, three-year qualifying period, and SEIS1 / EIS1 compliance flow are otherwise identical between standard EIS and KIC EIS. KIC is not a separate scheme; it is an enhanced regime within EIS with extended limits.",
+        "The qualifying tests, share rights, [three-year qualifying period](/services/qualifying-period-monitoring/), and SEIS1 / EIS1 compliance flow are otherwise identical between standard EIS and KIC EIS. KIC is not a separate scheme; it is an enhanced regime within EIS with extended limits.",
       ],
       dataTable: {
         caption: "Standard EIS vs Knowledge-Intensive EIS limits",
@@ -46,7 +46,7 @@ export const knowledgeIntensiveCompaniesContent: {
       callout: {
         type: 'tip',
         heading: 'Evidence the R&D intensity test from your R&D claim',
-        text: 'For companies that have made an R&D tax credit claim in the relevant preceding years, the R&D expenditure figure is already in the CT600L. Using the same figure for the KIC R&D intensity test provides consistent, HMRC-verifiable evidence. Companies that have not previously claimed R&D should consider doing so before applying for KIC EIS, both for the credit itself and for the audit-quality documentation it produces.',
+        text: 'For companies that have made an [R&D tax credit claim](/services/rd-tax-credits/) in the relevant preceding years, the R&D expenditure figure is already in the CT600L. Using the same figure for the KIC R&D intensity test provides consistent, HMRC-verifiable evidence. Companies that have not previously claimed R&D should consider doing so before applying for KIC EIS, both for the credit itself and for the audit-quality documentation it produces.',
       },
     },
     {

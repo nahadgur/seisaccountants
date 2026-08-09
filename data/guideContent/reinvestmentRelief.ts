@@ -52,7 +52,7 @@ export const reinvestmentReliefContent: {
       paragraphs: [
         "Consider an investor with a £400,000 chargeable gain in 2024-25. They reinvest £200,000 (the SEIS annual limit) into SEIS-qualifying shares in the same tax year. The reinvestment exempts 50 percent of the £200,000 reinvested, i.e. £100,000 of the gain becomes permanently CGT-exempt.",
         "Year-end CGT calculation: original gain £400,000, less SEIS reinvestment exemption £100,000, equals chargeable gain of £300,000. CGT at 20 percent (main rate, assuming higher-rate taxpayer with no BADR): £60,000. Compare to £80,000 CGT in the no-reinvestment case; the SEIS reinvestment relief has saved £20,000 of CGT.",
-        "On top of that, the £200,000 SEIS subscription itself attracts standard SEIS income tax relief of 50 percent, i.e. £100,000 of income tax saved (subject to sufficient income tax liability). So the £200,000 reinvestment has produced £20,000 of CGT relief plus £100,000 of income tax relief in the same tax year: a combined £120,000 of immediate tax benefit on a £200,000 investment. Even if the SEIS investment fails, the loss relief mechanism then kicks in (covered in the dedicated loss relief guide).",
+        "On top of that, the £200,000 SEIS subscription itself attracts standard SEIS income tax relief of 50 percent, i.e. £100,000 of income tax saved (subject to sufficient income tax liability). So the £200,000 reinvestment has produced £20,000 of CGT relief plus £100,000 of income tax relief in the same tax year: a combined £120,000 of immediate tax benefit on a £200,000 investment. Even if the SEIS investment fails, the [loss relief](/guides/seis-eis-loss-relief-failed-investments/) mechanism then kicks in (covered in the dedicated loss relief guide).",
       ],
     },
     {
@@ -61,7 +61,7 @@ export const reinvestmentReliefContent: {
       paragraphs: [
         "EIS reinvestment relief: the EIS shares must be issued within a four-year window around the original gain: one year before the gain or three years after. So a gain crystallising in March 2024 can be deferred by EIS shares issued any time from March 2023 to March 2027.",
         "SEIS reinvestment relief: stricter. The SEIS shares must be issued in the same tax year as the gain. There is no prior-year option and no extended forward window. An investor with a gain in 2024-25 must subscribe for SEIS shares in 2024-25 to use the relief.",
-        "The relief is claimed on the investor's Self-Assessment return for the original disposal year. For EIS reinvestment relief on shares issued in a later tax year, the return for the disposal year is amended once the shares are issued and the SEIS3 / EIS3 certificate is received. Specialists typically defer filing the return for the disposal year until the EIS shares are issued and the certificate is in hand.",
+        "The relief is claimed on the investor's Self-Assessment return for the original disposal year. For EIS reinvestment relief on shares issued in a later tax year, the return for the disposal year is amended once the shares are issued and the [SEIS3 / EIS3 certificate](/services/investor-tax-certificates/) is received. Specialists typically defer filing the return for the disposal year until the EIS shares are issued and the certificate is in hand.",
       ],
       callout: {
         type: 'warning',
@@ -74,7 +74,7 @@ export const reinvestmentReliefContent: {
       h2: "Qualifying conditions for reinvestment relief",
       paragraphs: [
         "Reinvestment relief is contingent on the investor and the share issue meeting the standard SEIS / EIS qualifying conditions. If the SEIS / EIS qualification fails (because the company is in an excluded trade, or the investor is connected, or the share class is wrong), the reinvestment relief is also lost. The investor returns to the original CGT position as if no relief was claimed.",
-        "The 'no value received' rule applies to reinvestment relief in the same way as to standard SEIS / EIS. An investor who receives value back from the company during the three-year qualifying period loses both the income tax relief and the reinvestment relief, with consequent recalculation of the prior-year tax return.",
+        "The 'no value received' rule applies to reinvestment relief in the same way as to standard SEIS / EIS. An investor who receives value back from the company during the [three-year qualifying period](/services/qualifying-period-monitoring/) loses both the income tax relief and the reinvestment relief, with consequent recalculation of the prior-year tax return.",
         "EIS reinvestment relief specifically: the EIS shares must be held for at least three years to maintain the deferral. Disposal before three years triggers the deferred gain to come back into charge in the year of disposal, in addition to whatever happens to the EIS shares themselves. Specialists model the holding-period commitment carefully when advising clients on using reinvestment relief.",
       ],
     },

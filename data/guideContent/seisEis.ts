@@ -11,7 +11,7 @@ export const seisEisContent: {
 } = {
   introduction: [
     "SEIS and EIS are the central reliefs UK founders use to attract early investor capital, and the central focus of every accountant in the seisaccountants.co.uk specialist network. The schemes themselves are well-defined; what fails them in practice is the documentation chain, the [advance assurance application](https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance), the share-class structure at issue, the SEIS1 and EIS1 compliance statements, the SEIS3 and EIS3 investor certificate distribution, and the three-year qualifying-period monitoring after the round closes.",
-    "This guide is the structural reference for founders running through that chain. It covers eligibility for SEIS, EIS, and knowledge-intensive EIS; the documentation HMRC's Venture Capital Reliefs team expects at each stage; the share class and cap table requirements; and the qualifying-period tests that protect investor relief from clawback. Where you would benefit from a specialist running the actual filings, our own live caseload is dominated by SEIS work.",
+    "This guide is the structural reference for founders running through that chain. It covers eligibility for SEIS, EIS, and knowledge-intensive EIS; the documentation HMRC's Venture Capital Reliefs team expects at each stage; the share class and [cap table](/services/share-issuance-cap-table/) requirements; and the qualifying-period tests that protect investor relief from clawback. Where you would benefit from a specialist running the actual filings, our own live caseload is dominated by SEIS work.",
   ],
   sections: [
     {
@@ -53,7 +53,7 @@ export const seisEisContent: {
       callout: {
         type: 'definition',
         heading: 'SEIS eligibility checklist',
-        text: 'To qualify for SEIS at the point of share issuance: (1) The company must be incorporated in the UK. (2) It must be fewer than three years old. (3) It must have gross assets of £350,000 or less immediately before the share issue. (4) It must have fewer than 25 full-time equivalent employees. (5) It must not be listed on a recognised stock exchange. (6) It must not have previously issued EIS shares or received VCT investment. (7) It must carry on a qualifying trade, or intend to within two years of incorporation. (8) The shares issued must be new, fully paid, ordinary shares with no preferential rights to assets on winding up.',
+        text: 'To qualify for SEIS at the point of share issuance: (1) The company must be incorporated in the UK. (2) It must be fewer than three years old. (3) It must have gross assets of £350,000 or less immediately before the share issue. (4) It must have fewer than 25 full-time equivalent employees. (5) It must not be listed on a recognised stock exchange. (6) It must not have previously issued EIS shares or received VCT investment. (7) It must carry on a [qualifying trade](/guides/seis-eis-qualifying-trades/), or intend to within two years of incorporation. (8) The shares issued must be new, fully paid, ordinary shares with no preferential rights to assets on winding up.',
       },
       subsections: [
         {
@@ -104,7 +104,7 @@ export const seisEisContent: {
           paragraphs: [
             "Knowledge-Intensive Companies (KICs) are a category of EIS-qualifying company that receives more generous investment limits and age thresholds in recognition of the longer development timescales typical of deep-tech, life sciences, and other research-intensive businesses.",
             "To qualify as a KIC, a company must meet at least one of two conditions: either it has spent more than 15% of its operating costs on innovation activities in the year preceding the share issue, or it has spent more than 10% of its operating costs on innovation in each of the three years preceding the issue. Additionally, the company must be creating, acquiring, or licensing intellectual property as a significant part of its business.",
-            "KICs can access EIS for up to ten years after their first commercial sale (rather than seven), can have up to 500 employees (rather than 250), can raise up to £10m per year under EIS (rather than £5m), and can access the higher £2m per investor annual relief limit. For life sciences, deeptech, and engineering companies with long development cycles, the KIC classification is worth identifying and confirming with a specialist accountant before any EIS advance assurance application.",
+            "KICs can access EIS for up to ten years after their first commercial sale (rather than seven), can have up to 500 employees (rather than 250), can raise up to £10m per year under EIS (rather than £5m), and can access the higher £2m per investor annual relief limit. For life sciences, deeptech, and engineering companies with long development cycles, the KIC classification is worth identifying and confirming with a specialist accountant before any [EIS advance assurance](/services/eis-advance-assurance/) application.",
           ],
           callout: {
             type: 'data',
@@ -167,7 +167,7 @@ export const seisEisContent: {
           paragraphs: [
             "SEIS is itself a State Aid scheme, and accepting other State Aid alongside SEIS investment can affect eligibility. For startups in Scotland, Wales, and Northern Ireland, this is a particularly important planning issue because regional development bodies, Scottish Enterprise, Business Wales, and Invest NI, regularly provide grant funding that carries State Aid status.",
             "The practical rule is that a company can receive de minimis State Aid (up to €300,000 over three years from all sources) without affecting SEIS eligibility. Many small grants from regional bodies fall within this threshold and do not create a problem. Larger grants or grants with full State Aid notification carry a higher risk of interaction and should be reviewed by your accountant before acceptance if SEIS shares have not yet been issued.",
-            "The safe sequencing for Scottish, Welsh, and Northern Irish startups is to obtain SEIS advance assurance and issue qualifying shares before accepting any significant regional grant funding. If grant funding is accepted first, the State Aid position of that grant must be confirmed as de minimis before the SEIS advance assurance application is submitted.",
+            "The safe sequencing for Scottish, Welsh, and Northern Irish startups is to obtain SEIS advance assurance and issue qualifying shares before accepting any significant regional grant funding. If grant funding is accepted first, the State Aid position of that grant must be confirmed as de minimis before the [SEIS advance assurance application](/services/seis-advance-assurance/) is submitted.",
           ],
         },
       ],

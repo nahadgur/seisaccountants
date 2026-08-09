@@ -10,7 +10,7 @@ export const shareIssueMechanicsContent: {
 } = {
   introduction: [
     "Once Advance Assurance is in hand and investors have committed, the actual issue of SEIS or EIS shares is where many founders stumble. The legal and HMRC tests for a qualifying SEIS / EIS share issue are specific: the right share class, the right consideration, the right Companies House filings, and the right share-register entries. Get any of these wrong and the shares are not qualifying, regardless of how clean the assurance was.",
-    "This guide covers the share-issue mechanics that determine whether the issue qualifies: the SEIS / EIS share-class requirements, the cash-consideration rule, the Companies House SH01 filing, the share-certificate generation, the share-register updates, the order of issues when SEIS and EIS are stacked in the same round, and the documentation that the SEIS1 / EIS1 compliance statement will eventually reference. The aim is a clean paper trail that survives HMRC scrutiny at compliance-statement time.",
+    "This guide covers the share-issue mechanics that determine whether the issue qualifies: the SEIS / EIS share-class requirements, the cash-consideration rule, the Companies House SH01 filing, the share-certificate generation, the share-register updates, the order of issues when SEIS and EIS are stacked in the same round, and the documentation that the [SEIS1 / EIS1 compliance statement](/services/seis1-eis1-compliance/) will eventually reference. The aim is a clean paper trail that survives HMRC scrutiny at compliance-statement time.",
   ],
   sections: [
     {
@@ -72,7 +72,7 @@ export const shareIssueMechanicsContent: {
       id: "documentation-pack",
       h2: "The post-issue documentation pack",
       paragraphs: [
-        "After the share issue closes, the company should hold a complete documentation pack for each investor and each tranche. The pack supports the SEIS1 / EIS1 compliance statement filing months later and the SEIS3 / EIS3 certificate distribution to investors. Missing documentation at compliance-statement time is the single most common cause of delayed filings.",
+        "After the share issue closes, the company should hold a complete documentation pack for each investor and each tranche. The pack supports the SEIS1 / EIS1 compliance statement filing months later and the [SEIS3 / EIS3 certificate](/services/investor-tax-certificates/) distribution to investors. Missing documentation at compliance-statement time is the single most common cause of delayed filings.",
         "Per-investor documentation: subscription agreement (signed by both parties), evidence of payment (bank statement showing the receipt of subscription funds), share certificate issued to the investor, and entry in the share register. Where the investor's address or details may change before the SEIS3 / EIS3 is issued (typical 6-9 months later), the company should record a stable contact channel.",
         "Per-tranche documentation: SH01 filing receipt from Companies House, board resolution approving the allotment (signed minutes), updated share register, and any side agreements (e.g. amended Articles, shareholders' agreement, investor letter of allocation). All of this should be in a shared SEIS / EIS folder that the specialist accountant can access when filing the SEIS1 / EIS1.",
       ],

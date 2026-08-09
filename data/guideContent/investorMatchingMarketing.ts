@@ -41,7 +41,7 @@ export const investorMatchingMarketingContent: {
       h2: "The data pack investors expect",
       paragraphs: [
         "Every investor pool expects a specific data pack at the start of diligence. Individual angels typically want a pitch deck (10-15 slides covering problem, solution, team, traction, business model, financials, ask), a one-page summary, and a Q&A pack covering frequent questions. The full data room is usually accessed only after first-meeting interest is confirmed.",
-        "Syndicates expect everything individual angels expect plus a structured data room: financials (actual and forecast), cap table, customer / contract list, IP register (if applicable), founder CVs, key hire profiles, and product / engineering plan. The syndicate lead runs the diligence and shares the data room with their network only after their own internal commitment.",
+        "Syndicates expect everything individual angels expect plus a structured data room: financials (actual and forecast), [cap table](/services/share-issuance-cap-table/), customer / contract list, IP register (if applicable), founder CVs, key hire profiles, and product / engineering plan. The syndicate lead runs the diligence and shares the data room with their network only after their own internal commitment.",
         "Funds expect the deepest data pack: full financials going back to incorporation, detailed cohort analysis (for businesses with customer or transaction data), competitive analysis, customer references, founder background checks, and any prior investor correspondence. Diligence questions can take 4-8 weeks even after initial fund interest; specialists prep founders for the level of scrutiny in advance.",
       ],
     },

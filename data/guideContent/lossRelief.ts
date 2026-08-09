@@ -54,14 +54,14 @@ export const lossReliefContent: {
       paragraphs: [
         "The loss is the difference between the investor's effective cost base and the disposal proceeds. The cost base is the cash subscription amount reduced by any income tax relief actually claimed. So an SEIS investor who subscribed £100,000 and claimed £50,000 in SEIS relief has a £50,000 cost base. An EIS investor who subscribed £100,000 and claimed £30,000 in EIS relief has a £70,000 cost base.",
         "Disposal proceeds are usually nominal: a few pence per share if the shares are sold to an insolvency practitioner, or zero on a negligible value claim. The full cost base then becomes the available loss. For a £50,000 SEIS cost base and zero proceeds, the available loss is £50,000.",
-        "Where the investor claimed CGT reinvestment relief (using a prior capital gain to invest in the SEIS / EIS shares with CGT deferred), the calculation is more complex. The deferred gain comes back into charge on disposal of the shares; the loss relief is calculated on the share cost base separately. Specialists run the dual calculation for investors with reinvestment-relief positions.",
+        "Where the investor claimed [CGT reinvestment relief](/guides/eis-seis-reinvestment-relief-cgt-deferral/) (using a prior capital gain to invest in the SEIS / EIS shares with CGT deferred), the calculation is more complex. The deferred gain comes back into charge on disposal of the shares; the loss relief is calculated on the share cost base separately. Specialists run the dual calculation for investors with reinvestment-relief positions.",
       ],
     },
     {
       id: "timing-rules",
       h2: "Timing rules: when can the loss be used?",
       paragraphs: [
-        "An income tax loss arising from share disposal can be set against the investor's general income in (a) the tax year of the loss, (b) the tax year before the loss, or (c) both. The claim is made on the Self-Assessment return for the year of the loss, with an election to carry back to the prior year if relevant.",
+        "An income tax loss arising from share disposal can be set against the investor's general income in (a) the tax year of the loss, (b) the tax year before the loss, or (c) both. The claim is made on the Self-Assessment return for the year of the loss, with an election to [carry back](/guides/seis-eis-carry-back-prior-tax-year/) to the prior year if relevant.",
         "If the loss is treated as a capital loss instead, it can be set against capital gains in the same tax year first; any excess is carried forward indefinitely against future capital gains. Capital losses cannot be carried back; income tax losses can.",
         "The 'cap' on income tax loss relief applies. The annual cap is the greater of £50,000 or 25 percent of the investor's adjusted total income. For most investors, this cap is comfortably above the available loss on a single SEIS or EIS investment. For high-net-worth investors with multiple failed SEIS / EIS positions in the same tax year, the cap can bite; specialists model the allocation across years.",
       ],
