@@ -16,6 +16,7 @@ import { ArrowLeft, Clock, Tag, Calendar } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { LeadCtaBanner } from '@/components/LeadCtaBanner';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { SpokeHero } from '@/components/SpokeHero';
 import type { BlogArticle, ContentBlock } from '@/data/blog';
@@ -25,26 +26,6 @@ interface Props {
   article: BlogArticle;
   hubGuide?: Guide;
   siblingSpokes?: BlogArticle[];
-}
-
-// Reusable lead-capture banner, reusing the site's existing match CTA copy and
-// the same lead-form modal the removed sidebar button opened.
-function LeadCtaBanner({ onOpen }: { onOpen: () => void }) {
-  return (
-    <div className="my-10 bg-ink-900 text-paper-100 rounded-sm px-6 py-6 md:px-10 md:py-7 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
-      <h2 className="font-display text-[18px] lg:text-[21px] text-white leading-snug tracking-tight mb-1.5">
-        Raising SEIS or EIS?
-      </h2>
-      <p className="font-sans text-[14.5px] text-paper-300 leading-snug mb-4 max-w-2xl">
-        Get a fixed quote for SEIS and EIS scheme work, from advance assurance through
-        to investor certificates. Free, no obligation.
-      </p>
-      <button onClick={onOpen} className="btn-primary py-2.5" type="button">
-        Get a Fixed Quote &nbsp;&rarr;
-      </button>
-    </div>
-  );
 }
 
 // Split paragraph text into nodes, converting:
@@ -125,9 +106,6 @@ function renderBlock(block: ContentBlock, index: number) {
     case 'h2':
       return (
         <div key={index} className="scroll-mt-24 mt-12 mb-5">
-          <div className="masthead mb-4">
-            <span>{(block.text || '').toUpperCase().slice(0, 30)}</span>
-          </div>
           <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight">
             {block.text || ''}
           </h2>
@@ -262,9 +240,6 @@ export default function BlogArticleClient({ article, hubGuide }: Props) {
                 <div className="[&_ol]:!text-white/70 [&_li>span]:!text-white [&_li>span[aria-hidden]]:!text-white/40 [&_a]:hover:!text-brand-300">
                   <Breadcrumbs items={breadcrumbItems} />
                 </div>
-                <p className="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-300">
-                  {hubGuide ? `${hubGuide.shortTitle} · ` : ''}{article.category}
-                </p>
                 <h1 className="font-display text-[36px] leading-[1.02] tracking-tight text-white md:text-[52px]">
                   {article.title}
                 </h1>

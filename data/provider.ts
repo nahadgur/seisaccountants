@@ -20,7 +20,6 @@
 //   - Professional indemnity insurance cover or any figure for it. ACCA firm
 //     registration requires PI cover, but we hold no certificate or sum
 //     insured on file, so the site does not state it.
-//   - Companies House number for Tidy Money Ltd (not confirmed).
 //   - Any count of applications filed per week/month/year.
 //   - Any privileged, named, or informal relationship with HMRC's Venture
 //     Capital Reliefs team beyond submitting and corresponding as agent.
@@ -36,6 +35,17 @@ export interface ClaimWording {
 /** The legal entity that supplies the professional service. */
 export const legalProvider = {
   name: 'Tidy Money Ltd',
+  /**
+   * Registered company number. Verified 2026-08-03 against the Companies
+   * House register: TIDY MONEY LTD, 06509733, status Active, incorporated
+   * 20 February 2008, registered office Devonshire House, 582 Honeypot
+   * Lane, Stanmore, Middlesex HA7 1JS.
+   */
+  companiesHouseNumber: '06509733',
+  companiesHouseUrl:
+    'https://find-and-update.company-information.service.gov.uk/company/06509733',
+  registeredOffice: 'Devonshire House, 582 Honeypot Lane, Stanmore, Middlesex HA7 1JS',
+  incorporatedOn: '2008-02-20',
   /** Public site a visitor can check the firm against, unaided. */
   verifyUrl: 'https://www.tidymoney.com/',
   verifyLabel: 'tidymoney.com',
@@ -53,7 +63,15 @@ export const professionalLead = {
   name: 'Preetesh Parmar',
   designation: 'FCCA',
   designationExpanded: 'Fellow of the Association of Chartered Certified Accountants',
-  role: 'Owner, Tidy Money Ltd',
+  role: 'Director, Tidy Money Ltd',
+  /**
+   * Directorship verified 2026-08-03 on the Companies House officers list
+   * for 06509733: PARMAR, Preetesh, Director, appointed 20 February 2008,
+   * status Active. "Director" is the term the register uses, so the site
+   * uses it too. The FCCA designation is separate and comes from the
+   * practice, not from Companies House.
+   */
+  isActiveDirector: true,
   /** No photograph or biography is published: neither has been supplied
    *  and approved for publication. Do not source one from elsewhere. */
   hasApprovedPhoto: false,
@@ -70,8 +88,9 @@ export const professionalLead = {
 export const credentialWording: Record<string, ClaimWording> = {
   /** Long form. Preferred wherever there is room. */
   delivery: {
-    text: 'Accountancy services on this site are delivered by Tidy Money Ltd, an ACCA-regulated practice owned by Preetesh Parmar FCCA. You can verify the practice independently at tidymoney.com.',
-    evidence: 'Firm identity and ACCA-regulated status published by the practice at tidymoney.com; named principal and FCCA designation confirmed by the practice.',
+    text: 'Accountancy services on this site are delivered by Tidy Money Ltd (company number 06509733), an ACCA-regulated practice whose director is Preetesh Parmar FCCA. You can check the company on the Companies House register and the practice at tidymoney.com.',
+    evidence:
+      'Company number, active status and directorship verified 2026-08-03 on the Companies House register. ACCA-regulated status and the FCCA designation published by the practice at tidymoney.com.',
   },
   /** Short form for strips, cards, and schema descriptions. */
   deliveryShort: {
@@ -84,8 +103,9 @@ export const credentialWording: Record<string, ClaimWording> = {
     evidence: 'As above.',
   },
   cloudPractice: {
-    text: 'The practice has run clients on live cloud accounting since 2009 and is a FreeAgent Gold Partner.',
-    evidence: 'Stated by the practice on its own site; FreeAgent partner tier is a published FreeAgent designation.',
+    text: 'The practice has run clients on live cloud accounting since 2009 and is listed by FreeAgent as a Gold Partner.',
+    evidence:
+      'FreeAgent Gold Partner tier confirmed as currently listed by FreeAgent (2026-08-03). The "since 2009" date is stated by the practice and is consistent with incorporation in February 2008; it is not independently verified.',
   },
   national: {
     text: 'The practice works with founders across the UK and runs engagements remotely on cloud accounting software, so there is no requirement to be near an office.',

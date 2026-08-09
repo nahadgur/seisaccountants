@@ -89,9 +89,6 @@ export default function GuidesIndexPage() {
  <Breadcrumbs items={[{ label: 'Guides' }]} />
 
  <div className="max-w-3xl mt-8 md:mt-12">
- <div className="masthead mb-5">
- <span>GUIDES &nbsp;&middot;&nbsp; {guides.length} IN-DEPTH PIECES</span>
- </div>
  <h1 className="font-display text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.02] tracking-tight text-ink-900 mb-6">
  SEIS, EIS and R&amp;D <em className="text-accent-600 italic">guides</em>.
  </h1>
@@ -111,9 +108,6 @@ export default function GuidesIndexPage() {
  >
  <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
  <div className="flex-1">
- <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
- <Calculator className="w-3 h-3" aria-hidden="true" /> Free tool
- </span>
  <h2 className="font-display text-[24px] md:text-[28px] text-white leading-[1.1] tracking-tight mb-2">
  Is your company SEIS-eligible? <em className="text-brand-300 italic">Check it now.</em>
  </h2>
@@ -136,9 +130,6 @@ export default function GuidesIndexPage() {
  style={{ backgroundColor: 'var(--paper-100)' }}
  >
  <div className="container-width">
- <div className="masthead mb-4">
- <span>ALL GUIDES</span>
- </div>
  <h2 className="font-display text-[26px] md:text-[32px] text-ink-900 leading-[1.05] tracking-tight mb-10">
  The full <em className="text-brand-500 italic">library</em>
  </h2>
@@ -163,9 +154,6 @@ export default function GuidesIndexPage() {
  </div>
  <div className="flex flex-1 flex-col p-6">
  <div className="flex items-center justify-between mb-5">
- <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium">
- GUIDE {String(i + 1).padStart(2, '0')}
- </span>
  {guide.hasCalculator && (
  <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ink-500 font-medium">
  <Calculator className="w-3 h-3" aria-hidden="true" />
@@ -202,9 +190,6 @@ export default function GuidesIndexPage() {
  {/* CROSS-LINK TO LOCATIONS */}
  <section className="section-padding border-t border-ink-900/10">
  <div className="container-width max-w-content">
- <div className="masthead mb-4">
- <span>READY WHEN YOU ARE</span>
- </div>
  <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-5">
  The guides explain the landscape. <em className="text-brand-500 italic">We handle the filings.</em>
  </h2>
@@ -243,12 +228,6 @@ export default function GuidesIndexPage() {
  style={{ backgroundColor: 'var(--brand-500)' }}
  >
  <div className="container-width text-center max-w-3xl">
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
- style={{ color: 'rgba(255, 255, 255, 0.75)' }}
- >
- CLOSING
- </span>
  <h2
  className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"
  style={{ color: '#ffffff' }}

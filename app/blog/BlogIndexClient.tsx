@@ -171,9 +171,6 @@ export default function BlogIndexClient() {
                 {/* Category filter */}
                 {categories.length > 2 && (
                   <div className="mb-10">
-                    <div className="masthead mb-4">
-                      <span>FILTER</span>
-                    </div>
                     <div className="flex flex-wrap gap-2">
                       {categories.map((cat) => (
                         <button

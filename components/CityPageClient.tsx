@@ -107,10 +107,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
 
  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start mt-6">
  <div className="lg:col-span-7">
- <div className="flex items-center gap-2 mb-5">
- <MapPin className="w-3.5 h-3.5 text-brand-500" aria-hidden="true" />
- <span className="eyebrow">{profile.region.toUpperCase()}</span>
- </div>
 
  <h1 className="font-display text-[44px] md:text-[56px] lg:text-[64px] text-ink-900 leading-[0.98] tracking-tighter mb-6">
  SEIS accountants<br />
@@ -243,9 +239,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  {deep.localExamples.map((ex, i) => (
  <div key={i} className="bg-white border border-ink-900/10 rounded-sm p-6 relative">
  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
- <div className="masthead mb-3 !border-0 !pb-0">
- <span>ILLUSTRATIVE EXAMPLE {String(i + 1).padStart(2, '0')}</span>
- </div>
  <h3 className="font-display text-[18px] md:text-[20px] text-ink-900 mb-3 tracking-tight leading-snug">
  {ex.title}
  </h3>
@@ -291,7 +284,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  <div>
  <div className="flex items-center gap-2 text-brand-500 mb-3">
  <Building2 className="w-4 h-4" />
- <span className="eyebrow">Business hubs</span>
+ <span className="font-display text-[15px] text-ink-900 tracking-tight">Business hubs</span>
  </div>
  <ul className="space-y-2">
  {profile.keyBusinessHubs.map(h => (
@@ -305,7 +298,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  <div>
  <div className="flex items-center gap-2 text-brand-500 mb-3">
  <GraduationCap className="w-4 h-4" />
- <span className="eyebrow">Universities</span>
+ <span className="font-display text-[15px] text-ink-900 tracking-tight">Universities</span>
  </div>
  <ul className="space-y-2">
  {profile.universities.map(uni => (
@@ -319,7 +312,7 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  <div>
  <div className="flex items-center gap-2 text-brand-500 mb-3">
  <Zap className="w-4 h-4" />
- <span className="eyebrow">Accelerators</span>
+ <span className="font-display text-[15px] text-ink-900 tracking-tight">Accelerators</span>
  </div>
  <ul className="space-y-2">
  {profile.accelerators.map(acc => (
@@ -341,7 +334,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  {!isRegional && (
  <section>
  <div className="bg-white border border-ink-900/10 rounded-sm p-6">
- <span className="eyebrow mb-3 block">CONSIDERATIONS</span>
  <h3 className="font-display text-[17px] text-ink-900 mb-3 tracking-tight leading-snug">
  Accounting context for <em className="text-brand-500 italic">{cityName}</em>
  </h3>
@@ -390,9 +382,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  >
  <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
  <div className="flex-1">
- <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
- Free check &middot; No sign-up
- </span>
  <p className="font-display text-[20px] md:text-[22px] text-white leading-[1.15] tracking-tight mb-2">
  Before you talk to a {cityName} specialist, <em className="text-brand-300 italic">check eligibility.</em>
  </p>
@@ -433,12 +422,6 @@ export default function CityPageClient({ params, profile, cityName }: Props) {
  style={{ backgroundColor: 'var(--brand-500)' }}
  >
  <div className="container-width text-center max-w-3xl">
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
- style={{ color: 'rgba(255, 255, 255, 0.75)' }}
- >
- CLOSING
- </span>
  <h2
  className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"
  style={{ color: '#ffffff' }}

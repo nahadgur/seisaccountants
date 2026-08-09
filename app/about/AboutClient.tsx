@@ -20,7 +20,7 @@ const STANDARDS = [
  {
  icon: <BadgeCheck className="w-5 h-5" />,
  title: 'A named, regulated accountant',
- desc: 'Your work is led by Preetesh Parmar FCCA, a Fellow of the Association of Chartered Certified Accountants and owner of Tidy Money Ltd. You can verify the practice independently at tidymoney.com before you send a single figure.',
+ desc: 'Your work is led by Preetesh Parmar FCCA, a Fellow of the Association of Chartered Certified Accountants and the director of Tidy Money Ltd. Companies House lists him as an active director of company number 06509733, and you can check both the company and the practice before you send a single figure.',
  },
  {
  icon: <PoundSterling className="w-5 h-5" />,
@@ -80,10 +80,10 @@ export default function AboutClient() {
  </h2>
  <div className="space-y-4 font-sans text-[14.5px] text-ink-700 leading-relaxed max-w-2xl">
  <p>
- Accountancy services on this site are provided by Tidy Money Ltd, the practice of Preetesh Parmar, a Fellow of the Association of Chartered Certified Accountants. A named person, a real regulated firm, and a website you can check before you get in touch.
+ Accountancy services on this site are provided by Tidy Money Ltd, the practice of Preetesh Parmar, a Fellow of the Association of Chartered Certified Accountants. A named person, a real regulated firm, and a public register entry you can check before you get in touch.
  </p>
  <p>
- The practice is based in Stanmore HA7 and runs on cloud accounting software, so engagements work the same wherever your company is registered in the UK. Most founders never need a face-to-face meeting.
+ The company was incorporated on 20 February 2008 and is registered at Devonshire House, 582 Honeypot Lane, Stanmore, Middlesex HA7 1JS. It runs on cloud accounting software, so engagements work the same wherever your company is registered in the UK. Most founders never need a face-to-face meeting.
  </p>
  <p>
  For SEIS and EIS rounds, the work covers the full documentation chain that protects investor relief: the advance assurance narrative, the share-issue sequencing, the SEIS1 and EIS1 reconciliation, certificate distribution, and qualifying-period monitoring.
@@ -100,10 +100,29 @@ export default function AboutClient() {
  ))}
  </div>
 
- <div className="flex flex-wrap items-center gap-3 mt-6 font-sans text-[13px] text-ink-700">
- <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-brand-500" /> Stanmore, Harrow &middot; HA7</span>
+ <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 font-sans text-[13px] text-ink-700">
+ <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-brand-500" /> Stanmore, Middlesex &middot; HA7 1JS</span>
  <span className="inline-flex items-center gap-1.5"><BadgeCheck className="w-3.5 h-3.5 text-brand-500" /> FreeAgent Gold Partner</span>
  <span className="inline-flex items-center gap-1.5"><Cloud className="w-3.5 h-3.5 text-brand-500" /> Cloud practice since 2009</span>
+ </div>
+
+ {/* Companies House is the one trust signal on this page a visitor can
+ check without taking our word for anything, so it gets its own row
+ with the register link rather than being folded into the meta strip. */}
+ <div className="mt-4 p-4 bg-white border border-ink-900/10 rounded-sm">
+ <p className="font-sans text-[13px] text-ink-700 leading-relaxed">
+ Tidy Money Ltd is registered in England and Wales, company number{' '}
+ <span className="font-mono text-ink-900">06509733</span>.{' '}
+ <a
+ href="https://find-and-update.company-information.service.gov.uk/company/06509733"
+ target="_blank"
+ rel="noopener"
+ className="text-brand-500 hover:text-brand-700 underline underline-offset-2"
+ >
+ Check the entry on the Companies House register
+ </a>
+ , which lists the company as active and Preetesh Parmar as a serving director.
+ </p>
  </div>
  </section>
 

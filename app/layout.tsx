@@ -87,15 +87,37 @@ const organizationSchema = {
  logo: `${siteConfig.url}/logo-mark.svg`,
  description:
  'SEIS and EIS accountants for UK founders. We file HMRC advance assurance, draft SEIS1 and EIS1 compliance statements, distribute investor certificates, and monitor the three-year qualifying period. Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice.',
+ // Company number, registered office and directorship all verified on
+ // the Companies House register (2026-08-03). See data/provider.ts.
+ // These are the strongest verifiable trust signals the site has, so
+ // they are stated in the graph as well as on /about/.
  parentOrganization: {
  '@type': 'AccountingService',
  name: 'Tidy Money Ltd',
+ legalName: 'TIDY MONEY LTD',
  url: 'https://www.tidymoney.com/',
+ identifier: {
+ '@type': 'PropertyValue',
+ propertyID: 'GB-COH',
+ value: '06509733',
+ },
+ sameAs: [
+ 'https://find-and-update.company-information.service.gov.uk/company/06509733',
+ ],
+ foundingDate: '2008-02-20',
+ address: {
+ '@type': 'PostalAddress',
+ streetAddress: 'Devonshire House, 582 Honeypot Lane',
+ addressLocality: 'Stanmore',
+ addressRegion: 'Middlesex',
+ postalCode: 'HA7 1JS',
+ addressCountry: 'GB',
+ },
  employee: {
  '@type': 'Person',
  name: 'Preetesh Parmar',
  honorificSuffix: 'FCCA',
- jobTitle: 'Owner',
+ jobTitle: 'Director',
  },
  },
  areaServed: { '@type': 'Country', name: 'United Kingdom' },

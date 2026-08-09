@@ -19,11 +19,6 @@ export function FAQ({
 
  return (
  <section>
- {/* Masthead */}
- <div className="masthead mb-8">
- <span>QUESTIONS</span>
- </div>
-
  <h2 className="h-display-md mb-8 max-w-xl">{title}</h2>
 
  <div className="bg-white border border-ink-900/10 rounded-sm overflow-hidden">

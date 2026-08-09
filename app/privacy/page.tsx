@@ -39,7 +39,6 @@ export default function PrivacyPage() {
  <div className="container-width py-12 md:py-16 max-w-3xl">
  <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
 
- <span className="eyebrow mb-4 inline-block">POLICY</span>
  <h1 className="font-display text-[40px] md:text-[52px] text-ink-900 leading-[0.98] tracking-tighter mb-4">
  Privacy <em className="text-brand-500 italic">Policy</em>
  </h1>
@@ -55,7 +54,7 @@ export default function PrivacyPage() {
  seisaccountants.co.uk provides SEIS and EIS accountancy for UK founders. Throughout this policy, &apos;we&apos;, &apos;us&apos; and &apos;our&apos; refer to seisaccountants.co.uk as the operator of this website and the controller of the personal data you submit.
  </p>
  <p className="mt-3">
- Accountancy services on this site are delivered by Tidy Money Ltd, an ACCA-regulated practice. If you need to identify a named individual for a data protection request, please contact us at <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a> and we will provide one.
+ Accountancy services on this site are delivered by Tidy Money Ltd, an ACCA-regulated practice registered in England and Wales under company number 06509733, with its registered office at Devonshire House, 582 Honeypot Lane, Stanmore, Middlesex HA7 1JS. If you need to identify a named individual for a data protection request, please contact us at <a href="mailto:hello@seisaccountants.co.uk" className="font-display italic text-brand-500 hover:text-brand-700">hello@seisaccountants.co.uk</a> and we will provide one.
  </p>
  </section>
 

@@ -17,9 +17,6 @@ export default function DirectAnswer({ question, answer, className = '' }: Direc
  className={`relative bg-white border border-ink-900/10 rounded-sm p-6 md:p-7 ${className}`}
  >
  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
- <p className="eyebrow mb-3">
- QUICK ANSWER
- </p>
  <h2 className="font-display text-[20px] md:text-[22px] text-ink-900 mb-4 leading-snug tracking-tight">
  {question}
  </h2>

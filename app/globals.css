@@ -69,17 +69,6 @@
            hover:text-brand-700 font-display italic text-base;
   }
 
-  /* EDITORIAL MARKERS */
-  /* Use as small eyebrow labels: § 01 · SERVICES */
-  .eyebrow {
-    @apply inline-flex items-center gap-2 text-brand-500 text-[10px]
-           font-semibold tracking-[0.22em] uppercase;
-  }
-  .eyebrow-dark {
-    @apply inline-flex items-center gap-2 text-white/80 text-[10px]
-           font-semibold tracking-[0.22em] uppercase;
-  }
-
   /* DISPLAY HEADLINES */
   .h-display-lg {
     @apply font-display font-normal text-display-lg md:text-display-xl
@@ -163,12 +152,6 @@
   .stat-label {
     @apply font-sans text-[10px] font-medium text-ink-500 tracking-[0.18em]
            uppercase mt-2 block;
-  }
-
-  /* SECTION LABEL - § 01 · SERVICES style mastheads */
-  .masthead {
-    @apply flex items-center justify-between text-[10px] font-semibold
-           tracking-[0.22em] uppercase text-ink-900 pb-3 border-b border-ink-900/40;
   }
 
   /* PULL QUOTE */

@@ -468,7 +468,7 @@ export default function SeisChecker() {
 
  <div className="bg-white rounded-sm p-5 mb-5 border border-ink-900/10 relative">
  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
- <p className="eyebrow mb-2">NEXT STEP</p>
+ <p className="font-sans text-[12px] text-ink-500 mb-2">Next step</p>
  <p className="font-display text-[15px] text-ink-900 leading-snug tracking-tight">{result.nextStep}</p>
  </div>
 

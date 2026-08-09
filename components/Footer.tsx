@@ -38,7 +38,7 @@ export function Footer() {
  SEIS and EIS accountants for UK founders. We handle the full lifecycle from advance assurance through SEIS1 and EIS1 compliance to three-year qualifying-period monitoring. Fixed written quotes within 48 hours.
  </p>
  <p className="font-display italic text-[12.5px] text-paper-300/60 border-l-2 border-brand-500 pl-4 leading-relaxed">
- Accountancy services are provided by Tidy Money Ltd, an ACCA-regulated practice.
+ Accountancy services are provided by Tidy Money Ltd, an ACCA-regulated practice registered in England and Wales, company number 06509733.
  </p>
  </div>
 

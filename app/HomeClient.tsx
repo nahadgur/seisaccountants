@@ -278,7 +278,6 @@ export default function HomeClient() {
  >
  {item.step}
  </span>
- <span className="eyebrow">STEP {item.step}</span>
  </div>
  <h3 className="font-display text-[19px] text-ink-900 mb-3 leading-snug tracking-tight">
  {item.title}
@@ -414,7 +413,7 @@ export default function HomeClient() {
  {' '}&ndash; £{tier.priceTo.toLocaleString()}
  </span>
  </p>
- <p className="font-sans text-[10.5px] text-ink-500 mb-4 tracking-[0.15em] uppercase">
+ <p className="font-sans text-[12.5px] text-ink-500 mb-4 leading-relaxed">
  {tier.serviceIncludes} &middot; {tier.typicalDuration}
  </p>
  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed">
@@ -516,12 +515,6 @@ export default function HomeClient() {
  style={{ backgroundColor: 'var(--brand-500)' }}
  >
  <div className="container-width text-center max-w-3xl">
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
- style={{ color: 'rgba(255, 255, 255, 0.75)' }}
- >
- CLOSING
- </span>
  <h2
  className="font-display text-[32px] md:text-[44px] leading-[1.0] tracking-tight mb-5"
  style={{ color: '#ffffff' }}

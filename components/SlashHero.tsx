@@ -1,7 +1,6 @@
 // components/SlashHero.tsx - Paper Tape edition
 // Formerly a dark-themed diagonal-slash hero. Rebuilt as a cream Paper
-// Tape hero. Same props preserved so existing callers work unchanged:
-// breadcrumbs, eyebrow, title, subtitle, image, right, bullets,
+// Tape hero. Props: breadcrumbs, title, subtitle, image, right, bullets,
 // mobileBadges.
 
 import React from 'react';
@@ -14,7 +13,6 @@ interface BreadcrumbItem { label: string; href?: string; }
 
 interface SlashHeroProps {
  breadcrumbs?: BreadcrumbItem[];
- eyebrow?: React.ReactNode;
  title: React.ReactNode;
  subtitle?: string;
  image: string;
@@ -54,7 +52,6 @@ function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
 
 export function SlashHero({
  breadcrumbs,
- eyebrow,
  title,
  subtitle,
  image,
@@ -74,10 +71,6 @@ export function SlashHero({
 
  {/* LEFT COLUMN - text + optional polaroid image */}
  <div className="lg:col-span-7">
- {eyebrow && (
- <div className="mb-5">{eyebrow}</div>
- )}
-
  <h1 className="font-display text-[44px] md:text-[56px] lg:text-[64px] text-ink-900 leading-[0.98] tracking-tighter mb-6">
  {title}
  </h1>
@@ -111,7 +104,6 @@ export function SlashHero({
  aria-hidden="true"
  />
  </div>
- <span className="polaroid-caption">IN PRACTICE</span>
  </div>
  </div>
  )}

@@ -85,6 +85,13 @@ module.exports = {
         tighter:'-1px',
         widest: '0.2em',
       },
+      maxWidth: {
+        // Reading measure for article and prose columns. `max-w-content` was
+        // already used in five places but had never been defined, so those
+        // columns silently rendered at the full 7xl container width and hugged
+        // the left edge.
+        content: '880px',
+      },
       borderRadius: {
         'xs': '2px',
         'sm': '4px',

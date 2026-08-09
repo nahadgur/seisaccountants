@@ -203,10 +203,10 @@ export default function SeisDiagnosticClient({ faqs = [] }: SeisDiagnosticClient
  className="border-b border-ink-900/10"
  style={{ backgroundColor: 'var(--paper-100)' }}
  >
- <div className="container-width py-10 md:py-16">
+ <div className="container-width max-w-content py-10 md:py-16">
  <Breadcrumbs items={[{ label: 'Tools' }, { label: 'SEIS Diagnostic' }]} />
 
- <div className="max-w-3xl mt-8 md:mt-12">
+ <div className="mt-8 md:mt-12">
  <h1 className="font-display text-[40px] md:text-[52px] lg:text-[60px] leading-[0.98] tracking-tighter text-ink-900 mb-6">
  Is your company <em className="text-brand-500 italic">SEIS-eligible?</em>
  </h1>
@@ -244,7 +244,7 @@ export default function SeisDiagnosticClient({ faqs = [] }: SeisDiagnosticClient
  </section>
 
  {/* Results area */}
- <section className="container-width py-10 md:py-14">
+ <section className="container-width max-w-content py-10 md:py-14">
 
  {view.kind === 'matches' && (
  <MatchList
@@ -288,7 +288,7 @@ export default function SeisDiagnosticClient({ faqs = [] }: SeisDiagnosticClient
 
 function MatchList({ hits, onPick, onReset }: { hits: SearchHit[]; onPick: (n: string) => void; onReset: () => void }) {
  return (
- <div className="max-w-3xl">
+ <div>
  <div className="flex items-center justify-between mb-4">
  <h2 className="font-display text-[22px] md:text-[26px] text-ink-900 tracking-tight">
  {hits.length} {hits.length === 1 ? 'match' : 'matches'}. Pick yours.
@@ -349,7 +349,7 @@ function DiagnosticResult({
  });
 
  return (
- <div className="max-w-3xl">
+ <div>
 
  {/* Company header */}
  <div className="flex items-start justify-between mb-6 flex-wrap gap-3">
@@ -527,7 +527,7 @@ function PrimaryCta({
 
 function ExplainerCards() {
  return (
- <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl">
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
  {[
  {
  title: 'What this checks',
@@ -563,9 +563,9 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  className="border-t border-ink-900/10"
  style={{ backgroundColor: 'var(--paper-50)' }}
  >
- <div className="container-width py-14 md:py-20">
+ <div className="container-width max-w-content py-14 md:py-20">
 
- <div className="max-w-3xl">
+ <div>
  <h2 className="font-display text-[28px] md:text-[34px] text-ink-900 leading-[1.1] tracking-tight mb-6">
  How the <em className="text-brand-500 italic">SEIS eligibility check</em> works
  </h2>
@@ -626,7 +626,7 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  </div>
 
  {faqs.length > 0 && (
- <div className="max-w-3xl mt-14">
+ <div className="mt-14">
  <h2 className="font-display text-[28px] md:text-[34px] text-ink-900 leading-[1.1] tracking-tight mb-8">
  Frequently <em className="text-brand-500 italic">asked</em>
  </h2>
@@ -652,7 +652,7 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  {/* Cross-links to canonical guides. Internal-link equity into
  the long-form guides; helps the diagnostic page rank and
  sends the diagnostic visitor toward deeper reading. */}
- <div className="max-w-3xl mt-14">
+ <div className="mt-14">
  <h2 className="font-display text-[22px] md:text-[26px] text-ink-900 leading-[1.1] tracking-tight mb-5">
  Read more
  </h2>
@@ -661,9 +661,6 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  href="/guides/seis-eis-guide-uk-startups/"
  className="group block bg-white border border-ink-900/10 rounded-sm p-4 hover:border-brand-500 transition-colors"
  >
- <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-1.5">
- Guide
- </p>
  <p className="font-display text-[15px] text-ink-900 group-hover:text-brand-500 leading-snug transition-colors">
  The Complete Guide to SEIS and EIS for UK Founders
  </p>
@@ -672,9 +669,6 @@ function SeoContent({ faqs }: { faqs: { q: string; a: string }[] }) {
  href="/services/seis-advance-assurance/"
  className="group block bg-white border border-ink-900/10 rounded-sm p-4 hover:border-brand-500 transition-colors"
  >
- <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-1.5">
- Service
- </p>
  <p className="font-display text-[15px] text-ink-900 group-hover:text-brand-500 leading-snug transition-colors">
  SEIS Advance Assurance specialists, end-to-end
  </p>

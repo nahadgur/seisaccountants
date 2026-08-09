@@ -93,9 +93,6 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  return (
  <div className="bg-white text-ink-900 rounded-sm p-6 md:p-7 border border-ink-900/10">
  <div className="mb-5 pb-4 border-b border-ink-900/10">
- <div className="flex items-center mb-3">
- <span className="eyebrow">FREE QUOTE</span>
- </div>
  <h3 className="font-display text-[26px] md:text-[28px] leading-[1.0] tracking-tight">
  {ctaHeading || (city ? <>Get a Fixed Quote<br /><em className="text-brand-500 italic">in {city}</em></> : <>Get a <em className="text-brand-500 italic">fixed quote</em></>)}
  </h3>

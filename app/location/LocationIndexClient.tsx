@@ -49,9 +49,6 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  <Breadcrumbs items={[{ label: 'Locations' }]} />
 
  <div className="max-w-3xl mt-8 md:mt-12">
- <div className="masthead mb-5">
- <span>LOCATIONS &nbsp;&middot;&nbsp; {totalCities} CITIES</span>
- </div>
  <h1 className="font-display text-[clamp(2rem,5.5vw,3.6rem)] leading-[1.02] tracking-tight text-ink-900 mb-6">
  Locations <em className="text-brand-500 italic">we cover</em>.
  </h1>
@@ -80,9 +77,6 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  >
  <div className="container-width">
  <div className="max-w-2xl mb-10 md:mb-14">
- <div className="masthead mb-4">
- <span>ALL LOCATIONS</span>
- </div>
  <h2 className="font-display text-[26px] md:text-[32px] text-ink-900 leading-[1.05] tracking-tight mb-4">
  Pick your <em className="text-brand-500 italic">city</em>
  </h2>
@@ -99,9 +93,9 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  <div key={region}>
  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 mb-6">
  <div className="lg:col-span-4">
- <div className="masthead mb-3">
- <span>{region.toUpperCase()}</span>
- </div>
+ <h3 className="font-display text-[20px] md:text-[22px] text-ink-900 leading-tight tracking-tight mb-2">
+ {region}
+ </h3>
  <p className="font-sans text-[13.5px] text-ink-700 leading-relaxed">
  {REGION_BLURBS[region] ?? `Cities we cover in ${region}.`}
  </p>
@@ -135,9 +129,6 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  {/* OUTSIDE THESE CITIES */}
  <section className="section-padding border-t border-ink-900/10">
  <div className="container-width max-w-content">
- <div className="masthead mb-4">
- <span>OUTSIDE THESE CITIES</span>
- </div>
  <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-5">
  Not on the list? <em className="text-brand-500 italic">We can still act for you.</em>
  </h2>
@@ -183,12 +174,6 @@ export default function LocationIndexClient({ pageUrl }: Props) {
  style={{ backgroundColor: 'var(--brand-500)' }}
  >
  <div className="container-width text-center max-w-3xl">
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
- style={{ color: 'rgba(255, 255, 255, 0.75)' }}
- >
- CLOSING
- </span>
  <h2
  className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"
  style={{ color: '#ffffff' }}

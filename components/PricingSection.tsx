@@ -27,10 +27,6 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
 
  return (
  <section>
- <div className="masthead mb-4">
- <span>TYPICAL FEES</span>
- <span className="text-ink-500">GBP</span>
- </div>
  <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.05] tracking-tight mb-3">
  {heading}
  </h2>
@@ -100,10 +96,6 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
  className="rounded-sm p-6 border border-ink-900/10"
  style={{ backgroundColor: 'var(--paper-50)' }}
  >
- <div className="flex items-center gap-2 mb-4">
- <PoundSterling className="w-4 h-4 text-brand-500" aria-hidden="true" />
- <span className="eyebrow">WHAT&apos;S INCLUDED</span>
- </div>
  <h3 className="font-display text-[17px] text-ink-900 mb-4 tracking-tight">Included in the fee</h3>
  <ul className="space-y-2.5">
  {treatmentIncludes.map((item, i) => (
@@ -119,15 +111,6 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
  className="rounded-sm p-6"
  style={{ backgroundColor: 'var(--ink-900)' }}
  >
- <div className="flex items-center gap-2 mb-4">
- <CreditCard className="w-4 h-4" style={{ color: '#AFA9EC' }} aria-hidden="true" />
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase"
- style={{ color: '#AFA9EC' }}
- >
- ANNUAL RETAINER
- </span>
- </div>
  <h3
  className="font-display text-[17px] mb-4 tracking-tight"
  style={{ color: 'var(--paper-100)' }}

@@ -11,7 +11,7 @@
 // - Magazine masthead row deleted from the hero; the UPDATED [date]
 // signal is kept in the inline metadata row.
 
-import { useState, useEffect } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
  Clock, ChevronRight, CheckCircle, AlertTriangle,
@@ -33,6 +33,7 @@ import { investorMatchingMarketingContent } from '@/data/guideContent/investorMa
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { LeadCtaBanner } from '@/components/LeadCtaBanner';
 import RdCalculator from '@/components/tools/RdCalculator';
 import SeisChecker from '@/components/tools/SeisChecker';
 import { renderInlineLinks } from '@/lib/renderInlineLinks';
@@ -84,18 +85,15 @@ const TOOL_REGISTRY: Record<
  string,
  {
  Component: React.ComponentType;
- sectionEyebrow: string;
  sectionHeading: React.ReactNode;
  }
 > = {
  'rd-tax-credits-uk-startups': {
  Component: RdCalculator,
- sectionEyebrow: 'CALCULATOR',
  sectionHeading: <>How much could your company <em className="text-brand-500 italic">claim?</em></>,
  },
  'seis-eis-guide-uk-startups': {
  Component: SeisChecker,
- sectionEyebrow: 'CHECKER',
  sectionHeading: <>Does your company <em className="text-brand-500 italic">qualify?</em></>,
  },
 };
@@ -103,9 +101,6 @@ const TOOL_REGISTRY: Record<
 function SectionHeading({ id, title }: { id: string; title: string }) {
  return (
  <div id={id} className="scroll-mt-24">
- <div className="masthead mb-4">
- <span>{title.toUpperCase().slice(0, 30)}</span>
- </div>
  <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight mb-5">
  {title}
  </h2>
@@ -158,12 +153,6 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  <div className="absolute inset-0 bg-gradient-to-r from-ink-900/95 via-ink-900/75 to-ink-900/35 md:via-ink-900/70 md:to-ink-900/10" aria-hidden="true" />
  <div className="container-width relative flex min-h-[430px] items-center py-10 md:min-h-[500px] md:py-16">
  <div className="w-full lg:max-w-[62%]">
- <div className="mb-5 flex items-center gap-2">
- <BookOpen className="h-3.5 w-3.5 text-brand-300" aria-hidden="true" />
- <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-300">
- GUIDE &middot; {guide.shortTitle.toUpperCase()}
- </span>
- </div>
  <h1 className="font-display text-[36px] leading-[1.02] tracking-tight text-white md:text-[52px]">
  {guide.heroHeading}
  </h1>
@@ -203,7 +192,6 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  {/* Direct answer */}
  <div className="relative bg-white border border-ink-900/10 rounded-sm p-6 md:p-7 mb-10">
  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
- <p className="eyebrow mb-3">QUICK ANSWER</p>
  <h2 className="font-display text-[21px] text-ink-900 mb-4 leading-snug tracking-tight">
  {guide.directQuestion}
  </h2>
@@ -221,31 +209,11 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  </div>
  )}
 
- {/* SEIS Diagnostic feature card. Surfaces the Companies House
- diagnostic to guide readers, most actionable thing on the
- page and a stronger conversion signal than the inline
- calculators. */}
- <Link
- href="/tools/seis-diagnostic/"
- className="group block mb-12 bg-ink-900 text-white rounded-sm p-6 hover:bg-brand-700 transition-colors"
- >
- <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
- <div className="flex-1">
- <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
- Companies House diagnostic &middot; Free
- </span>
- <h3 className="font-display text-[20px] md:text-[24px] text-white leading-[1.15] tracking-tight mb-2">
- Run your own company through the SEIS rules. <em className="text-brand-300 italic">Now.</em>
- </h3>
- <p className="font-sans text-[13.5px] text-paper-300 leading-relaxed max-w-xl">
- Type your company name, we pull the record from Companies House, and we run age, structure, jurisdiction, and excluded-trades tests automatically. Saves you reading another 10 paragraphs to figure out if you qualify.
- </p>
- </div>
- <span className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-300 whitespace-nowrap mt-2 group-hover:translate-x-1 transition-transform">
- Open the diagnostic <ArrowRight className="w-4 h-4" aria-hidden="true" />
- </span>
- </div>
- </Link>
+ {/* Lead CTA in first banner position. The diagnostic card used
+ to sit here on its own; the quote form now gets the same
+ treatment and the diagnostic moves below the opening
+ section so the two banners do not stack. */}
+ <LeadCtaBanner onOpen={openModal} className="mb-12" />
 
  {/* Tool (registry-driven). The tool result itself is the
  conversion moment; each tool component carries its own
@@ -253,9 +221,6 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  compete for attention. */}
  {toolEntry && (
  <section id="calculator" className="mb-14 scroll-mt-24">
- <div className="masthead mb-4">
- <span>{toolEntry.sectionEyebrow}</span>
- </div>
  <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight mb-6">
  {toolEntry.sectionHeading}
  </h2>
@@ -264,8 +229,9 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  )}
 
  {/* Content sections */}
- {content && content.sections.map(section => (
- <section key={section.id} className="mb-14">
+ {content && content.sections.map((section, sectionIndex) => (
+ <Fragment key={section.id}>
+ <section className="mb-14">
  <SectionHeading id={section.id} title={section.h2} />
 
  {section.paragraphs.map((p, i) => (
@@ -333,13 +299,36 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  </div>
  ))}
  </section>
+
+ {/* SEIS Diagnostic feature card. Surfaces the Companies House
+ diagnostic to guide readers, most actionable thing on the
+ page. Sits after the opening section so it does not stack
+ against the lead banner above. */}
+ {sectionIndex === 0 && (
+ <Link
+ href="/tools/seis-diagnostic/"
+ className="group block mb-14 bg-ink-900 text-white rounded-sm p-6 hover:bg-brand-700 transition-colors"
+ >
+ <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
+ <div className="flex-1">
+ <h3 className="font-display text-[20px] md:text-[24px] text-white leading-[1.15] tracking-tight mb-2">
+ Run your own company through the SEIS rules. <em className="text-brand-300 italic">Now.</em>
+ </h3>
+ <p className="font-sans text-[13.5px] text-paper-300 leading-relaxed max-w-xl">
+ Type your company name, we pull the record from Companies House, and we run age, structure, jurisdiction, and excluded-trades tests automatically. Saves you reading another 10 paragraphs to figure out if you qualify.
+ </p>
+ </div>
+ <span className="inline-flex items-center gap-2 font-display italic text-[14px] text-brand-300 whitespace-nowrap mt-2 group-hover:translate-x-1 transition-transform">
+ Open the diagnostic <ArrowRight className="w-4 h-4" aria-hidden="true" />
+ </span>
+ </div>
+ </Link>
+ )}
+ </Fragment>
  ))}
 
  {/* City spoke grid */}
  <section id="by-city" className="mb-14 scroll-mt-24">
- <div className="masthead mb-4">
- <span>BY CITY</span>
- </div>
  <h2 className="font-display text-[26px] md:text-[30px] text-ink-900 leading-[1.1] tracking-tight mb-3">
  Find a <em className="text-brand-500 italic">specialist</em> in your city
  </h2>
@@ -349,8 +338,8 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  <div className="space-y-6">
  {Object.entries(regionGroups).map(([region, cities]) => (
  <div key={region}>
- <h3 className="font-mono text-[10px] tracking-[0.22em] uppercase text-brand-500 font-medium mb-3">
- {region.toUpperCase()}
+ <h3 className="font-display text-[17px] text-ink-900 tracking-tight mb-3">
+ {region}
  </h3>
  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
  {cities.map(city => (
@@ -374,12 +363,6 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  className="rounded-sm p-8 md:p-10 text-center"
  style={{ backgroundColor: 'var(--brand-500)' }}
  >
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-4"
- style={{ color: 'rgba(255, 255, 255, 0.75)' }}
- >
- READY?
- </span>
  <h2
  className="font-display text-[26px] md:text-[32px] leading-tight tracking-tight mb-4"
  style={{ color: '#ffffff' }}
@@ -406,9 +389,6 @@ export default function GuidePageClient({ guide, cityLinks, relatedGuides }: Pro
  {/* Related guides strip, replaces the sidebar Other Guides widget */}
  {relatedGuides.length > 0 && (
  <section className="mt-16 pt-12 border-t border-ink-900/10">
- <div className="masthead mb-4">
- <span>OTHER GUIDES</span>
- </div>
  <h2 className="font-display text-[24px] md:text-[28px] text-ink-900 leading-[1.05] tracking-tight mb-8">
  Continue with another <em className="text-brand-500 italic">guide</em>
  </h2>

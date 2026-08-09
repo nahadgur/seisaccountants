@@ -54,11 +54,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
 
  <SlashHero
  breadcrumbs={[{ label: 'Services', href: '/services/' }, { label: service.title }]}
- eyebrow={
- <span className="eyebrow">
- SEIS SPECIALIST ACCOUNTANTS
- </span>
- }
  title={
  <>
  {service.title}<br />
@@ -122,9 +117,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  <BookOpen className="w-5 h-5" aria-hidden="true" />
  </div>
  <div className="flex-1">
- <div className="masthead mb-3 !border-0 !pb-0">
- <span>THE FULL GUIDE &nbsp;&middot;&nbsp; {relatedGuide.estimatedReadTime} MIN READ</span>
- </div>
  <h2
  id="related-guide-heading"
  className="font-display text-[22px] md:text-[26px] text-ink-900 tracking-tight leading-snug mb-2"
@@ -200,9 +192,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  {content.workedExamples.map((ex, i) => (
  <div key={i} className="bg-white border border-ink-900/10 rounded-sm p-6 relative">
  <div className="absolute top-0 left-0 w-1 h-full bg-brand-500" aria-hidden="true" />
- <div className="masthead mb-3 !border-0 !pb-0">
- <span>CASE {String(i + 1).padStart(2, '0')}</span>
- </div>
  <h3 className="font-display text-[18px] md:text-[20px] text-ink-900 mb-3 tracking-tight leading-snug">
  {ex.title}
  </h3>
@@ -227,7 +216,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  <div className="space-y-6">
  {Object.entries(LOCATIONS).map(([region, cities]) => (
  <div key={region}>
- <h3 className="font-display text-[15px] text-ink-900 mb-3 tracking-tight uppercase opacity-70">
+ <h3 className="font-display text-[17px] text-ink-900 mb-3 tracking-tight">
  {region}
  </h3>
  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
@@ -302,9 +291,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  >
  <div className="flex items-start gap-5 flex-wrap md:flex-nowrap">
  <div className="flex-1">
- <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase text-brand-300 font-semibold mb-3">
- Free SEIS check
- </span>
  <p className="font-display text-[20px] md:text-[24px] text-white leading-[1.15] tracking-tight mb-2">
  Not sure if you qualify? <em className="text-brand-300 italic">Check first.</em>
  </p>
@@ -328,7 +314,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  <div className="sticky top-24 space-y-5">
 
  <div className="bg-white p-6 border border-ink-900/10 rounded-sm">
- <span className="eyebrow mb-3 block">GET A QUOTE</span>
  <h3 className="font-display text-[18px] text-ink-900 mb-2 leading-tight tracking-tight">
  Quote for <em className="text-brand-500 italic">{service.title}</em>
  </h3>
@@ -369,17 +354,11 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  className="p-6 rounded-sm"
  style={{ backgroundColor: 'var(--ink-900)' }}
  >
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-3"
- style={{ color: '#AFA9EC' }}
- >
- FROM &pound;99/MONTH
- </span>
  <h3
  className="font-display text-[19px] mb-3 tracking-tight leading-tight"
  style={{ color: 'var(--paper-100)' }}
  >
- Fixed monthly <em className="italic" style={{ color: '#AFA9EC' }}>fees available</em>
+ Fixed monthly fees <em className="italic" style={{ color: '#AFA9EC' }}>from &pound;99</em>
  </h3>
  <p
  className="font-sans text-[12.5px] mb-4 leading-relaxed"
@@ -398,7 +377,7 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  </div>
 
  <div className="bg-white border border-ink-900/10 p-6 rounded-sm">
- <span className="eyebrow mb-4 block">OTHER SERVICES</span>
+ <h3 className="font-display text-[17px] text-ink-900 mb-4 tracking-tight">Other Services</h3>
  <div className="space-y-0">
  {relatedServices.map((s, i) => (
  <Link
@@ -425,12 +404,6 @@ export default function ServicePageClient({ service, totalCities, combinedFaqs, 
  style={{ backgroundColor: 'var(--brand-500)' }}
  >
  <div className="container-width text-center max-w-3xl">
- <span
- className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase mb-5"
- style={{ color: 'rgba(255, 255, 255, 0.75)' }}
- >
- CLOSING
- </span>
  <h2
  className="font-display text-[30px] md:text-[40px] leading-[1.0] tracking-tight mb-5"
  style={{ color: '#ffffff' }}

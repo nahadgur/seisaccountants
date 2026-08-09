@@ -37,7 +37,6 @@ export default function TermsPage() {
  <div className="container-width py-12 md:py-16 max-w-3xl">
  <Breadcrumbs items={[{ label: 'Terms of Use' }]} />
 
- <span className="eyebrow mb-4 inline-block">TERMS</span>
  <h1 className="font-display text-[40px] md:text-[52px] text-ink-900 leading-[0.98] tracking-tighter mb-4">
  Terms of <em className="text-brand-500 italic">Use</em>
  </h1>
@@ -50,7 +49,7 @@ export default function TermsPage() {
  <section>
  <SectionH2 num="01">About this service</SectionH2>
  <p>
- seisaccountants.co.uk provides SEIS and EIS accountancy for UK founders. Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice. The guides, blog articles, and calculators on this site are general information and do not by themselves create an engagement or amount to advice.
+ seisaccountants.co.uk provides SEIS and EIS accountancy for UK founders. Accountancy services are delivered by Tidy Money Ltd, an ACCA-regulated practice registered in England and Wales under company number 06509733. The guides, blog articles, and calculators on this site are general information and do not by themselves create an engagement or amount to advice.
  </p>
  <p className="mt-3">
  When you submit an enquiry, we come back within 48 hours with a fixed written quote for the scope of work. An engagement begins only once you accept that quote in writing, under our own terms of engagement.

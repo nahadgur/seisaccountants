@@ -203,9 +203,6 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  <>
  {/* Masthead */}
  <div className="mb-6 pb-4 border-b border-ink-900/15">
- <div className="flex items-center mb-4">
- <span className="eyebrow">FREE QUOTE</span>
- </div>
  <h2
  id="lead-form-title"
  className="font-display text-[30px] md:text-[34px] text-ink-900 leading-[1.0] tracking-tight"
