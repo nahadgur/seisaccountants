@@ -201,22 +201,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
  return (
  <html lang="en-GB" className={`${sans.variable} ${display.variable}`}>
  <body>
- <Script
+ <script
  id="organization-schema"
  type="application/ld+json"
- strategy="beforeInteractive"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
  />
- <Script
+ <script
  id="service-schema"
  type="application/ld+json"
- strategy="beforeInteractive"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
  />
- <Script
+ <script
  id="website-schema"
  type="application/ld+json"
- strategy="beforeInteractive"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
  />
  {siteConfig.gaId && (
