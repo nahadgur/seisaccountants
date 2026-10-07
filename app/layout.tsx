@@ -188,6 +188,7 @@ const websiteSchema = {
  '@id': `${siteConfig.url}/#website`,
  url: siteConfig.url,
  name: siteConfig.name,
+ alternateName: ['SEISAccountants'],
  description: siteConfig.description,
  publisher: { '@id': `${siteConfig.url}/#organization` },
  about: { '@id': `${siteConfig.url}/#service` },
