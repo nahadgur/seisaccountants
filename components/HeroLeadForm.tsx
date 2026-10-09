@@ -28,9 +28,10 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  phone: '',
  location: city || '',
  treatment: service || '',
+ message: '',
  });
 
- const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
  setFormData({ ...formData, [e.target.name]: e.target.value });
  };
 
@@ -44,6 +45,7 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  phone: formData.phone,
  location: formData.location || city || '',
  treatment: formData.treatment || service || '',
+ message: formData.message.trim(),
  page: window.location.href,
  source: siteConfig.name,
  };
@@ -119,6 +121,8 @@ export function HeroLeadForm({ city, service, ctaHeading, ctaButton }: HeroLeadF
  {!city && (
  <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Town or postcode *" className={inputClass} />
  )}
+
+ <textarea name="message" rows={2} value={formData.message} onChange={handleChange} placeholder="Message (optional)" className={inputClass} />
 
  <button
  disabled={isSubmitting}

@@ -31,6 +31,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  phone: '',
  email: '',
  location: '',
+ message: '',
  consent: false,
  });
 
@@ -120,6 +121,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  phone: formData.phone,
  email: formData.email,
  location: formData.location,
+ message: formData.message.trim(),
  page: window.location.href,
  source: siteConfig.name,
  };
@@ -296,6 +298,19 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
  value={formData.location}
  onChange={handleChange}
  placeholder="Town or postcode *"
+ className={inputClass}
+ />
+ </div>
+
+ <div>
+ <label htmlFor="lead-message" className="sr-only">Message (optional)</label>
+ <textarea
+ id="lead-message"
+ name="message"
+ rows={3}
+ value={formData.message}
+ onChange={e => setFormData(prev => ({ ...prev, message: e.target.value }))}
+ placeholder="Message (optional)"
  className={inputClass}
  />
  </div>
